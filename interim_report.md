@@ -84,6 +84,13 @@ Assumptions:
 
 ---
 
+## 4. Current Corpus Coverage (as of latest run)
+- Profiles generated: 16 total in `.refinery/profiles/`.
+- Class mix: native_digital=10, mixed=3, scanned_image=3 (form_fillable=0 observed in corpus).
+- Ledger: `.refinery/extraction_ledger.jsonl` populated via `src.main extract` runs.
+- PageIndex: entries produced via `src.main index` alongside the above profiles.
+
+
 ## Appendix: References to Deliverables
 - **Domain Notes:** See Section 1 and thresholds documented in `DOMAIN_NOTES.md`.
 - **Architecture & Routing:** See Section 2 and `rubric/extraction_rules.yaml` for thresholds and chunking constitution.
