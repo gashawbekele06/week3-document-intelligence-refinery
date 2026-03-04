@@ -114,6 +114,7 @@ class ChunkingEngine:
         self.rules = _load_rules()
         self.validator = ChunkValidator(self.rules)
         self.max_tokens = self.rules.get("chunking", {}).get("max_tokens_per_ldu", 512)
+        self.min_tokens_for_split = self.rules.get("chunking", {}).get("min_tokens_for_split", 256)
 
     def chunk(self, doc: ExtractedDocument) -> List[LDU]:
         """Main entry point: emit all LDUs from an ExtractedDocument."""
@@ -189,30 +190,28 @@ class ChunkingEngine:
 
             # Split if over max_tokens (except lists -- Rule 3)
             if chunk_type != "list" and token_count > self.max_tokens:
-                # Split into sub-chunks
                 words = content.split()
                 chunk_words: List[str] = []
+                current_tokens = 0
+                emitted: List[str] = []
+
                 for word in words:
                     chunk_words.append(word)
-                    if _estimate_tokens(" ".join(chunk_words)) >= self.max_tokens:
-                        sub_content = " ".join(chunk_words)
-                        sub_ldu = LDU(
-                            ldu_id=f"ldu_{uuid.uuid4().hex[:12]}",
-                            content=sub_content,
-                            chunk_type="text",
-                            page_refs=list(set(buffer_pages)),
-                            bounding_box=buffer_bbox,
-                            parent_section=section,
-                            doc_id=doc.doc_id,
-                            document_name=doc.filename,
-                            token_count=_estimate_tokens(sub_content),
-                        )
-                        sub_ldu.content_hash = LDU.compute_hash(sub_content)
-                        ldus.append(self.validator.validate_all(sub_ldu))
+                    current_tokens = _estimate_tokens(" ".join(chunk_words))
+                    if current_tokens >= self.max_tokens:
+                        emitted.append(" ".join(chunk_words))
                         chunk_words = []
+                        current_tokens = 0
 
                 if chunk_words:
-                    sub_content = " ".join(chunk_words)
+                    tail = " ".join(chunk_words)
+                    # If tail is smaller than min_tokens_for_split, merge with previous chunk to avoid tiny fragments
+                    if emitted and _estimate_tokens(tail) < self.min_tokens_for_split:
+                        emitted[-1] = emitted[-1] + " " + tail
+                    else:
+                        emitted.append(tail)
+
+                for sub_content in emitted:
                     sub_ldu = LDU(
                         ldu_id=f"ldu_{uuid.uuid4().hex[:12]}",
                         content=sub_content,
