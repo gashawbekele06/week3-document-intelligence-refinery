@@ -9,8 +9,9 @@ import base64
 import os
 import time
 from pathlib import Path
-from typing import List, Optional
+from typing import List, Optional, Tuple
 import json
+import requests
 
 import yaml
 
@@ -24,6 +25,7 @@ from src.models import (
 from src.strategies.base import BaseExtractor
 
 _RULES_PATH = Path(__file__).parent.parent.parent / "rubric" / "extraction_rules.yaml"
+_OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions"
 
 
 def _load_rules() -> dict:
@@ -96,15 +98,8 @@ class VisionExtractor(BaseExtractor):
 
     def __init__(self):
         self.rules = _load_rules()
-        self.api_key = os.getenv("GEMINI_API_KEY", "")
-        self._client = None
-
-    def _get_client(self):
-        if self._client is None:
-            import google.generativeai as genai
-            genai.configure(api_key=self.api_key)
-            self._client = genai.GenerativeModel("gemini-1.5-flash")
-        return self._client
+        self.api_key = os.getenv("OPENROUTER_API_KEY", "")
+        self.model = self.rules.get("budget", {}).get("vision_model", "google/gemini-flash-1.5")
 
     def _pdf_page_to_image_bytes(self, file_path: Path, page_num: int) -> Optional[bytes]:
         """Render PDF page to PNG bytes at 150 DPI using pymupdf."""
@@ -120,34 +115,68 @@ class VisionExtractor(BaseExtractor):
         except Exception:
             return None
 
+    def _call_openrouter(self, image_b64: str) -> Tuple[dict, int, int]:
+        payload = {
+            "model": self.model,
+            "messages": [
+                {
+                    "role": "user",
+                    "content": [
+                        {"type": "text", "text": _EXTRACTION_PROMPT},
+                        {
+                            "type": "image_url",
+                            "image_url": {"url": f"data:image/png;base64,{image_b64}"},
+                        },
+                    ],
+                }
+            ],
+            "temperature": 0.1,
+            "max_tokens": 1200,
+        }
+
+        headers = {
+            "Authorization": f"Bearer {self.api_key}",
+            "HTTP-Referer": "https://github.com/document-intel-refinery",
+            "X-Title": "document-intelligence-refinery",
+        }
+
+        resp = requests.post(_OPENROUTER_URL, headers=headers, json=payload, timeout=90)
+        if resp.status_code != 200:
+            raise RuntimeError(f"OpenRouter error: {resp.status_code} {resp.text[:200]}")
+
+        data = resp.json()
+        choices = data.get("choices", [])
+        if not choices:
+            raise RuntimeError("OpenRouter returned no choices")
+
+        content = choices[0]["message"].get("content", "{}")
+        if isinstance(content, list):
+            # openrouter may return array of text segments
+            content = "".join([c.get("text", "") for c in content])
+
+        text = content or "{}"
+        if "```" in text:
+            parts = text.split("```")
+            if len(parts) >= 2:
+                text = parts[1]
+            text = text.strip().lstrip("json").strip()
+
+        parsed = json.loads(text)
+        usage = data.get("usage", {})
+        in_tokens = usage.get("prompt_tokens", 1000)
+        out_tokens = usage.get("completion_tokens", 500)
+        return parsed, in_tokens, out_tokens
+
     def _extract_page(
-        self, client, img_bytes: bytes, page_num: int, budget_guard: BudgetGuard
+        self, img_bytes: bytes, page_num: int, budget_guard: BudgetGuard
     ) -> dict:
-        """Send one page image to Gemini Flash and parse structured response."""
+        """Send one page image to OpenRouter and parse structured response."""
         try:
-            import google.generativeai as genai
-            from PIL import Image
-            import io
-
-            img = Image.open(io.BytesIO(img_bytes))
-            response = client.generate_content(
-                [_EXTRACTION_PROMPT, img],
-                generation_config={"temperature": 0.1, "max_output_tokens": 2048},
-            )
-            text = response.text or "{}"
-            # Strip markdown fences if present
-            if "```" in text:
-                text = text.split("```")[1] if "```json" in text else text.split("```")[1]
-                text = text.strip().lstrip("json").strip()
-
-            data = json.loads(text)
-            # Record usage estimate (Gemini Flash doesn't always return token counts)
-            usage = getattr(response, "usage_metadata", None)
-            input_tokens = getattr(usage, "prompt_token_count", 1000) if usage else 1000
-            output_tokens = getattr(usage, "candidates_token_count", 500) if usage else 500
+            image_b64 = base64.b64encode(img_bytes).decode("utf-8")
+            page_data, input_tokens, output_tokens = self._call_openrouter(image_b64)
             budget_guard.record_usage(input_tokens, output_tokens)
-            return data
-        except Exception as e:
+            return page_data
+        except Exception:
             return {"page_number": page_num, "text_blocks": [], "tables": [], "figures": []}
 
     def extract(self, file_path: Path) -> ExtractedDocument:
@@ -162,7 +191,7 @@ class VisionExtractor(BaseExtractor):
                 strategy_used="vision_extractor",
                 confidence_score=0.0,
                 page_count=0,
-                metadata={"error": "GEMINI_API_KEY not set"},
+                metadata={"error": "OPENROUTER_API_KEY not set"},
             )
 
         try:
@@ -173,7 +202,6 @@ class VisionExtractor(BaseExtractor):
         except Exception:
             page_count = 1
 
-        client = self._get_client()
         text_blocks: List[TextBlock] = []
         tables: List[ExtractedTable] = []
         figures: List[ExtractedFigure] = []
@@ -188,7 +216,7 @@ class VisionExtractor(BaseExtractor):
             if not img_bytes:
                 continue
 
-            page_data = self._extract_page(client, img_bytes, page_num, budget_guard)
+            page_data = self._extract_page(img_bytes, page_num, budget_guard)
 
             # ── Text Blocks ────────────────────────────────────────────────
             for order, tb in enumerate(page_data.get("text_blocks", [])):
@@ -222,7 +250,7 @@ class VisionExtractor(BaseExtractor):
                 )
                 tables.append(ext_table)
 
-            # ── Figures ──────────────────────────────────────────────────
+            # ── Figures ─────────────────────────────────────────────────-
             for f_idx, fig in enumerate(page_data.get("figures", [])):
                 ext_fig = ExtractedFigure(
                     figure_id=f"f_{page_num}_{f_idx}",
@@ -249,6 +277,7 @@ class VisionExtractor(BaseExtractor):
                     budget_guard.max_cost_usd - budget_guard.total_cost, 6
                 ),
                 "pages_processed_by_vision": budget_guard.pages_processed,
+                "model": self.model,
             },
         )
         result.confidence_score = self.confidence(result)

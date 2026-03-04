@@ -121,6 +121,15 @@ OUTPUT: ExtractedDocument with bounding boxes, tables, figures
 - `digital_min_char_density = 50.0` (above this → likely digital)
 - `scanned_min_image_ratio = 0.70` (above this → scanned)
 
+### Phase 2 Confidence Signals (Strategy A)
+
+- **Minimum characters per page:** `100` — below this, pdfplumber output is unreliable and should escalate.
+- **Target character density:** `150 chars/1000pt²` — healthy native-digital PDFs land above this; lower values degrade confidence proportionally.
+- **Image ratio guardrail:** `50%` page-area image coverage begins to penalize; `>80%` forces confidence ≤0.2 to trigger escalation.
+- **Font metadata bonus:** +0.1 to confidence when embedded fonts are present (strong digital signal).
+
+The combined score = `0.45*text_volume + 0.35*density + 0.15*image_penalty + font_bonus`, capped to `[0,1]` and downweighted for image-heavy pages. Escalation thresholds: `<0.5` (Strategy A → B), `<0.4` (Strategy B → C).
+
 ---
 
 ## 5. VLM vs OCR Cost Tradeoff
