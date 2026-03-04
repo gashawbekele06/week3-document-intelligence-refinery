@@ -1,0 +1,5966 @@
+{
+  "doc_id": "034f5cfe0ed23f4a",
+  "document_name": "ETS-Annual-Report-2023_2024.pdf",
+  "page_count": 92,
+  "sections": [
+    {
+      "section_id": "sec_d7080989f6",
+      "title": "ANNUAL",
+      "page_start": 3,
+      "page_end": 2,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "REPORT",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_d2207c0409c3",
+        "ldu_ffbc4d4d2ea0"
+      ]
+    },
+    {
+      "section_id": "sec_fcfd18f19f",
+      "title": "REPORT",
+      "page_start": 3,
+      "page_end": 2,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [
+        "2023"
+      ],
+      "summary": "2023 1. 2. REPORTS",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_20b728d4b8bd",
+        "ldu_7bb89cd85a09",
+        "ldu_799d30f5b943",
+        "ldu_13509b7da930",
+        "ldu_d2207c0409c3"
+      ]
+    },
+    {
+      "section_id": "sec_53c4a2925a",
+      "title": "2023",
+      "page_start": 3,
+      "page_end": 2,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "-",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_8d748d2a1c07",
+        "ldu_20b728d4b8bd"
+      ]
+    },
+    {
+      "section_id": "sec_ab96aee548",
+      "title": "-",
+      "page_start": 3,
+      "page_end": 2,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [
+        "2024"
+      ],
+      "summary": "2024",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_f9551fcd01fe",
+        "ldu_8d748d2a1c07"
+      ]
+    },
+    {
+      "section_id": "sec_9a6ee59bce",
+      "title": "2024",
+      "page_start": 3,
+      "page_end": 2,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "FOR CONTENTS ETHSWITCH Report Statement",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_c68df13c703c",
+        "ldu_a12b20ec03fb",
+        "ldu_25a720988733",
+        "ldu_296d61f513bc",
+        "ldu_ded6469560c5",
+        "ldu_f9551fcd01fe"
+      ]
+    },
+    {
+      "section_id": "sec_3216c9832e",
+      "title": "FOR",
+      "page_start": 3,
+      "page_end": 2,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "THE",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_e03b7feced38",
+        "ldu_c68df13c703c"
+      ]
+    },
+    {
+      "section_id": "sec_25a396e69f",
+      "title": "THE",
+      "page_start": 3,
+      "page_end": 2,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "FINANCIAL",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_2123c3f5fabc",
+        "ldu_e03b7feced38"
+      ]
+    },
+    {
+      "section_id": "sec_9c9c219f7e",
+      "title": "FINANCIAL",
+      "page_start": 3,
+      "page_end": 2,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "YEAR STATEMENTS",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_c41005ca9763",
+        "ldu_3e5f9a832ddb",
+        "ldu_2123c3f5fabc"
+      ]
+    },
+    {
+      "section_id": "sec_1e4e4995ba",
+      "title": "YEAR",
+      "page_start": 3,
+      "page_end": 2,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "Ended",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_ea56cb9bee43",
+        "ldu_c41005ca9763"
+      ]
+    },
+    {
+      "section_id": "sec_0798114d2e",
+      "title": "Ended",
+      "page_start": 3,
+      "page_end": 2,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "30 30",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_8fb7d3956605",
+        "ldu_bee71b500379",
+        "ldu_ea56cb9bee43"
+      ]
+    },
+    {
+      "section_id": "sec_8fb71b3201",
+      "title": "30",
+      "page_start": 3,
+      "page_end": 2,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "June June June June",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_d7ea7dd5a7c0",
+        "ldu_13d2a501d457",
+        "ldu_b4fcb088624f",
+        "ldu_7d0ab8776a38",
+        "ldu_8fb7d3956605"
+      ]
+    },
+    {
+      "section_id": "sec_9db2b2aa95",
+      "title": "June",
+      "page_start": 3,
+      "page_end": 2,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [
+        "2024"
+      ],
+      "summary": "2024 2024 2024 2024",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_fbe6cbc5e5e7",
+        "ldu_3344e6e75453",
+        "ldu_0445575a2712",
+        "ldu_35818177a8da",
+        "ldu_d7ea7dd5a7c0"
+      ]
+    },
+    {
+      "section_id": "sec_2d7d2babd7",
+      "title": "2024",
+      "page_start": 3,
+      "page_end": 3,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "FOR CONTENTS ETHSWITCH Report Statement",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_c68df13c703c",
+        "ldu_a12b20ec03fb",
+        "ldu_25a720988733",
+        "ldu_296d61f513bc",
+        "ldu_ded6469560c5",
+        "ldu_fbe6cbc5e5e7"
+      ]
+    },
+    {
+      "section_id": "sec_b964b39e9c",
+      "title": "CONTENTS",
+      "page_start": 4,
+      "page_end": 4,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "ማህበሩን",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_247471d32adb",
+        "ldu_a12b20ec03fb"
+      ]
+    },
+    {
+      "section_id": "sec_49dc564f8e",
+      "title": "ማህበሩን",
+      "page_start": 5,
+      "page_end": 4,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "የሚመለከቱ",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_d5dacc033fe1",
+        "ldu_247471d32adb"
+      ]
+    },
+    {
+      "section_id": "sec_636f40ed98",
+      "title": "የሚመለከቱ",
+      "page_start": 5,
+      "page_end": 4,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "ዋና",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_192911343708",
+        "ldu_d5dacc033fe1"
+      ]
+    },
+    {
+      "section_id": "sec_26a37682eb",
+      "title": "ዋና",
+      "page_start": 5,
+      "page_end": 4,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "ዋና መረጃዎች",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_d608a9011ec8",
+        "ldu_e560900c086a",
+        "ldu_192911343708"
+      ]
+    },
+    {
+      "section_id": "sec_ffd43a9b32",
+      "title": "ዋና",
+      "page_start": 5,
+      "page_end": 4,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "ዋና መረጃዎች",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_d608a9011ec8",
+        "ldu_e560900c086a",
+        "ldu_d608a9011ec8"
+      ]
+    },
+    {
+      "section_id": "sec_62302589fe",
+      "title": "መረጃዎች",
+      "page_start": 5,
+      "page_end": 4,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "የባለአክሲዮኖች",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_05fd51f7b460",
+        "ldu_e560900c086a"
+      ]
+    },
+    {
+      "section_id": "sec_96089ae1ca",
+      "title": "የባለአክሲዮኖች",
+      "page_start": 5,
+      "page_end": 4,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "11",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_3a185b9307b8",
+        "ldu_05fd51f7b460"
+      ]
+    },
+    {
+      "section_id": "sec_a40d5e8528",
+      "title": "11",
+      "page_start": 5,
+      "page_end": 4,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "መደበኛ መደበኛ",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_4308ece3b3f8",
+        "ldu_54ff20a01f54",
+        "ldu_3a185b9307b8"
+      ]
+    },
+    {
+      "section_id": "sec_c75f5ae01d",
+      "title": "መደበኛ",
+      "page_start": 5,
+      "page_end": 4,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "ጠቅላላ ጠቅላላ",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_32a7630ce8c3",
+        "ldu_404c4650c106",
+        "ldu_4308ece3b3f8"
+      ]
+    },
+    {
+      "section_id": "sec_dc5dbf67ef",
+      "title": "ጠቅላላ",
+      "page_start": 5,
+      "page_end": 4,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "ጉባኤ ጉባኤ",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_e6ae4fedadac",
+        "ldu_1ead42b113dd",
+        "ldu_32a7630ce8c3"
+      ]
+    },
+    {
+      "section_id": "sec_58298eff5b",
+      "title": "ጉባኤ",
+      "page_start": 5,
+      "page_end": 4,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "አጀንዳዎች ጥሪ",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_ec2bc50f879a",
+        "ldu_4e87c7491904",
+        "ldu_e6ae4fedadac"
+      ]
+    },
+    {
+      "section_id": "sec_4d41f65c13",
+      "title": "አጀንዳዎች",
+      "page_start": 5,
+      "page_end": 4,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "3.",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_3353ff10c2e5",
+        "ldu_ec2bc50f879a"
+      ]
+    },
+    {
+      "section_id": "sec_66fefc6ece",
+      "title": "3.",
+      "page_start": 5,
+      "page_end": 4,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "ማሳሰቢያ Financial",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_f8e85058fe21",
+        "ldu_24abd727644a",
+        "ldu_3353ff10c2e5"
+      ]
+    },
+    {
+      "section_id": "sec_8d97115c38",
+      "title": "ማሳሰቢያ",
+      "page_start": 5,
+      "page_end": 4,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "የኢትስዊች",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_7122f9f06029",
+        "ldu_f8e85058fe21"
+      ]
+    },
+    {
+      "section_id": "sec_d220d8a290",
+      "title": "የኢትስዊች",
+      "page_start": 5,
+      "page_end": 4,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "አክስዮን",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_1de315bc4fa4",
+        "ldu_7122f9f06029"
+      ]
+    },
+    {
+      "section_id": "sec_f36e4f8eab",
+      "title": "አክስዮን",
+      "page_start": 5,
+      "page_end": 4,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "ማህበር",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_86354a872848",
+        "ldu_1de315bc4fa4"
+      ]
+    },
+    {
+      "section_id": "sec_e68b24507a",
+      "title": "ማህበር",
+      "page_start": 5,
+      "page_end": 4,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "ባለአክሲዮኖች",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_8b9d4484a1e2",
+        "ldu_86354a872848"
+      ]
+    },
+    {
+      "section_id": "sec_f37a29b57e",
+      "title": "ባለአክሲዮኖች",
+      "page_start": 5,
+      "page_end": 4,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "11",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_c0d21d2e1586",
+        "ldu_8b9d4484a1e2"
+      ]
+    },
+    {
+      "section_id": "sec_f77c13ff31",
+      "title": "11",
+      "page_start": 5,
+      "page_end": 4,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "መደበኛ መደበኛ",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_4308ece3b3f8",
+        "ldu_54ff20a01f54",
+        "ldu_c0d21d2e1586"
+      ]
+    },
+    {
+      "section_id": "sec_f805f1722b",
+      "title": "መደበኛ",
+      "page_start": 5,
+      "page_end": 4,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "ጠቅላላ ጠቅላላ",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_32a7630ce8c3",
+        "ldu_404c4650c106",
+        "ldu_54ff20a01f54"
+      ]
+    },
+    {
+      "section_id": "sec_a5d8fbd3b9",
+      "title": "ጠቅላላ",
+      "page_start": 5,
+      "page_end": 4,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "ጉባኤ ጉባኤ",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_e6ae4fedadac",
+        "ldu_1ead42b113dd",
+        "ldu_404c4650c106"
+      ]
+    },
+    {
+      "section_id": "sec_916bea3ba0",
+      "title": "ጉባኤ",
+      "page_start": 5,
+      "page_end": 4,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "አጀንዳዎች ጥሪ",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_ec2bc50f879a",
+        "ldu_4e87c7491904",
+        "ldu_1ead42b113dd"
+      ]
+    },
+    {
+      "section_id": "sec_2b09d34f60",
+      "title": "ጥሪ",
+      "page_start": 5,
+      "page_end": 4,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "www.ethswitch.com",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_697fb45550e8",
+        "ldu_4e87c7491904"
+      ]
+    },
+    {
+      "section_id": "sec_597517743e",
+      "title": "www.ethswitch.com",
+      "page_start": 5,
+      "page_end": 5,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "31",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_ee0f77b5875e",
+        "ldu_697fb45550e8"
+      ]
+    },
+    {
+      "section_id": "sec_adae29c405",
+      "title": "31",
+      "page_start": 6,
+      "page_end": 5,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "12",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_f66d229606fe",
+        "ldu_ee0f77b5875e"
+      ]
+    },
+    {
+      "section_id": "sec_ecebe28b7d",
+      "title": "12",
+      "page_start": 6,
+      "page_end": 5,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "01",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_eed0e2ece4fe",
+        "ldu_f66d229606fe"
+      ]
+    },
+    {
+      "section_id": "sec_b1a3e40023",
+      "title": "01",
+      "page_start": 6,
+      "page_end": 5,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "01 10,551",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_0108402a81db",
+        "ldu_c9014a5b6d9c",
+        "ldu_eed0e2ece4fe"
+      ]
+    },
+    {
+      "section_id": "sec_472b7e4d2b",
+      "title": "01",
+      "page_start": 6,
+      "page_end": 5,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "01 10,551",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_0108402a81db",
+        "ldu_c9014a5b6d9c",
+        "ldu_0108402a81db"
+      ]
+    },
+    {
+      "section_id": "sec_48a7727020",
+      "title": "10,551",
+      "page_start": 6,
+      "page_end": 5,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "14,030",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_cb22c1c4a527",
+        "ldu_c9014a5b6d9c"
+      ]
+    },
+    {
+      "section_id": "sec_407cc31192",
+      "title": "14,030",
+      "page_start": 6,
+      "page_end": 5,
+      "level": 1,
+      "child_sections": [
+        {
+          "section_id": "sec_69c71e0ef5",
+          "title": "45.54M",
+          "page_start": 6,
+          "page_end": 6,
+          "level": 2,
+          "child_sections": [],
+          "key_entities": [],
+          "summary": "574,409",
+          "data_types_present": [],
+          "ldu_ids": [
+            "ldu_7467b62afc2b",
+            "ldu_c7020f267469"
+          ]
+        }
+      ],
+      "key_entities": [],
+      "summary": "45.54M",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_c7020f267469",
+        "ldu_cb22c1c4a527"
+      ]
+    },
+    {
+      "section_id": "sec_86cf5c19fb",
+      "title": "574,409",
+      "page_start": 6,
+      "page_end": 5,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "Shareholders",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_d5df5a5d0a0b",
+        "ldu_7467b62afc2b"
+      ]
+    },
+    {
+      "section_id": "sec_5f25374488",
+      "title": "Shareholders",
+      "page_start": 6,
+      "page_end": 5,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "National Meeting",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_d67985ea4da9",
+        "ldu_acba4495c004",
+        "ldu_d5df5a5d0a0b"
+      ]
+    },
+    {
+      "section_id": "sec_a5d10dbc56",
+      "title": "National",
+      "page_start": 6,
+      "page_end": 5,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "Data Payment",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_8a4c1fa0cedb",
+        "ldu_370bf008b44d",
+        "ldu_d67985ea4da9"
+      ]
+    },
+    {
+      "section_id": "sec_1d2c139712",
+      "title": "Data",
+      "page_start": 6,
+      "page_end": 5,
+      "level": 1,
+      "child_sections": [
+        {
+          "section_id": "sec_1423837f60",
+          "title": "94.53M",
+          "page_start": 6,
+          "page_end": 6,
+          "level": 2,
+          "child_sections": [],
+          "key_entities": [],
+          "summary": "49.70M",
+          "data_types_present": [],
+          "ldu_ids": [
+            "ldu_5d95fd70de9a",
+            "ldu_3fa4f6bf5d54"
+          ]
+        },
+        {
+          "section_id": "sec_b29ef54de9",
+          "title": "49.70M",
+          "page_start": 6,
+          "page_end": 6,
+          "level": 2,
+          "child_sections": [],
+          "key_entities": [],
+          "summary": "Interoperable",
+          "data_types_present": [],
+          "ldu_ids": [
+            "ldu_0db2594950c1",
+            "ldu_5d95fd70de9a"
+          ]
+        }
+      ],
+      "key_entities": [],
+      "summary": "94.53M",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_3fa4f6bf5d54",
+        "ldu_8a4c1fa0cedb"
+      ]
+    },
+    {
+      "section_id": "sec_e614cf47b0",
+      "title": "Interoperable",
+      "page_start": 6,
+      "page_end": 5,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "Transactions QR Transactions",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_7c301d11b739",
+        "ldu_5cb7de0c385b",
+        "ldu_70efaa1e0fad",
+        "ldu_0db2594950c1"
+      ]
+    },
+    {
+      "section_id": "sec_8e66e88d55",
+      "title": "Transactions",
+      "page_start": 6,
+      "page_end": 5,
+      "level": 1,
+      "child_sections": [
+        {
+          "section_id": "sec_efdbc44922",
+          "title": "2.18M",
+          "page_start": 6,
+          "page_end": 6,
+          "level": 2,
+          "child_sections": [],
+          "key_entities": [],
+          "summary": "1.13B",
+          "data_types_present": [],
+          "ldu_ids": [
+            "ldu_ba2bb3053f2c",
+            "ldu_ddd920a06909"
+          ]
+        },
+        {
+          "section_id": "sec_06fbf831e5",
+          "title": "1.13B",
+          "page_start": 6,
+          "page_end": 6,
+          "level": 2,
+          "child_sections": [],
+          "key_entities": [],
+          "summary": "3.45B",
+          "data_types_present": [],
+          "ldu_ids": [
+            "ldu_9f448074a7ad",
+            "ldu_ba2bb3053f2c"
+          ]
+        },
+        {
+          "section_id": "sec_edc3a0ae67",
+          "title": "3.45B",
+          "page_start": 6,
+          "page_end": 6,
+          "level": 2,
+          "child_sections": [],
+          "key_entities": [],
+          "summary": "1.06B",
+          "data_types_present": [],
+          "ldu_ids": [
+            "ldu_05ca9d2ac4de",
+            "ldu_9f448074a7ad"
+          ]
+        },
+        {
+          "section_id": "sec_37bbcb040f",
+          "title": "1.06B",
+          "page_start": 6,
+          "page_end": 6,
+          "level": 2,
+          "child_sections": [],
+          "key_entities": [],
+          "summary": "Financial",
+          "data_types_present": [],
+          "ldu_ids": [
+            "ldu_65c818767c27",
+            "ldu_05ca9d2ac4de"
+          ]
+        }
+      ],
+      "key_entities": [],
+      "summary": "2.18M 2.2",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_ddd920a06909",
+        "ldu_cd2ce06339f0",
+        "ldu_7c301d11b739"
+      ]
+    },
+    {
+      "section_id": "sec_3e26ecdf09",
+      "title": "Financial",
+      "page_start": 6,
+      "page_end": 5,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "Performance Performance Performance",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_a5aafdda6f4b",
+        "ldu_618c572ff464",
+        "ldu_e2c18455a192",
+        "ldu_65c818767c27"
+      ]
+    },
+    {
+      "section_id": "sec_868b39cd3e",
+      "title": "Performance",
+      "page_start": 6,
+      "page_end": 5,
+      "level": 1,
+      "child_sections": [
+        {
+          "section_id": "sec_d7740f2b6b",
+          "title": "1.79B",
+          "page_start": 6,
+          "page_end": 6,
+          "level": 2,
+          "child_sections": [],
+          "key_entities": [],
+          "summary": "157",
+          "data_types_present": [],
+          "ldu_ids": [
+            "ldu_d40d7cceb606",
+            "ldu_b596f29bbab6"
+          ]
+        }
+      ],
+      "key_entities": [],
+      "summary": "1.79B 2.1 3.1. Review Review",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_b596f29bbab6",
+        "ldu_3fe60bd966af",
+        "ldu_d666fb020045",
+        "ldu_0cb96c4b4a9b",
+        "ldu_32366c136c06",
+        "ldu_a5aafdda6f4b"
+      ]
+    },
+    {
+      "section_id": "sec_237e5c8010",
+      "title": "157",
+      "page_start": 6,
+      "page_end": 5,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "PERFORMANCE",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_db979351f5ca",
+        "ldu_d40d7cceb606"
+      ]
+    },
+    {
+      "section_id": "sec_984d0a3ca8",
+      "title": "PERFORMANCE",
+      "page_start": 6,
+      "page_end": 5,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "HIGHLIGHTS",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_a3a5b99a0304",
+        "ldu_db979351f5ca"
+      ]
+    },
+    {
+      "section_id": "sec_540c8f8795",
+      "title": "HIGHLIGHTS",
+      "page_start": 6,
+      "page_end": 6,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "BOARD",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_32c2d1c7c453",
+        "ldu_a3a5b99a0304"
+      ]
+    },
+    {
+      "section_id": "sec_364ab7abb7",
+      "title": "BOARD",
+      "page_start": 7,
+      "page_end": 6,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "OF OF CHAIRPERSON’S OF CHAIRPERSON’S OF OF",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_acc998d75545",
+        "ldu_062153c27f06",
+        "ldu_bfd6d9818a4f",
+        "ldu_956275872e2f",
+        "ldu_4cf30a77e6e4",
+        "ldu_e2d79d308df9",
+        "ldu_03a1b47594c0",
+        "ldu_32c2d1c7c453"
+      ]
+    },
+    {
+      "section_id": "sec_48988cf31d",
+      "title": "OF",
+      "page_start": 7,
+      "page_end": 6,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "DIRECTORS DIRECTORS DIRECTORS DIRECTORS’ DIRECTORS’",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_98a1e954f634",
+        "ldu_d076f0008f9d",
+        "ldu_463287a9bcde",
+        "ldu_d3ee378f3821",
+        "ldu_85ea4a6d4ba1",
+        "ldu_acc998d75545"
+      ]
+    },
+    {
+      "section_id": "sec_fa6cd709d7",
+      "title": "DIRECTORS",
+      "page_start": 7,
+      "page_end": 7,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "NEWLY BOARD The Strategic",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_5abe13d7b649",
+        "ldu_5d3f7f41368f",
+        "ldu_dfbb83809fa4",
+        "ldu_9a19598e9915",
+        "ldu_98a1e954f634"
+      ]
+    },
+    {
+      "section_id": "sec_60535ed0d0",
+      "title": "NEWLY",
+      "page_start": 8,
+      "page_end": 7,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "ELECTED ELECTED",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_389b8d0aa7e1",
+        "ldu_027385c91b46",
+        "ldu_5abe13d7b649"
+      ]
+    },
+    {
+      "section_id": "sec_fb038bca53",
+      "title": "ELECTED",
+      "page_start": 8,
+      "page_end": 7,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "BOARD BOARD",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_49f02f0ee44b",
+        "ldu_c75a3c379a2b",
+        "ldu_389b8d0aa7e1"
+      ]
+    },
+    {
+      "section_id": "sec_70560f47f2",
+      "title": "BOARD",
+      "page_start": 8,
+      "page_end": 7,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "OF OF CHAIRPERSON’S OF CHAIRPERSON’S OF OF",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_acc998d75545",
+        "ldu_062153c27f06",
+        "ldu_bfd6d9818a4f",
+        "ldu_956275872e2f",
+        "ldu_4cf30a77e6e4",
+        "ldu_e2d79d308df9",
+        "ldu_03a1b47594c0",
+        "ldu_49f02f0ee44b"
+      ]
+    },
+    {
+      "section_id": "sec_ad266cec2b",
+      "title": "OF",
+      "page_start": 8,
+      "page_end": 7,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "DIRECTORS DIRECTORS DIRECTORS DIRECTORS’ DIRECTORS’",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_98a1e954f634",
+        "ldu_d076f0008f9d",
+        "ldu_463287a9bcde",
+        "ldu_d3ee378f3821",
+        "ldu_85ea4a6d4ba1",
+        "ldu_062153c27f06"
+      ]
+    },
+    {
+      "section_id": "sec_f593c565a9",
+      "title": "DIRECTORS",
+      "page_start": 8,
+      "page_end": 8,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "NEWLY BOARD The Strategic",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_5abe13d7b649",
+        "ldu_5d3f7f41368f",
+        "ldu_dfbb83809fa4",
+        "ldu_9a19598e9915",
+        "ldu_d076f0008f9d"
+      ]
+    },
+    {
+      "section_id": "sec_85350dd7f4",
+      "title": "BOARD",
+      "page_start": 9,
+      "page_end": 8,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "OF OF CHAIRPERSON’S OF CHAIRPERSON’S OF OF",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_acc998d75545",
+        "ldu_062153c27f06",
+        "ldu_bfd6d9818a4f",
+        "ldu_956275872e2f",
+        "ldu_4cf30a77e6e4",
+        "ldu_e2d79d308df9",
+        "ldu_03a1b47594c0",
+        "ldu_5d3f7f41368f"
+      ]
+    },
+    {
+      "section_id": "sec_7789c9e34d",
+      "title": "CHAIRPERSON’S",
+      "page_start": 9,
+      "page_end": 8,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "MESSAGE MESSAGE",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_5544b2235b9e",
+        "ldu_563e145c1167",
+        "ldu_bfd6d9818a4f"
+      ]
+    },
+    {
+      "section_id": "sec_1912994ef5",
+      "title": "MESSAGE",
+      "page_start": 9,
+      "page_end": 8,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "NEWLY EXECUTIVE We DEPARTMENT",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_505c52e7df30",
+        "ldu_e413a875c666",
+        "ldu_6f9fc6f17c69",
+        "ldu_354aa9974c04",
+        "ldu_5544b2235b9e"
+      ]
+    },
+    {
+      "section_id": "sec_f95b41a8a8",
+      "title": "NEWLY",
+      "page_start": 9,
+      "page_end": 8,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "ELECTED ELECTED",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_389b8d0aa7e1",
+        "ldu_027385c91b46",
+        "ldu_505c52e7df30"
+      ]
+    },
+    {
+      "section_id": "sec_25413adf3a",
+      "title": "ELECTED",
+      "page_start": 9,
+      "page_end": 8,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "BOARD BOARD",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_49f02f0ee44b",
+        "ldu_c75a3c379a2b",
+        "ldu_027385c91b46"
+      ]
+    },
+    {
+      "section_id": "sec_cd58682b5a",
+      "title": "BOARD",
+      "page_start": 9,
+      "page_end": 8,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "OF OF CHAIRPERSON’S OF CHAIRPERSON’S OF OF",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_acc998d75545",
+        "ldu_062153c27f06",
+        "ldu_bfd6d9818a4f",
+        "ldu_956275872e2f",
+        "ldu_4cf30a77e6e4",
+        "ldu_e2d79d308df9",
+        "ldu_03a1b47594c0",
+        "ldu_c75a3c379a2b"
+      ]
+    },
+    {
+      "section_id": "sec_31b7dbcf17",
+      "title": "OF",
+      "page_start": 9,
+      "page_end": 8,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "DIRECTORS DIRECTORS DIRECTORS DIRECTORS’ DIRECTORS’",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_98a1e954f634",
+        "ldu_d076f0008f9d",
+        "ldu_463287a9bcde",
+        "ldu_d3ee378f3821",
+        "ldu_85ea4a6d4ba1",
+        "ldu_956275872e2f"
+      ]
+    },
+    {
+      "section_id": "sec_4f044b8440",
+      "title": "DIRECTORS",
+      "page_start": 9,
+      "page_end": 8,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "NEWLY BOARD The Strategic",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_5abe13d7b649",
+        "ldu_5d3f7f41368f",
+        "ldu_dfbb83809fa4",
+        "ldu_9a19598e9915",
+        "ldu_463287a9bcde"
+      ]
+    },
+    {
+      "section_id": "sec_9de09958bb",
+      "title": "The",
+      "page_start": 9,
+      "page_end": 8,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "launch Five-Year",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_720a133d9636",
+        "ldu_e10205e668dc",
+        "ldu_dfbb83809fa4"
+      ]
+    },
+    {
+      "section_id": "sec_e4467e2c67",
+      "title": "launch",
+      "page_start": 9,
+      "page_end": 8,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "of",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_8becce46bf99",
+        "ldu_720a133d9636"
+      ]
+    },
+    {
+      "section_id": "sec_04434b4eb0",
+      "title": "of",
+      "page_start": 9,
+      "page_end": 8,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "the digital making a Strategy EthSwitch the directors'",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_04522045ef5b",
+        "ldu_4577c1165bd1",
+        "ldu_f53f1525d859",
+        "ldu_6165bcd62520",
+        "ldu_f5c0510ce161",
+        "ldu_e5025f2cba98",
+        "ldu_ab11e4367b91",
+        "ldu_58c95fca350c",
+        "ldu_8becce46bf99"
+      ]
+    },
+    {
+      "section_id": "sec_68dc63a182",
+      "title": "the",
+      "page_start": 9,
+      "page_end": 8,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "Ethiopian years year Year directors period",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_8ade5e85d95d",
+        "ldu_417c0fe8ab16",
+        "ldu_c9871786e8d2",
+        "ldu_302100aba850",
+        "ldu_27f6de8c0c2a",
+        "ldu_cea8b01f81ae",
+        "ldu_04522045ef5b"
+      ]
+    },
+    {
+      "section_id": "sec_1dd6b9eccc",
+      "title": "Ethiopian",
+      "page_start": 9,
+      "page_end": 8,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "Interoperable",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_ffc7d5d0b94c",
+        "ldu_8ade5e85d95d"
+      ]
+    },
+    {
+      "section_id": "sec_0e50fe7d34",
+      "title": "Interoperable",
+      "page_start": 9,
+      "page_end": 8,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "Transactions QR Transactions",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_7c301d11b739",
+        "ldu_5cb7de0c385b",
+        "ldu_70efaa1e0fad",
+        "ldu_ffc7d5d0b94c"
+      ]
+    },
+    {
+      "section_id": "sec_64d85b16dc",
+      "title": "QR",
+      "page_start": 9,
+      "page_end": 8,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "Code",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_8da39be8c7b3",
+        "ldu_5cb7de0c385b"
+      ]
+    },
+    {
+      "section_id": "sec_76bb0d4dae",
+      "title": "Code",
+      "page_start": 9,
+      "page_end": 8,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "for",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_d4f6e41ba504",
+        "ldu_8da39be8c7b3"
+      ]
+    },
+    {
+      "section_id": "sec_c82aab1ec0",
+      "title": "for",
+      "page_start": 9,
+      "page_end": 8,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "Payments FY Their the",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_300d34380683",
+        "ldu_273f3316d0a0",
+        "ldu_594405032bd7",
+        "ldu_401c0a6a260d",
+        "ldu_d4f6e41ba504"
+      ]
+    },
+    {
+      "section_id": "sec_338022d36b",
+      "title": "Payments",
+      "page_start": 9,
+      "page_end": 8,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "marked Landscape",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_cedbb347906e",
+        "ldu_28fbe75cc217",
+        "ldu_300d34380683"
+      ]
+    },
+    {
+      "section_id": "sec_09e3beda32",
+      "title": "marked",
+      "page_start": 9,
+      "page_end": 8,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "a",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_5e68cb64db6e",
+        "ldu_cedbb347906e"
+      ]
+    },
+    {
+      "section_id": "sec_641705d359",
+      "title": "a",
+      "page_start": 9,
+      "page_end": 8,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "pivotal new Domestic",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_0b30d51c2650",
+        "ldu_b8daa1f81c9b",
+        "ldu_cd180db87ece",
+        "ldu_5e68cb64db6e"
+      ]
+    },
+    {
+      "section_id": "sec_7eb40ce05a",
+      "title": "pivotal",
+      "page_start": 9,
+      "page_end": 8,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "step,",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_2986ec41472c",
+        "ldu_0b30d51c2650"
+      ]
+    },
+    {
+      "section_id": "sec_010d186b36",
+      "title": "step,",
+      "page_start": 9,
+      "page_end": 8,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "ushering",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_605953cefe4d",
+        "ldu_2986ec41472c"
+      ]
+    },
+    {
+      "section_id": "sec_77ffe7fd19",
+      "title": "ushering",
+      "page_start": 9,
+      "page_end": 8,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "in",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_2cfbf5c3ca2e",
+        "ldu_605953cefe4d"
+      ]
+    },
+    {
+      "section_id": "sec_bc75c0e8e8",
+      "title": "in",
+      "page_start": 9,
+      "page_end": 8,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "a the",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_060786e0b1bb",
+        "ldu_35027b04339b",
+        "ldu_2cfbf5c3ca2e"
+      ]
+    },
+    {
+      "section_id": "sec_009bc9afa8",
+      "title": "a",
+      "page_start": 9,
+      "page_end": 8,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "pivotal new Domestic",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_0b30d51c2650",
+        "ldu_b8daa1f81c9b",
+        "ldu_cd180db87ece",
+        "ldu_060786e0b1bb"
+      ]
+    },
+    {
+      "section_id": "sec_3b50cf5778",
+      "title": "new",
+      "page_start": 9,
+      "page_end": 8,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "era",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_ed5154514dd9",
+        "ldu_b8daa1f81c9b"
+      ]
+    },
+    {
+      "section_id": "sec_3d615946e9",
+      "title": "era",
+      "page_start": 9,
+      "page_end": 8,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "of",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_54bede266fd8",
+        "ldu_ed5154514dd9"
+      ]
+    },
+    {
+      "section_id": "sec_c165465e94",
+      "title": "of",
+      "page_start": 9,
+      "page_end": 8,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "the digital making a Strategy EthSwitch the directors'",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_04522045ef5b",
+        "ldu_4577c1165bd1",
+        "ldu_f53f1525d859",
+        "ldu_6165bcd62520",
+        "ldu_f5c0510ce161",
+        "ldu_e5025f2cba98",
+        "ldu_ab11e4367b91",
+        "ldu_58c95fca350c",
+        "ldu_54bede266fd8"
+      ]
+    },
+    {
+      "section_id": "sec_7877287f95",
+      "title": "digital",
+      "page_start": 9,
+      "page_end": 8,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "transactions.",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_c7f1492e252c",
+        "ldu_4577c1165bd1"
+      ]
+    },
+    {
+      "section_id": "sec_7a29b5f2a8",
+      "title": "transactions.",
+      "page_start": 9,
+      "page_end": 9,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "BOARD",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_b4932b0cad0c",
+        "ldu_c7f1492e252c"
+      ]
+    },
+    {
+      "section_id": "sec_dd7f2318cb",
+      "title": "BOARD",
+      "page_start": 10,
+      "page_end": 9,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "OF OF CHAIRPERSON’S OF CHAIRPERSON’S OF OF",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_acc998d75545",
+        "ldu_062153c27f06",
+        "ldu_bfd6d9818a4f",
+        "ldu_956275872e2f",
+        "ldu_4cf30a77e6e4",
+        "ldu_e2d79d308df9",
+        "ldu_03a1b47594c0",
+        "ldu_b4932b0cad0c"
+      ]
+    },
+    {
+      "section_id": "sec_b596ce343c",
+      "title": "CHAIRPERSON’S",
+      "page_start": 10,
+      "page_end": 9,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "MESSAGE MESSAGE",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_5544b2235b9e",
+        "ldu_563e145c1167",
+        "ldu_4cf30a77e6e4"
+      ]
+    },
+    {
+      "section_id": "sec_b212374c49",
+      "title": "MESSAGE",
+      "page_start": 10,
+      "page_end": 10,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "NEWLY EXECUTIVE We DEPARTMENT",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_505c52e7df30",
+        "ldu_e413a875c666",
+        "ldu_6f9fc6f17c69",
+        "ldu_354aa9974c04",
+        "ldu_563e145c1167"
+      ]
+    },
+    {
+      "section_id": "sec_a392a662c4",
+      "title": "EXECUTIVE",
+      "page_start": 11,
+      "page_end": 10,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "MANAGEMENT OFFICER’S OFFICER’S",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_9119abcbb0dc",
+        "ldu_273fcc46c75a",
+        "ldu_0e6b20797415",
+        "ldu_e413a875c666"
+      ]
+    },
+    {
+      "section_id": "sec_f8d7fab6ec",
+      "title": "MANAGEMENT",
+      "page_start": 11,
+      "page_end": 10,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "Yilebes",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_071b79d5e90b",
+        "ldu_9119abcbb0dc"
+      ]
+    },
+    {
+      "section_id": "sec_04233ccec0",
+      "title": "Yilebes",
+      "page_start": 11,
+      "page_end": 10,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "Addis",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_cd8114818a2e",
+        "ldu_071b79d5e90b"
+      ]
+    },
+    {
+      "section_id": "sec_ac35724e25",
+      "title": "Addis",
+      "page_start": 11,
+      "page_end": 11,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "CHIEF",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_9a071172b3b0",
+        "ldu_cd8114818a2e"
+      ]
+    },
+    {
+      "section_id": "sec_0affe20eb5",
+      "title": "CHIEF",
+      "page_start": 12,
+      "page_end": 11,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "EXECUTIVE EXECUTIVE",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_7b902f60a55f",
+        "ldu_2f81ed24eb7e",
+        "ldu_9a071172b3b0"
+      ]
+    },
+    {
+      "section_id": "sec_8db0873613",
+      "title": "EXECUTIVE",
+      "page_start": 12,
+      "page_end": 11,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "MANAGEMENT OFFICER’S OFFICER’S",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_9119abcbb0dc",
+        "ldu_273fcc46c75a",
+        "ldu_0e6b20797415",
+        "ldu_7b902f60a55f"
+      ]
+    },
+    {
+      "section_id": "sec_c5d2cb7747",
+      "title": "OFFICER’S",
+      "page_start": 12,
+      "page_end": 11,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "MESSAGE MESSAGE",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_d9548c995595",
+        "ldu_df0fc44f53c9",
+        "ldu_273fcc46c75a"
+      ]
+    },
+    {
+      "section_id": "sec_0c9cc28b38",
+      "title": "MESSAGE",
+      "page_start": 12,
+      "page_end": 11,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "NEWLY EXECUTIVE We DEPARTMENT",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_505c52e7df30",
+        "ldu_e413a875c666",
+        "ldu_6f9fc6f17c69",
+        "ldu_354aa9974c04",
+        "ldu_d9548c995595"
+      ]
+    },
+    {
+      "section_id": "sec_5c56d5beb4",
+      "title": "We",
+      "page_start": 12,
+      "page_end": 11,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "remain",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_60dca663a456",
+        "ldu_6f9fc6f17c69"
+      ]
+    },
+    {
+      "section_id": "sec_dd6d080782",
+      "title": "remain",
+      "page_start": 12,
+      "page_end": 11,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "committed",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_2ba14ce5f034",
+        "ldu_60dca663a456"
+      ]
+    },
+    {
+      "section_id": "sec_44ce075b0b",
+      "title": "committed",
+      "page_start": 12,
+      "page_end": 11,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "to",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_587f0f6364e3",
+        "ldu_2ba14ce5f034"
+      ]
+    },
+    {
+      "section_id": "sec_1dfee66059",
+      "title": "to",
+      "page_start": 12,
+      "page_end": 11,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "our pursue",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_82474a31f664",
+        "ldu_1d0059edbc93",
+        "ldu_587f0f6364e3"
+      ]
+    },
+    {
+      "section_id": "sec_89c369bd2e",
+      "title": "our",
+      "page_start": 12,
+      "page_end": 11,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "mission",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_79684dbe2351",
+        "ldu_82474a31f664"
+      ]
+    },
+    {
+      "section_id": "sec_cd2c96d852",
+      "title": "mission",
+      "page_start": 12,
+      "page_end": 11,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "of",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_7b00ebba2b9d",
+        "ldu_79684dbe2351"
+      ]
+    },
+    {
+      "section_id": "sec_143b380ae8",
+      "title": "of",
+      "page_start": 12,
+      "page_end": 11,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "the digital making a Strategy EthSwitch the directors'",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_04522045ef5b",
+        "ldu_4577c1165bd1",
+        "ldu_f53f1525d859",
+        "ldu_6165bcd62520",
+        "ldu_f5c0510ce161",
+        "ldu_e5025f2cba98",
+        "ldu_ab11e4367b91",
+        "ldu_58c95fca350c",
+        "ldu_7b00ebba2b9d"
+      ]
+    },
+    {
+      "section_id": "sec_0aca7feadf",
+      "title": "making",
+      "page_start": 12,
+      "page_end": 11,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "payments",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_de4c6f7a2c7a",
+        "ldu_f53f1525d859"
+      ]
+    },
+    {
+      "section_id": "sec_ba9fe1a003",
+      "title": "payments",
+      "page_start": 12,
+      "page_end": 11,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "simple",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_2b394cc5662c",
+        "ldu_de4c6f7a2c7a"
+      ]
+    },
+    {
+      "section_id": "sec_83f905da5b",
+      "title": "simple",
+      "page_start": 12,
+      "page_end": 11,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "and",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_b86f87e66105",
+        "ldu_2b394cc5662c"
+      ]
+    },
+    {
+      "section_id": "sec_9a43cfe365",
+      "title": "and",
+      "page_start": 12,
+      "page_end": 11,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "affordable, we PIN Settlement establishment seamless Expenses Organizational Financial Onboarding",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_cfdbb8895493",
+        "ldu_28e9f9b8e6f4",
+        "ldu_4a2494219bac",
+        "ldu_45fd01c4fa30",
+        "ldu_bb9b90ae38f7",
+        "ldu_8e193792bc91",
+        "ldu_472de82214bf",
+        "ldu_804287c3082f",
+        "ldu_eaa3798f0b2a",
+        "ldu_77fc8fdace9f",
+        "ldu_b86f87e66105"
+      ]
+    },
+    {
+      "section_id": "sec_cb9cb59ae8",
+      "title": "affordable,",
+      "page_start": 12,
+      "page_end": 11,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "and",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_0c01fa2817b6",
+        "ldu_cfdbb8895493"
+      ]
+    },
+    {
+      "section_id": "sec_b6d2c3ef01",
+      "title": "and",
+      "page_start": 12,
+      "page_end": 11,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "affordable, we PIN Settlement establishment seamless Expenses Organizational Financial Onboarding",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_cfdbb8895493",
+        "ldu_28e9f9b8e6f4",
+        "ldu_4a2494219bac",
+        "ldu_45fd01c4fa30",
+        "ldu_bb9b90ae38f7",
+        "ldu_8e193792bc91",
+        "ldu_472de82214bf",
+        "ldu_804287c3082f",
+        "ldu_eaa3798f0b2a",
+        "ldu_77fc8fdace9f",
+        "ldu_0c01fa2817b6"
+      ]
+    },
+    {
+      "section_id": "sec_f4b41b7a92",
+      "title": "we",
+      "page_start": 12,
+      "page_end": 11,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "will",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_7f8456714363",
+        "ldu_28e9f9b8e6f4"
+      ]
+    },
+    {
+      "section_id": "sec_ccff8c50ca",
+      "title": "will",
+      "page_start": 12,
+      "page_end": 11,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "continue",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_d6853543fc64",
+        "ldu_7f8456714363"
+      ]
+    },
+    {
+      "section_id": "sec_98347c1aba",
+      "title": "continue",
+      "page_start": 12,
+      "page_end": 11,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "to",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_ed19f0d0b278",
+        "ldu_d6853543fc64"
+      ]
+    },
+    {
+      "section_id": "sec_391c869d9c",
+      "title": "to",
+      "page_start": 12,
+      "page_end": 11,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "our pursue",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_82474a31f664",
+        "ldu_1d0059edbc93",
+        "ldu_ed19f0d0b278"
+      ]
+    },
+    {
+      "section_id": "sec_e1d653e08c",
+      "title": "pursue",
+      "page_start": 12,
+      "page_end": 11,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "excellence",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_b06e051aa3f1",
+        "ldu_1d0059edbc93"
+      ]
+    },
+    {
+      "section_id": "sec_351aeb8fb1",
+      "title": "excellence",
+      "page_start": 12,
+      "page_end": 11,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "in",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_9041e88f206f",
+        "ldu_b06e051aa3f1"
+      ]
+    },
+    {
+      "section_id": "sec_cd83c77899",
+      "title": "in",
+      "page_start": 12,
+      "page_end": 11,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "a the",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_060786e0b1bb",
+        "ldu_35027b04339b",
+        "ldu_9041e88f206f"
+      ]
+    },
+    {
+      "section_id": "sec_d00f32f1be",
+      "title": "the",
+      "page_start": 12,
+      "page_end": 11,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "Ethiopian years year Year directors period",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_8ade5e85d95d",
+        "ldu_417c0fe8ab16",
+        "ldu_c9871786e8d2",
+        "ldu_302100aba850",
+        "ldu_27f6de8c0c2a",
+        "ldu_cea8b01f81ae",
+        "ldu_35027b04339b"
+      ]
+    },
+    {
+      "section_id": "sec_018cc65b72",
+      "title": "years",
+      "page_start": 12,
+      "page_end": 11,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "ahead.",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_c3bbe53633be",
+        "ldu_417c0fe8ab16"
+      ]
+    },
+    {
+      "section_id": "sec_01632b441f",
+      "title": "ahead.",
+      "page_start": 12,
+      "page_end": 12,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "CHIEF",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_b2f84308d98e",
+        "ldu_c3bbe53633be"
+      ]
+    },
+    {
+      "section_id": "sec_89d9a97f40",
+      "title": "CHIEF",
+      "page_start": 13,
+      "page_end": 12,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "EXECUTIVE EXECUTIVE",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_7b902f60a55f",
+        "ldu_2f81ed24eb7e",
+        "ldu_b2f84308d98e"
+      ]
+    },
+    {
+      "section_id": "sec_1e23e8f9a9",
+      "title": "EXECUTIVE",
+      "page_start": 13,
+      "page_end": 12,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "MANAGEMENT OFFICER’S OFFICER’S",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_9119abcbb0dc",
+        "ldu_273fcc46c75a",
+        "ldu_0e6b20797415",
+        "ldu_2f81ed24eb7e"
+      ]
+    },
+    {
+      "section_id": "sec_192d416a60",
+      "title": "OFFICER’S",
+      "page_start": 13,
+      "page_end": 12,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "MESSAGE MESSAGE",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_d9548c995595",
+        "ldu_df0fc44f53c9",
+        "ldu_0e6b20797415"
+      ]
+    },
+    {
+      "section_id": "sec_2a23b6d480",
+      "title": "MESSAGE",
+      "page_start": 13,
+      "page_end": 13,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "NEWLY EXECUTIVE We DEPARTMENT",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_505c52e7df30",
+        "ldu_e413a875c666",
+        "ldu_6f9fc6f17c69",
+        "ldu_354aa9974c04",
+        "ldu_df0fc44f53c9"
+      ]
+    },
+    {
+      "section_id": "sec_10b889f7e7",
+      "title": "DEPARTMENT",
+      "page_start": 14,
+      "page_end": 13,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "DIRECTORS",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_256e80cecd37",
+        "ldu_354aa9974c04"
+      ]
+    },
+    {
+      "section_id": "sec_270dd2e848",
+      "title": "DIRECTORS",
+      "page_start": 14,
+      "page_end": 14,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "NEWLY BOARD The Strategic",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_5abe13d7b649",
+        "ldu_5d3f7f41368f",
+        "ldu_dfbb83809fa4",
+        "ldu_9a19598e9915",
+        "ldu_256e80cecd37"
+      ]
+    },
+    {
+      "section_id": "sec_935b09b2d0",
+      "title": "Strategic",
+      "page_start": 15,
+      "page_end": 14,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "Goals Aspirations",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_d350cf712c79",
+        "ldu_2b9123ad6b39",
+        "ldu_9a19598e9915"
+      ]
+    },
+    {
+      "section_id": "sec_e327feb7f7",
+      "title": "Goals",
+      "page_start": 15,
+      "page_end": 14,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "CORPORATE",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_30be17fd3ced",
+        "ldu_d350cf712c79"
+      ]
+    },
+    {
+      "section_id": "sec_ce49aa2391",
+      "title": "CORPORATE",
+      "page_start": 15,
+      "page_end": 14,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "PHILOSOPHY",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_c8e594101eb7",
+        "ldu_30be17fd3ced"
+      ]
+    },
+    {
+      "section_id": "sec_63a3a5383d",
+      "title": "PHILOSOPHY",
+      "page_start": 15,
+      "page_end": 14,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "Strategic",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_8a6a58ba9663",
+        "ldu_c8e594101eb7"
+      ]
+    },
+    {
+      "section_id": "sec_07c285e9f0",
+      "title": "Strategic",
+      "page_start": 15,
+      "page_end": 14,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "Goals Aspirations",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_d350cf712c79",
+        "ldu_2b9123ad6b39",
+        "ldu_8a6a58ba9663"
+      ]
+    },
+    {
+      "section_id": "sec_28eb3231e8",
+      "title": "Aspirations",
+      "page_start": 15,
+      "page_end": 16,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "BOARD",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_902067d014ee",
+        "ldu_2b9123ad6b39"
+      ]
+    },
+    {
+      "section_id": "sec_9966c39668",
+      "title": "BOARD",
+      "page_start": 17,
+      "page_end": 16,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "OF OF CHAIRPERSON’S OF CHAIRPERSON’S OF OF",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_acc998d75545",
+        "ldu_062153c27f06",
+        "ldu_bfd6d9818a4f",
+        "ldu_956275872e2f",
+        "ldu_4cf30a77e6e4",
+        "ldu_e2d79d308df9",
+        "ldu_03a1b47594c0",
+        "ldu_902067d014ee"
+      ]
+    },
+    {
+      "section_id": "sec_861dcfbf4d",
+      "title": "OF",
+      "page_start": 17,
+      "page_end": 16,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "DIRECTORS DIRECTORS DIRECTORS DIRECTORS’ DIRECTORS’",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_98a1e954f634",
+        "ldu_d076f0008f9d",
+        "ldu_463287a9bcde",
+        "ldu_d3ee378f3821",
+        "ldu_85ea4a6d4ba1",
+        "ldu_e2d79d308df9"
+      ]
+    },
+    {
+      "section_id": "sec_a6263f8749",
+      "title": "DIRECTORS’",
+      "page_start": 17,
+      "page_end": 16,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "REPORT REPORT",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_8b699060d223",
+        "ldu_f507a1ae3fbc",
+        "ldu_d3ee378f3821"
+      ]
+    },
+    {
+      "section_id": "sec_a44f9b9bd2",
+      "title": "REPORT",
+      "page_start": 17,
+      "page_end": 17,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [
+        "2023"
+      ],
+      "summary": "2023 1. 2. REPORTS",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_20b728d4b8bd",
+        "ldu_7bb89cd85a09",
+        "ldu_799d30f5b943",
+        "ldu_13509b7da930",
+        "ldu_8b699060d223"
+      ]
+    },
+    {
+      "section_id": "sec_d7c44d32b5",
+      "title": "1.",
+      "page_start": 18,
+      "page_end": 17,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "Digital",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_859fdfabf03f",
+        "ldu_7bb89cd85a09"
+      ]
+    },
+    {
+      "section_id": "sec_625a0bf283",
+      "title": "Digital",
+      "page_start": 18,
+      "page_end": 17,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "Payments",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_d0f64ebc0454",
+        "ldu_859fdfabf03f"
+      ]
+    },
+    {
+      "section_id": "sec_82666f2841",
+      "title": "Payments",
+      "page_start": 18,
+      "page_end": 17,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "marked Landscape",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_cedbb347906e",
+        "ldu_28fbe75cc217",
+        "ldu_d0f64ebc0454"
+      ]
+    },
+    {
+      "section_id": "sec_e9d9641a80",
+      "title": "Landscape",
+      "page_start": 18,
+      "page_end": 17,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "BOARD",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_a21a228388e9",
+        "ldu_28fbe75cc217"
+      ]
+    },
+    {
+      "section_id": "sec_290ee41ae9",
+      "title": "BOARD",
+      "page_start": 18,
+      "page_end": 17,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "OF OF CHAIRPERSON’S OF CHAIRPERSON’S OF OF",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_acc998d75545",
+        "ldu_062153c27f06",
+        "ldu_bfd6d9818a4f",
+        "ldu_956275872e2f",
+        "ldu_4cf30a77e6e4",
+        "ldu_e2d79d308df9",
+        "ldu_03a1b47594c0",
+        "ldu_a21a228388e9"
+      ]
+    },
+    {
+      "section_id": "sec_837f466644",
+      "title": "OF",
+      "page_start": 18,
+      "page_end": 17,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "DIRECTORS DIRECTORS DIRECTORS DIRECTORS’ DIRECTORS’",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_98a1e954f634",
+        "ldu_d076f0008f9d",
+        "ldu_463287a9bcde",
+        "ldu_d3ee378f3821",
+        "ldu_85ea4a6d4ba1",
+        "ldu_03a1b47594c0"
+      ]
+    },
+    {
+      "section_id": "sec_74a3f3018d",
+      "title": "DIRECTORS’",
+      "page_start": 18,
+      "page_end": 17,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "REPORT REPORT",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_8b699060d223",
+        "ldu_f507a1ae3fbc",
+        "ldu_85ea4a6d4ba1"
+      ]
+    },
+    {
+      "section_id": "sec_efc9100120",
+      "title": "REPORT",
+      "page_start": 18,
+      "page_end": 21,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [
+        "2023"
+      ],
+      "summary": "2023 1. 2. REPORTS",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_20b728d4b8bd",
+        "ldu_7bb89cd85a09",
+        "ldu_799d30f5b943",
+        "ldu_13509b7da930",
+        "ldu_f507a1ae3fbc"
+      ]
+    },
+    {
+      "section_id": "sec_4214cbd401",
+      "title": "2.",
+      "page_start": 22,
+      "page_end": 21,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "Operational",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_ba23b25eea8e",
+        "ldu_799d30f5b943"
+      ]
+    },
+    {
+      "section_id": "sec_8cbbcf78df",
+      "title": "Operational",
+      "page_start": 22,
+      "page_end": 21,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "Performance and",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_9af2f28739ff",
+        "ldu_778da2f819af",
+        "ldu_ba23b25eea8e"
+      ]
+    },
+    {
+      "section_id": "sec_46a056359c",
+      "title": "Performance",
+      "page_start": 22,
+      "page_end": 22,
+      "level": 1,
+      "child_sections": [
+        {
+          "section_id": "sec_a4fff7ed50",
+          "title": "2.1",
+          "page_start": 23,
+          "page_end": 23,
+          "level": 2,
+          "child_sections": [],
+          "key_entities": [],
+          "summary": "Interoperable",
+          "data_types_present": [],
+          "ldu_ids": [
+            "ldu_e2864f5f5aaf",
+            "ldu_3fe60bd966af"
+          ]
+        }
+      ],
+      "key_entities": [],
+      "summary": "1.79B 2.1 3.1. Review Review",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_b596f29bbab6",
+        "ldu_3fe60bd966af",
+        "ldu_d666fb020045",
+        "ldu_0cb96c4b4a9b",
+        "ldu_32366c136c06",
+        "ldu_9af2f28739ff"
+      ]
+    },
+    {
+      "section_id": "sec_b23d542832",
+      "title": "Interoperable",
+      "page_start": 23,
+      "page_end": 22,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "Transactions QR Transactions",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_7c301d11b739",
+        "ldu_5cb7de0c385b",
+        "ldu_70efaa1e0fad",
+        "ldu_e2864f5f5aaf"
+      ]
+    },
+    {
+      "section_id": "sec_e177ad85b2",
+      "title": "Transactions",
+      "page_start": 23,
+      "page_end": 24,
+      "level": 1,
+      "child_sections": [
+        {
+          "section_id": "sec_6d37a5f7a8",
+          "title": "2.2",
+          "page_start": 25,
+          "page_end": 25,
+          "level": 2,
+          "child_sections": [],
+          "key_entities": [],
+          "summary": "Card",
+          "data_types_present": [],
+          "ldu_ids": [
+            "ldu_405ded647742",
+            "ldu_cd2ce06339f0"
+          ]
+        }
+      ],
+      "key_entities": [],
+      "summary": "2.18M 2.2",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_ddd920a06909",
+        "ldu_cd2ce06339f0",
+        "ldu_70efaa1e0fad"
+      ]
+    },
+    {
+      "section_id": "sec_f548b9dfd0",
+      "title": "Card",
+      "page_start": 25,
+      "page_end": 24,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "and",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_06b3947fde12",
+        "ldu_405ded647742"
+      ]
+    },
+    {
+      "section_id": "sec_4e100fea17",
+      "title": "and",
+      "page_start": 25,
+      "page_end": 24,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "affordable, we PIN Settlement establishment seamless Expenses Organizational Financial Onboarding",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_cfdbb8895493",
+        "ldu_28e9f9b8e6f4",
+        "ldu_4a2494219bac",
+        "ldu_45fd01c4fa30",
+        "ldu_bb9b90ae38f7",
+        "ldu_8e193792bc91",
+        "ldu_472de82214bf",
+        "ldu_804287c3082f",
+        "ldu_eaa3798f0b2a",
+        "ldu_77fc8fdace9f",
+        "ldu_06b3947fde12"
+      ]
+    },
+    {
+      "section_id": "sec_3129ad112a",
+      "title": "PIN",
+      "page_start": 25,
+      "page_end": 24,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "Personalization",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_915203a88c7b",
+        "ldu_4a2494219bac"
+      ]
+    },
+    {
+      "section_id": "sec_61ef315ce0",
+      "title": "Personalization",
+      "page_start": 25,
+      "page_end": 24,
+      "level": 1,
+      "child_sections": [
+        {
+          "section_id": "sec_98932e74ee",
+          "title": "2.3",
+          "page_start": 25,
+          "page_end": 25,
+          "level": 2,
+          "child_sections": [],
+          "key_entities": [],
+          "summary": "Dispute",
+          "data_types_present": [],
+          "ldu_ids": [
+            "ldu_4d83491a32f8",
+            "ldu_0ed40ad9d47a"
+          ]
+        }
+      ],
+      "key_entities": [],
+      "summary": "2.3",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_0ed40ad9d47a",
+        "ldu_915203a88c7b"
+      ]
+    },
+    {
+      "section_id": "sec_5b337b84c2",
+      "title": "Dispute",
+      "page_start": 25,
+      "page_end": 24,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "Management",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_b87352b64b03",
+        "ldu_4d83491a32f8"
+      ]
+    },
+    {
+      "section_id": "sec_36f8b072ad",
+      "title": "Management",
+      "page_start": 25,
+      "page_end": 25,
+      "level": 1,
+      "child_sections": [
+        {
+          "section_id": "sec_a6ebfd0cf3",
+          "title": "2.4",
+          "page_start": 26,
+          "page_end": 26,
+          "level": 2,
+          "child_sections": [],
+          "key_entities": [],
+          "summary": "Clearing",
+          "data_types_present": [],
+          "ldu_ids": [
+            "ldu_ef6ec7b6aa79",
+            "ldu_00c3514ada60"
+          ]
+        }
+      ],
+      "key_entities": [],
+      "summary": "2.4",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_00c3514ada60",
+        "ldu_b87352b64b03"
+      ]
+    },
+    {
+      "section_id": "sec_8331efd583",
+      "title": "Clearing",
+      "page_start": 26,
+      "page_end": 25,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "and",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_f1bf05683555",
+        "ldu_ef6ec7b6aa79"
+      ]
+    },
+    {
+      "section_id": "sec_8008d2594b",
+      "title": "and",
+      "page_start": 26,
+      "page_end": 25,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "affordable, we PIN Settlement establishment seamless Expenses Organizational Financial Onboarding",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_cfdbb8895493",
+        "ldu_28e9f9b8e6f4",
+        "ldu_4a2494219bac",
+        "ldu_45fd01c4fa30",
+        "ldu_bb9b90ae38f7",
+        "ldu_8e193792bc91",
+        "ldu_472de82214bf",
+        "ldu_804287c3082f",
+        "ldu_eaa3798f0b2a",
+        "ldu_77fc8fdace9f",
+        "ldu_f1bf05683555"
+      ]
+    },
+    {
+      "section_id": "sec_1c87f11f3b",
+      "title": "Settlement",
+      "page_start": 26,
+      "page_end": 25,
+      "level": 1,
+      "child_sections": [
+        {
+          "section_id": "sec_9aba33b55e",
+          "title": "2.5",
+          "page_start": 26,
+          "page_end": 26,
+          "level": 2,
+          "child_sections": [],
+          "key_entities": [],
+          "summary": "Development",
+          "data_types_present": [],
+          "ldu_ids": [
+            "ldu_6d1aaa4b1f4b",
+            "ldu_b5feea7d28f4"
+          ]
+        }
+      ],
+      "key_entities": [],
+      "summary": "2.5",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_b5feea7d28f4",
+        "ldu_45fd01c4fa30"
+      ]
+    },
+    {
+      "section_id": "sec_9fab3d8637",
+      "title": "Development",
+      "page_start": 26,
+      "page_end": 25,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "and 4.1. EthSwitch",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_a2e0c82e864e",
+        "ldu_5282efd3eb3c",
+        "ldu_54e96a575983",
+        "ldu_6d1aaa4b1f4b"
+      ]
+    },
+    {
+      "section_id": "sec_cae51b86bf",
+      "title": "and",
+      "page_start": 26,
+      "page_end": 25,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "affordable, we PIN Settlement establishment seamless Expenses Organizational Financial Onboarding",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_cfdbb8895493",
+        "ldu_28e9f9b8e6f4",
+        "ldu_4a2494219bac",
+        "ldu_45fd01c4fa30",
+        "ldu_bb9b90ae38f7",
+        "ldu_8e193792bc91",
+        "ldu_472de82214bf",
+        "ldu_804287c3082f",
+        "ldu_eaa3798f0b2a",
+        "ldu_77fc8fdace9f",
+        "ldu_a2e0c82e864e"
+      ]
+    },
+    {
+      "section_id": "sec_8a5a4f385a",
+      "title": "establishment",
+      "page_start": 26,
+      "page_end": 25,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "of",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_b37bb6ceda50",
+        "ldu_bb9b90ae38f7"
+      ]
+    },
+    {
+      "section_id": "sec_d54468e167",
+      "title": "of",
+      "page_start": 26,
+      "page_end": 25,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "the digital making a Strategy EthSwitch the directors'",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_04522045ef5b",
+        "ldu_4577c1165bd1",
+        "ldu_f53f1525d859",
+        "ldu_6165bcd62520",
+        "ldu_f5c0510ce161",
+        "ldu_e5025f2cba98",
+        "ldu_ab11e4367b91",
+        "ldu_58c95fca350c",
+        "ldu_b37bb6ceda50"
+      ]
+    },
+    {
+      "section_id": "sec_1ab27263ac",
+      "title": "a",
+      "page_start": 26,
+      "page_end": 25,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "pivotal new Domestic",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_0b30d51c2650",
+        "ldu_b8daa1f81c9b",
+        "ldu_cd180db87ece",
+        "ldu_6165bcd62520"
+      ]
+    },
+    {
+      "section_id": "sec_52bf5c24e7",
+      "title": "Domestic",
+      "page_start": 26,
+      "page_end": 25,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "Payment",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_251a9d5cabca",
+        "ldu_cd180db87ece"
+      ]
+    },
+    {
+      "section_id": "sec_1afc542248",
+      "title": "Payment",
+      "page_start": 26,
+      "page_end": 25,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "Scheme Gateway:",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_0a38e0560579",
+        "ldu_f420bb47ba18",
+        "ldu_251a9d5cabca"
+      ]
+    },
+    {
+      "section_id": "sec_0a2c8aa588",
+      "title": "Scheme",
+      "page_start": 26,
+      "page_end": 26,
+      "level": 1,
+      "child_sections": [
+        {
+          "section_id": "sec_9e41e4ec58",
+          "title": "2.6",
+          "page_start": 27,
+          "page_end": 27,
+          "level": 2,
+          "child_sections": [],
+          "key_entities": [],
+          "summary": "Provide",
+          "data_types_present": [],
+          "ldu_ids": [
+            "ldu_70814bb7456e",
+            "ldu_6910751735f4"
+          ]
+        }
+      ],
+      "key_entities": [],
+      "summary": "2.6",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_6910751735f4",
+        "ldu_0a38e0560579"
+      ]
+    },
+    {
+      "section_id": "sec_89435b48e7",
+      "title": "Provide",
+      "page_start": 27,
+      "page_end": 26,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "secure,",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_59c30f06f548",
+        "ldu_70814bb7456e"
+      ]
+    },
+    {
+      "section_id": "sec_de1f1020f2",
+      "title": "secure,",
+      "page_start": 27,
+      "page_end": 26,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "reliable,",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_c424a11c7dae",
+        "ldu_59c30f06f548"
+      ]
+    },
+    {
+      "section_id": "sec_aa91b69953",
+      "title": "reliable,",
+      "page_start": 27,
+      "page_end": 26,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "and",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_a8dd4aff9c63",
+        "ldu_c424a11c7dae"
+      ]
+    },
+    {
+      "section_id": "sec_7ad78366d6",
+      "title": "and",
+      "page_start": 27,
+      "page_end": 26,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "affordable, we PIN Settlement establishment seamless Expenses Organizational Financial Onboarding",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_cfdbb8895493",
+        "ldu_28e9f9b8e6f4",
+        "ldu_4a2494219bac",
+        "ldu_45fd01c4fa30",
+        "ldu_bb9b90ae38f7",
+        "ldu_8e193792bc91",
+        "ldu_472de82214bf",
+        "ldu_804287c3082f",
+        "ldu_eaa3798f0b2a",
+        "ldu_77fc8fdace9f",
+        "ldu_a8dd4aff9c63"
+      ]
+    },
+    {
+      "section_id": "sec_f1b05a29da",
+      "title": "seamless",
+      "page_start": 27,
+      "page_end": 26,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "services",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_17afdfec8131",
+        "ldu_8e193792bc91"
+      ]
+    },
+    {
+      "section_id": "sec_c469c4c3ea",
+      "title": "services",
+      "page_start": 27,
+      "page_end": 26,
+      "level": 1,
+      "child_sections": [
+        {
+          "section_id": "sec_1ea7d31a9a",
+          "title": "2.7",
+          "page_start": 27,
+          "page_end": 27,
+          "level": 2,
+          "child_sections": [],
+          "key_entities": [],
+          "summary": "Projects",
+          "data_types_present": [],
+          "ldu_ids": [
+            "ldu_102e5124de28",
+            "ldu_5162eb70b12a"
+          ]
+        }
+      ],
+      "key_entities": [],
+      "summary": "2.7",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_5162eb70b12a",
+        "ldu_17afdfec8131"
+      ]
+    },
+    {
+      "section_id": "sec_c95b4faa53",
+      "title": "Projects",
+      "page_start": 27,
+      "page_end": 26,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "under",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_0b38a8d7186d",
+        "ldu_102e5124de28"
+      ]
+    },
+    {
+      "section_id": "sec_f47413ddcb",
+      "title": "under",
+      "page_start": 27,
+      "page_end": 26,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "implementation",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_f132ee0a7791",
+        "ldu_0b38a8d7186d"
+      ]
+    },
+    {
+      "section_id": "sec_6e34c81767",
+      "title": "implementation",
+      "page_start": 27,
+      "page_end": 26,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "3.",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_ce809ad9ff3a",
+        "ldu_f132ee0a7791"
+      ]
+    },
+    {
+      "section_id": "sec_7adfaacd7c",
+      "title": "3.",
+      "page_start": 27,
+      "page_end": 26,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "ማሳሰቢያ Financial",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_f8e85058fe21",
+        "ldu_24abd727644a",
+        "ldu_ce809ad9ff3a"
+      ]
+    },
+    {
+      "section_id": "sec_4a28f716ff",
+      "title": "Financial",
+      "page_start": 27,
+      "page_end": 26,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "Performance Performance Performance",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_a5aafdda6f4b",
+        "ldu_618c572ff464",
+        "ldu_e2c18455a192",
+        "ldu_24abd727644a"
+      ]
+    },
+    {
+      "section_id": "sec_e6f2ebf384",
+      "title": "Performance",
+      "page_start": 27,
+      "page_end": 26,
+      "level": 1,
+      "child_sections": [
+        {
+          "section_id": "sec_313708118a",
+          "title": "3.1.",
+          "page_start": 27,
+          "page_end": 27,
+          "level": 2,
+          "child_sections": [],
+          "key_entities": [],
+          "summary": "Assets",
+          "data_types_present": [],
+          "ldu_ids": [
+            "ldu_bb7d1e9b71f6",
+            "ldu_d666fb020045"
+          ]
+        }
+      ],
+      "key_entities": [],
+      "summary": "1.79B 2.1 3.1. Review Review",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_b596f29bbab6",
+        "ldu_3fe60bd966af",
+        "ldu_d666fb020045",
+        "ldu_0cb96c4b4a9b",
+        "ldu_32366c136c06",
+        "ldu_618c572ff464"
+      ]
+    },
+    {
+      "section_id": "sec_0fcfd29fd8",
+      "title": "Assets",
+      "page_start": 27,
+      "page_end": 27,
+      "level": 1,
+      "child_sections": [
+        {
+          "section_id": "sec_ceafa8cac3",
+          "title": "3.2.",
+          "page_start": 28,
+          "page_end": 28,
+          "level": 2,
+          "child_sections": [],
+          "key_entities": [],
+          "summary": "Capital",
+          "data_types_present": [],
+          "ldu_ids": [
+            "ldu_03bdfbd07a3b",
+            "ldu_bce60ff4d2c8"
+          ]
+        }
+      ],
+      "key_entities": [],
+      "summary": "3.2.",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_bce60ff4d2c8",
+        "ldu_bb7d1e9b71f6"
+      ]
+    },
+    {
+      "section_id": "sec_3873902532",
+      "title": "Capital",
+      "page_start": 28,
+      "page_end": 27,
+      "level": 1,
+      "child_sections": [
+        {
+          "section_id": "sec_7fb70712ea",
+          "title": "3.3.",
+          "page_start": 28,
+          "page_end": 28,
+          "level": 2,
+          "child_sections": [],
+          "key_entities": [],
+          "summary": "Revenues",
+          "data_types_present": [],
+          "ldu_ids": [
+            "ldu_fd212e00d403",
+            "ldu_68a725cdd869"
+          ]
+        }
+      ],
+      "key_entities": [],
+      "summary": "3.3.",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_68a725cdd869",
+        "ldu_03bdfbd07a3b"
+      ]
+    },
+    {
+      "section_id": "sec_0f94791c52",
+      "title": "Revenues",
+      "page_start": 28,
+      "page_end": 27,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "and",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_ac569c943b04",
+        "ldu_fd212e00d403"
+      ]
+    },
+    {
+      "section_id": "sec_9d07f2cbcd",
+      "title": "and",
+      "page_start": 28,
+      "page_end": 27,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "affordable, we PIN Settlement establishment seamless Expenses Organizational Financial Onboarding",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_cfdbb8895493",
+        "ldu_28e9f9b8e6f4",
+        "ldu_4a2494219bac",
+        "ldu_45fd01c4fa30",
+        "ldu_bb9b90ae38f7",
+        "ldu_8e193792bc91",
+        "ldu_472de82214bf",
+        "ldu_804287c3082f",
+        "ldu_eaa3798f0b2a",
+        "ldu_77fc8fdace9f",
+        "ldu_ac569c943b04"
+      ]
+    },
+    {
+      "section_id": "sec_fcb13a9e52",
+      "title": "Expenses",
+      "page_start": 28,
+      "page_end": 28,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [
+        "4%"
+      ],
+      "summary": "4%",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_fc6150dbfb3f",
+        "ldu_472de82214bf"
+      ]
+    },
+    {
+      "section_id": "sec_7dda7a4f40",
+      "title": "4%",
+      "page_start": 29,
+      "page_end": 28,
+      "level": 1,
+      "child_sections": [
+        {
+          "section_id": "sec_1793a12c03",
+          "title": "0.5%",
+          "page_start": 29,
+          "page_end": 29,
+          "level": 2,
+          "child_sections": [],
+          "key_entities": [
+            "0.1%"
+          ],
+          "summary": "0.1%",
+          "data_types_present": [],
+          "ldu_ids": [
+            "ldu_111c0145e3fb",
+            "ldu_be9391986ffe"
+          ]
+        },
+        {
+          "section_id": "sec_06e628efad",
+          "title": "0.1%",
+          "page_start": 29,
+          "page_end": 29,
+          "level": 2,
+          "child_sections": [],
+          "key_entities": [
+            "1.5%"
+          ],
+          "summary": "1.5%",
+          "data_types_present": [],
+          "ldu_ids": [
+            "ldu_127586610758",
+            "ldu_111c0145e3fb"
+          ]
+        },
+        {
+          "section_id": "sec_30ec3d5f2b",
+          "title": "1.5%",
+          "page_start": 29,
+          "page_end": 29,
+          "level": 2,
+          "child_sections": [],
+          "key_entities": [
+            "1%"
+          ],
+          "summary": "1%",
+          "data_types_present": [],
+          "ldu_ids": [
+            "ldu_c82675066d82",
+            "ldu_127586610758"
+          ]
+        }
+      ],
+      "key_entities": [
+        "0.5%"
+      ],
+      "summary": "0.5%",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_be9391986ffe",
+        "ldu_fc6150dbfb3f"
+      ]
+    },
+    {
+      "section_id": "sec_f853c7072f",
+      "title": "1%",
+      "page_start": 29,
+      "page_end": 28,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [
+        "57%"
+      ],
+      "summary": "57%",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_13604b630bc6",
+        "ldu_c82675066d82"
+      ]
+    },
+    {
+      "section_id": "sec_34f14263e9",
+      "title": "57%",
+      "page_start": 29,
+      "page_end": 28,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [
+        "36%"
+      ],
+      "summary": "36%",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_cf8537041815",
+        "ldu_13604b630bc6"
+      ]
+    },
+    {
+      "section_id": "sec_bf3e371e95",
+      "title": "36%",
+      "page_start": 29,
+      "page_end": 29,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "4.",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_392fc0ec704d",
+        "ldu_cf8537041815"
+      ]
+    },
+    {
+      "section_id": "sec_ea72fc9747",
+      "title": "4.",
+      "page_start": 30,
+      "page_end": 29,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "Strategy",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_5cb35cfdd4a1",
+        "ldu_392fc0ec704d"
+      ]
+    },
+    {
+      "section_id": "sec_a6d211eb1a",
+      "title": "Strategy",
+      "page_start": 30,
+      "page_end": 29,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "and Implementation of",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_efd70f21b653",
+        "ldu_020ee4001088",
+        "ldu_92bcfef82ad0",
+        "ldu_5cb35cfdd4a1"
+      ]
+    },
+    {
+      "section_id": "sec_2e9f98b96a",
+      "title": "and",
+      "page_start": 30,
+      "page_end": 29,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "affordable, we PIN Settlement establishment seamless Expenses Organizational Financial Onboarding",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_cfdbb8895493",
+        "ldu_28e9f9b8e6f4",
+        "ldu_4a2494219bac",
+        "ldu_45fd01c4fa30",
+        "ldu_bb9b90ae38f7",
+        "ldu_8e193792bc91",
+        "ldu_472de82214bf",
+        "ldu_804287c3082f",
+        "ldu_eaa3798f0b2a",
+        "ldu_77fc8fdace9f",
+        "ldu_efd70f21b653"
+      ]
+    },
+    {
+      "section_id": "sec_db90d7d559",
+      "title": "Organizational",
+      "page_start": 30,
+      "page_end": 29,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "Development",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_18dda1197f39",
+        "ldu_804287c3082f"
+      ]
+    },
+    {
+      "section_id": "sec_502086d1b9",
+      "title": "Development",
+      "page_start": 30,
+      "page_end": 29,
+      "level": 1,
+      "child_sections": [
+        {
+          "section_id": "sec_f680173878",
+          "title": "4.1.",
+          "page_start": 30,
+          "page_end": 30,
+          "level": 2,
+          "child_sections": [],
+          "key_entities": [],
+          "summary": "Status",
+          "data_types_present": [],
+          "ldu_ids": [
+            "ldu_512bd9b5ca02",
+            "ldu_5282efd3eb3c"
+          ]
+        }
+      ],
+      "key_entities": [],
+      "summary": "and 4.1. EthSwitch",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_a2e0c82e864e",
+        "ldu_5282efd3eb3c",
+        "ldu_54e96a575983",
+        "ldu_18dda1197f39"
+      ]
+    },
+    {
+      "section_id": "sec_af8a23e438",
+      "title": "Status",
+      "page_start": 30,
+      "page_end": 29,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "of",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_d031f52fd021",
+        "ldu_512bd9b5ca02"
+      ]
+    },
+    {
+      "section_id": "sec_ceca2c345f",
+      "title": "of",
+      "page_start": 30,
+      "page_end": 29,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "the digital making a Strategy EthSwitch the directors'",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_04522045ef5b",
+        "ldu_4577c1165bd1",
+        "ldu_f53f1525d859",
+        "ldu_6165bcd62520",
+        "ldu_f5c0510ce161",
+        "ldu_e5025f2cba98",
+        "ldu_ab11e4367b91",
+        "ldu_58c95fca350c",
+        "ldu_d031f52fd021"
+      ]
+    },
+    {
+      "section_id": "sec_5293afcc3c",
+      "title": "Strategy",
+      "page_start": 30,
+      "page_end": 29,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "and Implementation of",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_efd70f21b653",
+        "ldu_020ee4001088",
+        "ldu_92bcfef82ad0",
+        "ldu_f5c0510ce161"
+      ]
+    },
+    {
+      "section_id": "sec_1b58725d2d",
+      "title": "Implementation",
+      "page_start": 30,
+      "page_end": 30,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "The",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_8272e6df11e3",
+        "ldu_020ee4001088"
+      ]
+    },
+    {
+      "section_id": "sec_8403f8aa03",
+      "title": "The",
+      "page_start": 31,
+      "page_end": 30,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "launch Five-Year",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_720a133d9636",
+        "ldu_e10205e668dc",
+        "ldu_8272e6df11e3"
+      ]
+    },
+    {
+      "section_id": "sec_0d175336e3",
+      "title": "Five-Year",
+      "page_start": 31,
+      "page_end": 30,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "Strategy",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_51a3fe7eb960",
+        "ldu_e10205e668dc"
+      ]
+    },
+    {
+      "section_id": "sec_6d2f6a91a3",
+      "title": "Strategy",
+      "page_start": 31,
+      "page_end": 30,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "and Implementation of",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_efd70f21b653",
+        "ldu_020ee4001088",
+        "ldu_92bcfef82ad0",
+        "ldu_51a3fe7eb960"
+      ]
+    },
+    {
+      "section_id": "sec_9a55ea534a",
+      "title": "of",
+      "page_start": 31,
+      "page_end": 30,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "the digital making a Strategy EthSwitch the directors'",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_04522045ef5b",
+        "ldu_4577c1165bd1",
+        "ldu_f53f1525d859",
+        "ldu_6165bcd62520",
+        "ldu_f5c0510ce161",
+        "ldu_e5025f2cba98",
+        "ldu_ab11e4367b91",
+        "ldu_58c95fca350c",
+        "ldu_92bcfef82ad0"
+      ]
+    },
+    {
+      "section_id": "sec_c2ee544eab",
+      "title": "EthSwitch",
+      "page_start": 31,
+      "page_end": 30,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "S.C. S.C.",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_01b4e38a3b6b",
+        "ldu_ad0dcadd30f5",
+        "ldu_e5025f2cba98"
+      ]
+    },
+    {
+      "section_id": "sec_1f02affd7a",
+      "title": "S.C.",
+      "page_start": 31,
+      "page_end": 30,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "set 10",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_ec35c7ab29d9",
+        "ldu_847dc0efbd75",
+        "ldu_01b4e38a3b6b"
+      ]
+    },
+    {
+      "section_id": "sec_501116b851",
+      "title": "set",
+      "page_start": 31,
+      "page_end": 30,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "priorities",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_3866e210576d",
+        "ldu_ec35c7ab29d9"
+      ]
+    },
+    {
+      "section_id": "sec_d6881c903b",
+      "title": "priorities",
+      "page_start": 31,
+      "page_end": 30,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "into",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_b05a455d1cb1",
+        "ldu_3866e210576d"
+      ]
+    },
+    {
+      "section_id": "sec_e272e6ef40",
+      "title": "into",
+      "page_start": 31,
+      "page_end": 30,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "three",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_b33500792e50",
+        "ldu_b05a455d1cb1"
+      ]
+    },
+    {
+      "section_id": "sec_8b748810ff",
+      "title": "three",
+      "page_start": 31,
+      "page_end": 30,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "phases:",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_3f1176647c92",
+        "ldu_b33500792e50"
+      ]
+    },
+    {
+      "section_id": "sec_483672c255",
+      "title": "phases:",
+      "page_start": 31,
+      "page_end": 31,
+      "level": 1,
+      "child_sections": [
+        {
+          "section_id": "sec_11dd6fc9a7",
+          "title": "4.2.",
+          "page_start": 32,
+          "page_end": 32,
+          "level": 2,
+          "child_sections": [],
+          "key_entities": [],
+          "summary": "Other",
+          "data_types_present": [],
+          "ldu_ids": [
+            "ldu_a05112b364e4",
+            "ldu_ef1ea2302eac"
+          ]
+        }
+      ],
+      "key_entities": [],
+      "summary": "4.2.",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_ef1ea2302eac",
+        "ldu_3f1176647c92"
+      ]
+    },
+    {
+      "section_id": "sec_a984573d79",
+      "title": "Other",
+      "page_start": 32,
+      "page_end": 31,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "Development",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_a74a16952861",
+        "ldu_a05112b364e4"
+      ]
+    },
+    {
+      "section_id": "sec_037aaf986d",
+      "title": "Development",
+      "page_start": 32,
+      "page_end": 35,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "and 4.1. EthSwitch",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_a2e0c82e864e",
+        "ldu_5282efd3eb3c",
+        "ldu_54e96a575983",
+        "ldu_a74a16952861"
+      ]
+    },
+    {
+      "section_id": "sec_899e37232a",
+      "title": "EthSwitch",
+      "page_start": 36,
+      "page_end": 35,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "S.C. S.C.",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_01b4e38a3b6b",
+        "ldu_ad0dcadd30f5",
+        "ldu_54e96a575983"
+      ]
+    },
+    {
+      "section_id": "sec_667b3a9e1c",
+      "title": "S.C.",
+      "page_start": 36,
+      "page_end": 35,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "set 10",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_ec35c7ab29d9",
+        "ldu_847dc0efbd75",
+        "ldu_ad0dcadd30f5"
+      ]
+    },
+    {
+      "section_id": "sec_5e3e1e4c54",
+      "title": "10",
+      "page_start": 36,
+      "page_end": 35,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "Annual",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_440073a2be01",
+        "ldu_847dc0efbd75"
+      ]
+    },
+    {
+      "section_id": "sec_f5b94383e3",
+      "title": "Annual",
+      "page_start": 36,
+      "page_end": 35,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "Shareholders Performance",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_55a36d70c007",
+        "ldu_f51cf2e621c9",
+        "ldu_440073a2be01"
+      ]
+    },
+    {
+      "section_id": "sec_8a39f5391d",
+      "title": "Shareholders",
+      "page_start": 36,
+      "page_end": 35,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "National Meeting",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_d67985ea4da9",
+        "ldu_acba4495c004",
+        "ldu_55a36d70c007"
+      ]
+    },
+    {
+      "section_id": "sec_1ce42ab091",
+      "title": "Meeting",
+      "page_start": 36,
+      "page_end": 36,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "Annual for",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_b851d76487a8",
+        "ldu_5ebd5f779789",
+        "ldu_acba4495c004"
+      ]
+    },
+    {
+      "section_id": "sec_71c8924748",
+      "title": "Annual",
+      "page_start": 37,
+      "page_end": 36,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "Shareholders Performance",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_55a36d70c007",
+        "ldu_f51cf2e621c9",
+        "ldu_b851d76487a8"
+      ]
+    },
+    {
+      "section_id": "sec_ef5b59ac21",
+      "title": "Performance",
+      "page_start": 37,
+      "page_end": 36,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "1.79B 2.1 3.1. Review Review",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_b596f29bbab6",
+        "ldu_3fe60bd966af",
+        "ldu_d666fb020045",
+        "ldu_0cb96c4b4a9b",
+        "ldu_32366c136c06",
+        "ldu_f51cf2e621c9"
+      ]
+    },
+    {
+      "section_id": "sec_32ea835e74",
+      "title": "Review",
+      "page_start": 37,
+      "page_end": 36,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [
+        "2023"
+      ],
+      "summary": "Meeting 2023/24:",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_73132a552b76",
+        "ldu_323dc9130929",
+        "ldu_0cb96c4b4a9b"
+      ]
+    },
+    {
+      "section_id": "sec_dce7df924a",
+      "title": "Meeting",
+      "page_start": 37,
+      "page_end": 36,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "Annual for",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_b851d76487a8",
+        "ldu_5ebd5f779789",
+        "ldu_73132a552b76"
+      ]
+    },
+    {
+      "section_id": "sec_b64da0822f",
+      "title": "for",
+      "page_start": 37,
+      "page_end": 36,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "Payments FY Their the",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_300d34380683",
+        "ldu_273f3316d0a0",
+        "ldu_594405032bd7",
+        "ldu_401c0a6a260d",
+        "ldu_5ebd5f779789"
+      ]
+    },
+    {
+      "section_id": "sec_1eedcc4364",
+      "title": "FY",
+      "page_start": 37,
+      "page_end": 36,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [
+        "2023",
+        "2024"
+      ],
+      "summary": "2023-2024",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_218082b950bc",
+        "ldu_273f3316d0a0"
+      ]
+    },
+    {
+      "section_id": "sec_b7a489769b",
+      "title": "2023-2024",
+      "page_start": 37,
+      "page_end": 37,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "Semi-Annual",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_d9b6f084a23d",
+        "ldu_218082b950bc"
+      ]
+    },
+    {
+      "section_id": "sec_1d4a921ce0",
+      "title": "Semi-Annual",
+      "page_start": 38,
+      "page_end": 37,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "Operational",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_4a475b11ffd4",
+        "ldu_d9b6f084a23d"
+      ]
+    },
+    {
+      "section_id": "sec_867bfae13f",
+      "title": "Operational",
+      "page_start": 38,
+      "page_end": 37,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "Performance and",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_9af2f28739ff",
+        "ldu_778da2f819af",
+        "ldu_4a475b11ffd4"
+      ]
+    },
+    {
+      "section_id": "sec_95dd547015",
+      "title": "and",
+      "page_start": 38,
+      "page_end": 37,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "affordable, we PIN Settlement establishment seamless Expenses Organizational Financial Onboarding",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_cfdbb8895493",
+        "ldu_28e9f9b8e6f4",
+        "ldu_4a2494219bac",
+        "ldu_45fd01c4fa30",
+        "ldu_bb9b90ae38f7",
+        "ldu_8e193792bc91",
+        "ldu_472de82214bf",
+        "ldu_804287c3082f",
+        "ldu_eaa3798f0b2a",
+        "ldu_77fc8fdace9f",
+        "ldu_778da2f819af"
+      ]
+    },
+    {
+      "section_id": "sec_ce667a986e",
+      "title": "Financial",
+      "page_start": 38,
+      "page_end": 37,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "Performance Performance Performance",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_a5aafdda6f4b",
+        "ldu_618c572ff464",
+        "ldu_e2c18455a192",
+        "ldu_eaa3798f0b2a"
+      ]
+    },
+    {
+      "section_id": "sec_579f51ac47",
+      "title": "Performance",
+      "page_start": 38,
+      "page_end": 37,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "1.79B 2.1 3.1. Review Review",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_b596f29bbab6",
+        "ldu_3fe60bd966af",
+        "ldu_d666fb020045",
+        "ldu_0cb96c4b4a9b",
+        "ldu_32366c136c06",
+        "ldu_e2c18455a192"
+      ]
+    },
+    {
+      "section_id": "sec_49ffeb12bb",
+      "title": "Review",
+      "page_start": 38,
+      "page_end": 37,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [
+        "2023"
+      ],
+      "summary": "Meeting 2023/24:",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_73132a552b76",
+        "ldu_323dc9130929",
+        "ldu_32366c136c06"
+      ]
+    },
+    {
+      "section_id": "sec_d20630cf52",
+      "title": "2023/24:",
+      "page_start": 38,
+      "page_end": 38,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "National",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_8bc9b003aa58",
+        "ldu_323dc9130929"
+      ]
+    },
+    {
+      "section_id": "sec_26ade6288e",
+      "title": "National",
+      "page_start": 39,
+      "page_end": 38,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "Data Payment",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_8a4c1fa0cedb",
+        "ldu_370bf008b44d",
+        "ldu_8bc9b003aa58"
+      ]
+    },
+    {
+      "section_id": "sec_3f5e4d32e2",
+      "title": "Payment",
+      "page_start": 39,
+      "page_end": 38,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "Scheme Gateway:",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_0a38e0560579",
+        "ldu_f420bb47ba18",
+        "ldu_370bf008b44d"
+      ]
+    },
+    {
+      "section_id": "sec_d3532564ea",
+      "title": "Gateway:",
+      "page_start": 39,
+      "page_end": 38,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "Official",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_ae4e5d2d86f4",
+        "ldu_f420bb47ba18"
+      ]
+    },
+    {
+      "section_id": "sec_26aeafb20b",
+      "title": "Official",
+      "page_start": 39,
+      "page_end": 38,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "Announcement",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_63233569a64a",
+        "ldu_ae4e5d2d86f4"
+      ]
+    },
+    {
+      "section_id": "sec_6e608df8e7",
+      "title": "Announcement",
+      "page_start": 39,
+      "page_end": 38,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "and",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_6eb42c81960f",
+        "ldu_63233569a64a"
+      ]
+    },
+    {
+      "section_id": "sec_889535740e",
+      "title": "and",
+      "page_start": 39,
+      "page_end": 38,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "affordable, we PIN Settlement establishment seamless Expenses Organizational Financial Onboarding",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_cfdbb8895493",
+        "ldu_28e9f9b8e6f4",
+        "ldu_4a2494219bac",
+        "ldu_45fd01c4fa30",
+        "ldu_bb9b90ae38f7",
+        "ldu_8e193792bc91",
+        "ldu_472de82214bf",
+        "ldu_804287c3082f",
+        "ldu_eaa3798f0b2a",
+        "ldu_77fc8fdace9f",
+        "ldu_6eb42c81960f"
+      ]
+    },
+    {
+      "section_id": "sec_957a045480",
+      "title": "Onboarding",
+      "page_start": 39,
+      "page_end": 38,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "Program",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_bddfb5ba5c21",
+        "ldu_77fc8fdace9f"
+      ]
+    },
+    {
+      "section_id": "sec_2127fe0e12",
+      "title": "Program",
+      "page_start": 39,
+      "page_end": 39,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "Ethswitch",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_000d698e4a18",
+        "ldu_bddfb5ba5c21"
+      ]
+    },
+    {
+      "section_id": "sec_c14ee37f0b",
+      "title": "Ethswitch",
+      "page_start": 40,
+      "page_end": 39,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "Honors Share",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_dc5bca5c7092",
+        "ldu_82e86160d4fd",
+        "ldu_000d698e4a18"
+      ]
+    },
+    {
+      "section_id": "sec_2af8566994",
+      "title": "Honors",
+      "page_start": 40,
+      "page_end": 39,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "Local",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_a0612310f3ce",
+        "ldu_dc5bca5c7092"
+      ]
+    },
+    {
+      "section_id": "sec_631644a8e0",
+      "title": "Local",
+      "page_start": 40,
+      "page_end": 39,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "NGOs",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_3ea4b5f956f1",
+        "ldu_a0612310f3ce"
+      ]
+    },
+    {
+      "section_id": "sec_4dcc02708c",
+      "title": "NGOs",
+      "page_start": 40,
+      "page_end": 39,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "for",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_44fba79cfa7e",
+        "ldu_3ea4b5f956f1"
+      ]
+    },
+    {
+      "section_id": "sec_1a2ebea3a6",
+      "title": "for",
+      "page_start": 40,
+      "page_end": 39,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "Payments FY Their the",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_300d34380683",
+        "ldu_273f3316d0a0",
+        "ldu_594405032bd7",
+        "ldu_401c0a6a260d",
+        "ldu_44fba79cfa7e"
+      ]
+    },
+    {
+      "section_id": "sec_de935ef26d",
+      "title": "Their",
+      "page_start": 40,
+      "page_end": 39,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "Impactful",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_32692b9eddd8",
+        "ldu_594405032bd7"
+      ]
+    },
+    {
+      "section_id": "sec_d02b9ecb35",
+      "title": "Impactful",
+      "page_start": 40,
+      "page_end": 39,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "Contributions",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_58109c4bd3e1",
+        "ldu_32692b9eddd8"
+      ]
+    },
+    {
+      "section_id": "sec_0b841924ae",
+      "title": "Contributions",
+      "page_start": 40,
+      "page_end": 44,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "AUDITORS’",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_0acb3006fc8c",
+        "ldu_58109c4bd3e1"
+      ]
+    },
+    {
+      "section_id": "sec_a7ec72cd89",
+      "title": "AUDITORS’",
+      "page_start": 45,
+      "page_end": 44,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "REPORT",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_0f1ee4c16cc1",
+        "ldu_0acb3006fc8c"
+      ]
+    },
+    {
+      "section_id": "sec_fe0ca9a65a",
+      "title": "REPORT",
+      "page_start": 45,
+      "page_end": 44,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [
+        "2023"
+      ],
+      "summary": "2023 1. 2. REPORTS",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_20b728d4b8bd",
+        "ldu_7bb89cd85a09",
+        "ldu_799d30f5b943",
+        "ldu_13509b7da930",
+        "ldu_0f1ee4c16cc1"
+      ]
+    },
+    {
+      "section_id": "sec_f4ea882016",
+      "title": "REPORTS",
+      "page_start": 45,
+      "page_end": 44,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "AND",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_e101cca77f60",
+        "ldu_13509b7da930"
+      ]
+    },
+    {
+      "section_id": "sec_fdae5fa177",
+      "title": "AND",
+      "page_start": 45,
+      "page_end": 44,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "FINANCIAL",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_cad9919f2ce4",
+        "ldu_e101cca77f60"
+      ]
+    },
+    {
+      "section_id": "sec_ac428a88a9",
+      "title": "FINANCIAL",
+      "page_start": 45,
+      "page_end": 44,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "YEAR STATEMENTS",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_c41005ca9763",
+        "ldu_3e5f9a832ddb",
+        "ldu_cad9919f2ce4"
+      ]
+    },
+    {
+      "section_id": "sec_2e490b9c50",
+      "title": "STATEMENTS",
+      "page_start": 45,
+      "page_end": 44,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "for",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_78f3b7314ee8",
+        "ldu_3e5f9a832ddb"
+      ]
+    },
+    {
+      "section_id": "sec_c24ef7509a",
+      "title": "for",
+      "page_start": 45,
+      "page_end": 44,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "Payments FY Their the",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_300d34380683",
+        "ldu_273f3316d0a0",
+        "ldu_594405032bd7",
+        "ldu_401c0a6a260d",
+        "ldu_78f3b7314ee8"
+      ]
+    },
+    {
+      "section_id": "sec_aec5f13437",
+      "title": "the",
+      "page_start": 45,
+      "page_end": 44,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "Ethiopian years year Year directors period",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_8ade5e85d95d",
+        "ldu_417c0fe8ab16",
+        "ldu_c9871786e8d2",
+        "ldu_302100aba850",
+        "ldu_27f6de8c0c2a",
+        "ldu_cea8b01f81ae",
+        "ldu_401c0a6a260d"
+      ]
+    },
+    {
+      "section_id": "sec_a029465aab",
+      "title": "year",
+      "page_start": 45,
+      "page_end": 44,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "Ended",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_6a7939373b98",
+        "ldu_c9871786e8d2"
+      ]
+    },
+    {
+      "section_id": "sec_2d58ff871f",
+      "title": "Ended",
+      "page_start": 45,
+      "page_end": 44,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "30 30",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_8fb7d3956605",
+        "ldu_bee71b500379",
+        "ldu_6a7939373b98"
+      ]
+    },
+    {
+      "section_id": "sec_1a20a234e3",
+      "title": "30",
+      "page_start": 45,
+      "page_end": 44,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "June June June June",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_d7ea7dd5a7c0",
+        "ldu_13d2a501d457",
+        "ldu_b4fcb088624f",
+        "ldu_7d0ab8776a38",
+        "ldu_bee71b500379"
+      ]
+    },
+    {
+      "section_id": "sec_91c9bb97c7",
+      "title": "June",
+      "page_start": 45,
+      "page_end": 44,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [
+        "2024"
+      ],
+      "summary": "2024 2024 2024 2024",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_fbe6cbc5e5e7",
+        "ldu_3344e6e75453",
+        "ldu_0445575a2712",
+        "ldu_35818177a8da",
+        "ldu_13d2a501d457"
+      ]
+    },
+    {
+      "section_id": "sec_d81e94f8d6",
+      "title": "2024",
+      "page_start": 45,
+      "page_end": 44,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "FOR CONTENTS ETHSWITCH Report Statement",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_c68df13c703c",
+        "ldu_a12b20ec03fb",
+        "ldu_25a720988733",
+        "ldu_296d61f513bc",
+        "ldu_ded6469560c5",
+        "ldu_3344e6e75453"
+      ]
+    },
+    {
+      "section_id": "sec_99f1e7f813",
+      "title": "ETHSWITCH",
+      "page_start": 45,
+      "page_end": 44,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "SHARE SHARE",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_c9ae96547a8b",
+        "ldu_4c4966377b63",
+        "ldu_25a720988733"
+      ]
+    },
+    {
+      "section_id": "sec_56bca6acd5",
+      "title": "SHARE",
+      "page_start": 45,
+      "page_end": 44,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "COMPANY COMPANY",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_0d6df37ae8fa",
+        "ldu_f1b9581279a6",
+        "ldu_c9ae96547a8b"
+      ]
+    },
+    {
+      "section_id": "sec_86f933d133",
+      "title": "COMPANY",
+      "page_start": 45,
+      "page_end": 47,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "ETHSWITCH IFRS",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_7bd54806ed0f",
+        "ldu_0241c1fc795f",
+        "ldu_0d6df37ae8fa"
+      ]
+    },
+    {
+      "section_id": "sec_d47947c613",
+      "title": "ETHSWITCH",
+      "page_start": 48,
+      "page_end": 47,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "SHARE SHARE",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_c9ae96547a8b",
+        "ldu_4c4966377b63",
+        "ldu_7bd54806ed0f"
+      ]
+    },
+    {
+      "section_id": "sec_39456002fa",
+      "title": "SHARE",
+      "page_start": 48,
+      "page_end": 47,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "COMPANY COMPANY",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_0d6df37ae8fa",
+        "ldu_f1b9581279a6",
+        "ldu_4c4966377b63"
+      ]
+    },
+    {
+      "section_id": "sec_67aeb15000",
+      "title": "COMPANY",
+      "page_start": 48,
+      "page_end": 47,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "ETHSWITCH IFRS",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_7bd54806ed0f",
+        "ldu_0241c1fc795f",
+        "ldu_f1b9581279a6"
+      ]
+    },
+    {
+      "section_id": "sec_1769e3071c",
+      "title": "IFRS",
+      "page_start": 48,
+      "page_end": 47,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "financial financial",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_6091188b4d54",
+        "ldu_8cae24e83a1c",
+        "ldu_0241c1fc795f"
+      ]
+    },
+    {
+      "section_id": "sec_55a3a7fdd8",
+      "title": "financial",
+      "page_start": 48,
+      "page_end": 47,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "statements statements",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_6bf14de8c8f6",
+        "ldu_7e2dedcc4f78",
+        "ldu_6091188b4d54"
+      ]
+    },
+    {
+      "section_id": "sec_10961c66ce",
+      "title": "statements",
+      "page_start": 48,
+      "page_end": 47,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "For For",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_19292fb2c4c2",
+        "ldu_fba8440e436b",
+        "ldu_6bf14de8c8f6"
+      ]
+    },
+    {
+      "section_id": "sec_c9cf3c8ed6",
+      "title": "For",
+      "page_start": 48,
+      "page_end": 47,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "the the",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_79a305474958",
+        "ldu_cf9e66856362",
+        "ldu_19292fb2c4c2"
+      ]
+    },
+    {
+      "section_id": "sec_3a8b981bae",
+      "title": "the",
+      "page_start": 48,
+      "page_end": 47,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "Ethiopian years year Year directors period",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_8ade5e85d95d",
+        "ldu_417c0fe8ab16",
+        "ldu_c9871786e8d2",
+        "ldu_302100aba850",
+        "ldu_27f6de8c0c2a",
+        "ldu_cea8b01f81ae",
+        "ldu_79a305474958"
+      ]
+    },
+    {
+      "section_id": "sec_92d06ccfbc",
+      "title": "Year",
+      "page_start": 48,
+      "page_end": 47,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "ended",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_e74af33df0b6",
+        "ldu_302100aba850"
+      ]
+    },
+    {
+      "section_id": "sec_48ab251b4e",
+      "title": "ended",
+      "page_start": 48,
+      "page_end": 47,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "30 30",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_84b8126279a9",
+        "ldu_a50d44a098b7",
+        "ldu_e74af33df0b6"
+      ]
+    },
+    {
+      "section_id": "sec_79644124ce",
+      "title": "30",
+      "page_start": 48,
+      "page_end": 47,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "June June June June",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_d7ea7dd5a7c0",
+        "ldu_13d2a501d457",
+        "ldu_b4fcb088624f",
+        "ldu_7d0ab8776a38",
+        "ldu_84b8126279a9"
+      ]
+    },
+    {
+      "section_id": "sec_c1952a01c2",
+      "title": "June",
+      "page_start": 48,
+      "page_end": 47,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [
+        "2024"
+      ],
+      "summary": "2024 2024 2024 2024",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_fbe6cbc5e5e7",
+        "ldu_3344e6e75453",
+        "ldu_0445575a2712",
+        "ldu_35818177a8da",
+        "ldu_b4fcb088624f"
+      ]
+    },
+    {
+      "section_id": "sec_35839731fa",
+      "title": "2024",
+      "page_start": 48,
+      "page_end": 47,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "FOR CONTENTS ETHSWITCH Report Statement",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_c68df13c703c",
+        "ldu_a12b20ec03fb",
+        "ldu_25a720988733",
+        "ldu_296d61f513bc",
+        "ldu_ded6469560c5",
+        "ldu_0445575a2712"
+      ]
+    },
+    {
+      "section_id": "sec_c2771629aa",
+      "title": "Report",
+      "page_start": 48,
+      "page_end": 47,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "of",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_8a687f2149e0",
+        "ldu_296d61f513bc"
+      ]
+    },
+    {
+      "section_id": "sec_49c6eb51a8",
+      "title": "of",
+      "page_start": 48,
+      "page_end": 47,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "the digital making a Strategy EthSwitch the directors'",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_04522045ef5b",
+        "ldu_4577c1165bd1",
+        "ldu_f53f1525d859",
+        "ldu_6165bcd62520",
+        "ldu_f5c0510ce161",
+        "ldu_e5025f2cba98",
+        "ldu_ab11e4367b91",
+        "ldu_58c95fca350c",
+        "ldu_8a687f2149e0"
+      ]
+    },
+    {
+      "section_id": "sec_03d5952de7",
+      "title": "the",
+      "page_start": 48,
+      "page_end": 47,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "Ethiopian years year Year directors period",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_8ade5e85d95d",
+        "ldu_417c0fe8ab16",
+        "ldu_c9871786e8d2",
+        "ldu_302100aba850",
+        "ldu_27f6de8c0c2a",
+        "ldu_cea8b01f81ae",
+        "ldu_ab11e4367b91"
+      ]
+    },
+    {
+      "section_id": "sec_973dd70f33",
+      "title": "directors",
+      "page_start": 48,
+      "page_end": 48,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "Ethswitch",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_0af73f6edea1",
+        "ldu_27f6de8c0c2a"
+      ]
+    },
+    {
+      "section_id": "sec_c9b64eef62",
+      "title": "Ethswitch",
+      "page_start": 49,
+      "page_end": 48,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "Honors Share",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_dc5bca5c7092",
+        "ldu_82e86160d4fd",
+        "ldu_0af73f6edea1"
+      ]
+    },
+    {
+      "section_id": "sec_65435ccdf2",
+      "title": "Share",
+      "page_start": 49,
+      "page_end": 48,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "Company",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_c77d270da2bc",
+        "ldu_82e86160d4fd"
+      ]
+    },
+    {
+      "section_id": "sec_0f20167885",
+      "title": "Company",
+      "page_start": 49,
+      "page_end": 48,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "IFRS",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_16a628bf5efa",
+        "ldu_c77d270da2bc"
+      ]
+    },
+    {
+      "section_id": "sec_9074ef2ec2",
+      "title": "IFRS",
+      "page_start": 49,
+      "page_end": 48,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "financial financial",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_6091188b4d54",
+        "ldu_8cae24e83a1c",
+        "ldu_16a628bf5efa"
+      ]
+    },
+    {
+      "section_id": "sec_b5758005c4",
+      "title": "financial",
+      "page_start": 49,
+      "page_end": 48,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "statements statements",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_6bf14de8c8f6",
+        "ldu_7e2dedcc4f78",
+        "ldu_8cae24e83a1c"
+      ]
+    },
+    {
+      "section_id": "sec_06c3cd5368",
+      "title": "statements",
+      "page_start": 49,
+      "page_end": 48,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "For For",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_19292fb2c4c2",
+        "ldu_fba8440e436b",
+        "ldu_7e2dedcc4f78"
+      ]
+    },
+    {
+      "section_id": "sec_58093ddfe2",
+      "title": "For",
+      "page_start": 49,
+      "page_end": 48,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "the the",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_79a305474958",
+        "ldu_cf9e66856362",
+        "ldu_fba8440e436b"
+      ]
+    },
+    {
+      "section_id": "sec_5d833ba23f",
+      "title": "the",
+      "page_start": 49,
+      "page_end": 48,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "Ethiopian years year Year directors period",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_8ade5e85d95d",
+        "ldu_417c0fe8ab16",
+        "ldu_c9871786e8d2",
+        "ldu_302100aba850",
+        "ldu_27f6de8c0c2a",
+        "ldu_cea8b01f81ae",
+        "ldu_cf9e66856362"
+      ]
+    },
+    {
+      "section_id": "sec_0badf2cc2f",
+      "title": "period",
+      "page_start": 49,
+      "page_end": 48,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "ended",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_bc1b3f6772c4",
+        "ldu_cea8b01f81ae"
+      ]
+    },
+    {
+      "section_id": "sec_36dfdfb186",
+      "title": "ended",
+      "page_start": 49,
+      "page_end": 48,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "30 30",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_84b8126279a9",
+        "ldu_a50d44a098b7",
+        "ldu_bc1b3f6772c4"
+      ]
+    },
+    {
+      "section_id": "sec_a488aabf76",
+      "title": "30",
+      "page_start": 49,
+      "page_end": 48,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "June June June June",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_d7ea7dd5a7c0",
+        "ldu_13d2a501d457",
+        "ldu_b4fcb088624f",
+        "ldu_7d0ab8776a38",
+        "ldu_a50d44a098b7"
+      ]
+    },
+    {
+      "section_id": "sec_d203430a29",
+      "title": "June",
+      "page_start": 49,
+      "page_end": 48,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [
+        "2024"
+      ],
+      "summary": "2024 2024 2024 2024",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_fbe6cbc5e5e7",
+        "ldu_3344e6e75453",
+        "ldu_0445575a2712",
+        "ldu_35818177a8da",
+        "ldu_7d0ab8776a38"
+      ]
+    },
+    {
+      "section_id": "sec_3736369b62",
+      "title": "2024",
+      "page_start": 49,
+      "page_end": 48,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "FOR CONTENTS ETHSWITCH Report Statement",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_c68df13c703c",
+        "ldu_a12b20ec03fb",
+        "ldu_25a720988733",
+        "ldu_296d61f513bc",
+        "ldu_ded6469560c5",
+        "ldu_35818177a8da"
+      ]
+    },
+    {
+      "section_id": "sec_34d8375529",
+      "title": "Statement",
+      "page_start": 49,
+      "page_end": 48,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "of",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_10856c5ac274",
+        "ldu_ded6469560c5"
+      ]
+    },
+    {
+      "section_id": "sec_174039bb7d",
+      "title": "of",
+      "page_start": 49,
+      "page_end": 48,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "the digital making a Strategy EthSwitch the directors'",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_04522045ef5b",
+        "ldu_4577c1165bd1",
+        "ldu_f53f1525d859",
+        "ldu_6165bcd62520",
+        "ldu_f5c0510ce161",
+        "ldu_e5025f2cba98",
+        "ldu_ab11e4367b91",
+        "ldu_58c95fca350c",
+        "ldu_10856c5ac274"
+      ]
+    },
+    {
+      "section_id": "sec_9bbb85832c",
+      "title": "directors'",
+      "page_start": 49,
+      "page_end": 48,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "responsibilities",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_c544e73bcfd4",
+        "ldu_58c95fca350c"
+      ]
+    },
+    {
+      "section_id": "sec_c00677cdb3",
+      "title": "responsibilities",
+      "page_start": 49,
+      "page_end": 89,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "1",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_fd636b936477",
+        "ldu_c544e73bcfd4"
+      ]
+    },
+    {
+      "section_id": "sec_cd8ad2683f",
+      "title": "1",
+      "page_start": 90,
+      "page_end": 89,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "2",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_0a8b59866c31",
+        "ldu_fd636b936477"
+      ]
+    },
+    {
+      "section_id": "sec_b8b8a3ea7e",
+      "title": "2",
+      "page_start": 90,
+      "page_end": 89,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "3",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_073ef25357e3",
+        "ldu_0a8b59866c31"
+      ]
+    },
+    {
+      "section_id": "sec_75797764f4",
+      "title": "3",
+      "page_start": 90,
+      "page_end": 89,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "5",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_e6afd443af34",
+        "ldu_073ef25357e3"
+      ]
+    },
+    {
+      "section_id": "sec_22bc75d9f0",
+      "title": "5",
+      "page_start": 90,
+      "page_end": 89,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "4",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_3ff952ccd638",
+        "ldu_e6afd443af34"
+      ]
+    },
+    {
+      "section_id": "sec_1f8033584f",
+      "title": "4",
+      "page_start": 90,
+      "page_end": 89,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "MANDATE",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_b930b45f8d6d",
+        "ldu_3ff952ccd638"
+      ]
+    },
+    {
+      "section_id": "sec_f7c01c9a09",
+      "title": "MANDATE",
+      "page_start": 90,
+      "page_end": 89,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "&",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_c697618cc8b0",
+        "ldu_b930b45f8d6d"
+      ]
+    },
+    {
+      "section_id": "sec_2e84e32480",
+      "title": "&",
+      "page_start": 90,
+      "page_end": 89,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "CORE",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_d7791ee6abed",
+        "ldu_c697618cc8b0"
+      ]
+    },
+    {
+      "section_id": "sec_86ee64ae0c",
+      "title": "CORE",
+      "page_start": 90,
+      "page_end": 89,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "SERVICES",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_40ec68a401d9",
+        "ldu_d7791ee6abed"
+      ]
+    },
+    {
+      "section_id": "sec_f57dcc9cc1",
+      "title": "SERVICES",
+      "page_start": 90,
+      "page_end": 92,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [
+        "2023",
+        "2017",
+        "2005"
+      ],
+      "summary": "Digital Payments Landscape 18 2. Operational Performance 22 2.1 Interoperable Transactions 23 2.2 Card and PIN Personalization 25 2.3 Dispute Management 25 2.4 Clearing and Settlement 26 Development and establishment of a Domestic 2.5 26 Payment Scheme 2.6 Provide secure, reliable, and seamless services 27 2.7 Project Implementation Status 27 3.",
+      "data_types_present": [
+        "table",
+        "figure",
+        "text"
+      ],
+      "ldu_ids": [
+        "ldu_8ceece1b35f3",
+        "ldu_c22f5b172915",
+        "ldu_a4d5049403a3",
+        "ldu_fedf851436dd",
+        "ldu_30fe6274fda2",
+        "ldu_2535d6243d7c",
+        "ldu_981c355ae86d",
+        "ldu_c83a3495482a",
+        "ldu_bab19c112e22",
+        "ldu_b9bcfc5c0cc8",
+        "ldu_eb358f110870",
+        "ldu_0129c228ee3a",
+        "ldu_8b89301d56b0",
+        "ldu_a24ea20cc6eb",
+        "ldu_da8a7474eb8e",
+        "ldu_b848d1c7d84d",
+        "ldu_343204382433",
+        "ldu_6e89b1d316bf",
+        "ldu_38ce8808d6f1",
+        "ldu_bc1ba0a27b13",
+        "ldu_629caa5c7226",
+        "ldu_ee987e5da855",
+        "ldu_8b3e3d460495",
+        "ldu_509f8b6155ac",
+        "ldu_2664827f1955",
+        "ldu_329da7ec314b",
+        "ldu_7c8e686e2dae",
+        "ldu_0c266323f944",
+        "ldu_97c81f659238",
+        "ldu_7fdb050e1572",
+        "ldu_69aad1d653d2",
+        "ldu_bfef9c25d58f",
+        "ldu_eb983a662111",
+        "ldu_302233387df3",
+        "ldu_002f9973853b",
+        "ldu_904edf545567",
+        "ldu_2b4f54c64641",
+        "ldu_c944b3ad9bc7",
+        "ldu_a5fade2273b4",
+        "ldu_0aade017d086",
+        "ldu_332933aeeccc",
+        "ldu_96ec4832513b",
+        "ldu_2c09287ed77f",
+        "ldu_ede2da890488",
+        "ldu_b76617566c58",
+        "ldu_660b80b5e757",
+        "ldu_29983fd3bb4a",
+        "ldu_2fceff2c781e",
+        "ldu_ba323caa9c9b",
+        "ldu_57a613934d78",
+        "ldu_14dcd1e33666",
+        "ldu_664272d665fe",
+        "ldu_3ff6a5c7faf3",
+        "ldu_f8f5f3541fa2",
+        "ldu_dde1e456c0cd",
+        "ldu_e46448b28cab",
+        "ldu_a80346dd5454",
+        "ldu_66dd4667289e",
+        "ldu_24944c52b3f9",
+        "ldu_394cbdbad2b2",
+        "ldu_69f861102c6e",
+        "ldu_10caf62cc8e0",
+        "ldu_6c6ee5dad09e",
+        "ldu_f4677c718e5c",
+        "ldu_4c194f4ae778",
+        "ldu_3d010cefe0ff",
+        "ldu_aed0282c4b7d",
+        "ldu_540fd6ed1bb1",
+        "ldu_10b0dab0ed1a",
+        "ldu_4a4437217d0e",
+        "ldu_94518c4a9276",
+        "ldu_5e180e79722e",
+        "ldu_424bcbd829f6",
+        "ldu_02a1858ee8c8",
+        "ldu_d32ce9abe144",
+        "ldu_fbfab0bff048",
+        "ldu_6f7615996cb8",
+        "ldu_2ff0eb12f2c2",
+        "ldu_f06f7b7136cb",
+        "ldu_a67d1aa48155",
+        "ldu_6a4a7240b73d",
+        "ldu_539899c81511",
+        "ldu_f0137f55219b",
+        "ldu_8db37368d825",
+        "ldu_06b32b559e67",
+        "ldu_a98d5518928e",
+        "ldu_1e8d9e8e665d",
+        "ldu_f26694cacf0e",
+        "ldu_e5e35657eaad",
+        "ldu_806ed9c4e34b",
+        "ldu_128925eb9e03",
+        "ldu_a9045a944938",
+        "ldu_c3fbedc8027c",
+        "ldu_cdecd77f81c2",
+        "ldu_375e8bf58834",
+        "ldu_f71294cbaf03",
+        "ldu_c556c1dc6513",
+        "ldu_7705f4fd5fce",
+        "ldu_48eb41c3eb9b",
+        "ldu_31fbefe7fccd",
+        "ldu_9709d92f14cf",
+        "ldu_11c915ceff96",
+        "ldu_d45c612fb8b3",
+        "ldu_9bc38cc5986a",
+        "ldu_4e21482ef27d",
+        "ldu_fc15bfca68b4",
+        "ldu_66957c777961",
+        "ldu_8877847263cb",
+        "ldu_004ac13e8809",
+        "ldu_f6aafff1804a",
+        "ldu_f01125931b05",
+        "ldu_c3f5cb3d9cc5",
+        "ldu_977171763717",
+        "ldu_53b22ca8a2b8",
+        "ldu_5bd3a612d2a2",
+        "ldu_f93a92a421ef",
+        "ldu_8eca81095695",
+        "ldu_17ddc6b9d847",
+        "ldu_0df3e1887040",
+        "ldu_24af50260956",
+        "ldu_3282152f24b1",
+        "ldu_fb7c69536180",
+        "ldu_3a76b2b31f30",
+        "ldu_8d54c90b811d",
+        "ldu_60690d40949f",
+        "ldu_80049a6145ff",
+        "ldu_f976b1d78326",
+        "ldu_bde643bf5d6e",
+        "ldu_094feddc0ffd",
+        "ldu_1bf310e636ba",
+        "ldu_575b8c269baf",
+        "ldu_b83fea3f62a9",
+        "ldu_3a318eb5e0d3",
+        "ldu_38ebe9caf4d5",
+        "ldu_35d4cd398bb0",
+        "ldu_b758845dc3a5",
+        "ldu_e6eb98299053",
+        "ldu_0a1851225b5a",
+        "ldu_a2b92ab90c66",
+        "ldu_b956d4c527ee",
+        "ldu_fb7c3365b54c",
+        "ldu_2f83f24dc7f8",
+        "ldu_ffc4adc9cf12",
+        "ldu_45069362bab7",
+        "ldu_ca729d39a0a1",
+        "ldu_b962c6ec8dae",
+        "ldu_a992ed6036aa",
+        "ldu_11ddc2ed2356",
+        "ldu_ddffc5bcfce0",
+        "ldu_4c2912f440fa",
+        "ldu_6d4b1c12d6fe",
+        "ldu_c27bb2e128ba",
+        "ldu_101d64765265",
+        "ldu_3dd08474fd1c",
+        "ldu_55760574aa3b",
+        "ldu_36ac1a0e9523",
+        "ldu_a1c5febe0b6b",
+        "ldu_c62167474548",
+        "ldu_2a2292f5751d",
+        "ldu_b72290f07d61",
+        "ldu_76a4139bcdcb",
+        "ldu_613c602a458f",
+        "ldu_f8fe321b88d5",
+        "ldu_9fe562bbea69",
+        "ldu_577aaf8dde16",
+        "ldu_dfc7b0ecbed1",
+        "ldu_2ccde9d7ce34",
+        "ldu_4ae05a2941a9",
+        "ldu_5a4e23af58fa",
+        "ldu_a77627034c91",
+        "ldu_b199a6347f70",
+        "ldu_a8cc1e722a57",
+        "ldu_929ef6f3e4f7",
+        "ldu_684af646dcca",
+        "ldu_c2e703e3d853",
+        "ldu_b74c5da4a18f",
+        "ldu_573e94f9c35c",
+        "ldu_c262930a2364",
+        "ldu_86eb995d3d9c",
+        "ldu_e50d2ba8add1",
+        "ldu_87f0d11dc94c",
+        "ldu_ce10d554778b",
+        "ldu_b94943945c22",
+        "ldu_36c71ee5213f",
+        "ldu_36a1581b46ef",
+        "ldu_8cdd185bd603",
+        "ldu_8b509b024642",
+        "ldu_ac81bd0fb394",
+        "ldu_500d007fb92b",
+        "ldu_f83ce7833e3f",
+        "ldu_47bf124b6c9d",
+        "ldu_179801840145",
+        "ldu_988f5387acab",
+        "ldu_20f1cb755283",
+        "ldu_85688e0e5cc7",
+        "ldu_5958e8ef9fc3",
+        "ldu_79aa290b89f4",
+        "ldu_57ce0d5e2ab6",
+        "ldu_ffbd93703521",
+        "ldu_58f89a8815ef",
+        "ldu_cd0baf1e903f",
+        "ldu_176b80062c92",
+        "ldu_e31d3ad63afa",
+        "ldu_23fbc5fff942",
+        "ldu_6b3ca745b18a",
+        "ldu_df324c34b07f",
+        "ldu_cb935dc6be72",
+        "ldu_a6687f6ded83",
+        "ldu_4aedae14cb5f",
+        "ldu_2e7f09ef075a",
+        "ldu_91919c459206",
+        "ldu_8d12335c661e",
+        "ldu_b37214c47f7b",
+        "ldu_7363a33ccc7a",
+        "ldu_adf6bb492a2b",
+        "ldu_5b9d5223e7e5",
+        "ldu_15a288d684d9",
+        "ldu_03e0ba002e3e",
+        "ldu_4640000965f6",
+        "ldu_615d5b783e1d",
+        "ldu_9be6c268ecba",
+        "ldu_3f98f0bfe1d1",
+        "ldu_786988a92b16",
+        "ldu_3741679f1928",
+        "ldu_1a82e0aa3049",
+        "ldu_0faab7d8b5e0",
+        "ldu_848a719a36be",
+        "ldu_6dc8b6d2eda2",
+        "ldu_368f82760ab9",
+        "ldu_a1351b730e59",
+        "ldu_1dfac508340d",
+        "ldu_7b65a698c8af",
+        "ldu_4e24ffa5db0d",
+        "ldu_73eb223e0549",
+        "ldu_a005118a5195",
+        "ldu_1a9426bdf89f",
+        "ldu_c25bbd5f4aa7",
+        "ldu_9a949363b49c",
+        "ldu_caa52ee7c77e",
+        "ldu_70de9e105529",
+        "ldu_c716699ed7e4",
+        "ldu_c7f791b2a886",
+        "ldu_4259d810aaca",
+        "ldu_bcbe181c3fbc",
+        "ldu_d82c60e88784",
+        "ldu_532409b3d2a8",
+        "ldu_78fc66afb4b7",
+        "ldu_6db4cd6afd25",
+        "ldu_1cb74240c88e",
+        "ldu_58ec43f35a4a",
+        "ldu_503b72ac73e0",
+        "ldu_f9f543146b62",
+        "ldu_611bc10d1319",
+        "ldu_435d4a4a2f5c",
+        "ldu_04e2fc759928",
+        "ldu_258edce7b0dd",
+        "ldu_93217e5ad6b8",
+        "ldu_d5d10b8cc251",
+        "ldu_a32ad2a30dcc",
+        "ldu_1f0bd872b77b",
+        "ldu_4ba06d12c32f",
+        "ldu_d30ec76c30c9",
+        "ldu_7b10225e8309",
+        "ldu_598bbf318c58",
+        "ldu_ee79b3d83683",
+        "ldu_a3d8c0cebd11",
+        "ldu_77de71f74125",
+        "ldu_2dcbd1e76875",
+        "ldu_f498b9f04e1a",
+        "ldu_dab447547c12",
+        "ldu_f607216bb255",
+        "ldu_51bb4b8b742b",
+        "ldu_d9a1c94b7643",
+        "ldu_91d9f171dc0a",
+        "ldu_9660be4a3fcc",
+        "ldu_456d4a2bb5ce",
+        "ldu_4648a01f5cf5",
+        "ldu_01e281f351cb",
+        "ldu_ad798a060c6a",
+        "ldu_9385fc10518b",
+        "ldu_38f6ee0498ab",
+        "ldu_aa0d05602634",
+        "ldu_ae5f39d6fc55",
+        "ldu_3bd8c217ebb1",
+        "ldu_e0f5168b7155",
+        "ldu_eafbe2bda718",
+        "ldu_b4c334da6664",
+        "ldu_079ccecf1ccc",
+        "ldu_03bebaead96e",
+        "ldu_0a6a80be12bf",
+        "ldu_a7e8dff5edd9",
+        "ldu_d8958e70c1a6",
+        "ldu_4dcd45fa4cd9",
+        "ldu_d5138796b807",
+        "ldu_8c7656058f37",
+        "ldu_718f47d523a5",
+        "ldu_01aa887d3492",
+        "ldu_78a0648dee96",
+        "ldu_ad33c2cf40df",
+        "ldu_8fc54dae7b37",
+        "ldu_d3d162432212",
+        "ldu_c889e06a7245",
+        "ldu_d3861e7064e5",
+        "ldu_ea0439400674",
+        "ldu_e24e9ef7e6de",
+        "ldu_a2139533ada8",
+        "ldu_96909457b11c",
+        "ldu_51841335f6b7",
+        "ldu_5bb566399bcf",
+        "ldu_f61779f97506",
+        "ldu_abbf6485e963",
+        "ldu_56673bfc0579",
+        "ldu_5d8249046af4",
+        "ldu_1e2f77af7f40",
+        "ldu_c01cac02ca43",
+        "ldu_2c38c61b92a5",
+        "ldu_b4e085657402",
+        "ldu_471495f8e2fa",
+        "ldu_72e9fbc19cb6",
+        "ldu_153d7376e807",
+        "ldu_f311c948be1e",
+        "ldu_cf93d0c219a3",
+        "ldu_64812eda2f92",
+        "ldu_dd5cffd9dbea",
+        "ldu_72b2d6d332ae",
+        "ldu_d5990eb0199a",
+        "ldu_c8f2d9c36564",
+        "ldu_54b0f6f8dd02",
+        "ldu_6dafb8570b39",
+        "ldu_1b930f9434ec",
+        "ldu_fee79779f17f",
+        "ldu_1e79aa3a0d03",
+        "ldu_02ffe39c2b7e",
+        "ldu_460233c076e4",
+        "ldu_2bd68eb4532c",
+        "ldu_87cb6bfbf58e",
+        "ldu_1aa9a7411b02",
+        "ldu_bdffbe46b65a",
+        "ldu_fae49b829fb9",
+        "ldu_35663e206043",
+        "ldu_5fc1d4ee5209",
+        "ldu_f385060d7580",
+        "ldu_9b0eec1cea38",
+        "ldu_7422065e15ef",
+        "ldu_4c10a01dfa86",
+        "ldu_f6a116edcf86",
+        "ldu_8f7c67db7cfb",
+        "ldu_4abc00d6d791",
+        "ldu_524114bf2844",
+        "ldu_1cc77746588a",
+        "ldu_a218fba4a126",
+        "ldu_7234008221a6",
+        "ldu_dd1cdca1f4e7",
+        "ldu_5610f83adfc3",
+        "ldu_612c81b0b178",
+        "ldu_58efc8821ce0",
+        "ldu_c5cceb75716d",
+        "ldu_ad2d44d49d9f",
+        "ldu_33b895ac01f6",
+        "ldu_a27874d911cb",
+        "ldu_5c1eb8e55bf1",
+        "ldu_913fa609778e",
+        "ldu_de78c7ced45e",
+        "ldu_7feb97f02e21",
+        "ldu_f37f803f6d7f",
+        "ldu_55c5e5576e10",
+        "ldu_854a1fb0dac6",
+        "ldu_03c127b737ac",
+        "ldu_5e50690a483d",
+        "ldu_cea03043b575",
+        "ldu_f1143c158658",
+        "ldu_d11fc6ba8f0d",
+        "ldu_eaeb57a25cad",
+        "ldu_c180bfe41511",
+        "ldu_76f8f822bbda",
+        "ldu_c22aee85f41f",
+        "ldu_697d353f8876",
+        "ldu_4ced85ba7b89",
+        "ldu_cd109d286228",
+        "ldu_79659198a765",
+        "ldu_747ac763a97c",
+        "ldu_e745b56981d0",
+        "ldu_5ecbef2c46a1",
+        "ldu_d2c15a0437b7",
+        "ldu_b79323775b3e",
+        "ldu_23692f3ccb6f",
+        "ldu_c2ee29467931",
+        "ldu_9642891bd295",
+        "ldu_3972e2c20a16",
+        "ldu_22cc9b4d1f8a",
+        "ldu_35023982b146",
+        "ldu_bb8d6063b713",
+        "ldu_ff719db4b0ec",
+        "ldu_21d59e3f396c",
+        "ldu_9fe880010708",
+        "ldu_f540aff15db0",
+        "ldu_a08acd5fd652",
+        "ldu_95416b6ea6fe",
+        "ldu_7657367a386b",
+        "ldu_064ceec0eaff",
+        "ldu_8c4b6e54eb22",
+        "ldu_1e7453b5c2eb",
+        "ldu_45da497ead79",
+        "ldu_0c549c6e7abc",
+        "ldu_dba0a22445ac",
+        "ldu_041b2a1e5240",
+        "ldu_df86c1a97743",
+        "ldu_e4a916d89e92",
+        "ldu_191ee9b47c82",
+        "ldu_816b227f2869",
+        "ldu_f7a0615c5811",
+        "ldu_656af0e656ad",
+        "ldu_321b6eaa39d0",
+        "ldu_79d30016d0f0",
+        "ldu_6f27c1ee1d13",
+        "ldu_200b0cfaa9a2",
+        "ldu_7fc72f162783",
+        "ldu_a2a412bb7d28",
+        "ldu_0fcf1cd97d98",
+        "ldu_982c280f2b42",
+        "ldu_17a3b759eeb6",
+        "ldu_640aef22319d",
+        "ldu_f68369a9f081",
+        "ldu_67914f720adc",
+        "ldu_be9b0670e219",
+        "ldu_8eb6379fa3c7",
+        "ldu_6722661585f2",
+        "ldu_4660b0012832",
+        "ldu_434f019873a4",
+        "ldu_db85a5c20ba7",
+        "ldu_62fcf21ad6c2",
+        "ldu_da8d817970ce",
+        "ldu_7f68e59e23d3",
+        "ldu_fdbc5e1cdbf7",
+        "ldu_99c5ea194b8c",
+        "ldu_4e3a518252fd",
+        "ldu_40ec68a401d9"
+      ]
+    }
+  ],
+  "created_at": "2026-03-04T10:28:12.999886+00:00"
+}
