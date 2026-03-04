@@ -1,0 +1,17 @@
+{
+  "doc_id": "cadcf6a8c9db5e03",
+  "filename": "2013-E.C-Assigned-regular-budget-and-expense.pdf",
+  "file_path": "/home/hp/Desktop/TRP1/week3/week3-document-intelligence-refinery/data/2013-E.C-Assigned-regular-budget-and-expense.pdf",
+  "page_count": 3,
+  "origin_type": "mixed",
+  "layout_complexity": "figure_heavy",
+  "language": "en",
+  "language_confidence": 0.9,
+  "domain_hint": "general",
+  "estimated_cost": "needs_layout_model",
+  "char_density_mean": 0.0,
+  "image_ratio_mean": 0.0,
+  "has_font_metadata": false,
+  "is_form_fillable": false,
+  "created_at": "2026-03-04T10:42:36.390323Z"
+}
