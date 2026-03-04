@@ -1,6 +1,6 @@
 from __future__ import annotations
 from typing import Optional, Literal, Dict, Any
-from datetime import datetime
+from datetime import datetime, timezone
 from pydantic import BaseModel, ConfigDict, Field
 
 
@@ -40,4 +40,4 @@ class DocumentProfile(BaseModel):
     )
     is_form_fillable: bool = Field(default=False)
 
-    created_at: datetime = Field(default_factory=datetime.utcnow)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))

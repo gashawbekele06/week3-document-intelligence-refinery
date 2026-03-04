@@ -39,8 +39,15 @@ def _compute_char_density(page) -> float:
     A near-zero value indicates a scanned or image-only page.
     """
     try:
-        chars = page.chars
-        text = "".join(c["text"] for c in chars if c.get("text", "").strip())
+        chars = page.chars or []
+        text = "".join(c.get("text", "") for c in chars if c.get("text", "").strip())
+
+        # Fallback: some PDFs (including our PyMuPDF-generated fixtures) do not
+        # populate `page.chars` but still return text via `extract_text`.
+        if not text:
+            extracted = page.extract_text() or ""
+            text = extracted
+
         width = page.width or 1
         height = page.height or 1
         area_1000pt2 = (width * height) / 1000.0
@@ -107,12 +114,23 @@ def _detect_origin_type(
     digital_min = rules["origin_detection"]["digital_min_char_density"]
     mixed_lower = rules["origin_detection"]["mixed_image_ratio_lower"]
 
+    # If there is effectively no text and no font metadata, treat as scanned even if image ratio is low/unknown.
+    if mean_density < scanned_max * 0.2 and not has_fonts:
+        return "scanned_image"
+
+    # High image coverage is a strong scanned signal even if an OCR text layer exists.
+    if mean_image >= max(0.8, scanned_img_min):
+        return "scanned_image"
+
     if mean_density < scanned_max and mean_image > scanned_img_min:
         return "scanned_image"
-    if mean_density >= digital_min and mean_image < mixed_lower:
-        return "native_digital"
     if mixed_lower <= mean_image <= scanned_img_min:
         return "mixed"
+    # Strong signal: embedded fonts + low image coverage → native digital
+    if has_fonts and mean_image < scanned_img_min:
+        return "native_digital"
+    if mean_density >= digital_min and mean_image < mixed_lower:
+        return "native_digital"
     if mean_density >= digital_min * 0.3:
         return "native_digital"
     return "mixed"

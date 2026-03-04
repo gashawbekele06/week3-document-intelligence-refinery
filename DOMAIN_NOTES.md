@@ -1,157 +1,110 @@
 # DOMAIN_NOTES.md — Document Intelligence Refinery
-## Phase 0: Domain Onboarding Primer
+## Phase 0: Domain Onboarding Primer (living memo)
+
+This note captures the *rules of the road* for triage, routing, chunking, and cost controls. Thresholds are governed by `rubric/extraction_rules.yaml`; changing that file reconfigures behavior without code edits.
 
 ---
 
-## 1. Pipeline Architecture
+## 1) Signals & Thresholds (Triage Cheatsheet)
 
-```mermaid
-flowchart TD
-    A[Document Input] --> B[Stage 1: Triage Agent]
-    B --> C{DocumentProfile}
-    C -->|native_digital + single_col| D[Strategy A: FastText\npdfplumber]
-    C -->|native_digital + complex layout| E[Strategy B: Layout\nDocling]
-    C -->|scanned_image| F[Strategy C: Vision\nGemini Flash]
-    D -->|confidence ≥ 0.5| G[ExtractedDocument]
-    D -->|confidence < 0.5| E
-    E -->|confidence ≥ 0.4| G
-    E -->|confidence < 0.4| F
-    F --> G
-    G --> H[Stage 3: Semantic Chunking Engine]
-    H --> I[List of LDU]
-    I --> J[Stage 4: PageIndex Builder]
-    J --> K[PageIndex Tree]
-    I --> L[Vector Store ChromaDB]
-    K --> M[Stage 5: Query Agent]
-    L --> M
-    M --> N[Answer + ProvenanceChain]
-    
-    style A fill:#2d3748,color:#e2e8f0
-    style N fill:#276749,color:#e2e8f0
-    style C fill:#744210,color:#e2e8f0
-```
+- **Character density (chars / 1000 pt²)**
+  - `< 2` **and** no embedded fonts → force `scanned_image` (handles near-zero text layers)
+  - `< 10` **and** image ratio > 0.70 → `scanned_image`
+  - `≥ 50` with image ratio < 0.30 → `native_digital`
+- **Image ratio** (page area with image objects)
+  - `≥ 0.80` → strong scanned signal even if OCR text exists
+  - `0.30–0.70` → `mixed`; multi-column or table-heavy still routes to layout
+- **Fonts present?**
+  - Embedded font metadata boosts confidence and biases toward `native_digital`
+- **Form fillable**
+  - `/AcroForm` present → `form_fillable` origin and `fast_text_sufficient` cost hint
+- **Layout cues**
+  - X-center clusters ≥ 2 → `multi_column`
+  - Table area > 0.30 or figure area > 0.40 of page → `table_heavy` / `figure_heavy`
+
+Routing thresholds (from rules):
+- Strategy A (FastText/pdfplumber): `fast_text_min = 0.50` → below escalates to B
+- Strategy B (Docling): `layout_min = 0.40` → below escalates to C
+- Min chars/page: 100 for healthy A-confidence
+- Budget guard for Vision: max 50 pages, $0.10/doc
 
 ---
 
-## 2. Extraction Strategy Decision Tree
+## 2) Routing at a Glance
 
-```
-START
-│
-├─ Is PDF readable (character stream > 10 chars/1000pt²)?
-│   │
-│   YES → image_ratio < 30%?
-│   │   │
-│   │   YES → STRATEGY A (FastText / pdfplumber)
-│   │   │       Confidence check: chars_per_page ≥ 100 AND font metadata present
-│   │   │       If confidence < 0.5 → escalate to Strategy B
-│   │   │
-│   │   NO (30-70% image) → origin = mixed → STRATEGY B (Layout / Docling)
-│   │       Column clusters ≥ 2 → multi_column → STRATEGY B
-│   │       Table coverage > 30% → table_heavy → STRATEGY B
-│   │       If confidence < 0.4 → escalate to Strategy C
-│   │
-│   NO → image_ratio > 70%?
-│       │
-│       YES → STRATEGY C (Vision / Gemini Flash)
-│       │       Budget guard: max 50 pages, $0.10 cap/doc
-│       │
-│       NO → intermediate → STRATEGY B fallback
-│
-OUTPUT: ExtractedDocument with bounding boxes, tables, figures
-```
+| Origin / Layout | Primary Strategy | Escalation |
+|---|---|---|
+| `native_digital` + `single_column` | A: FastText (pdfplumber) | if conf < 0.5 → B |
+| `native_digital` + `multi_column` / `table_heavy` / `figure_heavy` | B: Layout (Docling) | if conf < 0.4 → C |
+| `mixed` (0.30–0.70 image ratio) | B: Layout (Docling) | if conf < 0.4 → C |
+| `scanned_image` or image ratio ≥ 0.80, or density < 2 w/o fonts | C: Vision (Gemini 1.5 Flash) | budget-capped |
+| `form_fillable` | A by default | escalates like native_digital |
+
+Cost hint (`estimated_cost`):
+- `needs_vision_model` when origin is `scanned_image`
+- `fast_text_sufficient` when origin is digital/form and layout is single_column
+- `needs_layout_model` otherwise
 
 ---
 
-## 3. Corpus Analysis & Observed Failure Modes
+## 3) Corpus Coverage (current run)
 
-### Class A: CBE Annual Report 2023-24 (native digital)
-- **Origin:** native_digital (char_density ~450 chars/1000pt²)
-- **Layout:** mixed (narrative + tables + figures)
-- **Domain:** financial
-- **Observed Failures:**
-  - Multi-column text on front pages confuses single-pass ordering
-  - Tables spanning headers across pages lose column alignment
-  - Footnote text gets merged with main body in naive extraction
-  - **Fix:** Use Docling (Strategy B) for layout-aware block ordering
-
-### Class B: Audit Report 2023.pdf (scanned image)
-- **Origin:** scanned_image (char_density ~0, all image)
-- **Layout:** single_column (audit report format)
-- **Domain:** financial/legal
-- **Observed Failures:**
-  - pdfplumber returns ZERO characters — complete failure of Strategy A
-  - Low-DPI scans cause OCR artifacts (ﬁ → fi ligature errors)
-  - Stamps and signatures misidentified as text blocks
-  - **Fix:** Strategy C (Gemini Vision) handles scanned pages; 300 DPI rendering recommended
-
-### Class C: FTA Performance Survey Report 2022 (mixed)
-- **Origin:** mixed (text sections + embedded tables)
-- **Layout:** mixed (narrative + assessment grids)
-- **Domain:** technical/legal
-- **Observed Failures:**
-  - Assessment score tables rendered as images embedded in PDFs → Strategy A misses them
-  - Multi-level numbered hierarchy (1.1.2.3) confuses flat OCR output
-  - **Fix:** Strategy B (Docling) detects table bounding boxes even when image-embedded
-
-### Class D: Tax Expenditure Report (table-heavy)
-- **Origin:** native_digital
-- **Layout:** table_heavy (multi-year fiscal data tables)
-- **Domain:** financial
-- **Observed Failures:**
-  - Tables with merged cells (rowspan/colspan) collapse to wrong row counts
-  - Percentage values (%) parsed as text rather than numeric
-  - Multi-page tables lose header on continuation pages
-  - **Fix:** Strategy B with Docling table cell merger detection
+- Profiles in `.refinery/profiles/`: **16**
+- Class mix: **native_digital=10, mixed=3, scanned_image=3** (form_fillable=0 observed)
+- Ledger populated in `.refinery/extraction_ledger.jsonl`
+- PageIndex entries written under `.refinery/pageindex/`
 
 ---
 
-## 4. Character Density Analysis (Empirical Thresholds)
+## 4) Archetypes & Failure Modes (what we saw)
 
-| Document | Char Density (chars/1000pt²) | Image Ratio | Strategy |
-|---|---|---|---|
-| CBE Annual Report 2023-24 | ~380 | ~0.12 | B (table_heavy) |
-| Audit Report 2023 | ~0 | ~0.98 | C (scanned) |
-| FTA Survey 2022 | ~150 | ~0.25 | B (mixed) |
-| Tax Expenditure 2022 | ~420 | ~0.05 | B (table_heavy) |
-| Simple text PDFs | >500 | <0.05 | A (fast_text) |
+**Native digital — annual report (CBE 2023-24)**
+- Char density ~380–450; multi-column front matter + dense tables
+- Failures: ordering breaks on multi-column; tables across pages lose headers; footnotes merge
+- Mitigation: Strategy B (Docling) for layout-aware ordering and header carry-forward
 
-**Thresholds derived:**
-- `scanned_max_char_density = 10.0` (below this → scanned)
-- `digital_min_char_density = 50.0` (above this → likely digital)
-- `scanned_min_image_ratio = 0.70` (above this → scanned)
+**Scanned audit packets (e.g., 2013 E.C. PDFs)**
+- Char density ~0; image ratio ~0.95–0.99
+- Failures: pdfplumber yields zero text; stamps/signatures misread; low DPI OCR noise
+- Mitigation: Strategy C (Vision). Prefer 300 DPI renders; respect 50-page cap
+
+**Mixed narrative + embedded image tables (FTA Survey 2022)**
+- Char density ~120–180; image ratio ~0.20–0.35
+- Failures: image-rendered tables missed by Strategy A; hierarchical numbering flattened
+- Mitigation: Strategy B detects table boxes even when rasterized; preserves list hierarchy
+
+**Table-heavy fiscal reports (Tax Expenditure)**
+- Char density ~400+; tables dominate (>0.30 area)
+- Failures: rowspan/colspan collapse; continuation pages lose headers; percent values parsed as text
+- Mitigation: Strategy B table merger + header carry-forward; chunk tables as atomic LDUs
 
 ---
 
-## 5. VLM vs OCR Cost Tradeoff
+## 5) Chunking & PageIndex Constitution
+
+- Max tokens per LDU: 512; split only if >256 tokens
+- Tables never split from headers; lists kept intact unless over max
+- Figure captions stored as metadata; headers become `parent_section`
+- Cross-references resolved and stored as relationships
+- PageIndex stores section tree + summaries + entities under `.refinery/pageindex/`
+
+---
+
+## 6) Cost & Performance Guardrails
 
 | Metric | Strategy A | Strategy B | Strategy C |
 |---|---|---|---|
-| Tool | pdfplumber | Docling | Gemini 1.5 Flash |
-| Speed | ~0.5s/page | ~5s/page | ~3s/page (API) |
-| Cost | $0 | $0 (local) | ~$0.0004/page |
-| Table Quality | Poor (flat text) | Good (structured JSON) | Excellent (vision) |
-| Scanned PDFs | ❌ Fails | ⚠️ Partial (if has text) | ✅ Full support |
-| Multi-column | ⚠️ Mixed | ✅ Native support | ✅ Full support |
-| Equations | ❌ | ✅ (formula detection) | ✅ |
+| Tooling | pdfplumber | Docling | Gemini 1.5 Flash |
+| Speed | ~0.5s/page (CPU) | ~5s/page (CPU) | ~3s/page (API) |
+| Cost | $0 | $0 | ~$0.000038/page input est.; cap $0.10/doc |
+| Strength | Clean text | Multi-column & tables | Scanned / image-heavy |
+| Weakness | Scanned, complex layout | Pure scans | Budget, latency |
 
-**Client-facing articulation:**
-> "We run three extraction tiers. Fast text costs nothing and works in milliseconds on clean digital PDFs. Layout-aware analysis handles complex tables and multi-column text without API calls. Vision extraction is our last resort—it can read anything a human can, but at ~$0.40 per 1000-page document. For a 365-page annual report, total Vision cost is under $0.15. We only invoke it when our confidence scoring detects we'd otherwise produce hallucinated data."
+Client-friendly framing:
+> Three tiers: free fast-text for clean PDFs; layout-aware for tables/columns at no API cost; vision last-resort for scans, capped at $0.10/doc and 50 pages. We auto-escalate when confidence dips (<0.5 for A, <0.4 for B).
 
 ---
 
-## 6. Provenance Model
+## 7) Provenance Model
 
-Every extracted fact carries spatial addressing:
-```json
-{
-  "document_name": "CBE ANNUAL REPORT 2023-24.pdf",
-  "page_number": 42,
-  "bbox": {"x0": 72.0, "y0": 234.5, "x1": 540.0, "y1": 280.2},
-  "content_hash": "sha256:a3f2...",
-  "strategy_used": "layout_extractor",
-  "confidence_score": 0.87
-}
-```
-
-This is the document equivalent of Week 1's `content_hash`—spatial addressing that remains valid even when surrounding text moves. The `bbox` allows an auditor to open the PDF to the exact pixel coordinates of any extracted claim.
+Every fact keeps spatial anchors (`bbox`) plus `strategy_used`, `page_number`, and `content_hash`. This mirrors Week 1’s immutable `content_hash`, letting auditors jump to exact PDF coordinates for any extracted claim.

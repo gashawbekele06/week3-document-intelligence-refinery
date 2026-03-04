@@ -1,0 +1,17 @@
+{
+  "doc_id": "5a528989cedc01d2",
+  "filename": "tax_expenditure_ethiopia_2021_22.pdf",
+  "file_path": "/home/hp/Desktop/TRP1/week3/week3-document-intelligence-refinery/data/tax_expenditure_ethiopia_2021_22.pdf",
+  "page_count": 60,
+  "origin_type": "native_digital",
+  "layout_complexity": "single_column",
+  "language": "en",
+  "language_confidence": 0.9,
+  "domain_hint": "financial",
+  "estimated_cost": "fast_text_sufficient",
+  "char_density_mean": 3.25,
+  "image_ratio_mean": 0.0043,
+  "has_font_metadata": true,
+  "is_form_fillable": false,
+  "created_at": "2026-03-04T10:35:08.077329Z"
+}
