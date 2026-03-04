@@ -1,0 +1,116 @@
+# Extraction Rules Constitution
+# All thresholds documented here based on Phase 0 empirical analysis of the corpus.
+# A new document type can be onboarded by modifying ONLY this file, not code.
+
+# ─── Origin Type Detection ─────────────────────────────────────────────────────
+origin_detection:
+  # If char_density < scanned_max AND image_ratio > scanned_min → scanned_image
+  scanned_max_char_density: 10.0        # chars/1000 pts² below this = scanned
+  digital_min_char_density: 50.0        # chars/1000 pts² above this = digital
+  scanned_min_image_ratio: 0.70         # images occupy >70% page area = scanned
+  mixed_image_ratio_lower: 0.30         # 30–70% image = mixed
+
+  # Form fillable: detected by /AcroForm in PDF metadata
+  form_fillable_detection: true
+
+# ─── Layout Complexity Detection ───────────────────────────────────────────────
+layout_detection:
+  # Column detection: cluster text block x-centers into groups
+  multi_column_min_clusters: 2          # ≥2 x-clusters → multi_column
+  table_heavy_min_ratio: 0.30           # tables occupy >30% of content = table_heavy
+  figure_heavy_min_ratio: 0.40          # figures occupy >40% = figure_heavy
+
+# ─── Confidence Scoring ────────────────────────────────────────────────────────
+confidence_thresholds:
+  fast_text_min: 0.50                   # Strategy A: escalate to B if below
+  layout_min: 0.40                      # Strategy B: escalate to C if below
+  min_chars_per_page: 100              # pages with <100 chars flagged as low-confidence
+
+# ─── Strategy Routing ──────────────────────────────────────────────────────────
+strategy_routing:
+  # Strategy A triggers when ALL of:
+  strategy_a:
+    requires_origin: [native_digital, form_fillable]
+    requires_layout: [single_column]
+  # Strategy B triggers when:
+  strategy_b:
+    requires_origin: [native_digital, mixed]
+    requires_layout: [multi_column, table_heavy, figure_heavy, mixed]
+  # Strategy C triggers when:
+  strategy_c:
+    requires_origin: [scanned_image]
+    # OR escalation from A/B below threshold
+
+# ─── Budget Guard ──────────────────────────────────────────────────────────────
+budget:
+  max_cost_per_doc_usd: 0.10
+  vision_model: "gemini-1.5-flash"
+  # Gemini Flash pricing: $0.075/1M input tokens, $0.30/1M output tokens
+  # Estimate ~500 tokens per page image → ~$0.000038 per page
+  token_cost_per_1m_input: 0.075
+  token_cost_per_1m_output: 0.30
+  max_pages_vision_per_doc: 50
+
+# ─── Chunking Constitution ─────────────────────────────────────────────────────
+chunking:
+  max_tokens_per_ldu: 512
+  min_tokens_for_split: 256
+  # Rule 1: Tables — never split cells from header
+  table_always_together: true
+  # Rule 2: Figures — caption always stored as metadata
+  figure_caption_as_metadata: true
+  # Rule 3: Lists — kept as single LDU unless exceed max_tokens
+  list_as_single_ldu: true
+  # Rule 4: Headers — stored as parent_section on child chunks
+  header_as_parent_metadata: true
+  # Rule 5: Cross-references — resolve and store as relationships
+  resolve_cross_references: true
+
+# ─── Domain Hint Keywords ──────────────────────────────────────────────────────
+domain_keywords:
+  financial:
+    - revenue
+    - profit
+    - balance sheet
+    - income statement
+    - fiscal
+    - expenditure
+    - budget
+    - assets
+    - liabilities
+    - dividends
+    - annual report
+    - auditor
+    - birr
+    - etb
+  legal:
+    - court
+    - judgment
+    - plaintiff
+    - defendant
+    - regulation
+    - act
+    - procurement
+    - compliance
+    - tender
+    - audit
+    - statutory
+  technical:
+    - specification
+    - protocol
+    - implementation
+    - vulnerability
+    - network
+    - system
+    - architecture
+    - framework
+    - pharmaceutical
+    - manufacturing
+  medical:
+    - patient
+    - diagnosis
+    - treatment
+    - clinical
+    - hospital
+    - medicine
+    - health
