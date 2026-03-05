@@ -71,14 +71,19 @@ def pageindex_navigate(query: str, doc_id: Optional[str] = None) -> dict:
     }
 
 
-def semantic_search(query: str, k: int = 5, doc_id: Optional[str] = None) -> dict:
+def semantic_search(
+    query: str,
+    k: int = 5,
+    doc_id: Optional[str] = None,
+    ldu_ids: Optional[list[str]] = None,
+) -> dict:
     """
     Tool 2: Vector similarity search over all LDUs in ChromaDB.
     Returns top-k relevant passages with provenance.
     """
     store = VectorStore()
     try:
-        results = store.search(query, k=k, doc_id=doc_id)
+        results = store.search(query, k=k, doc_id=doc_id, ldu_ids=ldu_ids)
         provenance = store.build_provenance(results, strategy_used="semantic_search")
 
         passages = []
@@ -94,6 +99,14 @@ def semantic_search(query: str, k: int = 5, doc_id: Optional[str] = None) -> dic
                     "chunk_type": meta.get("chunk_type", ""),
                     "similarity": round(1.0 - dist, 3),
                     "content_hash": meta.get("content_hash", ""),
+                    "bbox": {
+                        "x0": meta.get("bbox_x0"),
+                        "y0": meta.get("bbox_y0"),
+                        "x1": meta.get("bbox_x1"),
+                        "y1": meta.get("bbox_y1"),
+                    }
+                    if meta.get("bbox_x0") is not None
+                    else None,
                 }
             )
 
@@ -165,8 +178,11 @@ class QueryAgent:
             # Step 1: Navigate PageIndex for section context
             nav_result = pageindex_navigate(question, doc_id)
             section_context = ""
+            filtered_ldu_ids: list[str] = []
             if nav_result["results"]:
                 top_sec = nav_result["results"][0]
+                for sec in nav_result["results"]:
+                    filtered_ldu_ids.extend(sec.get("ldu_ids", []))
                 section_context = (
                     f"Most relevant section: {top_sec['section_title']} "
                     f"(pages {top_sec['page_start']}–{top_sec['page_end']})\n"
@@ -174,7 +190,9 @@ class QueryAgent:
                 )
 
             # Step 2: Semantic search for supporting passages
-            search_result = semantic_search(question, k=5, doc_id=doc_id)
+            search_result = semantic_search(
+                question, k=5, doc_id=doc_id, ldu_ids=filtered_ldu_ids or None
+            )
             passages_text = ""
             for p in search_result.get("passages", []):
                 passages_text += (
@@ -216,11 +234,13 @@ Answer concisely, cite specific page numbers, and note if information is not fou
             provenance = ProvenanceChain.model_validate(provenance_data) if provenance_data else ProvenanceChain()
             provenance.answer = answer
 
+            precision_report = self.evaluate_retrieval_precision(question, doc_id)
             return {
                 "question": question,
                 "answer": answer,
                 "provenance": provenance.model_dump(),
                 "pageindex_result": nav_result,
+                "precision_report": precision_report,
                 "passages_used": len(search_result.get("passages", [])),
             }
         except Exception as e:
@@ -229,7 +249,10 @@ Answer concisely, cite specific page numbers, and note if information is not fou
     def _deterministic_query(self, question: str, doc_id: Optional[str] = None) -> dict:
         """Rule-based fallback when LLM is unavailable."""
         nav = pageindex_navigate(question, doc_id)
-        search = semantic_search(question, k=5, doc_id=doc_id)
+        filtered_ldu_ids: list[str] = []
+        for sec in nav.get("results", []):
+            filtered_ldu_ids.extend(sec.get("ldu_ids", []))
+        search = semantic_search(question, k=5, doc_id=doc_id, ldu_ids=filtered_ldu_ids or None)
 
         answer_parts = []
         if nav["results"]:
@@ -256,6 +279,44 @@ Answer concisely, cite specific page numbers, and note if information is not fou
             "answer": answer,
             "provenance": provenance.model_dump(),
             "pageindex_result": nav,
+            "precision_report": self.evaluate_retrieval_precision(question, doc_id),
+        }
+
+    def evaluate_retrieval_precision(
+        self, query: str, doc_id: Optional[str] = None, k: int = 5
+    ) -> dict:
+        """
+        Measure precision@k with and without PageIndex traversal.
+        Uses PageIndex top sections as the relevance proxy.
+        """
+        nav = pageindex_navigate(query, doc_id)
+        relevant_ldu_ids: list[str] = []
+        for sec in nav.get("results", []):
+            relevant_ldu_ids.extend(sec.get("ldu_ids", []))
+        relevant_set = set(relevant_ldu_ids)
+
+        store = VectorStore()
+        full_results = store.search(query, k=k, doc_id=doc_id)
+        filtered_results = (
+            store.search(query, k=k, doc_id=doc_id, ldu_ids=list(relevant_set))
+            if relevant_set
+            else []
+        )
+
+        def _precision(results: list) -> float:
+            if not results:
+                return 0.0
+            hits = sum(1 for _, meta, _ in results if meta.get("ldu_id") in relevant_set)
+            return round(hits / len(results), 3)
+
+        return {
+            "query": query,
+            "k": k,
+            "precision_without_pageindex": _precision(full_results),
+            "precision_with_pageindex": _precision(filtered_results),
+            "results_without_pageindex": len(full_results),
+            "results_with_pageindex": len(filtered_results),
+            "relevant_pool_size": len(relevant_set),
         }
 
     def verify_claim(self, claim: str, doc_id: Optional[str] = None) -> dict:

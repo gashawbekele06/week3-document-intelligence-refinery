@@ -166,7 +166,11 @@ class ChunkingEngine:
             document_name=doc.filename,
             token_count=token_count,
         )
-        ldu.content_hash = LDU.compute_hash(block.text)
+        ldu.content_hash = LDU.compute_hash(
+            block.text,
+            page_refs=ldu.page_refs,
+            bbox=ldu.bounding_box,
+        )
         return self.validator.validate_all(ldu)
 
     def _chunk_text_blocks(
@@ -223,7 +227,11 @@ class ChunkingEngine:
                         document_name=doc.filename,
                         token_count=_estimate_tokens(sub_content),
                     )
-                    sub_ldu.content_hash = LDU.compute_hash(sub_content)
+                    sub_ldu.content_hash = LDU.compute_hash(
+                        sub_content,
+                        page_refs=sub_ldu.page_refs,
+                        bbox=sub_ldu.bounding_box,
+                    )
                     ldus.append(self.validator.validate_all(sub_ldu))
             else:
                 ldu = LDU(
@@ -237,7 +245,11 @@ class ChunkingEngine:
                     document_name=doc.filename,
                     token_count=token_count,
                 )
-                ldu.content_hash = LDU.compute_hash(content)
+                ldu.content_hash = LDU.compute_hash(
+                    content,
+                    page_refs=ldu.page_refs,
+                    bbox=ldu.bounding_box,
+                )
                 ldus.append(self.validator.validate_all(ldu))
 
             buffer_texts.clear()
@@ -287,7 +299,11 @@ class ChunkingEngine:
                 "caption": table.caption or "",
             },
         )
-        ldu.content_hash = LDU.compute_hash(content)
+        ldu.content_hash = LDU.compute_hash(
+            content,
+            page_refs=ldu.page_refs,
+            bbox=ldu.bounding_box,
+        )
         return self.validator.validate_all(ldu, source_table=table)
 
     def _make_figure_ldu(self, fig, section: Optional[str], doc: ExtractedDocument) -> LDU:
@@ -305,7 +321,11 @@ class ChunkingEngine:
             token_count=_estimate_tokens(content),
             metadata={"caption": fig.caption or "", "figure_id": fig.figure_id},
         )
-        ldu.content_hash = LDU.compute_hash(content)
+        ldu.content_hash = LDU.compute_hash(
+            content,
+            page_refs=ldu.page_refs,
+            bbox=ldu.bounding_box,
+        )
         return self.validator.validate_all(ldu)
 
     def _resolve_cross_references(self, ldus: List[LDU]) -> List[LDU]:

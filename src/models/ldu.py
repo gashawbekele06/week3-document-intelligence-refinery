@@ -46,11 +46,34 @@ class LDU(BaseModel):
     metadata: Dict[str, Any] = Field(default_factory=dict)
 
     @classmethod
-    def compute_hash(cls, content: str) -> str:
-        """Deterministic SHA-256 of normalized content."""
+    def compute_hash(
+        cls,
+        content: str,
+        page_refs: Optional[List[int]] = None,
+        bbox: Optional[BBoxRef] = None,
+    ) -> str:
+        """
+        Deterministic SHA-256 of normalized content + spatial anchors.
+        Mirrors Week 1 spatial hashing by mixing content with page and bbox when available.
+        """
         normalized = " ".join(content.split())
-        return "sha256:" + hashlib.sha256(normalized.encode("utf-8")).hexdigest()
+        spatial_parts: List[str] = []
+        if page_refs:
+            spatial_parts.append("pages=" + ",".join(str(p) for p in sorted(page_refs)))
+        if bbox:
+            spatial_parts.append(
+                "bbox="
+                + ",".join(
+                    f"{v:.2f}" for v in [bbox.x0, bbox.y0, bbox.x1, bbox.y1, float(bbox.page)]
+                )
+            )
+        payload = normalized + ("|" + "|".join(spatial_parts) if spatial_parts else "")
+        return "sha256:" + hashlib.sha256(payload.encode("utf-8")).hexdigest()
 
     def model_post_init(self, __context: Any) -> None:
         if not self.content_hash and self.content:
-            self.content_hash = LDU.compute_hash(self.content)
+            self.content_hash = LDU.compute_hash(
+                self.content,
+                page_refs=self.page_refs,
+                bbox=self.bounding_box,
+            )
