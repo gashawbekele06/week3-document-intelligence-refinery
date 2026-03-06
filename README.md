@@ -1,184 +1,355 @@
 # Document Intelligence Refinery 🏭
 
-> **Production-grade, 5-stage agentic pipeline for enterprise document intelligence**
+Document Intelligence Refinery is a 5-stage PDF intelligence pipeline that turns heterogeneous documents into:
 
-## Overview
+- structured text, tables, and figures
+- logical document units (LDUs)
+- a navigable `PageIndex`
+- a searchable vector store
+- a provenance-aware fact table for natural-language and SQL querying
 
-The Document Intelligence Refinery transforms heterogeneous documents (PDFs, scanned images, financial reports) into structured, spatially-indexed, provenance-tracked knowledge — queryable via natural language.
+It is built for assignment-style demos and audit-friendly document QA: every answer can point back to a source page, content hash, and spatial anchor when available.
 
-**Architecture:**
+## What it does
+
+The pipeline processes PDF documents through five stages:
+
+```text
+PDF
+  → Stage 1: Triage
+  → Stage 2: Extraction
+  → Stage 3: Chunking
+  → Stage 4: PageIndex
+  → Stage 5: Query / Audit
 ```
-Document → Triage Agent → Extraction Router → Chunking Engine → PageIndex Builder → Query Agent
-             (Stage 1)        (Stage 2)           (Stage 3)         (Stage 4)         (Stage 5)
-```
 
-**Three Extraction Strategies:**
-| Strategy | Tool | Trigger | Cost |
-|---|---|---|---|
-| A — Fast Text | pdfplumber | native_digital + single_column | Free |
-| B — Layout-Aware | Docling | multi_column / table_heavy / mixed | Free (local) |
-| C — Vision | Gemini 1.5 Flash | scanned_image / low confidence | ~$0.0004/page |
+### Stage 1 — Triage
 
----
+Classifies each document into:
 
-## Setup (< 10 minutes)
+- `origin_type`: `native_digital`, `mixed`, `scanned_image`, `form_fillable`
+- `layout_complexity`: `single_column`, `multi_column`, `table_heavy`, `figure_heavy`, `mixed`
+- `domain_hint`: `financial`, `legal`, `technical`, `medical`, `general`
+
+### Stage 2 — Extraction router
+
+Selects one of three extraction strategies:
+
+| Strategy | Use case | Backend |
+|---|---|---|
+| A — Fast text | clean digital PDFs | `pdfplumber` |
+| B — Layout-aware | multi-column, table-heavy, mixed layouts | `Docling` |
+| C — Vision | scanned/image-heavy documents | OpenAI / OpenRouter vision |
+
+### Stage 3 — Chunking
+
+Builds provenance-preserving LDUs with rules such as:
+
+- keep tables atomic
+- preserve list structure
+- carry parent headers into child chunks
+- keep chunk hashes spatially anchored
+
+### Stage 4 — PageIndex
+
+Builds a hierarchical, section-aware navigation tree for targeted retrieval.
+
+### Stage 5 — Query and audit
+
+Supports:
+
+- natural-language QA
+- provenance output
+- fact-first answering for numeric questions
+- SQL queries over extracted facts
+- claim verification in audit mode
+
+## Key features
+
+- **Agentic routing** based on PDF characteristics
+- **Local-first extraction** for most digital documents
+- **Budget-capped vision fallback** for scans
+- **Vector search + fact table** working together
+- **Page-aware provenance** with page number, LDU id, and content hash
+- **CLI workflow** for triage, extraction, chunking, indexing, ingest, and querying
+
+## Quick start
 
 ### 1. Prerequisites
-```bash
-# Python 3.11+
-python --version
 
-# uv (fast package installer)
-pip install uv
+- Python 3.11+
+- Linux/macOS/WSL recommended
+
+### 2. Create and activate a virtual environment
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
 ```
 
-### 2. Install Dependencies
+### 3. Install dependencies
+
 ```bash
-cd /path/to/week3-document-intelligence-refinery
-uv pip install -e ".[dev]" --python 3.11
+pip install -e ".[dev]"
 ```
 
-### 3. Configure API Keys
+### 4. Configure environment variables
+
+Copy the example file:
+
 ```bash
 cp .env.example .env
-# Edit .env and add your GEMINI_API_KEY
 ```
 
-### 4. Verify Installation
+Then edit `.env` as needed.
+
+#### Common environment options
+
+```dotenv
+# Optional: enables Gemini-based summaries / LLM synthesis
+GEMINI_API_KEY=
+
+# Optional: enables OpenAI vision for scanned PDFs
+OPENAI_API_KEY=
+OPENAI_PROJECT=
+
+# Optional: enables OpenRouter vision fallback
+OPENROUTER_API_KEY=
+OPENROUTER_MODEL=openai/gpt-4o-mini
+```
+
+Notes:
+
+- Most **digital** PDFs work without any paid API key.
+- **Scanned** PDFs need either `OPENAI_API_KEY` or `OPENROUTER_API_KEY`.
+- If no LLM key is present, the query agent falls back to deterministic retrieval.
+
+### 5. Check the CLI
+
 ```bash
-python -m pytest tests/ -v
 python -m src.main --help
 ```
 
----
+## CLI usage
 
-## Usage
+All document names can be given either as:
 
-### Single Document Pipeline
+- a filename that exists in `data/`
+- or a direct path to a PDF
+
+### Triage a document
+
 ```bash
-# Stage 1: Classify document
 python -m src.main triage "CBE ANNUAL REPORT 2023-24.pdf"
+```
 
-# Stage 2: Extract content
+### Extract content
+
+```bash
 python -m src.main extract "CBE ANNUAL REPORT 2023-24.pdf"
+python -m src.main extract "CBE ANNUAL REPORT 2023-24.pdf" --json
+```
 
-# Stage 3: Chunk into LDUs
+### Chunk into LDUs
+
+```bash
 python -m src.main chunk "CBE ANNUAL REPORT 2023-24.pdf"
+```
 
-# Stage 4: Build PageIndex
+### Build the PageIndex
+
+```bash
 python -m src.main index "CBE ANNUAL REPORT 2023-24.pdf"
+```
 
-# Full pipeline (all stages including vector store + fact table)
+### Run the full pipeline
+
+```bash
 python -m src.main ingest "CBE ANNUAL REPORT 2023-24.pdf"
 ```
 
-### Querying
-```bash
-# Ask a natural language question
-python -m src.main query "What was the total loan disbursement in 2024?" --doc-id <doc_id>
+The ingest command runs:
 
-# Audit mode: verify a claim
+1. triage
+2. extraction
+3. chunking
+4. PageIndex building
+5. vector ingestion
+6. fact extraction
+
+### Ask natural-language questions
+
+```bash
+python -m src.main query "What is the total comprehensive income for FY 2024?"
+```
+
+Restrict to a specific document:
+
+```bash
+python -m src.main query "What is the main purpose of the assessment?" --doc-id 2b7cf3753e01ab50
+```
+
+### Run SQL over the fact table
+
+```bash
+python -m src.main query "SELECT label, value, unit, page_number FROM facts LIMIT 10"
+```
+
+### Audit a claim
+
+```bash
 python -m src.main query "Revenue was 4.2 billion ETB" --audit
 ```
 
-### Bulk Processing (Corpus)
+### Process multiple PDFs
+
 ```bash
-# Process up to 12 documents from the data/ directory
 python -m src.main process-corpus --max 12
 ```
 
----
+## Recommended demo flow
 
-## Project Structure
+For a clean rubric/demo walkthrough:
 
-```
-week3-document-intelligence-refinery/
-├── src/
-│   ├── models/              # Pydantic schemas
-│   │   ├── document_profile.py   # DocumentProfile
-│   │   ├── extracted_document.py # ExtractedDocument + BBox
-│   │   ├── ldu.py               # Logical Document Unit
-│   │   ├── page_index.py        # PageIndex + Section
-│   │   └── provenance.py        # ProvenanceChain
-│   ├── agents/              # Pipeline stages
-│   │   ├── triage.py        # Stage 1: Triage Agent
-│   │   ├── extractor.py     # Stage 2: ExtractionRouter
-│   │   ├── chunker.py       # Stage 3: ChunkingEngine
-│   │   ├── indexer.py       # Stage 4: PageIndexBuilder
-│   │   └── query_agent.py   # Stage 5: QueryAgent
-│   ├── strategies/          # Extraction strategies
-│   │   ├── fast_text.py     # Strategy A
-│   │   ├── layout_extractor.py  # Strategy B
-│   │   └── vision_extractor.py  # Strategy C
-│   ├── data/                # Data layer
-│   │   ├── vector_store.py  # ChromaDB
-│   │   ├── fact_table.py    # SQLite FactTable
-│   │   └── audit.py         # AuditMode
-│   └── main.py              # CLI entry point
-├── tests/
-│   ├── test_triage.py
-│   ├── test_confidence_scoring.py
-│   └── test_chunking.py
-├── rubric/
-│   └── extraction_rules.yaml  # Externalized config
-├── data/                    # 50 corpus documents
-├── .refinery/               # Pipeline artifacts
-│   ├── profiles/            # DocumentProfile JSONs
-│   ├── pageindex/           # PageIndex JSONs
-│   └── extraction_ledger.jsonl
-├── DOMAIN_NOTES.md          # Phase 0 deliverable
-└── Dockerfile
-```
-
----
-
-## Configuration
-
-All thresholds and routing rules are in `rubric/extraction_rules.yaml`. **A new document type can be onboarded by modifying only this file — no code changes required.**
-
-Key settings:
-```yaml
-confidence_thresholds:
-  fast_text_min: 0.50    # Escalate A→B below this
-  layout_min: 0.40       # Escalate B→C below this
-
-budget:
-  max_cost_per_doc_usd: 0.10   # Hard limit for Vision strategy
-```
-
----
-
-## Docker
+### Example 1 — annual report
 
 ```bash
-docker build -t document-refinery .
-docker run --env GEMINI_API_KEY=your_key \
-           -v $(pwd)/data:/app/data \
-           -v $(pwd)/.refinery:/app/.refinery \
-           document-refinery \
-           python -m src.main ingest "CBE ANNUAL REPORT 2023-24.pdf"
+python -m src.main ingest "CBE ANNUAL REPORT 2023-24.pdf"
+python -m src.main query "What is the total comprehensive income for FY 2024?"
 ```
 
----
+### Example 2 — FTA report
+
+```bash
+python -m src.main ingest "fta_performance_survey_final_report_2022.pdf"
+python -m src.main query "What are the main implementation challenges of FTA initiatives identified in the report?" --doc-id 2b7cf3753e01ab50
+```
+
+### Example 3 — SQL-backed fact inspection
+
+```bash
+python -m src.main query "SELECT doc_name, label, value, unit, page_number FROM facts ORDER BY rowid DESC LIMIT 10"
+```
+
+## Output artifacts
+
+The pipeline writes outputs into `.refinery/`:
+
+```text
+.refinery/
+├── profiles/               # Stage 1 DocumentProfile JSON files
+├── pageindex/              # Stage 4 PageIndex JSON files
+├── chromadb/               # Vector store persistence
+├── extraction_ledger.jsonl # Extraction metadata log
+└── fact_table.db           # SQLite fact table
+```
+
+Important files:
+
+- `.refinery/profiles/<doc_id>.json` — triage result
+- `.refinery/pageindex/<doc_id>.json` — hierarchical index
+- `.refinery/fact_table.db` — structured facts for SQL and fact-first QA
+
+## How routing works
+
+Routing rules live in:
+
+- `rubric/extraction_rules.yaml`
+
+Typical behavior:
+
+- `native_digital + single_column` → Strategy A
+- `native_digital + multi_column/table_heavy/figure_heavy` → Strategy B
+- `mixed` → Strategy B
+- `scanned_image` → Strategy C
+
+This file is the main control surface for tuning behavior without changing core code.
+
+## Project structure
+
+```text
+week3-document-intelligence-refinery/
+├── src/
+│   ├── agents/
+│   │   ├── triage.py
+│   │   ├── extractor.py
+│   │   ├── chunker.py
+│   │   ├── indexer.py
+│   │   └── query_agent.py
+│   ├── strategies/
+│   │   ├── fast_text.py
+│   │   ├── layout_extractor.py
+│   │   └── vision_extractor.py
+│   ├── data/
+│   │   ├── vector_store.py
+│   │   ├── fact_table.py
+│   │   └── audit.py
+│   ├── models/
+│   └── main.py
+├── data/
+├── rubric/
+│   └── extraction_rules.yaml
+├── tests/
+├── DOMAIN_NOTES.md
+├── README.md
+└── pyproject.toml
+```
 
 ## Testing
 
-```bash
-# Run all unit tests
-pytest tests/ -v
+Run unit tests:
 
-# Run with coverage
-pytest tests/ --cov=src --cov-report=term-missing
+```bash
+pytest tests -v
 ```
 
----
+If you want a quick smoke test:
 
-## Cost Analysis
+```bash
+python -m src.main triage "CBE ANNUAL REPORT 2023-24.pdf"
+python -m src.main ingest "CBE ANNUAL REPORT 2023-24.pdf"
+```
 
-| Strategy | Tool | Cost/page | Cost/100-page doc |
-|---|---|---|---|
-| A — Fast Text | pdfplumber | $0 | $0 |
-| B — Layout | Docling | $0 | $0 |
-| C — Vision | Gemini 1.5 Flash | ~$0.0004 | ~$0.04 |
+## Troubleshooting
 
-**Budget guard** caps Vision strategy at $0.10/document (configurable).
+### 1. Query answer looks too vague
+
+- make sure the document was ingested first
+- pass `--doc-id` to scope retrieval
+- inspect `.refinery/pageindex/<doc_id>.json` if section ranges look odd
+
+### 2. Scanned PDF extraction fails
+
+Check that at least one of these is configured:
+
+- `OPENAI_API_KEY`
+- `OPENROUTER_API_KEY`
+
+Also note:
+
+- OpenRouter may fail if the account has no credits
+- OpenAI vision calls may require a valid project/key combination
+
+### 3. Docling / OCR logs appear during extraction
+
+Those are usually informational, not failures.
+
+### 4. Start clean
+
+To reset local artifacts:
+
+```bash
+rm -rf .refinery
+```
+
+Then rerun `ingest` on the documents you want.
+
+## Notes
+
+- `DOMAIN_NOTES.md` documents the current heuristics, routing logic, and cost guardrails.
+- Provenance is a first-class output: answers should be traceable back to source pages.
+- The repository is tuned for document-intelligence coursework, but the pipeline structure is reusable.
+
+## License
+
+See `LICENSE`.
