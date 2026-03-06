@@ -11,13 +11,14 @@ from __future__ import annotations
 
 import json
 import os
+import re
 from pathlib import Path
 from typing import Annotated, Any, Optional, TypedDict
 
 from src.data.audit import AuditMode
 from src.data.fact_table import FactTable
 from src.data.vector_store import VectorStore
-from src.models import PageIndex, ProvenanceChain
+from src.models import PageIndex, ProvenanceChain, ProvenanceCitation
 
 _PAGEINDEX_DIR = Path(".refinery") / "pageindex"
 
@@ -164,9 +165,84 @@ class QueryAgent:
         Answer a natural language question using multi-tool orchestration.
         Returns answer + ProvenanceChain.
         """
+        fact_first = self._fact_first_answer(question, doc_id)
+        if fact_first:
+            return fact_first
         if self.use_llm:
             return self._llm_query(question, doc_id)
         return self._deterministic_query(question, doc_id)
+
+    def _fact_first_answer(self, question: str, doc_id: Optional[str] = None) -> Optional[dict]:
+        """
+        Attempt to answer numeric/financial questions directly from FactTable.
+        This keeps the query natural-language but ensures precise provenance.
+        """
+        q = question.lower()
+        if not any(k in q for k in ("profit", "income", "revenue", "tax", "expense", "assets", "liabilities", "total", "comprehensive")):
+            return None
+
+        ft = FactTable()
+        # Extract key phrases (2-4 word ngrams) to search labels
+        tokens = re.findall(r"[a-zA-Z]+", q)
+        phrases = set()
+        for n in (2, 3, 4):
+            for i in range(len(tokens) - n + 1):
+                phrases.add(" ".join(tokens[i : i + n]))
+
+        candidates = []
+        for ph in list(phrases)[:15]:
+            rows = ft.search_facts(ph, doc_id)
+            for r in rows:
+                label = (r.get("label") or "").lower()
+                label_tokens = set(re.findall(r"[a-zA-Z]+", label))
+                overlap = len(set(tokens) & label_tokens)
+                try:
+                    numeric_value = float(str(r.get("value", "0")).replace(",", ""))
+                except Exception:
+                    numeric_value = 0.0
+                score = overlap * 2 + (1 if "total" in label else 0) + min(numeric_value / 1_000_000, 3)
+                candidates.append((score, r))
+
+        if not candidates:
+            return None
+
+        candidates.sort(key=lambda x: x[0], reverse=True)
+        best = candidates[0][1]
+
+        answer = (
+            f"{best.get('label', 'Value')} is {best.get('value', '')} {best.get('unit', '')}."
+        )
+
+        bbox = None
+        if best.get("bbox_x0") is not None:
+            bbox = {
+                "x0": best.get("bbox_x0"),
+                "y0": best.get("bbox_y0"),
+                "x1": best.get("bbox_x1"),
+                "y1": best.get("bbox_y1"),
+            }
+
+        citation = ProvenanceCitation(
+            document_name=best.get("doc_name", "unknown"),
+            file_path="",
+            page_number=best.get("page_number", -1),
+            bbox=bbox,
+            content_hash=best.get("content_hash", ""),
+            strategy_used="fact_table",
+            confidence_score=0.9,
+            ldu_id=best.get("ldu_id", ""),
+        )
+        provenance = ProvenanceChain(citations=[citation], answer=answer)
+
+        return {
+            "question": question,
+            "answer": answer,
+            "provenance": provenance.model_dump(),
+            "pageindex_result": {},
+            "precision_report": {},
+            "passages_used": 0,
+            "fact_table_hit": True,
+        }
 
     def _llm_query(self, question: str, doc_id: Optional[str] = None) -> dict:
         """LLM-orchestrated query using Gemini Flash."""

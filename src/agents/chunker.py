@@ -185,12 +185,15 @@ class ChunkingEngine:
         buffer_pages: List[int] = []
         buffer_bbox = None
         is_list = False
+        current_page: Optional[int] = None
 
         def flush_buffer(chunk_type: str) -> None:
+            nonlocal current_page, buffer_bbox
             if not buffer_texts:
                 return
             content = " ".join(buffer_texts)
             token_count = _estimate_tokens(content)
+            page_refs_sorted = sorted(set(buffer_pages))
 
             # Split if over max_tokens (except lists -- Rule 3)
             if chunk_type != "list" and token_count > self.max_tokens:
@@ -220,7 +223,7 @@ class ChunkingEngine:
                         ldu_id=f"ldu_{uuid.uuid4().hex[:12]}",
                         content=sub_content,
                         chunk_type="text",
-                        page_refs=list(set(buffer_pages)),
+                        page_refs=page_refs_sorted,
                         bounding_box=buffer_bbox,
                         parent_section=section,
                         doc_id=doc.doc_id,
@@ -238,7 +241,7 @@ class ChunkingEngine:
                     ldu_id=f"ldu_{uuid.uuid4().hex[:12]}",
                     content=content,
                     chunk_type=chunk_type,
-                    page_refs=list(set(buffer_pages)),
+                    page_refs=page_refs_sorted,
                     bounding_box=buffer_bbox,
                     parent_section=section,
                     doc_id=doc.doc_id,
@@ -254,6 +257,8 @@ class ChunkingEngine:
 
             buffer_texts.clear()
             buffer_pages.clear()
+            current_page = None
+            buffer_bbox = None
 
         list_pattern = re.compile(r"^\s*(\d+[\.\)]\s|\u2022\s|\-\s|\*\s)")
 
@@ -263,6 +268,13 @@ class ChunkingEngine:
                 continue
 
             block_is_list = bool(list_pattern.match(text))
+
+            # Flush if page changes to keep LDUs page-local (better provenance)
+            if current_page is not None and block.page != current_page:
+                flush_buffer("list" if is_list else "text")
+
+            if current_page is None:
+                current_page = block.page
 
             # Flush on type change
             if buffer_texts and block_is_list != is_list:
