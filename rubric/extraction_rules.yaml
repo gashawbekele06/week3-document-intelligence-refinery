@@ -46,7 +46,7 @@ strategy_routing:
 # ─── Budget Guard ──────────────────────────────────────────────────────────────
 budget:
   max_cost_per_doc_usd: 0.10
-  vision_model: "gemini-1.5-flash"
+  vision_model: "openai/gpt-4o-mini"
   # Gemini Flash pricing: $0.075/1M input tokens, $0.30/1M output tokens
   # Estimate ~500 tokens per page image → ~$0.000038 per page
   token_cost_per_1m_input: 0.075

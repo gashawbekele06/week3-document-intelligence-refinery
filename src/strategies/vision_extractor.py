@@ -134,6 +134,7 @@ class VisionExtractor(BaseExtractor):
             "vision_model", "openai/gpt-4o-mini"
         )
         self.model = self._normalize_model_name(raw_model)
+        self.openrouter_models = self._build_openrouter_models(self.model)
 
     def _normalize_model_name(self, model: str) -> str:
         model = (model or "").strip()
@@ -142,9 +143,26 @@ class VisionExtractor(BaseExtractor):
         aliases = {
             "gpt-4o-mini": "openai/gpt-4o-mini",
             "gpt-4o": "openai/gpt-4o",
-            "gemini-1.5-flash": "google/gemini-1.5-flash",
+            "gemini-1.5-flash": "google/gemini-2.0-flash-001",
+            "gemini-2.0-flash": "google/gemini-2.0-flash-001",
         }
         return aliases.get(model, model)
+
+    def _build_openrouter_models(self, primary_model: str) -> List[str]:
+        candidates = [
+            primary_model,
+            "openai/gpt-4o-mini",
+            "openai/gpt-4o",
+            "google/gemini-2.0-flash-001",
+        ]
+        seen = set()
+        ordered = []
+        for model in candidates:
+            normalized = self._normalize_model_name(model)
+            if normalized and normalized not in seen:
+                ordered.append(normalized)
+                seen.add(normalized)
+        return ordered
 
     def _pdf_page_to_image_bytes(self, file_path: Path, page_num: int) -> Optional[bytes]:
         try:
@@ -222,24 +240,6 @@ class VisionExtractor(BaseExtractor):
 
     def _call_openrouter(self, image_b64: str) -> Tuple[dict, int, int]:
         """Fallback to OpenRouter."""
-        payload = {
-            "model": self.model,
-            "messages": [
-                {
-                    "role": "user",
-                    "content": [
-                        {"type": "text", "text": _EXTRACTION_PROMPT},
-                        {
-                            "type": "image_url",
-                            "image_url": {"url": f"data:image/png;base64,{image_b64}"},
-                        },
-                    ],
-                }
-            ],
-            "temperature": 0.1,
-            "max_tokens": 1200,
-        }
-
         headers = {
             "Authorization": f"Bearer {self.api_key}",
             "HTTP-Referer": "https://github.com/your-repo",
@@ -247,20 +247,46 @@ class VisionExtractor(BaseExtractor):
             "Content-Type": "application/json",
         }
 
-        try:
-            resp = requests.post(_OPENROUTER_URL, headers=headers, json=payload, timeout=60)
-            resp.raise_for_status()
-            data = resp.json()
+        last_error = None
+        for model_name in self.openrouter_models:
+            payload = {
+                "model": model_name,
+                "messages": [
+                    {
+                        "role": "user",
+                        "content": [
+                            {"type": "text", "text": _EXTRACTION_PROMPT},
+                            {
+                                "type": "image_url",
+                                "image_url": {"url": f"data:image/png;base64,{image_b64}"},
+                            },
+                        ],
+                    }
+                ],
+                "temperature": 0.1,
+                "max_tokens": 1200,
+            }
 
-            content = data["choices"][0]["message"]["content"]
-            if isinstance(content, list):
-                content = "".join(part.get("text", "") for part in content if isinstance(part, dict))
-            parsed = _parse_json_payload(content)
-            usage = data.get("usage", {})
-            return parsed, usage.get("prompt_tokens", 0), usage.get("completion_tokens", 0)
+            try:
+                resp = requests.post(_OPENROUTER_URL, headers=headers, json=payload, timeout=60)
+                resp.raise_for_status()
+                data = resp.json()
 
-        except Exception as e:
-            raise RuntimeError(f"OpenRouter call failed: {str(e)}")
+                content = data["choices"][0]["message"]["content"]
+                if isinstance(content, list):
+                    content = "".join(
+                        part.get("text", "") for part in content if isinstance(part, dict)
+                    )
+                parsed = _parse_json_payload(content)
+                usage = data.get("usage", {})
+                self.model = model_name
+                return parsed, usage.get("prompt_tokens", 0), usage.get("completion_tokens", 0)
+
+            except Exception as e:
+                last_error = e
+                continue
+
+        raise RuntimeError(f"OpenRouter call failed: {str(last_error)}")
 
     def _extract_page(
         self, img_bytes: bytes, page_num: int, budget_guard: BudgetGuard
