@@ -1,0 +1,1750 @@
+{
+  "doc_id": "2b7cf3753e01ab50",
+  "document_name": "fta_performance_survey_final_report_2022.pdf",
+  "page_count": 155,
+  "sections": [
+    {
+      "section_id": "sec_6c45e39f97",
+      "title": "Assessment of Financial Transparency and Accountability (FTA) Implementation in Ethiopia",
+      "page_start": 1,
+      "page_end": 0,
+      "level": 2,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_3b1a15752a80"
+      ]
+    },
+    {
+      "section_id": "sec_2ca953bd00",
+      "title": "Final Report",
+      "page_start": 1,
+      "page_end": 0,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "SUBMITTED TO:",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_b666b0bf5bd8",
+        "ldu_2955bec32e29"
+      ]
+    },
+    {
+      "section_id": "sec_d7a0dcad76",
+      "title": "SUBMITTED TO:",
+      "page_start": 1,
+      "page_end": 0,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "SUBMITTED BY:",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_929a98f798b6",
+        "ldu_b666b0bf5bd8"
+      ]
+    },
+    {
+      "section_id": "sec_47a86de967",
+      "title": "SUBMITTED BY:",
+      "page_start": 1,
+      "page_end": 1,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "Contents",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_0c85d386ef3b",
+        "ldu_929a98f798b6"
+      ]
+    },
+    {
+      "section_id": "sec_2502a87c2b",
+      "title": "Contents",
+      "page_start": 2,
+      "page_end": 3,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "List of Figures",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_ebc0d565cf8e",
+        "ldu_0c85d386ef3b"
+      ]
+    },
+    {
+      "section_id": "sec_0cc55bfc57",
+      "title": "List of Figures",
+      "page_start": 4,
+      "page_end": 6,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "Acknowledgements",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_0586a2ced114",
+        "ldu_ebc0d565cf8e"
+      ]
+    },
+    {
+      "section_id": "sec_05e6de7db7",
+      "title": "Acknowledgements",
+      "page_start": 7,
+      "page_end": 7,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "Acronyms",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_0399b322dd63",
+        "ldu_0586a2ced114"
+      ]
+    },
+    {
+      "section_id": "sec_fb92832761",
+      "title": "Acronyms",
+      "page_start": 8,
+      "page_end": 8,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "Executive Summary",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_b94d5b2aa20f",
+        "ldu_0399b322dd63"
+      ]
+    },
+    {
+      "section_id": "sec_15dfa27cf3",
+      "title": "Executive Summary",
+      "page_start": 9,
+      "page_end": 12,
+      "level": 1,
+      "child_sections": [
+        {
+          "section_id": "sec_8ed36ce24c",
+          "title": "ACHIEVEMENT AGAINST EXPECTATIONS",
+          "page_start": 10,
+          "page_end": 10,
+          "level": 2,
+          "child_sections": [],
+          "key_entities": [],
+          "summary": "EFFECTIVENESS AND IMPACT OF FTA INITIATIVE",
+          "data_types_present": [],
+          "ldu_ids": [
+            "ldu_6ca2cf49ddb7",
+            "ldu_31415654254c"
+          ]
+        },
+        {
+          "section_id": "sec_caee8b8948",
+          "title": "EFFECTIVENESS AND IMPACT OF FTA INITIATIVE",
+          "page_start": 11,
+          "page_end": 11,
+          "level": 2,
+          "child_sections": [],
+          "key_entities": [],
+          "summary": "CROSS CUTTING ISSUES",
+          "data_types_present": [],
+          "ldu_ids": [
+            "ldu_0ccad496050d",
+            "ldu_6ca2cf49ddb7"
+          ]
+        }
+      ],
+      "key_entities": [],
+      "summary": "ACHIEVEMENT AGAINST EXPECTATIONS",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_31415654254c",
+        "ldu_b94d5b2aa20f"
+      ]
+    },
+    {
+      "section_id": "sec_78d44b82d0",
+      "title": "CROSS CUTTING ISSUES",
+      "page_start": 13,
+      "page_end": 16,
+      "level": 1,
+      "child_sections": [
+        {
+          "section_id": "sec_63bd159089",
+          "title": "CONCLUSION AND RECOMMENDATIONS",
+          "page_start": 14,
+          "page_end": 14,
+          "level": 2,
+          "child_sections": [],
+          "key_entities": [],
+          "summary": "1. Introduction",
+          "data_types_present": [],
+          "ldu_ids": [
+            "ldu_b4c125c352b0",
+            "ldu_86febcb44302"
+          ]
+        }
+      ],
+      "key_entities": [],
+      "summary": "CONCLUSION AND RECOMMENDATIONS",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_86febcb44302",
+        "ldu_0ccad496050d"
+      ]
+    },
+    {
+      "section_id": "sec_d8781ae188",
+      "title": "1. Introduction",
+      "page_start": 17,
+      "page_end": 19,
+      "level": 1,
+      "child_sections": [
+        {
+          "section_id": "sec_e03a5d1f92",
+          "title": "1.1. Background",
+          "page_start": 17,
+          "page_end": 17,
+          "level": 2,
+          "child_sections": [],
+          "key_entities": [],
+          "summary": "1.2. Objective of the assessment",
+          "data_types_present": [],
+          "ldu_ids": [
+            "ldu_b2b7330119ab",
+            "ldu_764fab6111f2"
+          ]
+        },
+        {
+          "section_id": "sec_a5ef73f016",
+          "title": "1.2. Objective of the assessment",
+          "page_start": 20,
+          "page_end": 20,
+          "level": 2,
+          "child_sections": [],
+          "key_entities": [],
+          "summary": "Specific objectives:",
+          "data_types_present": [],
+          "ldu_ids": [
+            "ldu_2541a734e2d0",
+            "ldu_b2b7330119ab"
+          ]
+        }
+      ],
+      "key_entities": [],
+      "summary": "1.1. Background",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_764fab6111f2",
+        "ldu_b4c125c352b0"
+      ]
+    },
+    {
+      "section_id": "sec_276b04bbe9",
+      "title": "Specific objectives:",
+      "page_start": 20,
+      "page_end": 25,
+      "level": 1,
+      "child_sections": [
+        {
+          "section_id": "sec_99dcb46c3c",
+          "title": "1.3. Scope of the study",
+          "page_start": 21,
+          "page_end": 21,
+          "level": 2,
+          "child_sections": [],
+          "key_entities": [],
+          "summary": "1.3.1. Geographic scope",
+          "data_types_present": [],
+          "ldu_ids": [
+            "ldu_d7bce64b07fb",
+            "ldu_033094bd26ad"
+          ]
+        },
+        {
+          "section_id": "sec_e6f0737d68",
+          "title": "1.3.1. Geographic scope",
+          "page_start": 21,
+          "page_end": 21,
+          "level": 3,
+          "child_sections": [],
+          "key_entities": [],
+          "summary": "1.3.2. Conceptual scope",
+          "data_types_present": [],
+          "ldu_ids": [
+            "ldu_9a0c3150518b",
+            "ldu_d7bce64b07fb"
+          ]
+        },
+        {
+          "section_id": "sec_0f82d59779",
+          "title": "1.3.2. Conceptual scope",
+          "page_start": 21,
+          "page_end": 21,
+          "level": 3,
+          "child_sections": [],
+          "key_entities": [],
+          "summary": "Brief overview of FTA Program in Ethiopia",
+          "data_types_present": [],
+          "ldu_ids": [
+            "ldu_028dcb440608",
+            "ldu_9a0c3150518b"
+          ]
+        },
+        {
+          "section_id": "sec_1620b612cd",
+          "title": "1.4. Brief overview of FTA Program in Ethiopia",
+          "page_start": 22,
+          "page_end": 22,
+          "level": 2,
+          "child_sections": [],
+          "key_entities": [],
+          "summary": "1.4.1. Context",
+          "data_types_present": [],
+          "ldu_ids": [
+            "ldu_e7538a649da0",
+            "ldu_028dcb440608"
+          ]
+        },
+        {
+          "section_id": "sec_bd4138b33e",
+          "title": "1.4.1. Context",
+          "page_start": 22,
+          "page_end": 22,
+          "level": 3,
+          "child_sections": [],
+          "key_entities": [],
+          "summary": "1.4.2. The FTA initiative",
+          "data_types_present": [],
+          "ldu_ids": [
+            "ldu_78a384ead3ef",
+            "ldu_e7538a649da0"
+          ]
+        },
+        {
+          "section_id": "sec_de785c7937",
+          "title": "1.4.2. The FTA initiative",
+          "page_start": 23,
+          "page_end": 23,
+          "level": 3,
+          "child_sections": [],
+          "key_entities": [],
+          "summary": "1.4.3. Logical framework of FTA",
+          "data_types_present": [],
+          "ldu_ids": [
+            "ldu_224b7c500ecc",
+            "ldu_78a384ead3ef"
+          ]
+        },
+        {
+          "section_id": "sec_cd15e989c8",
+          "title": "1.4.3. Logical framework of FTA",
+          "page_start": 24,
+          "page_end": 24,
+          "level": 3,
+          "child_sections": [],
+          "key_entities": [],
+          "summary": "Implementation status of FTA initiative so far",
+          "data_types_present": [],
+          "ldu_ids": [
+            "ldu_c16070fb3018",
+            "ldu_224b7c500ecc"
+          ]
+        },
+        {
+          "section_id": "sec_cf6124d52b",
+          "title": "1.4.4. Implementation status of FTA initiative so far",
+          "page_start": 25,
+          "page_end": 25,
+          "level": 3,
+          "child_sections": [],
+          "key_entities": [],
+          "summary": "2. Methodology",
+          "data_types_present": [],
+          "ldu_ids": [
+            "ldu_9c52e719e756",
+            "ldu_c16070fb3018"
+          ]
+        }
+      ],
+      "key_entities": [],
+      "summary": "1.3. Scope of the study",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_033094bd26ad",
+        "ldu_2541a734e2d0"
+      ]
+    },
+    {
+      "section_id": "sec_d36b13703a",
+      "title": "2. Methodology",
+      "page_start": 26,
+      "page_end": 31,
+      "level": 1,
+      "child_sections": [
+        {
+          "section_id": "sec_08c2a5f917",
+          "title": "2.1. Study design",
+          "page_start": 27,
+          "page_end": 27,
+          "level": 2,
+          "child_sections": [],
+          "key_entities": [],
+          "summary": "2.2. Study coverage",
+          "data_types_present": [],
+          "ldu_ids": [
+            "ldu_bdb3e4cc5c3e",
+            "ldu_fde316b96601"
+          ]
+        },
+        {
+          "section_id": "sec_a75c9a8b81",
+          "title": "2.2. Study coverage",
+          "page_start": 27,
+          "page_end": 27,
+          "level": 2,
+          "child_sections": [],
+          "key_entities": [],
+          "summary": "2.2. Sampling technique",
+          "data_types_present": [],
+          "ldu_ids": [
+            "ldu_840afa8212e4",
+            "ldu_bdb3e4cc5c3e"
+          ]
+        },
+        {
+          "section_id": "sec_1cf95ae74b",
+          "title": "2.2. Sampling technique",
+          "page_start": 27,
+          "page_end": 27,
+          "level": 2,
+          "child_sections": [],
+          "key_entities": [],
+          "summary": "2.3. Data collection technique",
+          "data_types_present": [],
+          "ldu_ids": [
+            "ldu_8e43f1a0d057",
+            "ldu_840afa8212e4"
+          ]
+        },
+        {
+          "section_id": "sec_219dd7c80d",
+          "title": "2.3. Data collection technique",
+          "page_start": 28,
+          "page_end": 28,
+          "level": 2,
+          "child_sections": [],
+          "key_entities": [],
+          "summary": "2.3.1. Document review",
+          "data_types_present": [],
+          "ldu_ids": [
+            "ldu_f10be0e43f23",
+            "ldu_8e43f1a0d057"
+          ]
+        },
+        {
+          "section_id": "sec_d83ce45cd8",
+          "title": "2.3.1. Document review",
+          "page_start": 28,
+          "page_end": 28,
+          "level": 3,
+          "child_sections": [],
+          "key_entities": [],
+          "summary": "2.3.2. Household interview",
+          "data_types_present": [],
+          "ldu_ids": [
+            "ldu_b9a8d9016c8a",
+            "ldu_f10be0e43f23"
+          ]
+        },
+        {
+          "section_id": "sec_da9928d51b",
+          "title": "2.3.2. Household interview",
+          "page_start": 29,
+          "page_end": 29,
+          "level": 3,
+          "child_sections": [],
+          "key_entities": [],
+          "summary": "2.3.3. Key informant interviews",
+          "data_types_present": [],
+          "ldu_ids": [
+            "ldu_78c925898af8",
+            "ldu_b9a8d9016c8a"
+          ]
+        },
+        {
+          "section_id": "sec_6d7630c335",
+          "title": "2.3.3. Key informant interviews",
+          "page_start": 29,
+          "page_end": 29,
+          "level": 3,
+          "child_sections": [],
+          "key_entities": [],
+          "summary": "2.3.4. Focus group discussions",
+          "data_types_present": [],
+          "ldu_ids": [
+            "ldu_99b72a8e0187",
+            "ldu_78c925898af8"
+          ]
+        },
+        {
+          "section_id": "sec_8bbd86d9a6",
+          "title": "2.3.4. Focus group discussions",
+          "page_start": 30,
+          "page_end": 30,
+          "level": 3,
+          "child_sections": [],
+          "key_entities": [],
+          "summary": "2.4. Data analysis",
+          "data_types_present": [],
+          "ldu_ids": [
+            "ldu_85afeb29d777",
+            "ldu_99b72a8e0187"
+          ]
+        },
+        {
+          "section_id": "sec_bfaf49143a",
+          "title": "2.4. Data analysis",
+          "page_start": 30,
+          "page_end": 30,
+          "level": 2,
+          "child_sections": [],
+          "key_entities": [],
+          "summary": "2.5. Limitations",
+          "data_types_present": [],
+          "ldu_ids": [
+            "ldu_3d0948a32d20",
+            "ldu_85afeb29d777"
+          ]
+        },
+        {
+          "section_id": "sec_662b5d0442",
+          "title": "2.5. Limitations",
+          "page_start": 30,
+          "page_end": 30,
+          "level": 2,
+          "child_sections": [],
+          "key_entities": [],
+          "summary": "2.6. Organization of the report",
+          "data_types_present": [],
+          "ldu_ids": [
+            "ldu_8f096d9917e3",
+            "ldu_3d0948a32d20"
+          ]
+        },
+        {
+          "section_id": "sec_455b3f45f5",
+          "title": "2.6. Organization of the report",
+          "page_start": 31,
+          "page_end": 31,
+          "level": 2,
+          "child_sections": [],
+          "key_entities": [],
+          "summary": "Achievement against expectations",
+          "data_types_present": [],
+          "ldu_ids": [
+            "ldu_54c5f9c9eb08",
+            "ldu_8f096d9917e3"
+          ]
+        }
+      ],
+      "key_entities": [],
+      "summary": "2.1. Study design",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_fde316b96601",
+        "ldu_9c52e719e756"
+      ]
+    },
+    {
+      "section_id": "sec_6f84573051",
+      "title": "3. Achievement against expectations",
+      "page_start": 32,
+      "page_end": 51,
+      "level": 1,
+      "child_sections": [
+        {
+          "section_id": "sec_fefa866759",
+          "title": "3.1 Achievements at Sub-national level",
+          "page_start": 32,
+          "page_end": 32,
+          "level": 2,
+          "child_sections": [],
+          "key_entities": [],
+          "summary": "3.1.1. Awareness creations",
+          "data_types_present": [],
+          "ldu_ids": [
+            "ldu_0bfc8a9fd8b1",
+            "ldu_d3c720acf77b"
+          ]
+        },
+        {
+          "section_id": "sec_fb05e104a5",
+          "title": "3.1.1. Awareness creations",
+          "page_start": 32,
+          "page_end": 32,
+          "level": 3,
+          "child_sections": [],
+          "key_entities": [],
+          "summary": "Budget Literacy Training provision",
+          "data_types_present": [],
+          "ldu_ids": [
+            "ldu_8e93099c5fc8",
+            "ldu_0bfc8a9fd8b1"
+          ]
+        },
+        {
+          "section_id": "sec_d9cecc7022",
+          "title": "3.1.2. Budget Literacy Training provision",
+          "page_start": 33,
+          "page_end": 33,
+          "level": 3,
+          "child_sections": [],
+          "key_entities": [],
+          "summary": "Budgetary information provision",
+          "data_types_present": [],
+          "ldu_ids": [
+            "ldu_a3a37ead3f0e",
+            "ldu_8e93099c5fc8"
+          ]
+        },
+        {
+          "section_id": "sec_04618eb421",
+          "title": "3.1.3. Budgetary information provision",
+          "page_start": 37,
+          "page_end": 37,
+          "level": 3,
+          "child_sections": [],
+          "key_entities": [],
+          "summary": "3.1.4. Pre-budget discussions",
+          "data_types_present": [],
+          "ldu_ids": [
+            "ldu_79f029a816b9",
+            "ldu_a3a37ead3f0e"
+          ]
+        },
+        {
+          "section_id": "sec_6533ac9737",
+          "title": "3.1.4. Pre-budget discussions",
+          "page_start": 41,
+          "page_end": 41,
+          "level": 3,
+          "child_sections": [],
+          "key_entities": [],
+          "summary": "3.1.5. Accountability mechanism",
+          "data_types_present": [],
+          "ldu_ids": [
+            "ldu_029a98288b18",
+            "ldu_79f029a816b9"
+          ]
+        },
+        {
+          "section_id": "sec_d014cc7942",
+          "title": "3.1.5. Accountability mechanism",
+          "page_start": 44,
+          "page_end": 44,
+          "level": 3,
+          "child_sections": [],
+          "key_entities": [],
+          "summary": "Implementation challenges at regional/city administration and woreda level",
+          "data_types_present": [],
+          "ldu_ids": [
+            "ldu_459b662ea244",
+            "ldu_029a98288b18"
+          ]
+        },
+        {
+          "section_id": "sec_232cbcd3fd",
+          "title": "3.1.6. Implementation challenges at regional/city administration and woreda level",
+          "page_start": 45,
+          "page_end": 45,
+          "level": 3,
+          "child_sections": [],
+          "key_entities": [],
+          "summary": "",
+          "data_types_present": [],
+          "ldu_ids": [
+            "ldu_459b662ea244"
+          ]
+        },
+        {
+          "section_id": "sec_f55f04f288",
+          "title": "3.2 Achievement at Federal budgetary institutions",
+          "page_start": 46,
+          "page_end": 46,
+          "level": 2,
+          "child_sections": [],
+          "key_entities": [],
+          "summary": "3.2.1. Awareness about FTA",
+          "data_types_present": [],
+          "ldu_ids": [
+            "ldu_2a3034644b1e",
+            "ldu_c3a0e71aae7f"
+          ]
+        },
+        {
+          "section_id": "sec_795b446e19",
+          "title": "3.2.1. Awareness about FTA",
+          "page_start": 46,
+          "page_end": 46,
+          "level": 3,
+          "child_sections": [],
+          "key_entities": [],
+          "summary": "Provision of budgetary information",
+          "data_types_present": [],
+          "ldu_ids": [
+            "ldu_a0271d1e77a3",
+            "ldu_2a3034644b1e"
+          ]
+        },
+        {
+          "section_id": "sec_4ac1258027",
+          "title": "3.2.2. Provision of budgetary information",
+          "page_start": 47,
+          "page_end": 47,
+          "level": 3,
+          "child_sections": [],
+          "key_entities": [],
+          "summary": "3.2.3. Engagement of stakeholders",
+          "data_types_present": [],
+          "ldu_ids": [
+            "ldu_061e2b125a04",
+            "ldu_a0271d1e77a3"
+          ]
+        },
+        {
+          "section_id": "sec_104b7ff615",
+          "title": "3.2.3. Engagement of stakeholders",
+          "page_start": 50,
+          "page_end": 50,
+          "level": 3,
+          "child_sections": [],
+          "key_entities": [],
+          "summary": "Implementation challenges at Federal budgetary institution level",
+          "data_types_present": [],
+          "ldu_ids": [
+            "ldu_11a9629187ca",
+            "ldu_061e2b125a04"
+          ]
+        },
+        {
+          "section_id": "sec_00cc9208e5",
+          "title": "3.2.4. Implementation challenges at Federal budgetary institution level",
+          "page_start": 51,
+          "page_end": 51,
+          "level": 3,
+          "child_sections": [],
+          "key_entities": [],
+          "summary": "Effectiveness and impact of FTA initiatives",
+          "data_types_present": [],
+          "ldu_ids": [
+            "ldu_45bd2ef1fdab",
+            "ldu_11a9629187ca"
+          ]
+        }
+      ],
+      "key_entities": [],
+      "summary": "3.1 Achievements at Sub-national level",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_d3c720acf77b",
+        "ldu_54c5f9c9eb08"
+      ]
+    },
+    {
+      "section_id": "sec_7fe801cbf2",
+      "title": "4. Effectiveness and impact of FTA initiatives",
+      "page_start": 52,
+      "page_end": 83,
+      "level": 1,
+      "child_sections": [
+        {
+          "section_id": "sec_945e502d31",
+          "title": "4.1. Demographic Characteristics of respondents",
+          "page_start": 52,
+          "page_end": 52,
+          "level": 2,
+          "child_sections": [],
+          "key_entities": [],
+          "summary": "Citizen awareness and understanding",
+          "data_types_present": [],
+          "ldu_ids": [
+            "ldu_4daeba2a2a1f",
+            "ldu_174322e761f5"
+          ]
+        },
+        {
+          "section_id": "sec_9a495fcf77",
+          "title": "4.2. Citizen awareness and understanding",
+          "page_start": 55,
+          "page_end": 55,
+          "level": 2,
+          "child_sections": [],
+          "key_entities": [],
+          "summary": "4.3. Access to budget information",
+          "data_types_present": [],
+          "ldu_ids": [
+            "ldu_ffd1cae58176",
+            "ldu_4daeba2a2a1f"
+          ]
+        },
+        {
+          "section_id": "sec_c273301dc2",
+          "title": "4.3. Access to budget information",
+          "page_start": 61,
+          "page_end": 61,
+          "level": 2,
+          "child_sections": [],
+          "key_entities": [],
+          "summary": "Citizens' participation in local government",
+          "data_types_present": [],
+          "ldu_ids": [
+            "ldu_d87b7209bd76",
+            "ldu_ffd1cae58176"
+          ]
+        },
+        {
+          "section_id": "sec_cec9084ae4",
+          "title": "4.4. Citizens' participation in local government",
+          "page_start": 68,
+          "page_end": 68,
+          "level": 2,
+          "child_sections": [],
+          "key_entities": [],
+          "summary": "Transparency and accountability in basic services delivery",
+          "data_types_present": [],
+          "ldu_ids": [
+            "ldu_4c9fcb8c92ba",
+            "ldu_d87b7209bd76"
+          ]
+        },
+        {
+          "section_id": "sec_fb4c99d683",
+          "title": "4.5. Transparency and accountability in basic services delivery",
+          "page_start": 78,
+          "page_end": 78,
+          "level": 2,
+          "child_sections": [],
+          "key_entities": [],
+          "summary": "How to interpretation of the performance/important matrix.",
+          "data_types_present": [],
+          "ldu_ids": [
+            "ldu_0806a01d79b3",
+            "ldu_4c9fcb8c92ba"
+          ]
+        },
+        {
+          "section_id": "sec_cc5ad65e28",
+          "title": "How to interpretation of the performance/important matrix.",
+          "page_start": 78,
+          "page_end": 78,
+          "level": 2,
+          "child_sections": [],
+          "key_entities": [],
+          "summary": "Satisfaction with of basic services delivery",
+          "data_types_present": [],
+          "ldu_ids": [
+            "ldu_a2f6324305f1",
+            "ldu_0806a01d79b3"
+          ]
+        },
+        {
+          "section_id": "sec_27d92d631c",
+          "title": "4.6. Satisfaction with of basic services delivery",
+          "page_start": 80,
+          "page_end": 80,
+          "level": 2,
+          "child_sections": [],
+          "key_entities": [],
+          "summary": "Determinants of local government transparency",
+          "data_types_present": [],
+          "ldu_ids": [
+            "ldu_67491b4cfd86",
+            "ldu_a2f6324305f1"
+          ]
+        }
+      ],
+      "key_entities": [],
+      "summary": "Demographic Characteristics of respondents",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_174322e761f5",
+        "ldu_45bd2ef1fdab"
+      ]
+    },
+    {
+      "section_id": "sec_d02708c533",
+      "title": "5. Determinants of local government transparency",
+      "page_start": 84,
+      "page_end": 88,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "6. Gender and FTA",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_e8f13139e976",
+        "ldu_67491b4cfd86"
+      ]
+    },
+    {
+      "section_id": "sec_c20ec56d5f",
+      "title": "6. Gender and FTA",
+      "page_start": 89,
+      "page_end": 94,
+      "level": 1,
+      "child_sections": [
+        {
+          "section_id": "sec_96e6e24386",
+          "title": "6.1. Women representation in local government",
+          "page_start": 89,
+          "page_end": 89,
+          "level": 2,
+          "child_sections": [],
+          "key_entities": [],
+          "summary": "Availability of sex disaggregated data",
+          "data_types_present": [],
+          "ldu_ids": [
+            "ldu_f33255fc58bf",
+            "ldu_4e5018b0b0ab"
+          ]
+        },
+        {
+          "section_id": "sec_56b0f6a6a0",
+          "title": "6.2. Availability of sex disaggregated data",
+          "page_start": 90,
+          "page_end": 90,
+          "level": 2,
+          "child_sections": [],
+          "key_entities": [],
+          "summary": "Women participation in FTA implementation",
+          "data_types_present": [],
+          "ldu_ids": [
+            "ldu_02ed59446bfd",
+            "ldu_f33255fc58bf"
+          ]
+        },
+        {
+          "section_id": "sec_7ae4469f46",
+          "title": "6.3. Women participation in FTA implementation",
+          "page_start": 91,
+          "page_end": 91,
+          "level": 2,
+          "child_sections": [],
+          "key_entities": [],
+          "summary": "Challenges in ensuring gender equality",
+          "data_types_present": [],
+          "ldu_ids": [
+            "ldu_76abf44ffffc",
+            "ldu_02ed59446bfd"
+          ]
+        },
+        {
+          "section_id": "sec_283fe0101d",
+          "title": "6.4. Challenges in ensuring gender equality",
+          "page_start": 93,
+          "page_end": 93,
+          "level": 2,
+          "child_sections": [],
+          "key_entities": [],
+          "summary": "7. Linkage and coordination",
+          "data_types_present": [],
+          "ldu_ids": [
+            "ldu_c42ae26c563e",
+            "ldu_76abf44ffffc"
+          ]
+        }
+      ],
+      "key_entities": [],
+      "summary": "Women representation in local government",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_4e5018b0b0ab",
+        "ldu_e8f13139e976"
+      ]
+    },
+    {
+      "section_id": "sec_ddfd28d438",
+      "title": "7. Linkage and coordination",
+      "page_start": 95,
+      "page_end": 98,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "8. Project management",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_c3466ed2fd67",
+        "ldu_c42ae26c563e"
+      ]
+    },
+    {
+      "section_id": "sec_7680e22ad6",
+      "title": "8. Project management",
+      "page_start": 99,
+      "page_end": 101,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "9. Lesson learned",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_433b28eef188",
+        "ldu_c3466ed2fd67"
+      ]
+    },
+    {
+      "section_id": "sec_1a14118242",
+      "title": "9. Lesson learned",
+      "page_start": 102,
+      "page_end": 104,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "Conclusions and Recommendations",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_48c10cb3490f",
+        "ldu_433b28eef188"
+      ]
+    },
+    {
+      "section_id": "sec_96d7e8afab",
+      "title": "10. Conclusions and Recommendations",
+      "page_start": 105,
+      "page_end": 105,
+      "level": 1,
+      "child_sections": [
+        {
+          "section_id": "sec_f656d8d252",
+          "title": "10.1. Conclusion",
+          "page_start": 105,
+          "page_end": 105,
+          "level": 2,
+          "child_sections": [],
+          "key_entities": [],
+          "summary": "Cross-cutting issues",
+          "data_types_present": [],
+          "ldu_ids": [
+            "ldu_025f29c0d0cb",
+            "ldu_bfb5727b1506"
+          ]
+        }
+      ],
+      "key_entities": [],
+      "summary": "10.1. Conclusion",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_bfb5727b1506",
+        "ldu_48c10cb3490f"
+      ]
+    },
+    {
+      "section_id": "sec_f5ecc80431",
+      "title": "Cross-cutting issues",
+      "page_start": 106,
+      "page_end": 110,
+      "level": 1,
+      "child_sections": [
+        {
+          "section_id": "sec_596a431a4e",
+          "title": "10.2. Recommendations",
+          "page_start": 107,
+          "page_end": 107,
+          "level": 2,
+          "child_sections": [],
+          "key_entities": [],
+          "summary": "Provision of budgetary information",
+          "data_types_present": [],
+          "ldu_ids": [
+            "ldu_be3f5326b4c6",
+            "ldu_9fa97ef02982"
+          ]
+        },
+        {
+          "section_id": "sec_80c0da222e",
+          "title": "I. Provision of budgetary information",
+          "page_start": 107,
+          "page_end": 107,
+          "level": 2,
+          "child_sections": [],
+          "key_entities": [],
+          "summary": "Awareness creation and training",
+          "data_types_present": [],
+          "ldu_ids": [
+            "ldu_66960b24230d",
+            "ldu_be3f5326b4c6"
+          ]
+        },
+        {
+          "section_id": "sec_5d2e551338",
+          "title": "II. Awareness creation and training",
+          "page_start": 108,
+          "page_end": 108,
+          "level": 2,
+          "child_sections": [],
+          "key_entities": [],
+          "summary": "Improve the utilization of M&E information",
+          "data_types_present": [],
+          "ldu_ids": [
+            "ldu_cf0477477ee5",
+            "ldu_66960b24230d"
+          ]
+        },
+        {
+          "section_id": "sec_cad4958dbc",
+          "title": "III. Improve the utilization of M&E information",
+          "page_start": 108,
+          "page_end": 108,
+          "level": 2,
+          "child_sections": [],
+          "key_entities": [],
+          "summary": "Taking timely corrective actions when rule and directives are not implemented",
+          "data_types_present": [],
+          "ldu_ids": [
+            "ldu_b12448ed9e09",
+            "ldu_cf0477477ee5"
+          ]
+        },
+        {
+          "section_id": "sec_3977d00df8",
+          "title": "IV. Taking timely corrective actions when rule and directives are not implemented",
+          "page_start": 109,
+          "page_end": 109,
+          "level": 2,
+          "child_sections": [],
+          "key_entities": [],
+          "summary": "",
+          "data_types_present": [],
+          "ldu_ids": [
+            "ldu_b12448ed9e09"
+          ]
+        },
+        {
+          "section_id": "sec_33aa3387c6",
+          "title": "V. Encourage women participation",
+          "page_start": 109,
+          "page_end": 109,
+          "level": 2,
+          "child_sections": [],
+          "key_entities": [],
+          "summary": "More resources to recapture the lost gain due to shocks",
+          "data_types_present": [],
+          "ldu_ids": [
+            "ldu_7445ea03e579",
+            "ldu_476d6f8590fe"
+          ]
+        },
+        {
+          "section_id": "sec_25a777e1d2",
+          "title": "VI. More resources to recapture the lost gain due to shocks",
+          "page_start": 110,
+          "page_end": 110,
+          "level": 2,
+          "child_sections": [],
+          "key_entities": [],
+          "summary": "Annexes",
+          "data_types_present": [],
+          "ldu_ids": [
+            "ldu_bc0beee8826d",
+            "ldu_7445ea03e579"
+          ]
+        }
+      ],
+      "key_entities": [],
+      "summary": "10.2. Recommendations",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_9fa97ef02982",
+        "ldu_025f29c0d0cb"
+      ]
+    },
+    {
+      "section_id": "sec_c2de808719",
+      "title": "Annexes",
+      "page_start": 111,
+      "page_end": 110,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "Annex A: Additional Tables",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_d63876228034",
+        "ldu_bc0beee8826d"
+      ]
+    },
+    {
+      "section_id": "sec_20eb89cd32",
+      "title": "Annex A: Additional Tables",
+      "page_start": 111,
+      "page_end": 130,
+      "level": 1,
+      "child_sections": [
+        {
+          "section_id": "sec_46a41bc8df",
+          "title": "Annex C: List of selected Federal Budgetary Institutions",
+          "page_start": 116,
+          "page_end": 116,
+          "level": 2,
+          "child_sections": [],
+          "key_entities": [],
+          "summary": "Household Survey Instruments (Questionnaire)",
+          "data_types_present": [],
+          "ldu_ids": [
+            "ldu_de1c407d2ac7",
+            "ldu_ed5c1b0a79ac"
+          ]
+        },
+        {
+          "section_id": "sec_863cbab772",
+          "title": "Annex E. Household Survey Instruments (Questionnaire)",
+          "page_start": 122,
+          "page_end": 122,
+          "level": 2,
+          "child_sections": [],
+          "key_entities": [],
+          "summary": "Recalling your most recent visit to a health facility, please evaluate each of the following statements:",
+          "data_types_present": [],
+          "ldu_ids": [
+            "ldu_3bfc6c90e1a3",
+            "ldu_de1c407d2ac7"
+          ]
+        }
+      ],
+      "key_entities": [],
+      "summary": "Annex C: List of selected Federal Budgetary Institutions",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_ed5c1b0a79ac",
+        "ldu_d63876228034"
+      ]
+    },
+    {
+      "section_id": "sec_d0dd1aa3b2",
+      "title": "96. Recalling your most recent visit to a health facility, please evaluate each of the following statements:",
+      "page_start": 131,
+      "page_end": 152,
+      "level": 1,
+      "child_sections": [
+        {
+          "section_id": "sec_0ca6a90773",
+          "title": "Annex F: Key Informant Interview (KII) Instrument",
+          "page_start": 139,
+          "page_end": 139,
+          "level": 2,
+          "child_sections": [],
+          "key_entities": [],
+          "summary": "Annex G: Focus Group Discussions (FGD) Guide (Protocol)",
+          "data_types_present": [],
+          "ldu_ids": [
+            "ldu_d7fd0416d1e5",
+            "ldu_9d99ac9ea27f"
+          ]
+        },
+        {
+          "section_id": "sec_6d7925d6dd",
+          "title": "Annex G: Focus Group Discussions (FGD) Guide (Protocol)",
+          "page_start": 153,
+          "page_end": 153,
+          "level": 2,
+          "child_sections": [],
+          "key_entities": [],
+          "summary": "Instructions :",
+          "data_types_present": [],
+          "ldu_ids": [
+            "ldu_76b2d2f0c183",
+            "ldu_d7fd0416d1e5"
+          ]
+        }
+      ],
+      "key_entities": [],
+      "summary": "",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_3bfc6c90e1a3"
+      ]
+    },
+    {
+      "section_id": "sec_ece40a60a0",
+      "title": "Instructions :",
+      "page_start": 153,
+      "page_end": 152,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "1. Relevance of FTA",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_43633c54dd05",
+        "ldu_76b2d2f0c183"
+      ]
+    },
+    {
+      "section_id": "sec_51c539d440",
+      "title": "1. Relevance of FTA",
+      "page_start": 153,
+      "page_end": 152,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "2. FTA Tools",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_e6a0651c5459",
+        "ldu_43633c54dd05"
+      ]
+    },
+    {
+      "section_id": "sec_a2ec27cb9f",
+      "title": "2. FTA Tools",
+      "page_start": 153,
+      "page_end": 152,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "3. Social Media",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_4ce27a6ab68a",
+        "ldu_e6a0651c5459"
+      ]
+    },
+    {
+      "section_id": "sec_26a35229f1",
+      "title": "3. Social Media",
+      "page_start": 153,
+      "page_end": 152,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "Institutional Capacity Development",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_cafc5dba842b",
+        "ldu_4ce27a6ab68a"
+      ]
+    },
+    {
+      "section_id": "sec_823b6a23cb",
+      "title": "4. Institutional Capacity Development",
+      "page_start": 153,
+      "page_end": 152,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "5. BLT Trainings",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_80b7c2aae96c",
+        "ldu_cafc5dba842b"
+      ]
+    },
+    {
+      "section_id": "sec_8413499f56",
+      "title": "5. BLT Trainings",
+      "page_start": 153,
+      "page_end": 152,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "6. Beneficiaries",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_b6d9499ecb83",
+        "ldu_80b7c2aae96c"
+      ]
+    },
+    {
+      "section_id": "sec_4b92659cea",
+      "title": "6. Beneficiaries",
+      "page_start": 153,
+      "page_end": 153,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "Stakeholders participation and ability to promote their interests",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_84cbd2f9aae4",
+        "ldu_b6d9499ecb83"
+      ]
+    },
+    {
+      "section_id": "sec_e15a2af6e2",
+      "title": "7. Stakeholders participation and ability to promote their interests",
+      "page_start": 154,
+      "page_end": 153,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "8. Implementation arrangements:",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_1fabbbf3e631",
+        "ldu_84cbd2f9aae4"
+      ]
+    },
+    {
+      "section_id": "sec_b692cc9e5a",
+      "title": "8. Implementation arrangements:",
+      "page_start": 154,
+      "page_end": 153,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "9. Monitoring and Evaluation:",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_607dcf943488",
+        "ldu_1fabbbf3e631"
+      ]
+    },
+    {
+      "section_id": "sec_0f94f2ae42",
+      "title": "9. Monitoring and Evaluation:",
+      "page_start": 154,
+      "page_end": 153,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "Linkage with good governance institutions",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_fa2b854bc0e8",
+        "ldu_607dcf943488"
+      ]
+    },
+    {
+      "section_id": "sec_684b467877",
+      "title": "10. Linkage with good governance institutions",
+      "page_start": 154,
+      "page_end": 153,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "11. Results and Sustainability",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_217dd074a8ab",
+        "ldu_fa2b854bc0e8"
+      ]
+    },
+    {
+      "section_id": "sec_cca76ac464",
+      "title": "11. Results and Sustainability",
+      "page_start": 154,
+      "page_end": 153,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "12. Impact of FTA",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_edfd08233a8d",
+        "ldu_217dd074a8ab"
+      ]
+    },
+    {
+      "section_id": "sec_f5fae23ddd",
+      "title": "12. Impact of FTA",
+      "page_start": 154,
+      "page_end": 153,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "Documenting and sharing the best practices for benchmarking; and more",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_41ff2075161a",
+        "ldu_edfd08233a8d"
+      ]
+    },
+    {
+      "section_id": "sec_a4a957b7e5",
+      "title": "13. Documenting and sharing the best practices for benchmarking; and more",
+      "page_start": 154,
+      "page_end": 154,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [],
+      "summary": "14. Strength and Weakness",
+      "data_types_present": [],
+      "ldu_ids": [
+        "ldu_5929ac582816",
+        "ldu_41ff2075161a"
+      ]
+    },
+    {
+      "section_id": "sec_07327e8864",
+      "title": "14. Strength and Weakness",
+      "page_start": 155,
+      "page_end": 155,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [
+        "2022",
+        "2006",
+        "2015"
+      ],
+      "summary": "RFP No: ET-NCB-MOFEC-COPCU-129904-CS-QCBS Ministry of Finance (MoF) Addis Ababa, Ethiopia TAK-Innovative Research and Development Institute PLC (TAK-IRDI) Addis Ababa, Ethiopia This  report  was  prepared  by  a  core  team  consisting  of  Abate  Mekuriaw,  Kaleb  Shiferaw, Abraham Hailemariam, and Tamirat Badi. The  report  benefitted  from  inputs  from  officials  of  the  Public  Expenditure  Management Reform Directorate/Ministry of Finance.",
+      "data_types_present": [
+        "text",
+        "table",
+        "figure"
+      ],
+      "ldu_ids": [
+        "ldu_10b9aac900c5",
+        "ldu_45ddc3be7d3e",
+        "ldu_b075edb9f9f7",
+        "ldu_b9c6dbe3d231",
+        "ldu_0fdc2e14b647",
+        "ldu_ff6388ace0fd",
+        "ldu_eebea0b9f433",
+        "ldu_bcc03450003d",
+        "ldu_10be86088510",
+        "ldu_6f0522a95652",
+        "ldu_e42e54638500",
+        "ldu_436e750e2dcb",
+        "ldu_41f5d00bebf9",
+        "ldu_7d667c496be3",
+        "ldu_14dc7f096b09",
+        "ldu_57f7a74d657a",
+        "ldu_bcf5ac7bb98c",
+        "ldu_e38ef095c3fa",
+        "ldu_3e0e2e537529",
+        "ldu_ef45a5c0adc5",
+        "ldu_6b70a03a4ecd",
+        "ldu_d8a9f237c779",
+        "ldu_5eeace2eefff",
+        "ldu_5956806f4524",
+        "ldu_0a690337831e",
+        "ldu_80430595b930",
+        "ldu_9683432ce718",
+        "ldu_a217a3cf6767",
+        "ldu_497d93de418d",
+        "ldu_304d2aea1067",
+        "ldu_a69a3468ca6b",
+        "ldu_961b8c32ad99",
+        "ldu_57a790b71497",
+        "ldu_8e3c9a720025",
+        "ldu_a7e081738a1d",
+        "ldu_8fb61a89c75a",
+        "ldu_04430f8a437a",
+        "ldu_98831066a06d",
+        "ldu_86df965de2e8",
+        "ldu_c9229bbd4a8d",
+        "ldu_6d70901f024a",
+        "ldu_f759ee748f15",
+        "ldu_297fb2789048",
+        "ldu_67c88f358fd1",
+        "ldu_44579a7ece2c",
+        "ldu_4508597c7b14",
+        "ldu_a14746511688",
+        "ldu_13ab990d8180",
+        "ldu_963d6498ddce",
+        "ldu_94eeaeab6e5d",
+        "ldu_e177343ff919",
+        "ldu_2f00afa481e4",
+        "ldu_b13091fb5305",
+        "ldu_a24fd847b7c9",
+        "ldu_13126ad7632e",
+        "ldu_f30486f9d46b",
+        "ldu_ea6e11b31095",
+        "ldu_843eba470599",
+        "ldu_a784f6cbd803",
+        "ldu_0dd4d13e70be",
+        "ldu_fef2abf5c7b8",
+        "ldu_dca22d6038ea",
+        "ldu_a64d94e67a48",
+        "ldu_3a73985ddd61",
+        "ldu_95c771e097be",
+        "ldu_b8e2281404fa",
+        "ldu_800d7e070fec",
+        "ldu_cf81397f5726",
+        "ldu_1bc829eb2062",
+        "ldu_57d6421337ca",
+        "ldu_4a2029f5fa9a",
+        "ldu_d2da88e5e6e6",
+        "ldu_92ca34055eba",
+        "ldu_c7fe2f338853",
+        "ldu_e44e7855edb2",
+        "ldu_a814aa3df0d7",
+        "ldu_0a55a0c191c8",
+        "ldu_8fece8ef2d09",
+        "ldu_b0749cff3dd8",
+        "ldu_b1eeb81e6235",
+        "ldu_b5f84184747a",
+        "ldu_9ed7ecba5117",
+        "ldu_937465742e18",
+        "ldu_c5a76daf9549",
+        "ldu_6a913af23cd1",
+        "ldu_ead26e6bb275",
+        "ldu_599c95427cdf",
+        "ldu_ce533a34d05e",
+        "ldu_1f31c3d2cad5",
+        "ldu_b693b264eaca",
+        "ldu_f970a0eecb9a",
+        "ldu_d25ab235ce04",
+        "ldu_1a27a8b8a2b5",
+        "ldu_5a8a3defc069",
+        "ldu_c3c52a75ceb2",
+        "ldu_8e914ec27e85",
+        "ldu_9fbc085f7e4f",
+        "ldu_5d15d59458a8",
+        "ldu_36c86b954a7e",
+        "ldu_ff3a2ee40c61",
+        "ldu_e00f94fdb5b0",
+        "ldu_5173cdf8edc5",
+        "ldu_6a4b68d1e4d0",
+        "ldu_e16050be8d3f",
+        "ldu_9b44177b8c27",
+        "ldu_153b094c6573",
+        "ldu_6450097c5b5e",
+        "ldu_0531932eb0d5",
+        "ldu_dd273416c594",
+        "ldu_6a7957fc8be6",
+        "ldu_b2831c915153",
+        "ldu_421e71673f1a",
+        "ldu_e86317f3c757",
+        "ldu_f910a8b69384",
+        "ldu_2e386a6e95e4",
+        "ldu_3af55f222584",
+        "ldu_afc008362b07",
+        "ldu_a78eed1d8e07",
+        "ldu_0070fc1a9948",
+        "ldu_e5238660f622",
+        "ldu_9b23a3f84115",
+        "ldu_95f8da08bc8d",
+        "ldu_b24d5dc007b0",
+        "ldu_b1be3f92bbe7",
+        "ldu_a240287d36e8",
+        "ldu_cb254877530c",
+        "ldu_198042251c35",
+        "ldu_a05609ad99a8",
+        "ldu_1f6e8752f3ea",
+        "ldu_dfe7ea868f27",
+        "ldu_0dfba709817f",
+        "ldu_81023d85c2ea",
+        "ldu_48137ed13aa5",
+        "ldu_9165bef43707",
+        "ldu_b8a5d068a222",
+        "ldu_c759fe1028cf",
+        "ldu_b21ac5c9d4d8",
+        "ldu_c32ad8b840b2",
+        "ldu_dff5825c5c93",
+        "ldu_a13873ff57b3",
+        "ldu_4e44736d56dc",
+        "ldu_cf9d42e5080a",
+        "ldu_8ee0d0f09191",
+        "ldu_91eb41033434",
+        "ldu_a84774ab4385",
+        "ldu_8ca2b9223fab",
+        "ldu_dcecefeaa68d",
+        "ldu_e5d19985f40a",
+        "ldu_ec895ebaee11",
+        "ldu_dd981f976ea0",
+        "ldu_b094b6854cfc",
+        "ldu_28ac974df533",
+        "ldu_135f3a471782",
+        "ldu_a6a319cfc3d7",
+        "ldu_c334d8cf248f",
+        "ldu_da12b5a0922d",
+        "ldu_2c52cf75c542",
+        "ldu_df52365eae14",
+        "ldu_77cd7e45ecca",
+        "ldu_ae26ad680915",
+        "ldu_ce37faaeb2d9",
+        "ldu_52cd04af9b4a",
+        "ldu_777cb6176de3",
+        "ldu_653b2a9fe5bf",
+        "ldu_06c2cf238630",
+        "ldu_30d069a3b4c2",
+        "ldu_68cb4c8ea335",
+        "ldu_1af1b3bdd81e",
+        "ldu_60387a13b573",
+        "ldu_2f0fdb2cebae",
+        "ldu_64628f1d9338",
+        "ldu_5d6bcc3fdf37",
+        "ldu_95040b20a3c2",
+        "ldu_1e972f44c03f",
+        "ldu_00b106e74deb",
+        "ldu_6e2fce966c8f",
+        "ldu_981e8735e0a7",
+        "ldu_064038183331",
+        "ldu_180d7685dfd0",
+        "ldu_96ca3b39b4a0",
+        "ldu_b829c6e72ba3",
+        "ldu_59045f43aa22",
+        "ldu_f7a70e159dad",
+        "ldu_bc1317b8d12c",
+        "ldu_bcfb5bb3c88b",
+        "ldu_5485dea3fd84",
+        "ldu_6ae688d85771",
+        "ldu_789e2968c14f",
+        "ldu_cd9fc2fb5fc0",
+        "ldu_80b4f3a8d955",
+        "ldu_fc2ca3a3f344",
+        "ldu_5e42889bd320",
+        "ldu_b971ba4fc464",
+        "ldu_29ab37646cfa",
+        "ldu_593e7ad1a10f",
+        "ldu_522d1bc8092a",
+        "ldu_281e8449c1ce",
+        "ldu_e3a0605c2163",
+        "ldu_841f9fdd8709",
+        "ldu_3d1fc13a69b3",
+        "ldu_a03d97170906",
+        "ldu_03e0369655fe",
+        "ldu_e623a2b507d9",
+        "ldu_55a908da30ae",
+        "ldu_deb0f17c2336",
+        "ldu_d0e0579a54f5",
+        "ldu_f56530199939",
+        "ldu_e41b09cd9018",
+        "ldu_172d6c16ca4d",
+        "ldu_508c2cae332c",
+        "ldu_a80265e8d239",
+        "ldu_7722276714fe",
+        "ldu_d3ae00013650",
+        "ldu_1ba649ada395",
+        "ldu_550c854cf626",
+        "ldu_ed2bad6ac34a",
+        "ldu_f4a118706309",
+        "ldu_9be5e34db1f9",
+        "ldu_d417506d6813",
+        "ldu_acc73f8986dc",
+        "ldu_d348ee0fe52f",
+        "ldu_5e97a1c89c55",
+        "ldu_569d0b853914",
+        "ldu_2108d48fde3b",
+        "ldu_ae26a1c78625",
+        "ldu_bd7f7a3ce426",
+        "ldu_933931171a2e",
+        "ldu_93b9ea69688b",
+        "ldu_49d68a8381c5",
+        "ldu_705b2f9ef524",
+        "ldu_b163dbac1619",
+        "ldu_162c15242aad",
+        "ldu_330cc1fd3eea",
+        "ldu_b7472b500445",
+        "ldu_b6c02af30810",
+        "ldu_4fbdb7f19281",
+        "ldu_43fe9c58d0cd",
+        "ldu_72eab77cc32c",
+        "ldu_d2617f0be733",
+        "ldu_3d40a1885560",
+        "ldu_be14142e3cfb",
+        "ldu_cdf8da7274fd",
+        "ldu_5929ac582816"
+      ]
+    }
+  ],
+  "created_at": "2026-03-06T15:01:23.707393+00:00"
+}
