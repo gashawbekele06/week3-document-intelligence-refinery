@@ -1,0 +1,17 @@
+{
+  "doc_id": "ef98703faa478f45",
+  "filename": "Consumer Price Index August 2025.pdf",
+  "file_path": "/home/hp/Desktop/TRP1/week3/week3-document-intelligence-refinery/data/Consumer Price Index August 2025.pdf",
+  "page_count": 13,
+  "origin_type": "native_digital",
+  "layout_complexity": "table_heavy",
+  "language": "en",
+  "language_confidence": 0.9,
+  "domain_hint": "general",
+  "estimated_cost": "needs_layout_model",
+  "char_density_mean": 2.46,
+  "image_ratio_mean": 0.1289,
+  "has_font_metadata": true,
+  "is_form_fillable": false,
+  "created_at": "2026-03-06T17:31:46.532860Z"
+}
