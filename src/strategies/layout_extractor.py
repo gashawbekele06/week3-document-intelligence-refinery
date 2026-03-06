@@ -73,7 +73,7 @@ class DoclingDocumentAdapter:
 
             elif item_type == "TableItem":
                 try:
-                    df = item.export_to_dataframe()
+                    df = item.export_to_dataframe(doc=self.doc)
                     headers = list(df.columns.astype(str))
                     rows = [list(row.astype(str)) for _, row in df.iterrows()]
                     cells: List[TableCell] = []
