@@ -231,7 +231,10 @@ def ingest(
 
     with console.status("[cyan]Stage 1: Triaging..."):
         profile = TriageAgent().triage(doc_path)
-    console.print(f"[green]✓[/green] Triage: {profile.origin_type} / {profile.domain_hint}")
+    console.print(
+        f"[green]✓[/green] Triage: "
+        f"{profile.origin_type} / {profile.layout_complexity} / {profile.domain_hint}"
+    )
 
     with console.status("[cyan]Stage 2: Extracting..."):
         router = ExtractionRouter()
