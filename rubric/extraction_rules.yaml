@@ -17,6 +17,8 @@ origin_detection:
 layout_detection:
   # Column detection: cluster text block x-centers into groups
   multi_column_min_clusters: 2          # ≥2 x-clusters → multi_column
+  multi_column_min_words: 40            # min words on sampled pages to attempt bimodal split
+  multi_column_min_side_fraction: 0.20  # min fraction of words on each side for multi-column
   table_heavy_min_ratio: 0.30           # tables occupy >30% of content = table_heavy
   figure_heavy_min_ratio: 0.40          # figures occupy >40% = figure_heavy
 
