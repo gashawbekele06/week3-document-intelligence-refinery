@@ -196,12 +196,23 @@ def _detect_layout_complexity(
     if figure_ratio > figure_heavy_thresh:
         return "figure_heavy"
 
-    # Column detection via x-center clustering
+    # Column detection via x-center clustering + bimodal split
     if x_centers:
         page_width = pages_sample[0].width or 600
         n_clusters = _count_x_clusters(x_centers, page_width, multi_col_clusters)
         if n_clusters >= multi_col_clusters:
             return "multi_column"
+
+        # Bimodal left/right distribution heuristic (helps dense reports)
+        min_words = rules["layout_detection"].get("multi_column_min_words", 40)
+        min_side_fraction = rules["layout_detection"].get("multi_column_min_side_fraction", 0.2)
+        if len(x_centers) >= min_words:
+            norm = [x / page_width for x in x_centers]
+            left = sum(1 for x in norm if x <= 0.45)
+            right = sum(1 for x in norm if x >= 0.55)
+            total = len(norm)
+            if left / total >= min_side_fraction and right / total >= min_side_fraction:
+                return "multi_column"
 
     return "single_column"
 
