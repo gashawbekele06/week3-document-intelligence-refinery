@@ -161,25 +161,6 @@ class VisionExtractor(BaseExtractor):
 
     def _call_openai(self, image_b64: str) -> Tuple[dict, int, int]:
         """Call OpenAI Vision API with correct format."""
-        payload = {
-            "model": self.openai_model,
-            "messages": [
-                {
-                    "role": "user",
-                    "content": [
-                        {"type": "text", "text": _EXTRACTION_PROMPT},
-                        {
-                            "type": "image_url",
-                            "image_url": {"url": f"data:image/png;base64,{image_b64}"},
-                        },
-                    ],
-                }
-            ],
-            "temperature": 0.1,
-            "max_tokens": 1200,
-            "response_format": {"type": "json_object"},
-        }
-
         headers = {
             "Authorization": f"Bearer {self.openai_api_key}",
             "Content-Type": "application/json",
@@ -188,23 +169,55 @@ class VisionExtractor(BaseExtractor):
         if self.openai_api_key.startswith("sk-proj-") and self.openai_project_id:
             headers["OpenAI-Project"] = self.openai_project_id
 
-        try:
-            resp = requests.post(_OPENAI_URL, headers=headers, json=payload, timeout=60)
-            resp.raise_for_status()
-            data = resp.json()
+        prompts = [
+            _EXTRACTION_PROMPT,
+            _EXTRACTION_PROMPT
+            + "\n\nReturn MINIFIED valid JSON only. Escape all inner quotes and newlines inside text values.",
+        ]
 
-            content = data["choices"][0]["message"]["content"]
-            if isinstance(content, list):
-                content = "".join(part.get("text", "") for part in content if isinstance(part, dict))
-            parsed = _parse_json_payload(content)
-            usage = data.get("usage", {})
-            return parsed, usage.get("prompt_tokens", 0), usage.get("completion_tokens", 0)
+        last_error = None
+        for prompt in prompts:
+            payload = {
+                "model": self.openai_model,
+                "messages": [
+                    {
+                        "role": "user",
+                        "content": [
+                            {"type": "text", "text": prompt},
+                            {
+                                "type": "image_url",
+                                "image_url": {"url": f"data:image/png;base64,{image_b64}"},
+                            },
+                        ],
+                    }
+                ],
+                "temperature": 0.1,
+                "max_tokens": 1200,
+                "response_format": {"type": "json_object"},
+            }
 
-        except requests.exceptions.HTTPError as e:
-            error_text = e.response.text[:200] if e.response else str(e)
-            raise RuntimeError(f"OpenAI HTTP error {e.response.status_code}: {error_text}")
-        except Exception as e:
-            raise RuntimeError(f"OpenAI call failed: {str(e)}")
+            try:
+                resp = requests.post(_OPENAI_URL, headers=headers, json=payload, timeout=60)
+                resp.raise_for_status()
+                data = resp.json()
+
+                content = data["choices"][0]["message"]["content"]
+                if isinstance(content, list):
+                    content = "".join(
+                        part.get("text", "") for part in content if isinstance(part, dict)
+                    )
+                parsed = _parse_json_payload(content)
+                usage = data.get("usage", {})
+                return parsed, usage.get("prompt_tokens", 0), usage.get("completion_tokens", 0)
+
+            except requests.exceptions.HTTPError as e:
+                error_text = e.response.text[:200] if e.response else str(e)
+                raise RuntimeError(f"OpenAI HTTP error {e.response.status_code}: {error_text}")
+            except Exception as e:
+                last_error = e
+                continue
+
+        raise RuntimeError(f"OpenAI call failed: {last_error}")
 
     def _call_openrouter(self, image_b64: str) -> Tuple[dict, int, int]:
         """Fallback to OpenRouter."""
