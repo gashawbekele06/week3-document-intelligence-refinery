@@ -245,12 +245,23 @@ class VisionExtractor(BaseExtractor):
 
             if self.openai_api_key:
                 try:
-                    return self._call_openai(image_b64) + (budget_guard.record_usage(*_[1:]),)
+                    page_data, input_tokens, output_tokens = self._call_openai(image_b64)
+                    budget_guard.record_usage(input_tokens, output_tokens)
+                    page_data.setdefault("page_number", page_num)
+                    return page_data
                 except Exception as e:
                     print(f"OpenAI failed (page {page_num}): {e} — trying OpenRouter")
-                    return self._call_openrouter(image_b64) + (budget_guard.record_usage(*_[1:]),)
+                    if self.api_key:
+                        page_data, input_tokens, output_tokens = self._call_openrouter(image_b64)
+                        budget_guard.record_usage(input_tokens, output_tokens)
+                        page_data.setdefault("page_number", page_num)
+                        return page_data
+                    raise
             else:
-                return self._call_openrouter(image_b64) + (budget_guard.record_usage(*_[1:]),)
+                page_data, input_tokens, output_tokens = self._call_openrouter(image_b64)
+                budget_guard.record_usage(input_tokens, output_tokens)
+                page_data.setdefault("page_number", page_num)
+                return page_data
 
         except Exception as e:
             return {
@@ -270,7 +281,7 @@ class VisionExtractor(BaseExtractor):
                 doc_id=file_path.stem + "_vision_fail",
                 filename=file_path.name,
                 strategy_used=self.name,
-                confidence=0.0,
+                confidence_score=0.0,
                 page_count=0,
                 metadata={"error": "No API key set (OPENAI_API_KEY or OPENROUTER_API_KEY)"},
             )
@@ -352,14 +363,14 @@ class VisionExtractor(BaseExtractor):
             doc_id=file_path.stem + "_vision",
             filename=file_path.name,
             strategy_used=self.name,
-            confidence=0.0,
+            confidence_score=0.0,
             page_count=page_count,
             text_blocks=text_blocks,
             tables=tables,
             figures=figures,
             full_text="\n\n".join(full_text_parts),
             section_headings=section_headings,
-            estimated_cost_usd=round(budget_guard.total_cost, 6),
+            cost_estimate_usd=round(budget_guard.total_cost, 6),
             processing_time_sec=round(duration, 2),
             metadata={
                 "budget_remaining_usd": round(budget_guard.max_cost_usd - budget_guard.total_cost, 6),
@@ -370,7 +381,7 @@ class VisionExtractor(BaseExtractor):
             },
         )
 
-        result.confidence = self.confidence(result)
+        result.confidence_score = self.confidence(result)
         return result
 
     def confidence(self, doc: ExtractedDocument) -> float:
