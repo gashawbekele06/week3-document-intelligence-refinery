@@ -280,7 +280,7 @@ week3-document-intelligence-refinery/
 │   │   ├── fast_text.py
 │   │   ├── layout_extractor.py
 │   │   └── vision_extractor.py
-│   ├── data/
+│   ├── storage/
 │   │   ├── vector_store.py
 │   │   ├── fact_table.py
 │   │   └── audit.py
