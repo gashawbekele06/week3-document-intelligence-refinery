@@ -128,6 +128,7 @@ class VisionExtractor(BaseExtractor):
         self.api_key = os.getenv("OPENROUTER_API_KEY", "")
         self.openai_api_key = os.getenv("OPENAI_API_KEY", "")
         self.openai_project_id = os.getenv("OPENAI_PROJECT") or os.getenv("OPENAI_PROJECT_ID")
+        self.openai_disabled_reason: Optional[str] = None
         self.openai_model = os.getenv("OPENAI_VISION_MODEL", "gpt-4o-mini")
         raw_model = os.getenv("OPENROUTER_MODEL") or self.rules.get("budget", {}).get(
             "vision_model", "openai/gpt-4o-mini"
@@ -268,13 +269,15 @@ class VisionExtractor(BaseExtractor):
         try:
             image_b64 = base64.b64encode(img_bytes).decode("utf-8")
 
-            if self.openai_api_key:
+            if self.openai_api_key and not self.openai_disabled_reason:
                 try:
                     page_data, input_tokens, output_tokens = self._call_openai(image_b64)
                     budget_guard.record_usage(input_tokens, output_tokens)
                     page_data.setdefault("page_number", page_num)
                     return page_data
                 except Exception as e:
+                    if "HTTP error 401" in str(e):
+                        self.openai_disabled_reason = "OpenAI authentication failed"
                     print(f"OpenAI failed (page {page_num}): {e} — trying OpenRouter")
                     if self.api_key:
                         page_data, input_tokens, output_tokens = self._call_openrouter(image_b64)
@@ -401,7 +404,12 @@ class VisionExtractor(BaseExtractor):
                 "budget_remaining_usd": round(budget_guard.max_cost_usd - budget_guard.total_cost, 6),
                 "pages_processed_by_vision": budget_guard.pages_processed,
                 "model": self.openai_model if self.openai_api_key else self.model,
-                "provider": "openai" if self.openai_api_key else "openrouter",
+                "provider": (
+                    "openai"
+                    if self.openai_api_key and not self.openai_disabled_reason
+                    else "openrouter"
+                ),
+                "openai_disabled_reason": self.openai_disabled_reason,
                 "errors": errors[:10],
             },
         )
