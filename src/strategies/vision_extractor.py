@@ -7,6 +7,7 @@ Includes budget_guard to prevent runaway API costs.
 from __future__ import annotations
 
 import base64
+import re
 import os
 import time
 from pathlib import Path
@@ -38,6 +39,28 @@ _OPENAI_URL = "https://api.openai.com/v1/chat/completions"
 def _load_rules() -> dict:
     with open(_RULES_PATH, encoding="utf-8") as f:
         return yaml.safe_load(f)
+
+
+def _parse_json_payload(raw_text: str) -> dict:
+    """Parse model output that may contain fences or extra prose around JSON."""
+    text = (raw_text or "{}").strip()
+
+    if "```" in text:
+        parts = text.split("```")
+        if len(parts) >= 2:
+            text = parts[1].strip()
+        text = text.lstrip("json").strip()
+
+    try:
+        return json.loads(text)
+    except json.JSONDecodeError:
+        pass
+
+    match = re.search(r"\{.*\}", text, re.DOTALL)
+    if match:
+        return json.loads(match.group(0))
+
+    raise RuntimeError("Model returned invalid JSON")
 
 
 _EXTRACTION_PROMPT = """You are an enterprise document intelligence system analyzing a PDF page image.
@@ -154,6 +177,7 @@ class VisionExtractor(BaseExtractor):
             ],
             "temperature": 0.1,
             "max_tokens": 1200,
+            "response_format": {"type": "json_object"},
         }
 
         headers = {
@@ -172,20 +196,13 @@ class VisionExtractor(BaseExtractor):
             content = data["choices"][0]["message"]["content"]
             if isinstance(content, list):
                 content = "".join(part.get("text", "") for part in content if isinstance(part, dict))
-            text = content or "{}"
-
-            if "```" in text:
-                text = text.split("```")[1].strip().lstrip("json").strip()
-
-            parsed = json.loads(text)
+            parsed = _parse_json_payload(content)
             usage = data.get("usage", {})
             return parsed, usage.get("prompt_tokens", 0), usage.get("completion_tokens", 0)
 
         except requests.exceptions.HTTPError as e:
             error_text = e.response.text[:200] if e.response else str(e)
             raise RuntimeError(f"OpenAI HTTP error {e.response.status_code}: {error_text}")
-        except json.JSONDecodeError:
-            raise RuntimeError("OpenAI returned invalid JSON")
         except Exception as e:
             raise RuntimeError(f"OpenAI call failed: {str(e)}")
 
@@ -224,12 +241,7 @@ class VisionExtractor(BaseExtractor):
             content = data["choices"][0]["message"]["content"]
             if isinstance(content, list):
                 content = "".join(part.get("text", "") for part in content if isinstance(part, dict))
-            text = content or "{}"
-
-            if "```" in text:
-                text = text.split("```")[1].strip().lstrip("json").strip()
-
-            parsed = json.loads(text)
+            parsed = _parse_json_payload(content)
             usage = data.get("usage", {})
             return parsed, usage.get("prompt_tokens", 0), usage.get("completion_tokens", 0)
 
