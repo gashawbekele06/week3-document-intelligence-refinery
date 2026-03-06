@@ -124,8 +124,6 @@ def _detect_origin_type(
 
     if mean_density < scanned_max and mean_image > scanned_img_min:
         return "scanned_image"
-    if mixed_lower <= mean_image <= scanned_img_min:
-        return "mixed"
     # Strong signal: embedded fonts + low image coverage → native digital
     if has_fonts and mean_image < scanned_img_min:
         return "native_digital"
@@ -133,6 +131,8 @@ def _detect_origin_type(
         return "native_digital"
     if mean_density >= digital_min * 0.3:
         return "native_digital"
+    if mixed_lower <= mean_image <= scanned_img_min:
+        return "mixed"
     return "mixed"
 
 
