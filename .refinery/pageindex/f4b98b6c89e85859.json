@@ -1,13 +1,13 @@
 {
   "doc_id": "f4b98b6c89e85859",
   "document_name": "2013-E.C-Audit-finding-information.pdf",
-  "page_count": 0,
+  "page_count": 3,
   "sections": [
     {
-      "section_id": "sec_38e79fe48a",
+      "section_id": "sec_1f0554f1d2",
       "title": "2013-E.C-Audit-finding-information.pdf",
       "page_start": 1,
-      "page_end": 0,
+      "page_end": 3,
       "level": 1,
       "child_sections": [],
       "key_entities": [],
@@ -16,5 +16,5 @@
       "ldu_ids": []
     }
   ],
-  "created_at": "2026-03-04T10:58:17.019874+00:00"
+  "created_at": "2026-03-06T17:19:56.368523+00:00"
 }

@@ -11,7 +11,7 @@ import re
 import uuid
 from datetime import datetime, timezone
 from pathlib import Path
-from typing import List, Optional
+from typing import Iterable, List, Optional
 
 from src.models import ExtractedDocument, LDU, PageIndex, Section
 
@@ -89,8 +89,6 @@ class PageIndexBuilder:
 
     def build(self, doc: ExtractedDocument, ldus: List[LDU]) -> PageIndex:
         """Build a hierarchical PageIndex from ExtractedDocument and its LDUs."""
-        sections: List[Section] = []
-        current_section: Optional[Section] = None
         root_sections: List[Section] = []
 
         # Build LDU lookup by section
@@ -100,7 +98,10 @@ class PageIndexBuilder:
             ldu_by_section.setdefault(key, []).append(ldu)
 
         # Build section tree from heading LDUs
-        heading_ldus = [l for l in ldus if l.chunk_type == "heading"]
+        heading_ldus = sorted(
+            [l for l in ldus if l.chunk_type == "heading"],
+            key=lambda l: ((l.page_refs[0] if l.page_refs else 1), l.content),
+        )
 
         if not heading_ldus:
             # No headings: create one root section for entire document
@@ -118,16 +119,16 @@ class PageIndexBuilder:
             )
             root_sections.append(root_section)
         else:
+            section_stack: List[Section] = []
             for h_ldu in heading_ldus:
                 section_title = h_ldu.content.strip()
                 page_start = h_ldu.page_refs[0] if h_ldu.page_refs else 1
 
-                # Gather child LDUs for this section
-                child_ldus = ldu_by_section.get(section_title, [])
-                section_text = " ".join(l.content for l in child_ldus)[:3000]
-
                 # Detect depth level from heading style
                 level = self._detect_heading_level(section_title)
+
+                child_ldus = ldu_by_section.get(section_title, [])
+                section_text = " ".join(l.content for l in child_ldus)[:3000]
 
                 section = Section(
                     section_id=_section_id(),
@@ -141,22 +142,18 @@ class PageIndexBuilder:
                     ldu_ids=[l.ldu_id for l in child_ldus] + [h_ldu.ldu_id],
                 )
 
-                if level == 1 or not root_sections:
-                    root_sections.append(section)
-                    current_section = section
-                else:
-                    parent = root_sections[-1] if root_sections else None
-                    if parent:
-                        parent.child_sections.append(section)
-                    else:
-                        root_sections.append(section)
+                while section_stack and section_stack[-1].level >= level:
+                    section_stack.pop()
 
-            # Fix page_end values
-            for i, sec in enumerate(root_sections):
-                if i + 1 < len(root_sections):
-                    sec.page_end = root_sections[i + 1].page_start - 1
+                if not section_stack:
+                    root_sections.append(section)
                 else:
-                    sec.page_end = doc.page_count
+                    section_stack[-1].child_sections.append(section)
+
+                section_stack.append(section)
+
+            self._assign_page_ranges(root_sections, doc.page_count)
+            self._populate_section_payloads(root_sections, ldus, ldu_by_section)
 
         page_index = PageIndex(
             doc_id=doc.doc_id,
@@ -170,6 +167,54 @@ class PageIndexBuilder:
         out_path = self.pageindex_dir / f"{doc.doc_id}.json"
         out_path.write_text(page_index.model_dump_json(indent=2))
         return page_index
+
+    def _populate_section_payloads(
+        self,
+        sections: List[Section],
+        ldus: List[LDU],
+        ldu_by_section: dict[str, List[LDU]],
+    ) -> None:
+        """Refresh section summaries, entities, and LDU membership after tree construction."""
+        for section in sections:
+            direct_ldus = list(ldu_by_section.get(section.title, []))
+            span_ldus = [
+                ldu
+                for ldu in ldus
+                if ldu.page_refs
+                and min(ldu.page_refs) >= section.page_start
+                and max(ldu.page_refs) <= section.page_end
+            ]
+            merged = self._dedupe_ldus([*direct_ldus, *span_ldus])
+            section.ldu_ids = [ldu.ldu_id for ldu in merged]
+            section_text = " ".join(ldu.content for ldu in merged if ldu.chunk_type != "heading")[:3000]
+            section.summary = self._generate_summary(section_text, section.title)
+            section.key_entities = self._extract_entities(section_text)
+            section.data_types_present = self._detect_data_types(merged)
+            if section.child_sections:
+                self._populate_section_payloads(section.child_sections, ldus, ldu_by_section)
+
+    def _dedupe_ldus(self, ldus: Iterable[LDU]) -> List[LDU]:
+        seen = set()
+        ordered: List[LDU] = []
+        for ldu in ldus:
+            if ldu.ldu_id not in seen:
+                seen.add(ldu.ldu_id)
+                ordered.append(ldu)
+        ordered.sort(key=lambda l: ((l.page_refs[0] if l.page_refs else 1), l.ldu_id))
+        return ordered
+
+    def _assign_page_ranges(self, sections: List[Section], max_page: int) -> None:
+        """Ensure sibling sections and their children have valid, non-decreasing page ranges."""
+        for i, sec in enumerate(sections):
+            sec.page_start = max(int(sec.page_start or 1), 1)
+            if i + 1 < len(sections):
+                next_start = max(int(sections[i + 1].page_start or sec.page_start), sec.page_start)
+                sec.page_end = max(sec.page_start, next_start - 1)
+            else:
+                sec.page_end = max(sec.page_start, int(max_page or sec.page_start))
+
+            if sec.child_sections:
+                self._assign_page_ranges(sec.child_sections, sec.page_end)
 
     def _detect_heading_level(self, title: str) -> int:
         """Detect heading level from font size markers or numbering patterns."""

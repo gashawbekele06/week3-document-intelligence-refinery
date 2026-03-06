@@ -23,6 +23,7 @@ dependencies = [
     "Pillow>=10.0",
     "pyyaml>=6.0",
     "requests>=2.31",
+    "openai>=2.26.0",
 ]
 
 [project.optional-dependencies]

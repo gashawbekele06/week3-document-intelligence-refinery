@@ -1,11 +1,13 @@
 """
-Strategy C: Vision-Augmented Extractor using Gemini Flash.
+Strategy C: Vision-Augmented Extractor using OpenAI GPT-4o / GPT-4o-mini (with OpenRouter fallback).
 Handles scanned PDFs, handwriting, and low-confidence situations.
 Includes budget_guard to prevent runaway API costs.
 """
+
 from __future__ import annotations
 
 import base64
+import re
 import os
 import time
 from pathlib import Path
@@ -14,6 +16,11 @@ import json
 import requests
 
 import yaml
+
+try:
+    from dotenv import load_dotenv
+except ImportError:
+    load_dotenv = None
 
 from src.models import (
     BBox,
@@ -26,17 +33,40 @@ from src.strategies.base import BaseExtractor
 
 _RULES_PATH = Path(__file__).parent.parent.parent / "rubric" / "extraction_rules.yaml"
 _OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions"
+_OPENAI_URL = "https://api.openai.com/v1/chat/completions"
 
 
 def _load_rules() -> dict:
-    with open(_RULES_PATH) as f:
+    with open(_RULES_PATH, encoding="utf-8") as f:
         return yaml.safe_load(f)
+
+
+def _parse_json_payload(raw_text: str) -> dict:
+    """Parse model output that may contain fences or extra prose around JSON."""
+    text = (raw_text or "{}").strip()
+
+    if "```" in text:
+        parts = text.split("```")
+        if len(parts) >= 2:
+            text = parts[1].strip()
+        text = text.lstrip("json").strip()
+
+    try:
+        return json.loads(text)
+    except json.JSONDecodeError:
+        pass
+
+    match = re.search(r"\{.*\}", text, re.DOTALL)
+    if match:
+        return json.loads(match.group(0))
+
+    raise RuntimeError("Model returned invalid JSON")
 
 
 _EXTRACTION_PROMPT = """You are an enterprise document intelligence system analyzing a PDF page image.
 Extract ALL visible content with precise structure:
 
-Return a JSON object with exactly this schema:
+Return ONLY a JSON object with exactly this schema — no markdown, no explanations:
 {
   "page_number": <int>,
   "text_blocks": [
@@ -55,10 +85,9 @@ Return a JSON object with exactly this schema:
 }
 
 Rules:
-1. Preserve ALL text including headers, footers, and footnotes
-2. Extract tables with EXACT column alignment — never merge cells incorrectly
-3. For numerical tables: preserve decimal points, currency symbols, and units exactly
-4. Return ONLY valid JSON, no markdown fences
+1. Preserve ALL text including headers, footers, footnotes
+2. Tables: exact column alignment, never merge cells
+3. Numerical values: keep decimals, currency, units exact
 """
 
 
@@ -79,8 +108,8 @@ class BudgetGuard:
 
     def record_usage(self, input_tokens: int, output_tokens: int) -> float:
         cost = (
-            input_tokens * self.cost_per_1m_input / 1_000_000
-            + output_tokens * self.cost_per_1m_output / 1_000_000
+            input_tokens * self.cost_per_1m_input / 1_000_000 +
+            output_tokens * self.cost_per_1m_output / 1_000_000
         )
         self.total_cost += cost
         self.pages_processed += 1
@@ -88,110 +117,242 @@ class BudgetGuard:
 
 
 class VisionExtractor(BaseExtractor):
-    """
-    Strategy C: Gemini Flash vision-based extraction.
-    Converts PDF pages to images and sends structured extraction prompts.
-    Budget guard prevents runaway API costs.
-    """
+    """Strategy C: Vision extraction via OpenAI (preferred) or OpenRouter fallback."""
 
     name = "vision_extractor"
 
     def __init__(self):
+        if load_dotenv:
+            load_dotenv(override=True)
         self.rules = _load_rules()
         self.api_key = os.getenv("OPENROUTER_API_KEY", "")
-        self.model = self.rules.get("budget", {}).get("vision_model", "google/gemini-flash-1.5")
+        self.openai_api_key = os.getenv("OPENAI_API_KEY", "")
+        self.openai_project_id = os.getenv("OPENAI_PROJECT") or os.getenv("OPENAI_PROJECT_ID")
+        self.openai_disabled_reason: Optional[str] = None
+        self.openrouter_disabled_reason: Optional[str] = None
+        self.openai_model = os.getenv("OPENAI_VISION_MODEL", "gpt-4o-mini")
+        raw_model = os.getenv("OPENROUTER_MODEL") or self.rules.get("budget", {}).get(
+            "vision_model", "openai/gpt-4o-mini"
+        )
+        self.model = self._normalize_model_name(raw_model)
+        self.openrouter_models = self._build_openrouter_models(self.model)
+
+    def _normalize_model_name(self, model: str) -> str:
+        model = (model or "").strip()
+        if "/" in model:
+            return model
+        aliases = {
+            "gpt-4o-mini": "openai/gpt-4o-mini",
+            "gpt-4o": "openai/gpt-4o",
+            "gemini-1.5-flash": "google/gemini-2.0-flash-001",
+            "gemini-2.0-flash": "google/gemini-2.0-flash-001",
+        }
+        return aliases.get(model, model)
+
+    def _build_openrouter_models(self, primary_model: str) -> List[str]:
+        candidates = [
+            primary_model,
+            "openai/gpt-4o-mini",
+            "openai/gpt-4o",
+            "google/gemini-2.0-flash-001",
+        ]
+        seen = set()
+        ordered = []
+        for model in candidates:
+            normalized = self._normalize_model_name(model)
+            if normalized and normalized not in seen:
+                ordered.append(normalized)
+                seen.add(normalized)
+        return ordered
 
     def _pdf_page_to_image_bytes(self, file_path: Path, page_num: int) -> Optional[bytes]:
-        """Render PDF page to PNG bytes at 150 DPI using pymupdf."""
         try:
-            import fitz  # pymupdf
+            import fitz
             doc = fitz.open(str(file_path))
             page = doc[page_num - 1]
-            mat = fitz.Matrix(150 / 72, 150 / 72)  # 150 DPI
+            mat = fitz.Matrix(150 / 72, 150 / 72)
             pix = page.get_pixmap(matrix=mat)
             img_bytes = pix.tobytes("png")
             doc.close()
             return img_bytes
-        except Exception:
+        except Exception as e:
+            print(f"Page {page_num} render failed: {e}")
             return None
 
-    def _call_openrouter(self, image_b64: str) -> Tuple[dict, int, int]:
-        payload = {
-            "model": self.model,
-            "messages": [
-                {
-                    "role": "user",
-                    "content": [
-                        {"type": "text", "text": _EXTRACTION_PROMPT},
-                        {
-                            "type": "image_url",
-                            "image_url": {"url": f"data:image/png;base64,{image_b64}"},
-                        },
-                    ],
-                }
-            ],
-            "temperature": 0.1,
-            "max_tokens": 1200,
+    def _call_openai(self, image_b64: str) -> Tuple[dict, int, int]:
+        """Call OpenAI Vision API with correct format."""
+        headers = {
+            "Authorization": f"Bearer {self.openai_api_key}",
+            "Content-Type": "application/json",
         }
 
+        if self.openai_api_key.startswith("sk-proj-") and self.openai_project_id:
+            headers["OpenAI-Project"] = self.openai_project_id
+
+        prompts = [
+            _EXTRACTION_PROMPT,
+            _EXTRACTION_PROMPT
+            + "\n\nReturn MINIFIED valid JSON only. Escape all inner quotes and newlines inside text values.",
+        ]
+
+        last_error = None
+        for prompt in prompts:
+            payload = {
+                "model": self.openai_model,
+                "messages": [
+                    {
+                        "role": "user",
+                        "content": [
+                            {"type": "text", "text": prompt},
+                            {
+                                "type": "image_url",
+                                "image_url": {"url": f"data:image/png;base64,{image_b64}"},
+                            },
+                        ],
+                    }
+                ],
+                "temperature": 0.1,
+                "max_tokens": 1200,
+                "response_format": {"type": "json_object"},
+            }
+
+            try:
+                resp = requests.post(_OPENAI_URL, headers=headers, json=payload, timeout=60)
+                resp.raise_for_status()
+                data = resp.json()
+
+                content = data["choices"][0]["message"]["content"]
+                if isinstance(content, list):
+                    content = "".join(
+                        part.get("text", "") for part in content if isinstance(part, dict)
+                    )
+                parsed = _parse_json_payload(content)
+                usage = data.get("usage", {})
+                return parsed, usage.get("prompt_tokens", 0), usage.get("completion_tokens", 0)
+
+            except requests.exceptions.HTTPError as e:
+                error_text = e.response.text[:200] if e.response else str(e)
+                raise RuntimeError(f"OpenAI HTTP error {e.response.status_code}: {error_text}")
+            except requests.exceptions.HTTPError as e:
+                error_text = e.response.text[:200] if e.response else str(e)
+                last_error = RuntimeError(
+                    f"OpenRouter HTTP error {e.response.status_code}: {error_text}"
+                )
+                continue
+            except Exception as e:
+                last_error = e
+                continue
+
+        raise RuntimeError(f"OpenAI call failed: {last_error}")
+
+    def _call_openrouter(self, image_b64: str) -> Tuple[dict, int, int]:
+        """Fallback to OpenRouter."""
         headers = {
             "Authorization": f"Bearer {self.api_key}",
-            "HTTP-Referer": "https://github.com/document-intel-refinery",
-            "X-Title": "document-intelligence-refinery",
+            "HTTP-Referer": "https://github.com/your-repo",
+            "X-Title": "document-refinery",
+            "Content-Type": "application/json",
         }
 
-        resp = requests.post(_OPENROUTER_URL, headers=headers, json=payload, timeout=90)
-        if resp.status_code != 200:
-            raise RuntimeError(f"OpenRouter error: {resp.status_code} {resp.text[:200]}")
+        last_error = None
+        for model_name in self.openrouter_models:
+            payload = {
+                "model": model_name,
+                "messages": [
+                    {
+                        "role": "user",
+                        "content": [
+                            {"type": "text", "text": _EXTRACTION_PROMPT},
+                            {
+                                "type": "image_url",
+                                "image_url": {"url": f"data:image/png;base64,{image_b64}"},
+                            },
+                        ],
+                    }
+                ],
+                "temperature": 0.1,
+                "max_tokens": 1200,
+            }
 
-        data = resp.json()
-        choices = data.get("choices", [])
-        if not choices:
-            raise RuntimeError("OpenRouter returned no choices")
+            try:
+                resp = requests.post(_OPENROUTER_URL, headers=headers, json=payload, timeout=60)
+                resp.raise_for_status()
+                data = resp.json()
 
-        content = choices[0]["message"].get("content", "{}")
-        if isinstance(content, list):
-            # openrouter may return array of text segments
-            content = "".join([c.get("text", "") for c in content])
+                content = data["choices"][0]["message"]["content"]
+                if isinstance(content, list):
+                    content = "".join(
+                        part.get("text", "") for part in content if isinstance(part, dict)
+                    )
+                parsed = _parse_json_payload(content)
+                usage = data.get("usage", {})
+                self.model = model_name
+                return parsed, usage.get("prompt_tokens", 0), usage.get("completion_tokens", 0)
 
-        text = content or "{}"
-        if "```" in text:
-            parts = text.split("```")
-            if len(parts) >= 2:
-                text = parts[1]
-            text = text.strip().lstrip("json").strip()
+            except Exception as e:
+                last_error = e
+                continue
 
-        parsed = json.loads(text)
-        usage = data.get("usage", {})
-        in_tokens = usage.get("prompt_tokens", 1000)
-        out_tokens = usage.get("completion_tokens", 500)
-        return parsed, in_tokens, out_tokens
+        raise RuntimeError(f"OpenRouter call failed: {str(last_error)}")
 
     def _extract_page(
         self, img_bytes: bytes, page_num: int, budget_guard: BudgetGuard
     ) -> dict:
-        """Send one page image to OpenRouter and parse structured response."""
+        """Extract structured content from one page image."""
         try:
             image_b64 = base64.b64encode(img_bytes).decode("utf-8")
-            page_data, input_tokens, output_tokens = self._call_openrouter(image_b64)
-            budget_guard.record_usage(input_tokens, output_tokens)
-            return page_data
-        except Exception:
-            return {"page_number": page_num, "text_blocks": [], "tables": [], "figures": []}
+
+            if self.openai_api_key and not self.openai_disabled_reason:
+                try:
+                    page_data, input_tokens, output_tokens = self._call_openai(image_b64)
+                    budget_guard.record_usage(input_tokens, output_tokens)
+                    page_data.setdefault("page_number", page_num)
+                    return page_data
+                except Exception as e:
+                    if "HTTP error 401" in str(e):
+                        self.openai_disabled_reason = "OpenAI authentication failed"
+                    print(f"OpenAI failed (page {page_num}): {e} — trying OpenRouter")
+                    if self.api_key and not self.openrouter_disabled_reason:
+                        page_data, input_tokens, output_tokens = self._call_openrouter(image_b64)
+                        budget_guard.record_usage(input_tokens, output_tokens)
+                        page_data.setdefault("page_number", page_num)
+                        return page_data
+                    raise
+            else:
+                if self.openrouter_disabled_reason:
+                    raise RuntimeError(self.openrouter_disabled_reason)
+                page_data, input_tokens, output_tokens = self._call_openrouter(image_b64)
+                budget_guard.record_usage(input_tokens, output_tokens)
+                page_data.setdefault("page_number", page_num)
+                return page_data
+
+        except Exception as e:
+            if "OpenRouter HTTP error 401" in str(e):
+                self.openrouter_disabled_reason = "OpenRouter authentication failed"
+            elif "OpenRouter HTTP error 402" in str(e):
+                self.openrouter_disabled_reason = "OpenRouter account has no available credits"
+            elif "OpenRouter HTTP error 403" in str(e):
+                self.openrouter_disabled_reason = "OpenRouter request forbidden"
+            return {
+                "page_number": page_num,
+                "text_blocks": [],
+                "tables": [],
+                "figures": [],
+                "error": str(e)[:200],
+            }
 
     def extract(self, file_path: Path) -> ExtractedDocument:
         start = time.time()
         budget_guard = BudgetGuard(self.rules)
 
-        if not self.api_key:
-            # No API key: return empty document
+        if not self.api_key and not self.openai_api_key:
             return ExtractedDocument(
-                doc_id=file_path.stem + "_vision",
+                doc_id=file_path.stem + "_vision_fail",
                 filename=file_path.name,
-                strategy_used="vision_extractor",
+                strategy_used=self.name,
                 confidence_score=0.0,
                 page_count=0,
-                metadata={"error": "OPENROUTER_API_KEY not set"},
+                metadata={"error": "No API key set (OPENAI_API_KEY or OPENROUTER_API_KEY)"},
             )
 
         try:
@@ -202,23 +363,35 @@ class VisionExtractor(BaseExtractor):
         except Exception:
             page_count = 1
 
-        text_blocks: List[TextBlock] = []
-        tables: List[ExtractedTable] = []
-        figures: List[ExtractedFigure] = []
-        section_headings: List[TextBlock] = []
-        full_text_parts: List[str] = []
+        text_blocks = []
+        tables = []
+        figures = []
+        section_headings = []
+        full_text_parts = []
+        errors = []
 
         for page_num in range(1, page_count + 1):
             if not budget_guard.can_process_page():
+                errors.append("Budget cap reached — stopped processing")
+                break
+
+            if self.openrouter_disabled_reason and (
+                not self.openai_api_key or self.openai_disabled_reason
+            ):
+                errors.append(self.openrouter_disabled_reason)
                 break
 
             img_bytes = self._pdf_page_to_image_bytes(file_path, page_num)
             if not img_bytes:
+                errors.append(f"p{page_num}: failed to render page to image")
                 continue
 
             page_data = self._extract_page(img_bytes, page_num, budget_guard)
+            if "error" in page_data:
+                errors.append(f"p{page_num}: {page_data['error']}")
+                continue
 
-            # ── Text Blocks ────────────────────────────────────────────────
+            # Parse text blocks
             for order, tb in enumerate(page_data.get("text_blocks", [])):
                 text = tb.get("text", "").strip()
                 if not text:
@@ -235,7 +408,7 @@ class VisionExtractor(BaseExtractor):
                     section_headings.append(block)
                 full_text_parts.append(text)
 
-            # ── Tables ────────────────────────────────────────────────────
+            # Parse tables
             for t_idx, tbl in enumerate(page_data.get("tables", [])):
                 headers = [str(h) for h in tbl.get("headers", [])]
                 rows = [[str(c) for c in row] for row in tbl.get("rows", [])]
@@ -250,7 +423,7 @@ class VisionExtractor(BaseExtractor):
                 )
                 tables.append(ext_table)
 
-            # ── Figures ─────────────────────────────────────────────────-
+            # Parse figures
             for f_idx, fig in enumerate(page_data.get("figures", [])):
                 ext_fig = ExtractedFigure(
                     figure_id=f"f_{page_num}_{f_idx}",
@@ -259,10 +432,12 @@ class VisionExtractor(BaseExtractor):
                 )
                 figures.append(ext_fig)
 
+        duration = time.time() - start
+
         result = ExtractedDocument(
             doc_id=file_path.stem + "_vision",
             filename=file_path.name,
-            strategy_used="vision_extractor",
+            strategy_used=self.name,
             confidence_score=0.0,
             page_count=page_count,
             text_blocks=text_blocks,
@@ -271,24 +446,33 @@ class VisionExtractor(BaseExtractor):
             full_text="\n\n".join(full_text_parts),
             section_headings=section_headings,
             cost_estimate_usd=round(budget_guard.total_cost, 6),
-            processing_time_sec=round(time.time() - start, 2),
+            processing_time_sec=round(duration, 2),
             metadata={
-                "budget_remaining_usd": round(
-                    budget_guard.max_cost_usd - budget_guard.total_cost, 6
-                ),
+                "budget_remaining_usd": round(budget_guard.max_cost_usd - budget_guard.total_cost, 6),
                 "pages_processed_by_vision": budget_guard.pages_processed,
-                "model": self.model,
+                "model": self.openai_model if self.openai_api_key else self.model,
+                "provider": (
+                    "openai"
+                    if self.openai_api_key and not self.openai_disabled_reason
+                    else "openrouter"
+                ),
+                "openai_disabled_reason": self.openai_disabled_reason,
+                "openrouter_disabled_reason": self.openrouter_disabled_reason,
+                "errors": errors[:10],
             },
         )
+
         result.confidence_score = self.confidence(result)
         return result
 
     def confidence(self, doc: ExtractedDocument) -> float:
-        """Vision extraction is our highest-confidence strategy when it succeeds."""
+        """Vision extraction confidence score."""
         if doc.page_count == 0:
             return 0.0
         has_text = len(doc.text_blocks) > 0
         text_score = min(
-            sum(len(b.text) for b in doc.text_blocks) / (doc.page_count * 100), 1.0
+            sum(len(b.text) for b in doc.text_blocks) / (doc.page_count * 100 + 1), 1.0
         )
-        return round(0.7 * text_score + 0.3 * int(has_text), 3)
+        structure_bonus = 0.25 if doc.tables or doc.figures else 0.0
+        score = 0.65 * text_score + 0.35 * int(has_text) + structure_bonus
+        return round(min(max(score, 0.0), 0.98), 3)

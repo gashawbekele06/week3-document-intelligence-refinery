@@ -4,7 +4,7 @@
   "page_count": 161,
   "sections": [
     {
-      "section_id": "sec_39d725d800",
+      "section_id": "sec_35defb1681",
       "title": "CONTENTS",
       "page_start": 3,
       "page_end": 3,
@@ -14,13 +14,13 @@
       "summary": "PROFILE OF",
       "data_types_present": [],
       "ldu_ids": [
-        "ldu_341649d3eab5",
-        "ldu_c0310785c277",
-        "ldu_d556f58699d3"
+        "ldu_5de43023785b",
+        "ldu_bbf7a629324e",
+        "ldu_a0970a29f0ef"
       ]
     },
     {
-      "section_id": "sec_7093c10472",
+      "section_id": "sec_b737cb3cb1",
       "title": "PROFILE",
       "page_start": 4,
       "page_end": 3,
@@ -30,12 +30,12 @@
       "summary": "VISION",
       "data_types_present": [],
       "ldu_ids": [
-        "ldu_c38d7ddc2386",
-        "ldu_341649d3eab5"
+        "ldu_bfc31b9eb247",
+        "ldu_5de43023785b"
       ]
     },
     {
-      "section_id": "sec_92f83ca4df",
+      "section_id": "sec_03f63afedc",
       "title": "VISION",
       "page_start": 4,
       "page_end": 3,
@@ -45,12 +45,12 @@
       "summary": "MISSION",
       "data_types_present": [],
       "ldu_ids": [
-        "ldu_3aa43b73eae4",
-        "ldu_c38d7ddc2386"
+        "ldu_5cf7b66f8d73",
+        "ldu_bfc31b9eb247"
       ]
     },
     {
-      "section_id": "sec_7845cb6d61",
+      "section_id": "sec_19df2dde7f",
       "title": "MISSION",
       "page_start": 4,
       "page_end": 3,
@@ -60,12 +60,12 @@
       "summary": "MOTTO",
       "data_types_present": [],
       "ldu_ids": [
-        "ldu_bead41b71aa3",
-        "ldu_3aa43b73eae4"
+        "ldu_201360a9ed6d",
+        "ldu_5cf7b66f8d73"
       ]
     },
     {
-      "section_id": "sec_a42e72ec88",
+      "section_id": "sec_3446242359",
       "title": "MOTTO",
       "page_start": 4,
       "page_end": 3,
@@ -75,12 +75,12 @@
       "summary": "VALUES",
       "data_types_present": [],
       "ldu_ids": [
-        "ldu_0bc277dc4141",
-        "ldu_bead41b71aa3"
+        "ldu_2df307143045",
+        "ldu_201360a9ed6d"
       ]
     },
     {
-      "section_id": "sec_d9d5bfbc0b",
+      "section_id": "sec_9577ed8fc6",
       "title": "VALUES",
       "page_start": 4,
       "page_end": 4,
@@ -90,13 +90,13 @@
       "summary": "VALUES -",
       "data_types_present": [],
       "ldu_ids": [
-        "ldu_080ecdfc4ecd",
-        "ldu_bcc6332d8b00",
-        "ldu_0bc277dc4141"
+        "ldu_483b84b82518",
+        "ldu_812bd62da3a8",
+        "ldu_2df307143045"
       ]
     },
     {
-      "section_id": "sec_74d6e5a8f8",
+      "section_id": "sec_551de29167",
       "title": "VALUES",
       "page_start": 5,
       "page_end": 4,
@@ -106,13 +106,13 @@
       "summary": "VALUES -",
       "data_types_present": [],
       "ldu_ids": [
-        "ldu_080ecdfc4ecd",
-        "ldu_bcc6332d8b00",
-        "ldu_080ecdfc4ecd"
+        "ldu_483b84b82518",
+        "ldu_812bd62da3a8",
+        "ldu_483b84b82518"
       ]
     },
     {
-      "section_id": "sec_d7ba066d5d",
+      "section_id": "sec_03eb6586a9",
       "title": "-",
       "page_start": 5,
       "page_end": 4,
@@ -122,16 +122,16 @@
       "summary": "(Continued) (Continued) (Continued) (Continued) (Continued)",
       "data_types_present": [],
       "ldu_ids": [
-        "ldu_f8e9854bd078",
-        "ldu_8f71c08d0a4f",
-        "ldu_7ea39030c56c",
-        "ldu_512f496aaf8f",
-        "ldu_63ebba977fe7",
-        "ldu_bcc6332d8b00"
+        "ldu_69137d77dc4d",
+        "ldu_5309dc39eccc",
+        "ldu_7ca0b0cdf3fc",
+        "ldu_1e1f9983c74f",
+        "ldu_85d14dfb36cb",
+        "ldu_812bd62da3a8"
       ]
     },
     {
-      "section_id": "sec_23e70a2af7",
+      "section_id": "sec_8dced1e339",
       "title": "(Continued)",
       "page_start": 5,
       "page_end": 5,
@@ -141,16 +141,16 @@
       "summary": "Performance Board CBE EXECUTIVE PRESIDENT’S",
       "data_types_present": [],
       "ldu_ids": [
-        "ldu_b64a239c76bd",
-        "ldu_353c0d7095f7",
-        "ldu_f1a2962bbc56",
-        "ldu_78b48189277e",
-        "ldu_9f0f457f24e2",
-        "ldu_f8e9854bd078"
+        "ldu_2b030971951e",
+        "ldu_3e7d5ea0fa98",
+        "ldu_4541ebb74705",
+        "ldu_25e9f5e590c0",
+        "ldu_8bc0f1598daa",
+        "ldu_69137d77dc4d"
       ]
     },
     {
-      "section_id": "sec_856ddb7b98",
+      "section_id": "sec_69606213fe",
       "title": "Performance",
       "page_start": 6,
       "page_end": 5,
@@ -160,13 +160,13 @@
       "summary": "Highlights Highlights",
       "data_types_present": [],
       "ldu_ids": [
-        "ldu_099600b715c6",
-        "ldu_85a1d1db4512",
-        "ldu_b64a239c76bd"
+        "ldu_b9f3a5d6b59c",
+        "ldu_57c5e2f95e04",
+        "ldu_2b030971951e"
       ]
     },
     {
-      "section_id": "sec_1e2aa6c0ce",
+      "section_id": "sec_8492c719ce",
       "title": "Highlights",
       "page_start": 6,
       "page_end": 6,
@@ -176,13 +176,13 @@
       "summary": "Performance -",
       "data_types_present": [],
       "ldu_ids": [
-        "ldu_cd7856c565d5",
-        "ldu_34e046651e40",
-        "ldu_099600b715c6"
+        "ldu_67f9586277d2",
+        "ldu_d4c68f0a7d3e",
+        "ldu_b9f3a5d6b59c"
       ]
     },
     {
-      "section_id": "sec_77d9c231fb",
+      "section_id": "sec_cf4c3c774b",
       "title": "Performance",
       "page_start": 7,
       "page_end": 6,
@@ -192,13 +192,13 @@
       "summary": "Highlights Highlights",
       "data_types_present": [],
       "ldu_ids": [
-        "ldu_099600b715c6",
-        "ldu_85a1d1db4512",
-        "ldu_cd7856c565d5"
+        "ldu_b9f3a5d6b59c",
+        "ldu_57c5e2f95e04",
+        "ldu_67f9586277d2"
       ]
     },
     {
-      "section_id": "sec_b8314867b8",
+      "section_id": "sec_92897db7d0",
       "title": "Highlights",
       "page_start": 7,
       "page_end": 6,
@@ -208,13 +208,13 @@
       "summary": "Performance -",
       "data_types_present": [],
       "ldu_ids": [
-        "ldu_cd7856c565d5",
-        "ldu_34e046651e40",
-        "ldu_85a1d1db4512"
+        "ldu_67f9586277d2",
+        "ldu_d4c68f0a7d3e",
+        "ldu_57c5e2f95e04"
       ]
     },
     {
-      "section_id": "sec_8373a245f4",
+      "section_id": "sec_b154b48245",
       "title": "-",
       "page_start": 7,
       "page_end": 6,
@@ -224,16 +224,16 @@
       "summary": "(Continued) (Continued) (Continued) (Continued) (Continued)",
       "data_types_present": [],
       "ldu_ids": [
-        "ldu_f8e9854bd078",
-        "ldu_8f71c08d0a4f",
-        "ldu_7ea39030c56c",
-        "ldu_512f496aaf8f",
-        "ldu_63ebba977fe7",
-        "ldu_34e046651e40"
+        "ldu_69137d77dc4d",
+        "ldu_5309dc39eccc",
+        "ldu_7ca0b0cdf3fc",
+        "ldu_1e1f9983c74f",
+        "ldu_85d14dfb36cb",
+        "ldu_d4c68f0a7d3e"
       ]
     },
     {
-      "section_id": "sec_567a3bae73",
+      "section_id": "sec_6b79144a9e",
       "title": "(Continued)",
       "page_start": 7,
       "page_end": 7,
@@ -243,16 +243,16 @@
       "summary": "Performance Board CBE EXECUTIVE PRESIDENT’S",
       "data_types_present": [],
       "ldu_ids": [
-        "ldu_b64a239c76bd",
-        "ldu_353c0d7095f7",
-        "ldu_f1a2962bbc56",
-        "ldu_78b48189277e",
-        "ldu_9f0f457f24e2",
-        "ldu_8f71c08d0a4f"
+        "ldu_2b030971951e",
+        "ldu_3e7d5ea0fa98",
+        "ldu_4541ebb74705",
+        "ldu_25e9f5e590c0",
+        "ldu_8bc0f1598daa",
+        "ldu_5309dc39eccc"
       ]
     },
     {
-      "section_id": "sec_debf61d905",
+      "section_id": "sec_a6c5e6b09b",
       "title": "Board",
       "page_start": 8,
       "page_end": 7,
@@ -262,13 +262,13 @@
       "summary": "of of",
       "data_types_present": [],
       "ldu_ids": [
-        "ldu_b389ed24d57b",
-        "ldu_a457aeb7cfc1",
-        "ldu_353c0d7095f7"
+        "ldu_5af88a7fdbe7",
+        "ldu_f6f1e122fa59",
+        "ldu_3e7d5ea0fa98"
       ]
     },
     {
-      "section_id": "sec_a212b67869",
+      "section_id": "sec_036a67c693",
       "title": "of",
       "page_start": 8,
       "page_end": 7,
@@ -278,13 +278,13 @@
       "summary": "Directors Directors",
       "data_types_present": [],
       "ldu_ids": [
-        "ldu_e3e13a71094d",
-        "ldu_c0fdeef86bd9",
-        "ldu_b389ed24d57b"
+        "ldu_21f228d6ffe3",
+        "ldu_a44853388dfa",
+        "ldu_5af88a7fdbe7"
       ]
     },
     {
-      "section_id": "sec_fdc451a6af",
+      "section_id": "sec_af4a1b422e",
       "title": "Directors",
       "page_start": 8,
       "page_end": 8,
@@ -294,13 +294,13 @@
       "summary": "Board -",
       "data_types_present": [],
       "ldu_ids": [
-        "ldu_370619870a38",
-        "ldu_747693971d6c",
-        "ldu_e3e13a71094d"
+        "ldu_782524fa9a0e",
+        "ldu_00518de07fcc",
+        "ldu_21f228d6ffe3"
       ]
     },
     {
-      "section_id": "sec_876ba97e55",
+      "section_id": "sec_42eb0be76f",
       "title": "Board",
       "page_start": 9,
       "page_end": 8,
@@ -310,13 +310,13 @@
       "summary": "of of",
       "data_types_present": [],
       "ldu_ids": [
-        "ldu_b389ed24d57b",
-        "ldu_a457aeb7cfc1",
-        "ldu_370619870a38"
+        "ldu_5af88a7fdbe7",
+        "ldu_f6f1e122fa59",
+        "ldu_782524fa9a0e"
       ]
     },
     {
-      "section_id": "sec_c1bb0e07b8",
+      "section_id": "sec_dc1b699d5c",
       "title": "of",
       "page_start": 9,
       "page_end": 8,
@@ -326,13 +326,13 @@
       "summary": "Directors Directors",
       "data_types_present": [],
       "ldu_ids": [
-        "ldu_e3e13a71094d",
-        "ldu_c0fdeef86bd9",
-        "ldu_a457aeb7cfc1"
+        "ldu_21f228d6ffe3",
+        "ldu_a44853388dfa",
+        "ldu_f6f1e122fa59"
       ]
     },
     {
-      "section_id": "sec_07e44bd6da",
+      "section_id": "sec_f25ceaff7c",
       "title": "Directors",
       "page_start": 9,
       "page_end": 8,
@@ -342,13 +342,13 @@
       "summary": "Board -",
       "data_types_present": [],
       "ldu_ids": [
-        "ldu_370619870a38",
-        "ldu_747693971d6c",
-        "ldu_c0fdeef86bd9"
+        "ldu_782524fa9a0e",
+        "ldu_00518de07fcc",
+        "ldu_a44853388dfa"
       ]
     },
     {
-      "section_id": "sec_70dc5dc4f3",
+      "section_id": "sec_415a0261e9",
       "title": "-",
       "page_start": 9,
       "page_end": 8,
@@ -358,16 +358,16 @@
       "summary": "(Continued) (Continued) (Continued) (Continued) (Continued)",
       "data_types_present": [],
       "ldu_ids": [
-        "ldu_f8e9854bd078",
-        "ldu_8f71c08d0a4f",
-        "ldu_7ea39030c56c",
-        "ldu_512f496aaf8f",
-        "ldu_63ebba977fe7",
-        "ldu_747693971d6c"
+        "ldu_69137d77dc4d",
+        "ldu_5309dc39eccc",
+        "ldu_7ca0b0cdf3fc",
+        "ldu_1e1f9983c74f",
+        "ldu_85d14dfb36cb",
+        "ldu_00518de07fcc"
       ]
     },
     {
-      "section_id": "sec_d387cba887",
+      "section_id": "sec_eb59ad6939",
       "title": "(Continued)",
       "page_start": 9,
       "page_end": 9,
@@ -377,16 +377,16 @@
       "summary": "Performance Board CBE EXECUTIVE PRESIDENT’S",
       "data_types_present": [],
       "ldu_ids": [
-        "ldu_b64a239c76bd",
-        "ldu_353c0d7095f7",
-        "ldu_f1a2962bbc56",
-        "ldu_78b48189277e",
-        "ldu_9f0f457f24e2",
-        "ldu_7ea39030c56c"
+        "ldu_2b030971951e",
+        "ldu_3e7d5ea0fa98",
+        "ldu_4541ebb74705",
+        "ldu_25e9f5e590c0",
+        "ldu_8bc0f1598daa",
+        "ldu_7ca0b0cdf3fc"
       ]
     },
     {
-      "section_id": "sec_2b26d26bb6",
+      "section_id": "sec_bd7316bc72",
       "title": "CBE",
       "page_start": 10,
       "page_end": 9,
@@ -396,13 +396,13 @@
       "summary": "NOOR NOOR",
       "data_types_present": [],
       "ldu_ids": [
-        "ldu_c4f745997213",
-        "ldu_fc33e7e94eb1",
-        "ldu_f1a2962bbc56"
+        "ldu_48dcd685620e",
+        "ldu_f657d70a4662",
+        "ldu_4541ebb74705"
       ]
     },
     {
-      "section_id": "sec_8590b9c1ef",
+      "section_id": "sec_54a64d0804",
       "title": "NOOR",
       "page_start": 10,
       "page_end": 9,
@@ -412,13 +412,13 @@
       "summary": "SHARI’AH Sharia’s",
       "data_types_present": [],
       "ldu_ids": [
-        "ldu_012baa093813",
-        "ldu_57d365e0b647",
-        "ldu_c4f745997213"
+        "ldu_635ce32cf243",
+        "ldu_eeb2c8d5e644",
+        "ldu_48dcd685620e"
       ]
     },
     {
-      "section_id": "sec_ed2fed5a94",
+      "section_id": "sec_21fc928a54",
       "title": "SHARI’AH",
       "page_start": 10,
       "page_end": 9,
@@ -428,12 +428,12 @@
       "summary": "ADVISORY",
       "data_types_present": [],
       "ldu_ids": [
-        "ldu_81a009c902c4",
-        "ldu_012baa093813"
+        "ldu_0b87285c3fbb",
+        "ldu_635ce32cf243"
       ]
     },
     {
-      "section_id": "sec_7c3a6ae969",
+      "section_id": "sec_c68af4b808",
       "title": "ADVISORY",
       "page_start": 10,
       "page_end": 9,
@@ -443,12 +443,12 @@
       "summary": "COMMITTEE",
       "data_types_present": [],
       "ldu_ids": [
-        "ldu_650f5693cc94",
-        "ldu_81a009c902c4"
+        "ldu_aa3eb9fbcfac",
+        "ldu_0b87285c3fbb"
       ]
     },
     {
-      "section_id": "sec_c1bee7f7dd",
+      "section_id": "sec_b6bf86480b",
       "title": "COMMITTEE",
       "page_start": 10,
       "page_end": 10,
@@ -458,12 +458,12 @@
       "summary": "EXECUTIVE",
       "data_types_present": [],
       "ldu_ids": [
-        "ldu_fb721ad811ff",
-        "ldu_650f5693cc94"
+        "ldu_b12abd4f4136",
+        "ldu_aa3eb9fbcfac"
       ]
     },
     {
-      "section_id": "sec_ec946f12c5",
+      "section_id": "sec_86109b858d",
       "title": "EXECUTIVE",
       "page_start": 11,
       "page_end": 10,
@@ -473,14 +473,14 @@
       "summary": "MANAGEMENT MANAGEMENT MANAGEMENT",
       "data_types_present": [],
       "ldu_ids": [
-        "ldu_c34d44b54715",
-        "ldu_160470b2e1a4",
-        "ldu_56add0bafb06",
-        "ldu_fb721ad811ff"
+        "ldu_cda9e3cf9706",
+        "ldu_0cea5d084f96",
+        "ldu_b0cf058f6d90",
+        "ldu_b12abd4f4136"
       ]
     },
     {
-      "section_id": "sec_edaa7482bc",
+      "section_id": "sec_d729b09f78",
       "title": "MANAGEMENT",
       "page_start": 11,
       "page_end": 11,
@@ -490,14 +490,14 @@
       "summary": "EXECUTIVE - -",
       "data_types_present": [],
       "ldu_ids": [
-        "ldu_fac5fa772114",
-        "ldu_aa7706b8ac28",
-        "ldu_03c4fe8cd145",
-        "ldu_c34d44b54715"
+        "ldu_0030d9026d3b",
+        "ldu_aa91b026cfe7",
+        "ldu_350fee3a5caf",
+        "ldu_cda9e3cf9706"
       ]
     },
     {
-      "section_id": "sec_1527a103fe",
+      "section_id": "sec_dcefe19f86",
       "title": "EXECUTIVE",
       "page_start": 12,
       "page_end": 11,
@@ -507,14 +507,14 @@
       "summary": "MANAGEMENT MANAGEMENT MANAGEMENT",
       "data_types_present": [],
       "ldu_ids": [
-        "ldu_c34d44b54715",
-        "ldu_160470b2e1a4",
-        "ldu_56add0bafb06",
-        "ldu_fac5fa772114"
+        "ldu_cda9e3cf9706",
+        "ldu_0cea5d084f96",
+        "ldu_b0cf058f6d90",
+        "ldu_0030d9026d3b"
       ]
     },
     {
-      "section_id": "sec_91eefd96f5",
+      "section_id": "sec_090d4230f7",
       "title": "MANAGEMENT",
       "page_start": 12,
       "page_end": 11,
@@ -524,14 +524,14 @@
       "summary": "EXECUTIVE - -",
       "data_types_present": [],
       "ldu_ids": [
-        "ldu_fac5fa772114",
-        "ldu_aa7706b8ac28",
-        "ldu_03c4fe8cd145",
-        "ldu_160470b2e1a4"
+        "ldu_0030d9026d3b",
+        "ldu_aa91b026cfe7",
+        "ldu_350fee3a5caf",
+        "ldu_0cea5d084f96"
       ]
     },
     {
-      "section_id": "sec_93987784aa",
+      "section_id": "sec_4145c098dc",
       "title": "-",
       "page_start": 12,
       "page_end": 11,
@@ -541,16 +541,16 @@
       "summary": "(Continued) (Continued) (Continued) (Continued) (Continued)",
       "data_types_present": [],
       "ldu_ids": [
-        "ldu_f8e9854bd078",
-        "ldu_8f71c08d0a4f",
-        "ldu_7ea39030c56c",
-        "ldu_512f496aaf8f",
-        "ldu_63ebba977fe7",
-        "ldu_aa7706b8ac28"
+        "ldu_69137d77dc4d",
+        "ldu_5309dc39eccc",
+        "ldu_7ca0b0cdf3fc",
+        "ldu_1e1f9983c74f",
+        "ldu_85d14dfb36cb",
+        "ldu_aa91b026cfe7"
       ]
     },
     {
-      "section_id": "sec_e7183438cc",
+      "section_id": "sec_0382bc8ebf",
       "title": "(Continued)",
       "page_start": 12,
       "page_end": 12,
@@ -560,16 +560,16 @@
       "summary": "Performance Board CBE EXECUTIVE PRESIDENT’S",
       "data_types_present": [],
       "ldu_ids": [
-        "ldu_b64a239c76bd",
-        "ldu_353c0d7095f7",
-        "ldu_f1a2962bbc56",
-        "ldu_78b48189277e",
-        "ldu_9f0f457f24e2",
-        "ldu_512f496aaf8f"
+        "ldu_2b030971951e",
+        "ldu_3e7d5ea0fa98",
+        "ldu_4541ebb74705",
+        "ldu_25e9f5e590c0",
+        "ldu_8bc0f1598daa",
+        "ldu_1e1f9983c74f"
       ]
     },
     {
-      "section_id": "sec_9f3cee9fcf",
+      "section_id": "sec_70d0f6f30a",
       "title": "EXECUTIVE",
       "page_start": 13,
       "page_end": 12,
@@ -579,14 +579,14 @@
       "summary": "MANAGEMENT MANAGEMENT MANAGEMENT",
       "data_types_present": [],
       "ldu_ids": [
-        "ldu_c34d44b54715",
-        "ldu_160470b2e1a4",
-        "ldu_56add0bafb06",
-        "ldu_78b48189277e"
+        "ldu_cda9e3cf9706",
+        "ldu_0cea5d084f96",
+        "ldu_b0cf058f6d90",
+        "ldu_25e9f5e590c0"
       ]
     },
     {
-      "section_id": "sec_b0a98ca845",
+      "section_id": "sec_1ccf2466cf",
       "title": "MANAGEMENT",
       "page_start": 13,
       "page_end": 12,
@@ -596,14 +596,14 @@
       "summary": "EXECUTIVE - -",
       "data_types_present": [],
       "ldu_ids": [
-        "ldu_fac5fa772114",
-        "ldu_aa7706b8ac28",
-        "ldu_03c4fe8cd145",
-        "ldu_56add0bafb06"
+        "ldu_0030d9026d3b",
+        "ldu_aa91b026cfe7",
+        "ldu_350fee3a5caf",
+        "ldu_b0cf058f6d90"
       ]
     },
     {
-      "section_id": "sec_acc94f4a11",
+      "section_id": "sec_6bc81c29d6",
       "title": "-",
       "page_start": 13,
       "page_end": 12,
@@ -613,16 +613,16 @@
       "summary": "(Continued) (Continued) (Continued) (Continued) (Continued)",
       "data_types_present": [],
       "ldu_ids": [
-        "ldu_f8e9854bd078",
-        "ldu_8f71c08d0a4f",
-        "ldu_7ea39030c56c",
-        "ldu_512f496aaf8f",
-        "ldu_63ebba977fe7",
-        "ldu_03c4fe8cd145"
+        "ldu_69137d77dc4d",
+        "ldu_5309dc39eccc",
+        "ldu_7ca0b0cdf3fc",
+        "ldu_1e1f9983c74f",
+        "ldu_85d14dfb36cb",
+        "ldu_350fee3a5caf"
       ]
     },
     {
-      "section_id": "sec_c6595067c9",
+      "section_id": "sec_4d81821eab",
       "title": "(Continued)",
       "page_start": 13,
       "page_end": 13,
@@ -632,16 +632,16 @@
       "summary": "Performance Board CBE EXECUTIVE PRESIDENT’S",
       "data_types_present": [],
       "ldu_ids": [
-        "ldu_b64a239c76bd",
-        "ldu_353c0d7095f7",
-        "ldu_f1a2962bbc56",
-        "ldu_78b48189277e",
-        "ldu_9f0f457f24e2",
-        "ldu_63ebba977fe7"
+        "ldu_2b030971951e",
+        "ldu_3e7d5ea0fa98",
+        "ldu_4541ebb74705",
+        "ldu_25e9f5e590c0",
+        "ldu_8bc0f1598daa",
+        "ldu_85d14dfb36cb"
       ]
     },
     {
-      "section_id": "sec_93193fb9a2",
+      "section_id": "sec_7483d52cb5",
       "title": "PRESIDENT’S",
       "page_start": 14,
       "page_end": 13,
@@ -651,12 +651,12 @@
       "summary": "MESSAGE",
       "data_types_present": [],
       "ldu_ids": [
-        "ldu_e8e359990e9c",
-        "ldu_9f0f457f24e2"
+        "ldu_d9e12b3dfa04",
+        "ldu_8bc0f1598daa"
       ]
     },
     {
-      "section_id": "sec_baa5d2b06a",
+      "section_id": "sec_fbe93561ee",
       "title": "MESSAGE",
       "page_start": 14,
       "page_end": 15,
@@ -666,12 +666,12 @@
       "summary": "CBE",
       "data_types_present": [],
       "ldu_ids": [
-        "ldu_eb61e90e2b19",
-        "ldu_e8e359990e9c"
+        "ldu_72da66a40d13",
+        "ldu_d9e12b3dfa04"
       ]
     },
     {
-      "section_id": "sec_da776f6542",
+      "section_id": "sec_afef89b86a",
       "title": "CBE",
       "page_start": 16,
       "page_end": 15,
@@ -681,13 +681,13 @@
       "summary": "NOOR NOOR",
       "data_types_present": [],
       "ldu_ids": [
-        "ldu_c4f745997213",
-        "ldu_fc33e7e94eb1",
-        "ldu_eb61e90e2b19"
+        "ldu_48dcd685620e",
+        "ldu_f657d70a4662",
+        "ldu_72da66a40d13"
       ]
     },
     {
-      "section_id": "sec_d0b5d92ba0",
+      "section_id": "sec_3a02ce6cdc",
       "title": "NOOR",
       "page_start": 16,
       "page_end": 15,
@@ -697,13 +697,13 @@
       "summary": "SHARI’AH Sharia’s",
       "data_types_present": [],
       "ldu_ids": [
-        "ldu_012baa093813",
-        "ldu_57d365e0b647",
-        "ldu_fc33e7e94eb1"
+        "ldu_635ce32cf243",
+        "ldu_eeb2c8d5e644",
+        "ldu_f657d70a4662"
       ]
     },
     {
-      "section_id": "sec_2548d82022",
+      "section_id": "sec_c769f645e1",
       "title": "Sharia’s",
       "page_start": 16,
       "page_end": 15,
@@ -713,12 +713,12 @@
       "summary": "advisory",
       "data_types_present": [],
       "ldu_ids": [
-        "ldu_030172a3e25b",
-        "ldu_57d365e0b647"
+        "ldu_427a72ef6acf",
+        "ldu_eeb2c8d5e644"
       ]
     },
     {
-      "section_id": "sec_acfc320e29",
+      "section_id": "sec_cb6e96652d",
       "title": "advisory",
       "page_start": 16,
       "page_end": 15,
@@ -728,12 +728,12 @@
       "summary": "committee",
       "data_types_present": [],
       "ldu_ids": [
-        "ldu_457ffb371e8f",
-        "ldu_030172a3e25b"
+        "ldu_a4459008e2e4",
+        "ldu_427a72ef6acf"
       ]
     },
     {
-      "section_id": "sec_9f36109c01",
+      "section_id": "sec_a9ea66581e",
       "title": "committee",
       "page_start": 16,
       "page_end": 15,
@@ -743,12 +743,12 @@
       "summary": "(SAC)",
       "data_types_present": [],
       "ldu_ids": [
-        "ldu_92ebb4226bb5",
-        "ldu_457ffb371e8f"
+        "ldu_b51f6ef0e89e",
+        "ldu_a4459008e2e4"
       ]
     },
     {
-      "section_id": "sec_c7e3bac02f",
+      "section_id": "sec_017c398b3f",
       "title": "(SAC)",
       "page_start": 16,
       "page_end": 15,
@@ -758,12 +758,12 @@
       "summary": "statement",
       "data_types_present": [],
       "ldu_ids": [
-        "ldu_b81814f6710f",
-        "ldu_92ebb4226bb5"
+        "ldu_616a95bc1ee9",
+        "ldu_b51f6ef0e89e"
       ]
     },
     {
-      "section_id": "sec_b55c4e9dd1",
+      "section_id": "sec_71b70e32ba",
       "title": "statement",
       "page_start": 16,
       "page_end": 15,
@@ -773,12 +773,12 @@
       "summary": "for",
       "data_types_present": [],
       "ldu_ids": [
-        "ldu_797ab30788cc",
-        "ldu_b81814f6710f"
+        "ldu_678a6bb4a38b",
+        "ldu_616a95bc1ee9"
       ]
     },
     {
-      "section_id": "sec_76251e5cb3",
+      "section_id": "sec_0e55f1a697",
       "title": "for",
       "page_start": 16,
       "page_end": 15,
@@ -788,12 +788,12 @@
       "summary": "the",
       "data_types_present": [],
       "ldu_ids": [
-        "ldu_90accdd3b7ab",
-        "ldu_797ab30788cc"
+        "ldu_0693ef885858",
+        "ldu_678a6bb4a38b"
       ]
     },
     {
-      "section_id": "sec_17ebd6ab48",
+      "section_id": "sec_4549942516",
       "title": "the",
       "page_start": 16,
       "page_end": 15,
@@ -803,12 +803,12 @@
       "summary": "fiscal",
       "data_types_present": [],
       "ldu_ids": [
-        "ldu_b8f4568101ee",
-        "ldu_90accdd3b7ab"
+        "ldu_d5371651db7c",
+        "ldu_0693ef885858"
       ]
     },
     {
-      "section_id": "sec_82a6592a2d",
+      "section_id": "sec_5ab08b8077",
       "title": "fiscal",
       "page_start": 16,
       "page_end": 15,
@@ -818,12 +818,12 @@
       "summary": "year",
       "data_types_present": [],
       "ldu_ids": [
-        "ldu_488be080a76a",
-        "ldu_b8f4568101ee"
+        "ldu_49263e274657",
+        "ldu_d5371651db7c"
       ]
     },
     {
-      "section_id": "sec_6356e9344f",
+      "section_id": "sec_6903c5d3ba",
       "title": "year",
       "page_start": 16,
       "page_end": 15,
@@ -833,12 +833,12 @@
       "summary": "ended",
       "data_types_present": [],
       "ldu_ids": [
-        "ldu_01fad6607b47",
-        "ldu_488be080a76a"
+        "ldu_ed07a9c8037c",
+        "ldu_49263e274657"
       ]
     },
     {
-      "section_id": "sec_c9fdce0ee5",
+      "section_id": "sec_09e1d12246",
       "title": "ended",
       "page_start": 16,
       "page_end": 15,
@@ -848,12 +848,12 @@
       "summary": "June",
       "data_types_present": [],
       "ldu_ids": [
-        "ldu_51deeebc8b54",
-        "ldu_01fad6607b47"
+        "ldu_1dc906a238bf",
+        "ldu_ed07a9c8037c"
       ]
     },
     {
-      "section_id": "sec_e11ee4bd01",
+      "section_id": "sec_593e377314",
       "title": "June",
       "page_start": 16,
       "page_end": 15,
@@ -863,12 +863,12 @@
       "summary": "30",
       "data_types_present": [],
       "ldu_ids": [
-        "ldu_ac2364d94718",
-        "ldu_51deeebc8b54"
+        "ldu_fe135d741f80",
+        "ldu_1dc906a238bf"
       ]
     },
     {
-      "section_id": "sec_5a39059d94",
+      "section_id": "sec_1f2b781e3d",
       "title": "30",
       "page_start": 16,
       "page_end": 15,
@@ -880,12 +880,12 @@
       "summary": "2024",
       "data_types_present": [],
       "ldu_ids": [
-        "ldu_5d96394063a3",
-        "ldu_ac2364d94718"
+        "ldu_ab25d7ecc3d9",
+        "ldu_fe135d741f80"
       ]
     },
     {
-      "section_id": "sec_833eaf8e4d",
+      "section_id": "sec_8656fa514d",
       "title": "2024",
       "page_start": 16,
       "page_end": 17,
@@ -895,12 +895,12 @@
       "summary": "1.",
       "data_types_present": [],
       "ldu_ids": [
-        "ldu_eb6c119698d5",
-        "ldu_5d96394063a3"
+        "ldu_d12eafef5052",
+        "ldu_ab25d7ecc3d9"
       ]
     },
     {
-      "section_id": "sec_46366c93dd",
+      "section_id": "sec_ebd304a13b",
       "title": "1.",
       "page_start": 18,
       "page_end": 17,
@@ -910,12 +910,12 @@
       "summary": "HIGHLIGHTS",
       "data_types_present": [],
       "ldu_ids": [
-        "ldu_b689dc9b81e0",
-        "ldu_eb6c119698d5"
+        "ldu_0c90d3807e2b",
+        "ldu_d12eafef5052"
       ]
     },
     {
-      "section_id": "sec_966014a679",
+      "section_id": "sec_841212c40e",
       "title": "HIGHLIGHTS",
       "page_start": 18,
       "page_end": 17,
@@ -925,14 +925,14 @@
       "summary": "OF OF OF",
       "data_types_present": [],
       "ldu_ids": [
-        "ldu_4845e4b3a4f9",
-        "ldu_09812530d232",
-        "ldu_3469a3250e7b",
-        "ldu_b689dc9b81e0"
+        "ldu_55ec1e982d9d",
+        "ldu_2ee28465e945",
+        "ldu_8eb1a4593e08",
+        "ldu_0c90d3807e2b"
       ]
     },
     {
-      "section_id": "sec_75c269dd7d",
+      "section_id": "sec_fddf547582",
       "title": "OF",
       "page_start": 18,
       "page_end": 17,
@@ -942,15 +942,15 @@
       "summary": "GLOBAL CBE’S NON-FINANCIAL THE",
       "data_types_present": [],
       "ldu_ids": [
-        "ldu_c75ec88c55e4",
-        "ldu_4dbb56a4c667",
-        "ldu_cdd2e283d6b9",
-        "ldu_aa0d6425662e",
-        "ldu_4845e4b3a4f9"
+        "ldu_999ba7709f25",
+        "ldu_c3963faac62c",
+        "ldu_1caf7f4f6f80",
+        "ldu_46003fb2e7a9",
+        "ldu_55ec1e982d9d"
       ]
     },
     {
-      "section_id": "sec_660f0bb4b1",
+      "section_id": "sec_edab349515",
       "title": "GLOBAL",
       "page_start": 18,
       "page_end": 17,
@@ -960,12 +960,12 @@
       "summary": "AND",
       "data_types_present": [],
       "ldu_ids": [
-        "ldu_541f318cc0cb",
-        "ldu_c75ec88c55e4"
+        "ldu_ba32f6d8f12e",
+        "ldu_999ba7709f25"
       ]
     },
     {
-      "section_id": "sec_50105ef029",
+      "section_id": "sec_e7b15bf443",
       "title": "AND",
       "page_start": 18,
       "page_end": 17,
@@ -975,12 +975,12 @@
       "summary": "DOMESTIC",
       "data_types_present": [],
       "ldu_ids": [
-        "ldu_9519a8ea2ff9",
-        "ldu_541f318cc0cb"
+        "ldu_de60646202ac",
+        "ldu_ba32f6d8f12e"
       ]
     },
     {
-      "section_id": "sec_747178d8ac",
+      "section_id": "sec_e4d9d23a92",
       "title": "DOMESTIC",
       "page_start": 18,
       "page_end": 17,
@@ -990,19 +990,19 @@
       "summary": "ECONOMIES",
       "data_types_present": [],
       "ldu_ids": [
-        "ldu_9d19c075e897",
-        "ldu_9519a8ea2ff9"
+        "ldu_5508f2cd333d",
+        "ldu_de60646202ac"
       ]
     },
     {
-      "section_id": "sec_cad15e90bc",
+      "section_id": "sec_00a6427d6f",
       "title": "ECONOMIES",
       "page_start": 18,
       "page_end": 17,
       "level": 1,
       "child_sections": [
         {
-          "section_id": "sec_cc3aeb057f",
+          "section_id": "sec_96a7962a65",
           "title": "1.1",
           "page_start": 18,
           "page_end": 18,
@@ -1012,8 +1012,8 @@
           "summary": "The",
           "data_types_present": [],
           "ldu_ids": [
-            "ldu_65822457b507",
-            "ldu_cfd1133372b1"
+            "ldu_1ff2e544e68c",
+            "ldu_b21985cef678"
           ]
         }
       ],
@@ -1021,12 +1021,12 @@
       "summary": "1.1",
       "data_types_present": [],
       "ldu_ids": [
-        "ldu_cfd1133372b1",
-        "ldu_9d19c075e897"
+        "ldu_b21985cef678",
+        "ldu_5508f2cd333d"
       ]
     },
     {
-      "section_id": "sec_d93a4b9c4a",
+      "section_id": "sec_7cde578de6",
       "title": "The",
       "page_start": 18,
       "page_end": 17,
@@ -1036,13 +1036,13 @@
       "summary": "Global Ethiopian",
       "data_types_present": [],
       "ldu_ids": [
-        "ldu_b528692adf7e",
-        "ldu_208865c1e789",
-        "ldu_65822457b507"
+        "ldu_c1d7e0be51e8",
+        "ldu_6e6ebcfd99a3",
+        "ldu_1ff2e544e68c"
       ]
     },
     {
-      "section_id": "sec_f3022b7a15",
+      "section_id": "sec_28ddd1fdb4",
       "title": "Global",
       "page_start": 18,
       "page_end": 17,
@@ -1052,19 +1052,19 @@
       "summary": "Economy",
       "data_types_present": [],
       "ldu_ids": [
-        "ldu_9c58adfbc64c",
-        "ldu_b528692adf7e"
+        "ldu_8715e3674ff1",
+        "ldu_c1d7e0be51e8"
       ]
     },
     {
-      "section_id": "sec_385c00d22e",
+      "section_id": "sec_dd00f7da66",
       "title": "Economy",
       "page_start": 18,
       "page_end": 17,
       "level": 1,
       "child_sections": [
         {
-          "section_id": "sec_97751e2fa0",
+          "section_id": "sec_0d7c53e5c5",
           "title": "1.2",
           "page_start": 18,
           "page_end": 18,
@@ -1074,8 +1074,8 @@
           "summary": "The",
           "data_types_present": [],
           "ldu_ids": [
-            "ldu_09494bcd2c96",
-            "ldu_eab507bec95a"
+            "ldu_df30c83ef830",
+            "ldu_5d6c4d4b29f1"
           ]
         }
       ],
@@ -1083,13 +1083,13 @@
       "summary": "1.2 2.",
       "data_types_present": [],
       "ldu_ids": [
-        "ldu_eab507bec95a",
-        "ldu_bf51bb0aabe4",
-        "ldu_9c58adfbc64c"
+        "ldu_5d6c4d4b29f1",
+        "ldu_6bde16dc94a7",
+        "ldu_8715e3674ff1"
       ]
     },
     {
-      "section_id": "sec_f0ad114853",
+      "section_id": "sec_540505ac45",
       "title": "The",
       "page_start": 18,
       "page_end": 17,
@@ -1099,13 +1099,13 @@
       "summary": "Global Ethiopian",
       "data_types_present": [],
       "ldu_ids": [
-        "ldu_b528692adf7e",
-        "ldu_208865c1e789",
-        "ldu_09494bcd2c96"
+        "ldu_c1d7e0be51e8",
+        "ldu_6e6ebcfd99a3",
+        "ldu_df30c83ef830"
       ]
     },
     {
-      "section_id": "sec_0eb306c606",
+      "section_id": "sec_fd1f236346",
       "title": "Ethiopian",
       "page_start": 18,
       "page_end": 17,
@@ -1115,12 +1115,12 @@
       "summary": "Economy",
       "data_types_present": [],
       "ldu_ids": [
-        "ldu_376caf584f7e",
-        "ldu_208865c1e789"
+        "ldu_f68e8a3c1185",
+        "ldu_6e6ebcfd99a3"
       ]
     },
     {
-      "section_id": "sec_8ce72c0a9f",
+      "section_id": "sec_70d80c042f",
       "title": "Economy",
       "page_start": 18,
       "page_end": 19,
@@ -1130,13 +1130,13 @@
       "summary": "1.2 2.",
       "data_types_present": [],
       "ldu_ids": [
-        "ldu_eab507bec95a",
-        "ldu_bf51bb0aabe4",
-        "ldu_376caf584f7e"
+        "ldu_5d6c4d4b29f1",
+        "ldu_6bde16dc94a7",
+        "ldu_f68e8a3c1185"
       ]
     },
     {
-      "section_id": "sec_0912dc3ade",
+      "section_id": "sec_9062a443e4",
       "title": "2.",
       "page_start": 20,
       "page_end": 19,
@@ -1146,12 +1146,12 @@
       "summary": "HIGHLIGHTS",
       "data_types_present": [],
       "ldu_ids": [
-        "ldu_c85fe0866245",
-        "ldu_bf51bb0aabe4"
+        "ldu_690293947897",
+        "ldu_6bde16dc94a7"
       ]
     },
     {
-      "section_id": "sec_aebdf11037",
+      "section_id": "sec_65b0b3e9e0",
       "title": "HIGHLIGHTS",
       "page_start": 20,
       "page_end": 19,
@@ -1161,14 +1161,14 @@
       "summary": "OF OF OF",
       "data_types_present": [],
       "ldu_ids": [
-        "ldu_4845e4b3a4f9",
-        "ldu_09812530d232",
-        "ldu_3469a3250e7b",
-        "ldu_c85fe0866245"
+        "ldu_55ec1e982d9d",
+        "ldu_2ee28465e945",
+        "ldu_8eb1a4593e08",
+        "ldu_690293947897"
       ]
     },
     {
-      "section_id": "sec_7b8cfba79d",
+      "section_id": "sec_773386d278",
       "title": "OF",
       "page_start": 20,
       "page_end": 19,
@@ -1178,15 +1178,15 @@
       "summary": "GLOBAL CBE’S NON-FINANCIAL THE",
       "data_types_present": [],
       "ldu_ids": [
-        "ldu_c75ec88c55e4",
-        "ldu_4dbb56a4c667",
-        "ldu_cdd2e283d6b9",
-        "ldu_aa0d6425662e",
-        "ldu_09812530d232"
+        "ldu_999ba7709f25",
+        "ldu_c3963faac62c",
+        "ldu_1caf7f4f6f80",
+        "ldu_46003fb2e7a9",
+        "ldu_2ee28465e945"
       ]
     },
     {
-      "section_id": "sec_f42e266dcc",
+      "section_id": "sec_90abbc5277",
       "title": "CBE’S",
       "page_start": 20,
       "page_end": 19,
@@ -1196,12 +1196,12 @@
       "summary": "FINANCIAL",
       "data_types_present": [],
       "ldu_ids": [
-        "ldu_90f832c4acb3",
-        "ldu_4dbb56a4c667"
+        "ldu_7bfefc445bb5",
+        "ldu_c3963faac62c"
       ]
     },
     {
-      "section_id": "sec_8b8a486b1d",
+      "section_id": "sec_9d70e11058",
       "title": "FINANCIAL",
       "page_start": 20,
       "page_end": 19,
@@ -1211,12 +1211,12 @@
       "summary": "STATEMENTS",
       "data_types_present": [],
       "ldu_ids": [
-        "ldu_32fa5202b289",
-        "ldu_90f832c4acb3"
+        "ldu_e188874b8bcd",
+        "ldu_7bfefc445bb5"
       ]
     },
     {
-      "section_id": "sec_6ab6cfc5c8",
+      "section_id": "sec_da77db1559",
       "title": "STATEMENTS",
       "page_start": 20,
       "page_end": 22,
@@ -1226,12 +1226,12 @@
       "summary": "3",
       "data_types_present": [],
       "ldu_ids": [
-        "ldu_1def25939bf9",
-        "ldu_32fa5202b289"
+        "ldu_b8dd2bef63a8",
+        "ldu_e188874b8bcd"
       ]
     },
     {
-      "section_id": "sec_21cc8b0526",
+      "section_id": "sec_8f2f1888d7",
       "title": "3",
       "page_start": 23,
       "page_end": 22,
@@ -1241,12 +1241,12 @@
       "summary": "HIGHLIGHTS",
       "data_types_present": [],
       "ldu_ids": [
-        "ldu_e69d30109714",
-        "ldu_1def25939bf9"
+        "ldu_92d2da986211",
+        "ldu_b8dd2bef63a8"
       ]
     },
     {
-      "section_id": "sec_012a6827db",
+      "section_id": "sec_ea2a1f153c",
       "title": "HIGHLIGHTS",
       "page_start": 23,
       "page_end": 22,
@@ -1256,14 +1256,14 @@
       "summary": "OF OF OF",
       "data_types_present": [],
       "ldu_ids": [
-        "ldu_4845e4b3a4f9",
-        "ldu_09812530d232",
-        "ldu_3469a3250e7b",
-        "ldu_e69d30109714"
+        "ldu_55ec1e982d9d",
+        "ldu_2ee28465e945",
+        "ldu_8eb1a4593e08",
+        "ldu_92d2da986211"
       ]
     },
     {
-      "section_id": "sec_d61626a8a6",
+      "section_id": "sec_2737f1505f",
       "title": "OF",
       "page_start": 23,
       "page_end": 22,
@@ -1273,15 +1273,15 @@
       "summary": "GLOBAL CBE’S NON-FINANCIAL THE",
       "data_types_present": [],
       "ldu_ids": [
-        "ldu_c75ec88c55e4",
-        "ldu_4dbb56a4c667",
-        "ldu_cdd2e283d6b9",
-        "ldu_aa0d6425662e",
-        "ldu_3469a3250e7b"
+        "ldu_999ba7709f25",
+        "ldu_c3963faac62c",
+        "ldu_1caf7f4f6f80",
+        "ldu_46003fb2e7a9",
+        "ldu_8eb1a4593e08"
       ]
     },
     {
-      "section_id": "sec_13c0c2245d",
+      "section_id": "sec_194d60a5d1",
       "title": "NON-FINANCIAL",
       "page_start": 23,
       "page_end": 22,
@@ -1291,12 +1291,12 @@
       "summary": "DEVELOPMENTS",
       "data_types_present": [],
       "ldu_ids": [
-        "ldu_2dfab921aa93",
-        "ldu_cdd2e283d6b9"
+        "ldu_b11a2fc07521",
+        "ldu_1caf7f4f6f80"
       ]
     },
     {
-      "section_id": "sec_6aa00f6359",
+      "section_id": "sec_d8db34b5e7",
       "title": "DEVELOPMENTS",
       "page_start": 23,
       "page_end": 159,
@@ -1306,12 +1306,12 @@
       "summary": "CONTENTS",
       "data_types_present": [],
       "ldu_ids": [
-        "ldu_63efcbbab194",
-        "ldu_2dfab921aa93"
+        "ldu_4329d48d6e21",
+        "ldu_b11a2fc07521"
       ]
     },
     {
-      "section_id": "sec_01aca78452",
+      "section_id": "sec_a899a9444e",
       "title": "CONTENTS",
       "page_start": 160,
       "page_end": 159,
@@ -1321,13 +1321,13 @@
       "summary": "PROFILE OF",
       "data_types_present": [],
       "ldu_ids": [
-        "ldu_341649d3eab5",
-        "ldu_c0310785c277",
-        "ldu_63efcbbab194"
+        "ldu_5de43023785b",
+        "ldu_bbf7a629324e",
+        "ldu_4329d48d6e21"
       ]
     },
     {
-      "section_id": "sec_5f9c18ae46",
+      "section_id": "sec_942331096e",
       "title": "OF",
       "page_start": 160,
       "page_end": 159,
@@ -1337,15 +1337,15 @@
       "summary": "GLOBAL CBE’S NON-FINANCIAL THE",
       "data_types_present": [],
       "ldu_ids": [
-        "ldu_c75ec88c55e4",
-        "ldu_4dbb56a4c667",
-        "ldu_cdd2e283d6b9",
-        "ldu_aa0d6425662e",
-        "ldu_c0310785c277"
+        "ldu_999ba7709f25",
+        "ldu_c3963faac62c",
+        "ldu_1caf7f4f6f80",
+        "ldu_46003fb2e7a9",
+        "ldu_bbf7a629324e"
       ]
     },
     {
-      "section_id": "sec_a6fe3aa143",
+      "section_id": "sec_f86ada7d65",
       "title": "THE",
       "page_start": 160,
       "page_end": 159,
@@ -1355,12 +1355,12 @@
       "summary": "ANNEX",
       "data_types_present": [],
       "ldu_ids": [
-        "ldu_0f3750fc2ce7",
-        "ldu_aa0d6425662e"
+        "ldu_624a4485360a",
+        "ldu_46003fb2e7a9"
       ]
     },
     {
-      "section_id": "sec_0b5cebee79",
+      "section_id": "sec_be8248a031",
       "title": "ANNEX",
       "page_start": 160,
       "page_end": 161,
@@ -1374,442 +1374,469 @@
       ],
       "summary": "PROFILE VISION MISSION MOTTO VALUES PERFORMANCE HIGHLIGHTS BOARD OF DIRECTORS CBE NOOR SHARI'AH ADVISORY COMMITTEE EXECUTIVE MANAGEMENT PRESIDENT’S MESSAGE SHARIÁ ADVISORY COMMITTEE (SAC) STATEMENT FOR THE FISCAL YEAR ENDED JUNE 30 2022 1. HIGHLIGHTS OF GLOBAL AND DOMESTIC ECONOMIES 1.1 The Global Economy 1.2 The Ethiopian Economy 2 HIGHLIGHTS OF CBE’S FINANCIAL STATEMENTS 2.1 Income Statement 2.1.1 Income 2.1.2 Expense 2.1.3 Profit 2.2 Balance Sheet 2.2.1 Assets 2.2.2 Liabilities 2.2.3 Capital and Reserves 3 HIGHLIGHTS OF NON-FINANCIAL DEVELOPMENTS 3.1 Customer Base Expansion and Use of Digital Channels 3.2 Accessibility 3.3 Human Resource Development ii ii ii ii ii-iii iv-v vi-vii viii ix-xi XII 1-2 3 3 3 5 5 5 6 6 7 7 8 8 8 8 8 8 ANNEX: 2022/23 AUDITOR’S REPORT AND FINANCIAL STATEMENTS 10-144 145 CONTENTS OF THE ANNEX Â Has been serving Ethiopia since 1942.",
       "data_types_present": [
-        "figure",
         "table",
-        "text"
+        "text",
+        "figure"
       ],
       "ldu_ids": [
-        "ldu_83980f5bb980",
-        "ldu_6aea4d5fb519",
-        "ldu_fa8a03629308",
-        "ldu_58bdcd271de8",
-        "ldu_016d921e95d8",
-        "ldu_fe7e1606dd80",
-        "ldu_5dca9268b1d3",
-        "ldu_163d4cd76285",
-        "ldu_cb7e90db280f",
-        "ldu_fce3bf28d970",
-        "ldu_eee43d7a2fbe",
-        "ldu_14c19f321354",
-        "ldu_6d566791f2bb",
-        "ldu_d61768eae88d",
-        "ldu_2c138f70e48f",
-        "ldu_93870390f42d",
-        "ldu_c364a7986b1d",
-        "ldu_85c996c699f2",
-        "ldu_d96256acedad",
-        "ldu_1120a44fc89b",
-        "ldu_2073cd868bf4",
-        "ldu_34a190eb2491",
-        "ldu_8e262dd33373",
-        "ldu_b8fa3f6a6c63",
-        "ldu_ed7bbec3cc39",
-        "ldu_bd47bca8c23a",
-        "ldu_dac14ac8b48a",
-        "ldu_c0ffbb2c9b58",
-        "ldu_dbce469d417f",
-        "ldu_21e12bc7837a",
-        "ldu_be031beb3222",
-        "ldu_52258ae7fe06",
-        "ldu_0ad92dd7b940",
-        "ldu_d9edecfba34c",
-        "ldu_6b938e5695ea",
-        "ldu_79c2c1311732",
-        "ldu_e7b5c58ea779",
-        "ldu_4132ad2969b1",
-        "ldu_55cb9e6970b1",
-        "ldu_4b4d905b5abc",
-        "ldu_d6ed12859dd2",
-        "ldu_b986073c44ef",
-        "ldu_7a57c0011911",
-        "ldu_6e015c11378a",
-        "ldu_8774ae6af262",
-        "ldu_90cac9442e31",
-        "ldu_736245b157fb",
-        "ldu_424e6b41acdd",
-        "ldu_5abf6e1acfc0",
-        "ldu_e0c92df917fc",
-        "ldu_4eac8f613c73",
-        "ldu_d4c2f70f2a8a",
-        "ldu_eb8256ecf502",
-        "ldu_dcfcac1c52da",
-        "ldu_cd902ba54c9b",
-        "ldu_dc7665ebd12b",
-        "ldu_01829ce8a198",
-        "ldu_e9f7c9002828",
-        "ldu_a527a90bf630",
-        "ldu_62cc8bb61696",
-        "ldu_be01a726bccc",
-        "ldu_0fc474d72d08",
-        "ldu_ff1716b744b0",
-        "ldu_437aa6b39403",
-        "ldu_9f4fabc28a4d",
-        "ldu_40e347e7a7c6",
-        "ldu_c13e60df70b9",
-        "ldu_34ea000f4101",
-        "ldu_9f2772ce16c1",
-        "ldu_f309c752d7cb",
-        "ldu_567991ec8278",
-        "ldu_ff8eea394743",
-        "ldu_5a7391a3632f",
-        "ldu_aa2b306723e9",
-        "ldu_726b360fd23b",
-        "ldu_9d8693e52d90",
-        "ldu_36d86f21cc6c",
-        "ldu_cc96343b346f",
-        "ldu_8e9f7181e2f4",
-        "ldu_dfc530b38286",
-        "ldu_994b79d57e38",
-        "ldu_da411b932f91",
-        "ldu_1a068c78d0ae",
-        "ldu_9b806908b981",
-        "ldu_cfc8c4c0d1e6",
-        "ldu_eae1b7709c0a",
-        "ldu_449524e6367d",
-        "ldu_958533fd273f",
-        "ldu_ca20f4e7def8",
-        "ldu_e77d2207e65f",
-        "ldu_1f77ef16d1b7",
-        "ldu_9226ccffb95d",
-        "ldu_720452f59ece",
-        "ldu_6395db394366",
-        "ldu_82154da27bbe",
-        "ldu_37722e31c621",
-        "ldu_25a0951b65c5",
-        "ldu_bca7e72e33aa",
-        "ldu_0e916ef9cb3a",
-        "ldu_023a7066a7ef",
-        "ldu_57761e4d80cf",
-        "ldu_21df973cf06c",
-        "ldu_c8b69a7b9c66",
-        "ldu_b7465b60516e",
-        "ldu_e89faa494dda",
-        "ldu_03a7eaf9e7f4",
-        "ldu_e10a59c60809",
-        "ldu_64412ba72379",
-        "ldu_1ede40fbefb9",
-        "ldu_729461aef300",
-        "ldu_58d7e66b649a",
-        "ldu_6ca64d362c74",
-        "ldu_6b3ec3b47778",
-        "ldu_61f9671845bc",
-        "ldu_1d710e046884",
-        "ldu_1b0fc254f711",
-        "ldu_f98c5b1d3ffc",
-        "ldu_b3f70519f362",
-        "ldu_40f852f02ed0",
-        "ldu_76d8edfeacd6",
-        "ldu_27e72a672291",
-        "ldu_36280a08aad3",
-        "ldu_01ef580dcddf",
-        "ldu_56b4e41868dc",
-        "ldu_2871f8876ae8",
-        "ldu_1aef7422476c",
-        "ldu_d05b2eb81113",
-        "ldu_8ccaca938075",
-        "ldu_79990ee960ca",
-        "ldu_5c97760b126d",
-        "ldu_43e2c4f63e67",
-        "ldu_c62d22cb117c",
-        "ldu_594d51178e79",
-        "ldu_f9d8febdb8dd",
-        "ldu_8584aab62503",
-        "ldu_346f5c768c75",
-        "ldu_23dae981803f",
-        "ldu_90a7dc737845",
-        "ldu_e8799aef590a",
-        "ldu_a7f4ecd5584f",
-        "ldu_9d4aa8a5f89c",
-        "ldu_8816fcff4143",
-        "ldu_9530b5e737e3",
-        "ldu_a633ce557be4",
-        "ldu_bf235569057e",
-        "ldu_20f94b809a0b",
-        "ldu_3579717c4328",
-        "ldu_4dd6205dd4bf",
-        "ldu_053fa4e4340e",
-        "ldu_cfb38a3b3dab",
-        "ldu_466d8ac43dfc",
-        "ldu_d414959ffe14",
-        "ldu_04940f72bbf5",
-        "ldu_8dbdb6d819fa",
-        "ldu_eb654670951e",
-        "ldu_3d098ff29630",
-        "ldu_d6de14fca5f1",
-        "ldu_b2611943a3ba",
-        "ldu_2d41eba81d62",
-        "ldu_eef02081e133",
-        "ldu_ff0da23753fc",
-        "ldu_93268688981c",
-        "ldu_98ea4ce0cba3",
-        "ldu_281ee7fce5e9",
-        "ldu_5cdcdc2c6445",
-        "ldu_6d1c9d78fd47",
-        "ldu_4fb88e5d7c1b",
-        "ldu_17252b94209e",
-        "ldu_c1e0f2415f3f",
-        "ldu_ec074c98ed87",
-        "ldu_8fe146d41394",
-        "ldu_190b1851f331",
-        "ldu_899534d1667a",
-        "ldu_d0a0fa5f2dea",
-        "ldu_23774a3d49c7",
-        "ldu_580410c1f167",
-        "ldu_71d87fdcc41a",
-        "ldu_c9662c04e608",
-        "ldu_13437a5a276c",
-        "ldu_50ff29e7733d",
-        "ldu_54c6b2633e52",
-        "ldu_41ffbf8411fe",
-        "ldu_1f90a368722b",
-        "ldu_0d8715f8c3e6",
-        "ldu_8a2c9c730b12",
-        "ldu_d1c6d2a3d28f",
-        "ldu_328eb0786562",
-        "ldu_df9026292ea4",
-        "ldu_2176b61be707",
-        "ldu_43b79ae50fee",
-        "ldu_1191efdd093e",
-        "ldu_e9377cf991dc",
-        "ldu_c818d2096cb3",
-        "ldu_371f13a0d5a2",
-        "ldu_7d6192c5d60b",
-        "ldu_9bbabc89b3d5",
-        "ldu_0d1d4ce6544c",
-        "ldu_be488a9d7075",
-        "ldu_5d1979e2b18d",
-        "ldu_b9bc36143153",
-        "ldu_066cb6d817fd",
-        "ldu_d24b64cc0e31",
-        "ldu_3939af30643f",
-        "ldu_d589f3cb04db",
-        "ldu_bffab0b45a57",
-        "ldu_8218d5ff43c3",
-        "ldu_8c5f2e798483",
-        "ldu_f7d1841224d4",
-        "ldu_544a22b2d829",
-        "ldu_685135d760b3",
-        "ldu_52317edf2267",
-        "ldu_db4aff22132e",
-        "ldu_7caba781d48f",
-        "ldu_29d47890abc2",
-        "ldu_36c35fc16e42",
-        "ldu_fb98d63e1ed4",
-        "ldu_d772f74719bb",
-        "ldu_45d93ad65e1f",
-        "ldu_7ea7cdd2676e",
-        "ldu_293248629349",
-        "ldu_d46464f398f6",
-        "ldu_26779f2ef89f",
-        "ldu_3a3a64eb9540",
-        "ldu_7fcaf44099ce",
-        "ldu_06be76e396d8",
-        "ldu_e82fdcd18703",
-        "ldu_0fa12af6401f",
-        "ldu_303731642028",
-        "ldu_0678179c6614",
-        "ldu_18bc11248c21",
-        "ldu_8904d6066424",
-        "ldu_468df62e7c60",
-        "ldu_fb9af2ee3141",
-        "ldu_b06e70b66328",
-        "ldu_0089210c5cef",
-        "ldu_c64173ebde50",
-        "ldu_7487f7041d89",
-        "ldu_eea72e1406f8",
-        "ldu_ace1d1b0b16d",
-        "ldu_74267357fbd5",
-        "ldu_51610e4cd987",
-        "ldu_ae726f5a4e05",
-        "ldu_4d29e1f16e7e",
-        "ldu_18e2f4d9f261",
-        "ldu_da7a7b42f31b",
-        "ldu_bfeee78432c7",
-        "ldu_2ce9671cc108",
-        "ldu_c383a75f1894",
-        "ldu_3fa9c43e8bea",
-        "ldu_e1ab8b855f6a",
-        "ldu_be5d211705c3",
-        "ldu_062b5720dd1f",
-        "ldu_fe12ae7e51bb",
-        "ldu_2742e52c9e2f",
-        "ldu_3028b4d88b7b",
-        "ldu_e44ab2b07aa5",
-        "ldu_4f8f07bf889a",
-        "ldu_9c989a0c681e",
-        "ldu_e13f4254a166",
-        "ldu_81fac2cff1bd",
-        "ldu_38408db915da",
-        "ldu_2b87f78615b4",
-        "ldu_cda1b3c2f031",
-        "ldu_69ee786b8851",
-        "ldu_254ef2d633af",
-        "ldu_eb809744a147",
-        "ldu_67db052d989c",
-        "ldu_da1c3c5b04bc",
-        "ldu_25d5c034f482",
-        "ldu_c02628a038d9",
-        "ldu_eb8df48b3b83",
-        "ldu_c2d5604c6dc9",
-        "ldu_5ea9347388f3",
-        "ldu_c4c2d07382d4",
-        "ldu_a168907d963c",
-        "ldu_7419efdddcf8",
-        "ldu_9d7cd02afc42",
-        "ldu_8fd3d201083b",
-        "ldu_222ed2677f9c",
-        "ldu_cd09018f9731",
-        "ldu_9b7312fd837f",
-        "ldu_4f158a90975e",
-        "ldu_366647400db9",
-        "ldu_6a13e23d783b",
-        "ldu_796bcf5a2218",
-        "ldu_5470afa281bc",
-        "ldu_0823246cd879",
-        "ldu_aa1c73b04791",
-        "ldu_3c693463947f",
-        "ldu_f17579cc9284",
-        "ldu_d2658577971c",
-        "ldu_b5e2ae8531ad",
-        "ldu_9620ad5c8b0b",
-        "ldu_99d65fb2cbfb",
-        "ldu_f602ee1b72e6",
-        "ldu_264e5a0e7c47",
-        "ldu_072787b95baa",
-        "ldu_144ba39bd2c2",
-        "ldu_e07c2dfa1a40",
-        "ldu_cbc8544f1816",
-        "ldu_43d8b1c2e73f",
-        "ldu_ee4fa719f9c0",
-        "ldu_b7e404cda5cc",
-        "ldu_10f16f337b8a",
-        "ldu_78e4c2e368f6",
-        "ldu_0d76c3a432af",
-        "ldu_f08fcb6ac9ea",
-        "ldu_ef4ae4b973c9",
-        "ldu_4c9add0f69e2",
-        "ldu_711679daaa01",
-        "ldu_d797f58a252c",
-        "ldu_f5399b6630f2",
-        "ldu_89f7e857efc6",
-        "ldu_21cb491b5560",
-        "ldu_334fa3fe829d",
-        "ldu_56e475dcc541",
-        "ldu_7e9c72a41f12",
-        "ldu_31cf36db0030",
-        "ldu_dd74c0f07c2f",
-        "ldu_b0098f1878b1",
-        "ldu_b7724a683202",
-        "ldu_7eee3be4e90f",
-        "ldu_1776ddd1d099",
-        "ldu_762ee1a65db2",
-        "ldu_feb39b50e966",
-        "ldu_30db8dfdef48",
-        "ldu_e233d30fee30",
-        "ldu_2681023ad881",
-        "ldu_5060929fb1a6",
-        "ldu_6020c1794c7a",
-        "ldu_09d449c65165",
-        "ldu_b502104d703d",
-        "ldu_df6e40a3de48",
-        "ldu_d14ffafd75c6",
-        "ldu_1c50ed4b63f7",
-        "ldu_4abdca242af5",
-        "ldu_465e75690568",
-        "ldu_f6f3b4ff4e6b",
-        "ldu_e64cc8889cbc",
-        "ldu_30b0949193af",
-        "ldu_ed474d7b9572",
-        "ldu_be818eb44745",
-        "ldu_81d47e046390",
-        "ldu_12639aef12ad",
-        "ldu_08ba3eefefe0",
-        "ldu_bfd11f4d82bd",
-        "ldu_60543e9757d0",
-        "ldu_b1621820f51c",
-        "ldu_ae50abae553b",
-        "ldu_4d9207bb0ba7",
-        "ldu_b44be4865d80",
-        "ldu_51669642be0c",
-        "ldu_aa1e3caf8b12",
-        "ldu_f4b2eb9063a0",
-        "ldu_174aa695a9c3",
-        "ldu_4157b972b48f",
-        "ldu_7711e91a7cf3",
-        "ldu_ea99b2b6b3c6",
-        "ldu_45a7520c1611",
-        "ldu_d96dbf2c5c2a",
-        "ldu_2a4f514e9126",
-        "ldu_34f29feba3aa",
-        "ldu_3b055fbdccbc",
-        "ldu_b36960dd746e",
-        "ldu_e30231f8af15",
-        "ldu_f421051daa62",
-        "ldu_bc186ce7b965",
-        "ldu_e3553de5ae31",
-        "ldu_97a3c7631a46",
-        "ldu_410bad5bfb40",
-        "ldu_73cb191e7266",
-        "ldu_ba1dcca31747",
-        "ldu_ac57be2f6969",
-        "ldu_9bd4205ade2e",
-        "ldu_a184e88f053e",
-        "ldu_00d912a4411b",
-        "ldu_fa072d6e2ff6",
-        "ldu_e172dc9d31c0",
-        "ldu_cd5d37dcb6a4",
-        "ldu_0b922393204f",
-        "ldu_526caf3845e9",
-        "ldu_04b542663f01",
-        "ldu_daefdbc22695",
-        "ldu_867e71953f16",
-        "ldu_844d236849c1",
-        "ldu_c294f90b1edc",
-        "ldu_42ba43a22d18",
-        "ldu_61923b27ecbb",
-        "ldu_7f6c592bc59a",
-        "ldu_9a6649f5486d",
-        "ldu_7d6437d94939",
-        "ldu_3103f8e16d09",
-        "ldu_f92d0798e7ad",
-        "ldu_33a4ffcc7fae",
-        "ldu_85bb1014c4f1",
-        "ldu_1f92bbeb1b8a",
-        "ldu_38e88de3b2f0",
-        "ldu_047e440db556",
-        "ldu_4d663f171598",
-        "ldu_0a6e14a06758",
-        "ldu_9e910ad123f8",
-        "ldu_905dc93e371f",
-        "ldu_e08796e3e222",
-        "ldu_f3f7c4ffc267",
-        "ldu_df49ba85e9e9",
-        "ldu_71b62c8b0fc0",
-        "ldu_dcd4511ce6af",
-        "ldu_a70d588b3628",
-        "ldu_3b03497262ef",
-        "ldu_66e2fd219585",
-        "ldu_22518497a29c",
-        "ldu_9e876d2b1715",
-        "ldu_6fc4a86f7d34",
-        "ldu_a8423cd8edf9",
-        "ldu_1978f38bd2a2",
-        "ldu_5819b8c8ef64",
-        "ldu_10b708f0da36",
-        "ldu_b9e936111f82",
-        "ldu_7ee6531c41b0",
-        "ldu_fb0ae07b615f",
-        "ldu_2da2d179a86d",
-        "ldu_f0e08bf77c72",
-        "ldu_8879b7cce86e",
-        "ldu_3da06dceb181",
-        "ldu_c280decdb2ca",
-        "ldu_eb9cf37130f8",
-        "ldu_969307cb580a",
-        "ldu_68d2e9623e36",
-        "ldu_0f3750fc2ce7"
+        "ldu_9e689c2d0ad1",
+        "ldu_d1fbbaf77b89",
+        "ldu_8f319f8374c6",
+        "ldu_41d84b8f0094",
+        "ldu_b5d7113f7073",
+        "ldu_670391aafc35",
+        "ldu_b4a0b0202936",
+        "ldu_06505246d249",
+        "ldu_de01aa8a0bee",
+        "ldu_1ecafe9cc839",
+        "ldu_3ef4b7051986",
+        "ldu_0f0d12db612f",
+        "ldu_28e2ef04901a",
+        "ldu_ed026058f2a2",
+        "ldu_cb564f1bd2bf",
+        "ldu_cccbcf8cf408",
+        "ldu_efddba87e2d1",
+        "ldu_b909c19906b2",
+        "ldu_a4cfba46963a",
+        "ldu_0bc27d1b7369",
+        "ldu_064b597cab5e",
+        "ldu_c0e0b8168d7a",
+        "ldu_b43a99f12f7a",
+        "ldu_461c0eb8cc9c",
+        "ldu_2138c58d9aeb",
+        "ldu_f283cc5e6c74",
+        "ldu_d4b01e976c8b",
+        "ldu_f4a94ac397ba",
+        "ldu_74fee455db3e",
+        "ldu_810407e7869e",
+        "ldu_dc81817a74a7",
+        "ldu_ca0d9958ba04",
+        "ldu_b7f2d840ded8",
+        "ldu_142288d21915",
+        "ldu_37980f683729",
+        "ldu_ecc7f6bc606f",
+        "ldu_cd9db0adc221",
+        "ldu_abb936704da9",
+        "ldu_77a0327e981b",
+        "ldu_e85d506b3c8b",
+        "ldu_3045b758f4d2",
+        "ldu_cb9e8e567951",
+        "ldu_f36ca69cf977",
+        "ldu_514cce41dcce",
+        "ldu_77f4e64b64cf",
+        "ldu_691971a82449",
+        "ldu_3dc8afd32416",
+        "ldu_1d4c8c6f3dae",
+        "ldu_320320d7c2b6",
+        "ldu_ce5a394e8194",
+        "ldu_f04e31a7f422",
+        "ldu_fca39a0427c3",
+        "ldu_7761b629194a",
+        "ldu_03e5fbb4b7ff",
+        "ldu_86f0e48834e0",
+        "ldu_86f2b03ff8af",
+        "ldu_bffa45c539e8",
+        "ldu_33a7752ecc82",
+        "ldu_e276a4f01f5a",
+        "ldu_d4d45e450860",
+        "ldu_7513b9b0ecfa",
+        "ldu_ad647971f68a",
+        "ldu_ec7067d44539",
+        "ldu_2c9b5d4400db",
+        "ldu_657ca34fca9c",
+        "ldu_53d6526df367",
+        "ldu_384c63061868",
+        "ldu_fad0ab71f658",
+        "ldu_5c5124237571",
+        "ldu_2078d7c6c47f",
+        "ldu_591f9c182dad",
+        "ldu_ef0d9ce5e97a",
+        "ldu_ed4a4682b300",
+        "ldu_aa3fca87f0b9",
+        "ldu_accbc61cab55",
+        "ldu_823a4f4ec85b",
+        "ldu_000c475e5c65",
+        "ldu_0d8f2a751913",
+        "ldu_fd2542430a43",
+        "ldu_1c7b95784f48",
+        "ldu_1e2ac3b1ed35",
+        "ldu_923eb01b14f1",
+        "ldu_b91f4825de57",
+        "ldu_8c331db99e2f",
+        "ldu_c4531b1563d7",
+        "ldu_6b85d63abe80",
+        "ldu_f27c79b2433e",
+        "ldu_6640ebef12ef",
+        "ldu_5b08a3faeda3",
+        "ldu_f1f78029fc6a",
+        "ldu_08a34b287cd8",
+        "ldu_03284b33bccd",
+        "ldu_3ff2a4a8d675",
+        "ldu_23e7f7b0a870",
+        "ldu_1164d41cea23",
+        "ldu_982495e42d7f",
+        "ldu_4d8883c00a83",
+        "ldu_a73c4e5aaca3",
+        "ldu_86e6a8ce58a2",
+        "ldu_47975205d486",
+        "ldu_8cade4ff7ab5",
+        "ldu_2d3c1c6ec192",
+        "ldu_2761aa9a36fe",
+        "ldu_6bbe95fa36c7",
+        "ldu_75578bcc03ca",
+        "ldu_71ecad1d70f7",
+        "ldu_77fa1bdaeb71",
+        "ldu_3a0dc21cbd68",
+        "ldu_e29417c3c832",
+        "ldu_b9b5f6e1c056",
+        "ldu_3c3d660e354e",
+        "ldu_40b29c054eb3",
+        "ldu_f0b959b72232",
+        "ldu_87e6397d2ab2",
+        "ldu_8d3d9467f9a6",
+        "ldu_de270eff1cee",
+        "ldu_3a3cb714eaa6",
+        "ldu_05278062a799",
+        "ldu_724fbb6d1f38",
+        "ldu_e72447f95cd6",
+        "ldu_b08d160f0f84",
+        "ldu_6d05418496a0",
+        "ldu_d09dd3417cda",
+        "ldu_b931b4e216e6",
+        "ldu_7f4cc4dc2c96",
+        "ldu_981cd57fe8f8",
+        "ldu_e788abc89c31",
+        "ldu_dd13f5b57f92",
+        "ldu_709f2fd10c90",
+        "ldu_5148fbcef60c",
+        "ldu_0e1d5f724b15",
+        "ldu_f8cae75f8139",
+        "ldu_388101d49ac4",
+        "ldu_16a8797d04f4",
+        "ldu_d5437fac229f",
+        "ldu_6cbcdaf8c41b",
+        "ldu_586c4dfe5dd0",
+        "ldu_397d3d189047",
+        "ldu_4e37f7cc21b1",
+        "ldu_ec1aff949dd4",
+        "ldu_7f1c414cc1f8",
+        "ldu_a14356762534",
+        "ldu_2123d4648ee3",
+        "ldu_3e07005fa5f9",
+        "ldu_a9b8d04277e3",
+        "ldu_0bec361a51f9",
+        "ldu_bc28d6a2965a",
+        "ldu_cb9cecfaf16f",
+        "ldu_c58e8ecf25a4",
+        "ldu_31624e655537",
+        "ldu_b7ce5f157a72",
+        "ldu_f5bdb424e1f7",
+        "ldu_e7852e055963",
+        "ldu_1cc75f21f438",
+        "ldu_63d56658a1de",
+        "ldu_f313a599281e",
+        "ldu_e502ae6536d6",
+        "ldu_b618735d2969",
+        "ldu_e4a95f76e9b8",
+        "ldu_21213c5d5615",
+        "ldu_4cfae67cf4d3",
+        "ldu_38947d276313",
+        "ldu_3f1d01baaed2",
+        "ldu_65f1c48dde81",
+        "ldu_30295294944d",
+        "ldu_2475c4983929",
+        "ldu_97d119ac7d62",
+        "ldu_ec7668db6481",
+        "ldu_e4d6559195a6",
+        "ldu_a6a93dda3eb5",
+        "ldu_a418e81a8679",
+        "ldu_732ac9ac8daa",
+        "ldu_193a577dcadd",
+        "ldu_5c81b998eb98",
+        "ldu_eec83603db13",
+        "ldu_e19c0b3643c7",
+        "ldu_62c76ca93cec",
+        "ldu_dd1e4c95ecea",
+        "ldu_6a2d65cdf858",
+        "ldu_6adaa816ae6f",
+        "ldu_a70a283db537",
+        "ldu_3d071041cec0",
+        "ldu_c4c156a5fec5",
+        "ldu_0d14c7c64f43",
+        "ldu_85f887c73895",
+        "ldu_bd3e355c3d28",
+        "ldu_9b68f4203d2d",
+        "ldu_504a2159499e",
+        "ldu_3a74616a3774",
+        "ldu_b2de1cdf05b6",
+        "ldu_1acaf0153917",
+        "ldu_d9f3f1611a99",
+        "ldu_dfc4a51c762e",
+        "ldu_4b3558715360",
+        "ldu_8ee295168eb4",
+        "ldu_bc0a6335757c",
+        "ldu_4ea4d2aaa2b8",
+        "ldu_9fa4d6c5c8b1",
+        "ldu_022773271531",
+        "ldu_da9e6c75ef63",
+        "ldu_9c0894fcbc23",
+        "ldu_0df4eb8c854b",
+        "ldu_1df313b84c96",
+        "ldu_c461f00ab5df",
+        "ldu_0d0dd69ea56a",
+        "ldu_0abf56296c4e",
+        "ldu_9aed3dbf2348",
+        "ldu_065c159e1cf0",
+        "ldu_b20e03dc7d4e",
+        "ldu_33724300dc2e",
+        "ldu_f066c0936954",
+        "ldu_de3a6a639d91",
+        "ldu_462ea5e4d333",
+        "ldu_ee2077aa2b90",
+        "ldu_a45f12fe11ce",
+        "ldu_876c5c0a4224",
+        "ldu_f676e35d8ae1",
+        "ldu_67f9175b4090",
+        "ldu_a5a1bc8fbf11",
+        "ldu_2239e2c5d8cf",
+        "ldu_2cd5e3c3e925",
+        "ldu_6955b36b4cee",
+        "ldu_71efb790edb7",
+        "ldu_b63aac85d527",
+        "ldu_035510b2d6b8",
+        "ldu_a5e827d478f7",
+        "ldu_6e7a7ce4f31f",
+        "ldu_a342395f2bb4",
+        "ldu_d63d62b94321",
+        "ldu_b21b220bdc9b",
+        "ldu_96de7528ac22",
+        "ldu_ef4d749c7f67",
+        "ldu_fcc8e9431ffc",
+        "ldu_592bcc750cac",
+        "ldu_6831920a57a8",
+        "ldu_91801b2a58ba",
+        "ldu_df9121b5abfc",
+        "ldu_5d59eef4fc5f",
+        "ldu_bc43d616aecc",
+        "ldu_c32ab6dc9aa9",
+        "ldu_a70de1e86498",
+        "ldu_852accc0ce4c",
+        "ldu_febcf42d39cd",
+        "ldu_d1c3258d8eca",
+        "ldu_77125f4c14b4",
+        "ldu_63a1e1c7eac1",
+        "ldu_8d6ffbe0e049",
+        "ldu_a1b95e5bf5b2",
+        "ldu_cc97a8b7ea72",
+        "ldu_1a70288bf851",
+        "ldu_bc9f906ae953",
+        "ldu_a3e172f524df",
+        "ldu_872d6c25db6a",
+        "ldu_28199c5130f2",
+        "ldu_623a09f3ed9b",
+        "ldu_aaa49f77de86",
+        "ldu_2d93cae2db79",
+        "ldu_a42f59541145",
+        "ldu_2dd8ac01a6b4",
+        "ldu_4cf7bb9040f5",
+        "ldu_9fcefc12cd66",
+        "ldu_609405d6e786",
+        "ldu_c9f921662a0d",
+        "ldu_a6859e4a6b6e",
+        "ldu_3f0f91485096",
+        "ldu_75bc589ed310",
+        "ldu_2421249a5257",
+        "ldu_cc4de54e2aa9",
+        "ldu_3db72c7021d3",
+        "ldu_92d4b5cd7be6",
+        "ldu_48c44a8ab07d",
+        "ldu_823e31508c0f",
+        "ldu_e61f7b54e085",
+        "ldu_d3d8f1643314",
+        "ldu_7499d58e0208",
+        "ldu_a43d5ff7f908",
+        "ldu_2f4b9727eba1",
+        "ldu_1c20157a53eb",
+        "ldu_699343a60827",
+        "ldu_3803a46285a5",
+        "ldu_fcf0985081a1",
+        "ldu_d2a2851b8d53",
+        "ldu_507bf29af1b1",
+        "ldu_7858a96a2fe3",
+        "ldu_4fd17a3accc6",
+        "ldu_739ba958b56b",
+        "ldu_244e3625142c",
+        "ldu_0c823df76c41",
+        "ldu_3d8d20475f55",
+        "ldu_32faae94c554",
+        "ldu_2ed44eaf2d6f",
+        "ldu_2c6fcee18b53",
+        "ldu_284c4a730f9d",
+        "ldu_d99e9d611e3f",
+        "ldu_9fd471a623f7",
+        "ldu_c490f96e5ae9",
+        "ldu_5040b4ea1326",
+        "ldu_f29ea978960d",
+        "ldu_629475fa879a",
+        "ldu_2e31e390184d",
+        "ldu_b934f76ef061",
+        "ldu_b790266a6982",
+        "ldu_927b55019cd0",
+        "ldu_95b5ce01b096",
+        "ldu_8cd29243f828",
+        "ldu_38cec9ad746c",
+        "ldu_39e11f7a6860",
+        "ldu_241bda4f48aa",
+        "ldu_893f5a71fd4d",
+        "ldu_432402a93ff8",
+        "ldu_8a3cd1d926bf",
+        "ldu_7f28f281bb3a",
+        "ldu_b0f2477f28b6",
+        "ldu_9d13d38577b0",
+        "ldu_c2d02682f62d",
+        "ldu_f2cf7a270e48",
+        "ldu_ec3254d8acab",
+        "ldu_a6179d88352c",
+        "ldu_c6210d1d39eb",
+        "ldu_b776161c5c0f",
+        "ldu_1a3451756469",
+        "ldu_fa3f0c3ec41f",
+        "ldu_d6ce5a95b895",
+        "ldu_3f2fce87687c",
+        "ldu_15c8a5a074c1",
+        "ldu_1c87641a8a5e",
+        "ldu_6670cb6cb707",
+        "ldu_bbf5724c8627",
+        "ldu_d4fbd6f0a3f9",
+        "ldu_37c2d1c66703",
+        "ldu_c9532a2d9aec",
+        "ldu_edef739182f6",
+        "ldu_121a26b41474",
+        "ldu_57d9793cd3c0",
+        "ldu_b82a89282e57",
+        "ldu_1214f9468634",
+        "ldu_b9a6e32e63a4",
+        "ldu_1a2920c9460e",
+        "ldu_c959570ffb29",
+        "ldu_9fba9e816c45",
+        "ldu_7101279889e3",
+        "ldu_25e5341caebb",
+        "ldu_a1029bcc25bb",
+        "ldu_e377a0b9d53f",
+        "ldu_086c899945a9",
+        "ldu_8dc41d46ddfc",
+        "ldu_30a60112fb1c",
+        "ldu_8aff32f873d3",
+        "ldu_8a75f1fc8abe",
+        "ldu_fe6b606b1b95",
+        "ldu_39f3b0dea785",
+        "ldu_a13d0a2e664b",
+        "ldu_704102ede9ba",
+        "ldu_6de5694e8826",
+        "ldu_552812affd66",
+        "ldu_04c2f89b5050",
+        "ldu_fedf260c3391",
+        "ldu_408dde0f8a7a",
+        "ldu_9e27c33f3601",
+        "ldu_54634657c221",
+        "ldu_d4db7e7a869a",
+        "ldu_85b2fb44a5f5",
+        "ldu_42dbf95cefa3",
+        "ldu_d816fa255221",
+        "ldu_cdb8eb7229f8",
+        "ldu_233cc691d5e7",
+        "ldu_b4976875c7cf",
+        "ldu_a9498834b574",
+        "ldu_c6e766e5ba4d",
+        "ldu_be93474bec60",
+        "ldu_6f8d26492d22",
+        "ldu_9eb2f06212a1",
+        "ldu_6791ce44ef9c",
+        "ldu_f833765e9f51",
+        "ldu_327ea5319059",
+        "ldu_9dc7ee9105db",
+        "ldu_11b1b2ff2ca6",
+        "ldu_44514fa349e3",
+        "ldu_05db3a7b5ab9",
+        "ldu_19d896380b25",
+        "ldu_3079eb7d1f33",
+        "ldu_458d0424c648",
+        "ldu_1e67b779f5ae",
+        "ldu_e738d45e2764",
+        "ldu_f67fd1db10c3",
+        "ldu_cf37a936bf04",
+        "ldu_cb0b3bef2007",
+        "ldu_4e808ff1529f",
+        "ldu_413c32837d09",
+        "ldu_91d83f4976b7",
+        "ldu_f9869741cef2",
+        "ldu_ee9412ab3876",
+        "ldu_81dda8d542d6",
+        "ldu_2bc7a32d0ed7",
+        "ldu_74da10ba5e22",
+        "ldu_dde40098bafb",
+        "ldu_31c477dbf45d",
+        "ldu_7c59cb0b4af8",
+        "ldu_58cc9611e93b",
+        "ldu_b553ff392c20",
+        "ldu_dfff11539485",
+        "ldu_9191f4838c27",
+        "ldu_b8e37af2ba1f",
+        "ldu_439c70843015",
+        "ldu_2d8c4fe2247d",
+        "ldu_2b4aa27994e3",
+        "ldu_4ee2d5012afb",
+        "ldu_5032976e0ff6",
+        "ldu_0fea49f5f8f3",
+        "ldu_3711462dab43",
+        "ldu_fab018fd4f42",
+        "ldu_8c3ebb9a7696",
+        "ldu_f99408606e19",
+        "ldu_42034871a101",
+        "ldu_7a62c41275be",
+        "ldu_47fdb7c70abb",
+        "ldu_7e41c0575eb8",
+        "ldu_39994c9519f8",
+        "ldu_4655874a423e",
+        "ldu_a891c4975ac2",
+        "ldu_a4de5ffc859d",
+        "ldu_8de271f826a0",
+        "ldu_6093dd581557",
+        "ldu_fcf55a7db685",
+        "ldu_a82b287e7573",
+        "ldu_261c0cf62c37",
+        "ldu_1c017f3926fc",
+        "ldu_49ceb000901f",
+        "ldu_827ada091d38",
+        "ldu_4d52eef856d0",
+        "ldu_73705da01869",
+        "ldu_62fc1ed6bc50",
+        "ldu_c15686065008",
+        "ldu_87e84d912484",
+        "ldu_2c39ed95d514",
+        "ldu_168b9506ea9e",
+        "ldu_adfedb9ca5c6",
+        "ldu_89c2c47b1066",
+        "ldu_1eeabac25f21",
+        "ldu_9665cfaa3b21",
+        "ldu_21106eec9bc0",
+        "ldu_7dfb8fc6762e",
+        "ldu_d0420528e326",
+        "ldu_ec0c88369440",
+        "ldu_2bc1eea913d8",
+        "ldu_afca6fc4cad0",
+        "ldu_185f2de14491",
+        "ldu_48b2dbaaf743",
+        "ldu_73ce19364ced",
+        "ldu_ec07c6423a08",
+        "ldu_59a769b388e3",
+        "ldu_2c0136e00f23",
+        "ldu_8020a9c4249b",
+        "ldu_f87a58d6a24e",
+        "ldu_0c15519509fa",
+        "ldu_624a4485360a"
       ]
     }
   ],
-  "created_at": "2026-03-04T10:34:12.883537+00:00"
+  "created_at": "2026-03-06T07:51:50.374992+00:00"
 }

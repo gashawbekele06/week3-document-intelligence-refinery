@@ -24,6 +24,13 @@ app = typer.Typer(
 console = Console()
 DATA_DIR = Path("data")
 
+# Load environment variables from .env (for API keys)
+try:
+    from dotenv import load_dotenv
+    load_dotenv(override=True)
+except Exception:
+    pass
+
 
 def _get_data_path(filename: str) -> Path:
     """Resolve document path (absolute or relative to data/)."""
@@ -224,7 +231,10 @@ def ingest(
 
     with console.status("[cyan]Stage 1: Triaging..."):
         profile = TriageAgent().triage(doc_path)
-    console.print(f"[green]✓[/green] Triage: {profile.origin_type} / {profile.domain_hint}")
+    console.print(
+        f"[green]✓[/green] Triage: "
+        f"{profile.origin_type} / {profile.layout_complexity} / {profile.domain_hint}"
+    )
 
     with console.status("[cyan]Stage 2: Extracting..."):
         router = ExtractionRouter()
@@ -265,6 +275,7 @@ def query(
 ):
     """Stage 5: Ask a question and get an answer with provenance."""
     from src.agents.query_agent import QueryAgent
+    from src.data.fact_table import FactTable
 
     agent = QueryAgent()
 
@@ -283,6 +294,27 @@ def query(
             console.print(f"  📄 {c['document_name']}, page {c['page_number']}")
     else:
         console.print(f"\n[bold cyan]❓ Query:[/bold cyan] {question}\n")
+
+        if question.strip().upper().startswith("SELECT"):
+            ft = FactTable()
+            try:
+                rows = ft.query(question)
+            except Exception as e:
+                console.print(Panel(str(e), title="SQL Error", style="red"))
+                return
+
+            if not rows:
+                console.print(Panel("No rows returned.", title="SQL Result"))
+                return
+
+            table = Table(title="SQL Result")
+            for col in rows[0].keys():
+                table.add_column(str(col), style="cyan")
+            for row in rows:
+                table.add_row(*[str(row.get(col, "")) for col in rows[0].keys()])
+            console.print(table)
+            return
+
         result = agent.query(question, doc_id)
         console.print(Panel(result.get("answer", "No answer"), title="Answer"))
 

@@ -114,8 +114,8 @@ def _detect_origin_type(
     digital_min = rules["origin_detection"]["digital_min_char_density"]
     mixed_lower = rules["origin_detection"]["mixed_image_ratio_lower"]
 
-    # If there is effectively no text and no font metadata, treat as scanned even if image ratio is low/unknown.
-    if mean_density < scanned_max * 0.2 and not has_fonts:
+    # If there is effectively no text, treat as scanned even if image ratio is low/unknown.
+    if mean_density < scanned_max * 0.2:
         return "scanned_image"
 
     # High image coverage is a strong scanned signal even if an OCR text layer exists.
@@ -124,8 +124,6 @@ def _detect_origin_type(
 
     if mean_density < scanned_max and mean_image > scanned_img_min:
         return "scanned_image"
-    if mixed_lower <= mean_image <= scanned_img_min:
-        return "mixed"
     # Strong signal: embedded fonts + low image coverage → native digital
     if has_fonts and mean_image < scanned_img_min:
         return "native_digital"
@@ -133,6 +131,8 @@ def _detect_origin_type(
         return "native_digital"
     if mean_density >= digital_min * 0.3:
         return "native_digital"
+    if mixed_lower <= mean_image <= scanned_img_min:
+        return "mixed"
     return "mixed"
 
 
@@ -196,12 +196,23 @@ def _detect_layout_complexity(
     if figure_ratio > figure_heavy_thresh:
         return "figure_heavy"
 
-    # Column detection via x-center clustering
+    # Column detection via x-center clustering + bimodal split
     if x_centers:
         page_width = pages_sample[0].width or 600
         n_clusters = _count_x_clusters(x_centers, page_width, multi_col_clusters)
         if n_clusters >= multi_col_clusters:
             return "multi_column"
+
+        # Bimodal left/right distribution heuristic (helps dense reports)
+        min_words = rules["layout_detection"].get("multi_column_min_words", 40)
+        min_side_fraction = rules["layout_detection"].get("multi_column_min_side_fraction", 0.2)
+        if len(x_centers) >= min_words:
+            norm = [x / page_width for x in x_centers]
+            left = sum(1 for x in norm if x <= 0.45)
+            right = sum(1 for x in norm if x >= 0.55)
+            total = len(norm)
+            if left / total >= min_side_fraction and right / total >= min_side_fraction:
+                return "multi_column"
 
     return "single_column"
 
