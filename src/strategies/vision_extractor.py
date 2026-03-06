@@ -129,6 +129,7 @@ class VisionExtractor(BaseExtractor):
         self.openai_api_key = os.getenv("OPENAI_API_KEY", "")
         self.openai_project_id = os.getenv("OPENAI_PROJECT") or os.getenv("OPENAI_PROJECT_ID")
         self.openai_disabled_reason: Optional[str] = None
+        self.openrouter_disabled_reason: Optional[str] = None
         self.openai_model = os.getenv("OPENAI_VISION_MODEL", "gpt-4o-mini")
         raw_model = os.getenv("OPENROUTER_MODEL") or self.rules.get("budget", {}).get(
             "vision_model", "openai/gpt-4o-mini"
@@ -232,6 +233,12 @@ class VisionExtractor(BaseExtractor):
             except requests.exceptions.HTTPError as e:
                 error_text = e.response.text[:200] if e.response else str(e)
                 raise RuntimeError(f"OpenAI HTTP error {e.response.status_code}: {error_text}")
+            except requests.exceptions.HTTPError as e:
+                error_text = e.response.text[:200] if e.response else str(e)
+                last_error = RuntimeError(
+                    f"OpenRouter HTTP error {e.response.status_code}: {error_text}"
+                )
+                continue
             except Exception as e:
                 last_error = e
                 continue
@@ -305,19 +312,27 @@ class VisionExtractor(BaseExtractor):
                     if "HTTP error 401" in str(e):
                         self.openai_disabled_reason = "OpenAI authentication failed"
                     print(f"OpenAI failed (page {page_num}): {e} — trying OpenRouter")
-                    if self.api_key:
+                    if self.api_key and not self.openrouter_disabled_reason:
                         page_data, input_tokens, output_tokens = self._call_openrouter(image_b64)
                         budget_guard.record_usage(input_tokens, output_tokens)
                         page_data.setdefault("page_number", page_num)
                         return page_data
                     raise
             else:
+                if self.openrouter_disabled_reason:
+                    raise RuntimeError(self.openrouter_disabled_reason)
                 page_data, input_tokens, output_tokens = self._call_openrouter(image_b64)
                 budget_guard.record_usage(input_tokens, output_tokens)
                 page_data.setdefault("page_number", page_num)
                 return page_data
 
         except Exception as e:
+            if "OpenRouter HTTP error 401" in str(e):
+                self.openrouter_disabled_reason = "OpenRouter authentication failed"
+            elif "OpenRouter HTTP error 402" in str(e):
+                self.openrouter_disabled_reason = "OpenRouter account has no available credits"
+            elif "OpenRouter HTTP error 403" in str(e):
+                self.openrouter_disabled_reason = "OpenRouter request forbidden"
             return {
                 "page_number": page_num,
                 "text_blocks": [],
@@ -358,6 +373,12 @@ class VisionExtractor(BaseExtractor):
         for page_num in range(1, page_count + 1):
             if not budget_guard.can_process_page():
                 errors.append("Budget cap reached — stopped processing")
+                break
+
+            if self.openrouter_disabled_reason and (
+                not self.openai_api_key or self.openai_disabled_reason
+            ):
+                errors.append(self.openrouter_disabled_reason)
                 break
 
             img_bytes = self._pdf_page_to_image_bytes(file_path, page_num)
@@ -436,6 +457,7 @@ class VisionExtractor(BaseExtractor):
                     else "openrouter"
                 ),
                 "openai_disabled_reason": self.openai_disabled_reason,
+                "openrouter_disabled_reason": self.openrouter_disabled_reason,
                 "errors": errors[:10],
             },
         )
