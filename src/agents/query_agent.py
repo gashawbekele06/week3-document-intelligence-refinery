@@ -380,7 +380,7 @@ class QueryAgent:
 
         citation = ProvenanceCitation(
             document_name=best.get("doc_name", "unknown"),
-            file_path="",
+            file_path=str(self._resolve_document_path(best.get("doc_name", "unknown")) or ""),
             page_number=best.get("page_number", -1),
             bbox=bbox,
             content_hash=best.get("content_hash", ""),

@@ -8,7 +8,7 @@ from __future__ import annotations
 import re
 import uuid
 from pathlib import Path
-from typing import List, Optional
+from typing import List, Optional, Sequence
 import yaml
 
 from src.models import (
@@ -87,6 +87,11 @@ class ChunkValidator:
             if ldu.chunk_type not in ("heading",) and ldu.parent_section is None:
                 ldu.parent_section = "_root"  # assign root section as fallback
 
+    def validate_cross_reference_container(self, ldu: LDU) -> None:
+        """Rule 5 precondition: every LDU must carry a cross-reference container."""
+        if self.rules.get("resolve_cross_references", True):
+            ldu.cross_references = list(dict.fromkeys(ldu.cross_references or []))
+
     def validate_all(self, ldu: LDU, source_table: Optional[ExtractedTable] = None) -> LDU:
         """Run all validation rules and fix issues in-place where possible."""
         if source_table:
@@ -94,6 +99,7 @@ class ChunkValidator:
         self.validate_figure_caption(ldu)
         self.validate_list_integrity(ldu)
         self.validate_section_header(ldu)
+        self.validate_cross_reference_container(ldu)
         return ldu
 
 
@@ -121,35 +127,77 @@ class ChunkingEngine:
         ldus: List[LDU] = []
         current_section: Optional[str] = None
 
-        # ── Build ordered item list (heading, text, table, figure) sorted by page/order ──
-        heading_pages = {b.page for b in doc.section_headings}
+        text_buffer: List[TextBlock] = []
+        buffer_section: Optional[str] = None
+        buffer_type: str = "text"
 
-        # Pass 1: headings
-        for block in doc.section_headings:
-            ldu = self._make_text_ldu(block, "heading", current_section, doc)
-            ldus.append(ldu)
-            current_section = block.text[:80]  # use heading text as section key
+        def flush_text_buffer() -> None:
+            nonlocal text_buffer, buffer_section, buffer_type
+            if not text_buffer:
+                return
+            ldus.extend(self._chunk_text_blocks(text_buffer, buffer_section, doc, buffer_type))
+            text_buffer = []
+            buffer_section = None
+            buffer_type = "text"
 
-        # Pass 2: text blocks (non-heading, reading-order sorted)
-        text_only = [b for b in doc.text_blocks if not b.is_header]
-        # Group consecutive text into paragraph chunks
-        ldus.extend(self._chunk_text_blocks(text_only, current_section, doc))
+        for item_type, item in self._ordered_items(doc):
+            if item_type == "heading":
+                flush_text_buffer()
+                ldu = self._make_text_ldu(item, "heading", current_section, doc)
+                ldus.append(ldu)
+                current_section = item.text[:160].strip() or current_section
+                continue
 
-        # Pass 3: tables (atomic)
-        for table in doc.tables:
-            ldu = self._make_table_ldu(table, current_section, doc)
-            ldus.append(ldu)
+            if item_type == "text":
+                text = item.text.strip()
+                if not text:
+                    continue
+                block_type = "list" if self._is_list_block(text) else "text"
+                section_changed = buffer_section != current_section if text_buffer else False
+                type_changed = text_buffer and block_type != buffer_type
+                page_changed = text_buffer and item.page != text_buffer[-1].page
+                if section_changed or type_changed or page_changed:
+                    flush_text_buffer()
+                if not text_buffer:
+                    buffer_section = current_section
+                    buffer_type = block_type
+                text_buffer.append(item)
+                continue
 
-        # Pass 4: figures
-        for fig in doc.figures:
-            ldu = self._make_figure_ldu(fig, current_section, doc)
-            ldus.append(ldu)
+            flush_text_buffer()
+            if item_type == "table":
+                ldus.append(self._make_table_ldu(item, current_section, doc))
+            elif item_type == "figure":
+                ldus.append(self._make_figure_ldu(item, current_section, doc))
+
+        flush_text_buffer()
 
         # Rule 5: resolve cross-references
         if self.rules.get("chunking", {}).get("resolve_cross_references", True):
             ldus = self._resolve_cross_references(ldus)
 
         return ldus
+
+    def _ordered_items(self, doc: ExtractedDocument) -> List[tuple[str, object]]:
+        """Return headings, text, tables, and figures in page/reading order."""
+        items: List[tuple[tuple[int, int, int], str, object]] = []
+        priority = {"heading": 0, "text": 1, "table": 2, "figure": 3}
+
+        for block in doc.section_headings:
+            items.append(((block.page, block.reading_order, priority["heading"]), "heading", block))
+        for block in doc.text_blocks:
+            if not block.is_header:
+                items.append(((block.page, block.reading_order, priority["text"]), "text", block))
+        for table in doc.tables:
+            items.append(((table.page, table.reading_order, priority["table"]), "table", table))
+        for fig in doc.figures:
+            items.append(((fig.page, fig.reading_order, priority["figure"]), "figure", fig))
+
+        items.sort(key=lambda entry: entry[0])
+        return [(item_type, item) for _, item_type, item in items]
+
+    def _is_list_block(self, text: str) -> bool:
+        return bool(re.compile(r"^\s*(\d+[\.\)]\s|\u2022\s|\-\s|\*\s)").match(text))
 
     def _make_text_ldu(
         self, block: TextBlock, chunk_type: str, section: Optional[str], doc: ExtractedDocument
@@ -174,28 +222,42 @@ class ChunkingEngine:
         return self.validator.validate_all(ldu)
 
     def _chunk_text_blocks(
-        self, blocks: List[TextBlock], section: Optional[str], doc: ExtractedDocument
+        self,
+        blocks: Sequence[TextBlock],
+        section: Optional[str],
+        doc: ExtractedDocument,
+        chunk_type: str = "text",
     ) -> List[LDU]:
         """
         Group consecutive text blocks into paragraph-sized LDUs.
-        Detect numbered lists and keep them together.
+        Caller is responsible for grouping by section and list/non-list type.
         """
         ldus: List[LDU] = []
         buffer_texts: List[str] = []
         buffer_pages: List[int] = []
-        buffer_bbox = None
-        is_list = False
+        bbox_candidates: List[BBoxRef] = []
         current_page: Optional[int] = None
 
-        def flush_buffer(chunk_type: str) -> None:
-            nonlocal current_page, buffer_bbox
+        def merged_bbox() -> Optional[BBoxRef]:
+            if not bbox_candidates:
+                return None
+            return BBoxRef(
+                x0=min(b.x0 for b in bbox_candidates),
+                y0=min(b.y0 for b in bbox_candidates),
+                x1=max(b.x1 for b in bbox_candidates),
+                y1=max(b.y1 for b in bbox_candidates),
+                page=bbox_candidates[0].page,
+            )
+
+        def flush_buffer() -> None:
+            nonlocal current_page
             if not buffer_texts:
                 return
             content = " ".join(buffer_texts)
             token_count = _estimate_tokens(content)
             page_refs_sorted = sorted(set(buffer_pages))
+            bbox = merged_bbox()
 
-            # Split if over max_tokens (except lists -- Rule 3)
             if chunk_type != "list" and token_count > self.max_tokens:
                 words = content.split()
                 chunk_words: List[str] = []
@@ -224,7 +286,7 @@ class ChunkingEngine:
                         content=sub_content,
                         chunk_type="text",
                         page_refs=page_refs_sorted,
-                        bounding_box=buffer_bbox,
+                        bounding_box=bbox,
                         parent_section=section,
                         doc_id=doc.doc_id,
                         document_name=doc.filename,
@@ -242,7 +304,7 @@ class ChunkingEngine:
                     content=content,
                     chunk_type=chunk_type,
                     page_refs=page_refs_sorted,
-                    bounding_box=buffer_bbox,
+                    bounding_box=bbox,
                     parent_section=section,
                     doc_id=doc.doc_id,
                     document_name=doc.filename,
@@ -257,37 +319,29 @@ class ChunkingEngine:
 
             buffer_texts.clear()
             buffer_pages.clear()
+            bbox_candidates.clear()
             current_page = None
-            buffer_bbox = None
-
-        list_pattern = re.compile(r"^\s*(\d+[\.\)]\s|\u2022\s|\-\s|\*\s)")
 
         for block in blocks:
             text = block.text.strip()
             if not text:
                 continue
 
-            block_is_list = bool(list_pattern.match(text))
-
             # Flush if page changes to keep LDUs page-local (better provenance)
             if current_page is not None and block.page != current_page:
-                flush_buffer("list" if is_list else "text")
+                flush_buffer()
 
             if current_page is None:
                 current_page = block.page
 
-            # Flush on type change
-            if buffer_texts and block_is_list != is_list:
-                flush_buffer("list" if is_list else "text")
-                is_list = block_is_list
-
             buffer_texts.append(text)
             if block.page >= 0:
                 buffer_pages.append(block.page)
-            if buffer_bbox is None:
-                buffer_bbox = _to_bbox_ref(block.bbox)
+            bbox_ref = _to_bbox_ref(block.bbox)
+            if bbox_ref is not None:
+                bbox_candidates.append(bbox_ref)
 
-        flush_buffer("list" if is_list else "text")
+        flush_buffer()
         return ldus
 
     def _make_table_ldu(self, table: ExtractedTable, section: Optional[str], doc: ExtractedDocument) -> LDU:

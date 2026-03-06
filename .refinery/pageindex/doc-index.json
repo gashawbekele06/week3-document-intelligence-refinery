@@ -1,0 +1,65 @@
+{
+  "doc_id": "doc-index",
+  "document_name": "sample.pdf",
+  "page_count": 2,
+  "sections": [
+    {
+      "section_id": "sec_a4b3de4e08",
+      "title": "1. Introduction",
+      "page_start": 1,
+      "page_end": 1,
+      "level": 1,
+      "child_sections": [
+        {
+          "section_id": "sec_b58b9a76b3",
+          "title": "1.1. Background",
+          "page_start": 1,
+          "page_end": 1,
+          "level": 2,
+          "child_sections": [],
+          "key_entities": [],
+          "summary": "Intro overview paragraph. Background details paragraph.",
+          "data_types_present": [
+            "text"
+          ],
+          "ldu_ids": [
+            "ldu_18852d3ea1da",
+            "ldu_ae92e4c84cfc",
+            "ldu_d022fcfb8d46",
+            "ldu_62c95b0fd299"
+          ]
+        }
+      ],
+      "key_entities": [],
+      "summary": "Intro overview paragraph. Background details paragraph.",
+      "data_types_present": [
+        "text"
+      ],
+      "ldu_ids": [
+        "ldu_18852d3ea1da",
+        "ldu_ae92e4c84cfc",
+        "ldu_d022fcfb8d46"
+      ]
+    },
+    {
+      "section_id": "sec_6a988b8123",
+      "title": "2. Findings",
+      "page_start": 2,
+      "page_end": 2,
+      "level": 1,
+      "child_sections": [],
+      "key_entities": [
+        "ETB 1000"
+      ],
+      "summary": "Findings paragraph with ETB 1000.",
+      "data_types_present": [
+        "text"
+      ],
+      "ldu_ids": [
+        "ldu_62c95b0fd299",
+        "ldu_c5157edf3204"
+      ]
+    }
+  ],
+  "created_at": "2026-03-06T15:47:36.370336+00:00"
+}

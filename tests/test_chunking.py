@@ -80,14 +80,17 @@ def test_chunking_rules_enforced():
     list_ldus = [l for l in ldus if l.chunk_type == "list"]
     assert len(list_ldus) == 1
     assert len(list_ldus[0].page_refs) >= 1
+    assert list_ldus[0].parent_section == "1. Executive Summary"
 
     # Table rule: headers present and metadata captured
     table_ldus = [l for l in ldus if l.chunk_type == "table"]
     assert table_ldus and "headers" in table_ldus[0].metadata
+    assert table_ldus[0].parent_section == "1. Executive Summary"
 
     # Figure rule: caption stored in metadata
     fig_ldus = [l for l in ldus if l.chunk_type == "figure"]
     assert fig_ldus and "caption" in fig_ldus[0].metadata
+    assert fig_ldus[0].parent_section == "1. Executive Summary"
 
     # Cross references may be empty but should not error
     for l in ldus:
