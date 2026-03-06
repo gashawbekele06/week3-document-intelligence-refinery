@@ -151,12 +151,7 @@ class PageIndexBuilder:
                     else:
                         root_sections.append(section)
 
-            # Fix page_end values
-            for i, sec in enumerate(root_sections):
-                if i + 1 < len(root_sections):
-                    sec.page_end = root_sections[i + 1].page_start - 1
-                else:
-                    sec.page_end = doc.page_count
+            self._assign_page_ranges(root_sections, doc.page_count)
 
         page_index = PageIndex(
             doc_id=doc.doc_id,
@@ -170,6 +165,19 @@ class PageIndexBuilder:
         out_path = self.pageindex_dir / f"{doc.doc_id}.json"
         out_path.write_text(page_index.model_dump_json(indent=2))
         return page_index
+
+    def _assign_page_ranges(self, sections: List[Section], max_page: int) -> None:
+        """Ensure sibling sections and their children have valid, non-decreasing page ranges."""
+        for i, sec in enumerate(sections):
+            sec.page_start = max(int(sec.page_start or 1), 1)
+            if i + 1 < len(sections):
+                next_start = max(int(sections[i + 1].page_start or sec.page_start), sec.page_start)
+                sec.page_end = max(sec.page_start, next_start - 1)
+            else:
+                sec.page_end = max(sec.page_start, int(max_page or sec.page_start))
+
+            if sec.child_sections:
+                self._assign_page_ranges(sec.child_sections, sec.page_end)
 
     def _detect_heading_level(self, title: str) -> int:
         """Detect heading level from font size markers or numbering patterns."""

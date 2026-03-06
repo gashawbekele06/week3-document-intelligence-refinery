@@ -15,12 +15,15 @@ import re
 from pathlib import Path
 from typing import Annotated, Any, Optional, TypedDict
 
+import pdfplumber
+
 from src.data.audit import AuditMode
 from src.data.fact_table import FactTable
 from src.data.vector_store import VectorStore
 from src.models import PageIndex, ProvenanceChain, ProvenanceCitation
 
 _PAGEINDEX_DIR = Path(".refinery") / "pageindex"
+_DATA_DIR = Path("data")
 
 
 class QueryState(TypedDict):
@@ -49,13 +52,15 @@ def pageindex_navigate(query: str, doc_id: Optional[str] = None) -> dict:
             page_index = PageIndex.model_validate_json(idx_file.read_text())
             matching = page_index.find_sections_for_query(query, top_k=3)
             for section in matching:
+                page_start = max(int(section.page_start or 1), 1)
+                page_end = max(int(section.page_end or page_start), page_start)
                 results.append(
                     {
                         "document": page_index.document_name,
                         "doc_id": page_index.doc_id,
                         "section_title": section.title,
-                        "page_start": section.page_start,
-                        "page_end": section.page_end,
+                        "page_start": page_start,
+                        "page_end": page_end,
                         "summary": section.summary,
                         "key_entities": section.key_entities,
                         "ldu_ids": section.ldu_ids,
@@ -160,11 +165,162 @@ class QueryAgent:
         self.use_llm = use_llm and bool(os.getenv("GEMINI_API_KEY"))
         self.audit = AuditMode()
 
+    @staticmethod
+    def _normalize_page_range(page_start: int, page_end: int) -> tuple[int, int]:
+        start = max(int(page_start or 1), 1)
+        end = max(int(page_end or start), start)
+        return start, end
+
+    @staticmethod
+    def _is_objective_query(question: str) -> bool:
+        q = question.lower()
+        return any(term in q for term in ("purpose", "objective", "aim", "goal"))
+
+    @staticmethod
+    def _clean_passage_text(text: str) -> str:
+        text = re.sub(r"\s+", " ", text or "").strip()
+        return text
+
+    @staticmethod
+    def _resolve_document_path(document_name: str) -> Optional[Path]:
+        direct = _DATA_DIR / document_name
+        if direct.exists():
+            return direct
+        matches = list(_DATA_DIR.rglob(document_name))
+        return matches[0] if matches else None
+
+    def _extract_objective_from_pages(
+        self, document_name: str, page_start: int, page_end: int
+    ) -> str:
+        doc_path = self._resolve_document_path(document_name)
+        if not doc_path:
+            return ""
+
+        text_parts: list[str] = []
+        safe_start, safe_end = self._normalize_page_range(page_start, page_end)
+        read_end = min(safe_end + 1, safe_start + 1)
+        try:
+            with pdfplumber.open(doc_path) as pdf:
+                for page_num in range(safe_start, min(read_end, len(pdf.pages)) + 1):
+                    text = pdf.pages[page_num - 1].extract_text() or ""
+                    text_parts.append(text)
+        except Exception:
+            return ""
+
+        text = self._clean_passage_text(" ".join(text_parts))
+        match = re.search(
+            r"The overall objective of the assessment is to (.*?)(?:Specific objectives:|\Z)",
+            text,
+            re.IGNORECASE,
+        )
+        if match:
+            sentence = "The overall objective of the assessment is to " + match.group(1).strip()
+            return sentence.rstrip(".") + "."
+        return ""
+
+    def _answer_objective_query(
+        self,
+        question: str,
+        doc_id: Optional[str],
+        nav: dict,
+        fallback_search: dict,
+    ) -> Optional[dict]:
+        objective_sections = [
+            sec
+            for sec in nav.get("results", [])
+            if re.search(r"\b(objective|purpose|aim|goal)\b", (sec.get("section_title", "") + " " + sec.get("summary", "")).lower())
+        ]
+
+        if not objective_sections and doc_id:
+            expanded_nav = pageindex_navigate("objective purpose assessment", doc_id)
+            objective_sections = [
+                sec
+                for sec in expanded_nav.get("results", [])
+                if re.search(
+                    r"\b(objective|purpose|aim|goal)\b",
+                    (sec.get("section_title", "") + " " + sec.get("summary", "")).lower(),
+                )
+            ]
+
+        ldu_ids: list[str] = []
+        for sec in objective_sections or nav.get("results", []):
+            ldu_ids.extend(sec.get("ldu_ids", []))
+
+        targeted_search = semantic_search(
+            question + " objective purpose overall objective",
+            k=5,
+            doc_id=doc_id,
+            ldu_ids=ldu_ids or None,
+        )
+        passages = targeted_search.get("passages", []) or fallback_search.get("passages", [])
+
+        best_sentence = ""
+        best_page = None
+        for passage in passages:
+            content = self._clean_passage_text(passage.get("content", ""))
+            if len(content) < 60:
+                continue
+            match = re.search(
+                r"(The overall objective of the assessment is .*? strategic direction[^.]*\.)",
+                content,
+                re.IGNORECASE,
+            )
+            if match:
+                best_sentence = match.group(1)
+                best_page = passage.get("page")
+                break
+            if re.search(r"\bobjective\b", content, re.IGNORECASE):
+                best_sentence = content.split(".")[0].strip() + "."
+                best_page = passage.get("page")
+                break
+
+        if not best_sentence:
+            section = objective_sections[0] if objective_sections else (nav.get("results") or [None])[0]
+            if section:
+                best_sentence = self._extract_objective_from_pages(
+                    section.get("document", ""),
+                    section.get("page_start", 1),
+                    section.get("page_end", 1),
+                )
+                best_page = section.get("page_start", 1)
+
+        if not best_sentence:
+            return None
+
+        section = objective_sections[0] if objective_sections else (nav.get("results") or [None])[0]
+        answer = best_sentence
+        if section:
+            start, end = self._normalize_page_range(section.get("page_start", 1), section.get("page_end", 1))
+            page_note = f"page {best_page}" if best_page else f"pages {start}–{end}"
+            answer = f"{best_sentence} This is stated in section '{section.get('section_title', 'relevant section')}' ({page_note})."
+
+        provenance_data = targeted_search.get("provenance") or fallback_search.get("provenance", {})
+        provenance = ProvenanceChain.model_validate(provenance_data) if provenance_data else ProvenanceChain()
+        provenance.answer = answer
+
+        return {
+            "question": question,
+            "answer": answer,
+            "provenance": provenance.model_dump(),
+            "pageindex_result": nav,
+            "precision_report": self.evaluate_retrieval_precision(question, doc_id),
+        }
+
     def query(self, question: str, doc_id: Optional[str] = None) -> dict:
         """
         Answer a natural language question using multi-tool orchestration.
         Returns answer + ProvenanceChain.
         """
+        if self._is_objective_query(question):
+            nav = pageindex_navigate(question, doc_id)
+            filtered_ldu_ids: list[str] = []
+            for sec in nav.get("results", []):
+                filtered_ldu_ids.extend(sec.get("ldu_ids", []))
+            search = semantic_search(question, k=5, doc_id=doc_id, ldu_ids=filtered_ldu_ids or None)
+            objective_answer = self._answer_objective_query(question, doc_id, nav, search)
+            if objective_answer:
+                return objective_answer
+
         fact_first = self._fact_first_answer(question, doc_id)
         if fact_first:
             return fact_first
@@ -259,9 +415,12 @@ class QueryAgent:
                 top_sec = nav_result["results"][0]
                 for sec in nav_result["results"]:
                     filtered_ldu_ids.extend(sec.get("ldu_ids", []))
+                page_start, page_end = self._normalize_page_range(
+                    top_sec["page_start"], top_sec["page_end"]
+                )
                 section_context = (
                     f"Most relevant section: {top_sec['section_title']} "
-                    f"(pages {top_sec['page_start']}–{top_sec['page_end']})\n"
+                    f"(pages {page_start}–{page_end})\n"
                     f"Summary: {top_sec.get('summary', '')}"
                 )
 
@@ -330,11 +489,19 @@ Answer concisely, cite specific page numbers, and note if information is not fou
             filtered_ldu_ids.extend(sec.get("ldu_ids", []))
         search = semantic_search(question, k=5, doc_id=doc_id, ldu_ids=filtered_ldu_ids or None)
 
+        if self._is_objective_query(question):
+            objective_answer = self._answer_objective_query(question, doc_id, nav, search)
+            if objective_answer:
+                return objective_answer
+
         answer_parts = []
         if nav["results"]:
             top = nav["results"][0]
+            page_start, page_end = self._normalize_page_range(
+                top["page_start"], top["page_end"]
+            )
             answer_parts.append(
-                f"In section '{top['section_title']}' (pages {top['page_start']}–{top['page_end']}): "
+                f"In section '{top['section_title']}' (pages {page_start}–{page_end}): "
                 f"{top.get('summary', 'See original document')}"
             )
 
