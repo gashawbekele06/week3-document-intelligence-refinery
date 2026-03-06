@@ -24,6 +24,13 @@ app = typer.Typer(
 console = Console()
 DATA_DIR = Path("data")
 
+# Load environment variables from .env (for API keys)
+try:
+    from dotenv import load_dotenv
+    load_dotenv(override=True)
+except Exception:
+    pass
+
 
 def _get_data_path(filename: str) -> Path:
     """Resolve document path (absolute or relative to data/)."""

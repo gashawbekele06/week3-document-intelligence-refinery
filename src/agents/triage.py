@@ -114,8 +114,8 @@ def _detect_origin_type(
     digital_min = rules["origin_detection"]["digital_min_char_density"]
     mixed_lower = rules["origin_detection"]["mixed_image_ratio_lower"]
 
-    # If there is effectively no text and no font metadata, treat as scanned even if image ratio is low/unknown.
-    if mean_density < scanned_max * 0.2 and not has_fonts:
+    # If there is effectively no text, treat as scanned even if image ratio is low/unknown.
+    if mean_density < scanned_max * 0.2:
         return "scanned_image"
 
     # High image coverage is a strong scanned signal even if an OCR text layer exists.
