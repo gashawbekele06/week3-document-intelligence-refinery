@@ -174,8 +174,17 @@ def chunk(
 def index(
     document: str = typer.Argument(..., help="Document filename or path"),
     show_tree: bool = typer.Option(True, "--tree/--no-tree"),
+    ingest_pipeline: bool = typer.Option(
+        False,
+        "--ingest",
+        help="Also ingest LDUs into vector store and fact table so the document is ready for query",
+    ),
 ):
-    """Stage 4: Build the PageIndex tree for the document."""
+    """Stage 4: Build the PageIndex tree for the document.
+
+    If ``--ingest`` is passed, this command will also perform the final ingestion
+    step (vector store + fact table), making the document ready for ``query``.
+    """
     from src.agents.triage import TriageAgent
     from src.agents.extractor import ExtractionRouter
     from src.agents.chunker import ChunkingEngine
@@ -213,6 +222,20 @@ def index(
 
     console.print(f"\n[dim]Saved to .refinery/pageindex/{page_index.doc_id}.json[/dim]")
 
+    if ingest_pipeline:
+        from src.storage.vector_store import VectorStore
+        from src.storage.fact_table import FactTable
+
+        console.print("\n[bold magenta]📥 Ingesting for query...[/bold magenta]")
+        vs = VectorStore()
+        ingested = vs.ingest(ldus)
+        console.print(f"[green]✓[/green] Vector Store: {ingested} LDUs ingested")
+
+        ft = FactTable()
+        facts_count = ft.ingest_ldus(ldus, doc_path.name)
+        console.print(f"[green]✓[/green] Fact Table: {facts_count} facts extracted")
+        console.print("[dim]Document is now ready for query()/audit()[/dim]")
+
 
 @app.command()
 def ingest(
@@ -223,8 +246,8 @@ def ingest(
     from src.agents.extractor import ExtractionRouter
     from src.agents.chunker import ChunkingEngine
     from src.agents.indexer import PageIndexBuilder
-    from src.data.vector_store import VectorStore
-    from src.data.fact_table import FactTable
+    from src.storage.vector_store import VectorStore
+    from src.storage.fact_table import FactTable
 
     doc_path = _get_data_path(document)
     console.print(f"\n[bold magenta]🏭 FULL PIPELINE:[/bold magenta] {doc_path.name}\n")
@@ -275,7 +298,7 @@ def query(
 ):
     """Stage 5: Ask a question and get an answer with provenance."""
     from src.agents.query_agent import QueryAgent
-    from src.data.fact_table import FactTable
+    from src.storage.fact_table import FactTable
 
     agent = QueryAgent()
 
@@ -351,8 +374,8 @@ def process_corpus(
     from src.agents.extractor import ExtractionRouter
     from src.agents.chunker import ChunkingEngine
     from src.agents.indexer import PageIndexBuilder
-    from src.data.vector_store import VectorStore
-    from src.data.fact_table import FactTable
+    from src.storage.vector_store import VectorStore
+    from src.storage.fact_table import FactTable
 
     triage_agent = TriageAgent()
     router = ExtractionRouter()
