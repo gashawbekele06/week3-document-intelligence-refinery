@@ -35,11 +35,11 @@ Classifies each document into:
 
 Selects one of three extraction strategies:
 
-| Strategy | Use case | Backend |
-|---|---|---|
-| A — Fast text | clean digital PDFs | `pdfplumber` |
-| B — Layout-aware | multi-column, table-heavy, mixed layouts | `Docling` |
-| C — Vision | scanned/image-heavy documents | OpenAI / OpenRouter vision |
+| Strategy         | Use case                                 | Backend                    |
+| ---------------- | ---------------------------------------- | -------------------------- |
+| A — Fast text    | clean digital PDFs                       | `pdfplumber`               |
+| B — Layout-aware | multi-column, table-heavy, mixed layouts | `Docling`                  |
+| C — Vision       | scanned/image-heavy documents            | OpenAI / OpenRouter vision |
 
 ### Stage 3 — Chunking
 
@@ -116,12 +116,16 @@ OPENAI_PROJECT=
 # Optional: enables OpenRouter vision fallback
 OPENROUTER_API_KEY=
 OPENROUTER_MODEL=openai/gpt-4o-mini
+
+# Optional: enables Anthropic-native summarization/query features
+ANTHROPIC_API_KEY=
 ```
 
 Notes:
 
 - Most **digital** PDFs work without any paid API key.
 - **Scanned** PDFs need either `OPENAI_API_KEY` or `OPENROUTER_API_KEY`.
+- `ANTHROPIC_API_KEY` must be a real Anthropic key. Values starting with `sk-or-` are OpenRouter keys and should be set as `OPENROUTER_API_KEY`.
 - If no LLM key is present, the query agent falls back to deterministic retrieval.
 
 ### 5. Check the CLI

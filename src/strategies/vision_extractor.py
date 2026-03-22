@@ -29,6 +29,7 @@ from src.models import (
     ExtractedTable,
     TextBlock,
 )
+from src.provider_keys import resolve_provider_keys
 from src.strategies.base import BaseExtractor
 
 _RULES_PATH = Path(__file__).parent.parent.parent / "rubric" / "extraction_rules.yaml"
@@ -125,9 +126,7 @@ class VisionExtractor(BaseExtractor):
         if load_dotenv:
             load_dotenv(override=True)
         self.rules = _load_rules()
-        self.api_key = os.getenv("OPENROUTER_API_KEY", "")
-        self.openai_api_key = os.getenv("OPENAI_API_KEY", "")
-        self.anthropic_api_key = os.getenv("ANTHROPIC_API_KEY", "")
+        self.api_key, self.openai_api_key, self.anthropic_api_key = resolve_provider_keys()
         self.openai_project_id = os.getenv("OPENAI_PROJECT") or os.getenv("OPENAI_PROJECT_ID")
         self.openai_disabled_reason: Optional[str] = None
         self.openrouter_disabled_reason: Optional[str] = None
@@ -138,6 +137,13 @@ class VisionExtractor(BaseExtractor):
         )
         self.model = self._normalize_model_name(raw_model)
         self.openrouter_models = self._build_openrouter_models(self.model)
+
+    def _active_provider(self) -> str:
+        if self.openai_api_key and not self.openai_disabled_reason:
+            return "openai"
+        if self.anthropic_api_key and not self.anthropic_disabled_reason:
+            return "anthropic"
+        return "openrouter"
 
     def _normalize_model_name(self, model: str) -> str:
         model = (model or "").strip()
@@ -495,13 +501,10 @@ class VisionExtractor(BaseExtractor):
                 "budget_remaining_usd": round(budget_guard.max_cost_usd - budget_guard.total_cost, 6),
                 "pages_processed_by_vision": budget_guard.pages_processed,
                 "model": self.openai_model if self.openai_api_key else self.model,
-                "provider": (
-                    "openai"
-                    if self.openai_api_key and not self.openai_disabled_reason
-                    else "openrouter"
-                ),
+                "provider": self._active_provider(),
                 "openai_disabled_reason": self.openai_disabled_reason,
                 "openrouter_disabled_reason": self.openrouter_disabled_reason,
+                "anthropic_disabled_reason": self.anthropic_disabled_reason,
                 "errors": errors[:10],
             },
         )

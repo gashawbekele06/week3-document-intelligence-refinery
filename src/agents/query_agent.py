@@ -17,6 +17,7 @@ from typing import Annotated, Any, Optional, TypedDict
 
 import pdfplumber
 
+from src.provider_keys import resolve_provider_keys
 from src.storage.audit import AuditMode
 from src.storage.fact_table import FactTable
 from src.storage.vector_store import VectorStore
@@ -170,8 +171,10 @@ class QueryAgent:
     """
 
     def __init__(self, use_llm: bool = True):
-        self.use_llm = use_llm and bool(os.getenv("ANTHROPIC_API_KEY"))
+        _, _, anthropic_api_key = resolve_provider_keys()
+        self.use_llm = use_llm and bool(anthropic_api_key)
         self.audit = AuditMode()
+        self._anthropic_api_key = anthropic_api_key
 
     @staticmethod
     def _safe_sql_literal(value: str) -> str:
@@ -569,7 +572,7 @@ class QueryAgent:
         try:
             effective_plan = plan or self._build_query_plan(question, doc_id)
             import anthropic
-            client = anthropic.Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
+            client = anthropic.Anthropic(api_key=self._anthropic_api_key)
 
             context = self._run_context_tools(question, doc_id, effective_plan)
             nav_result = context["nav"]

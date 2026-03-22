@@ -14,6 +14,7 @@ from pathlib import Path
 from typing import Iterable, List, Optional
 
 from src.models import ExtractedDocument, LDU, PageIndex, Section
+from src.provider_keys import resolve_provider_keys
 
 _PAGEINDEX_DIR = Path(".refinery") / "pageindex"
 
@@ -29,17 +30,19 @@ class PageIndexBuilder:
     """
 
     def __init__(self, use_llm: bool = True):
-        self.use_llm = use_llm and bool(os.getenv("ANTHROPIC_API_KEY"))
+        _, _, anthropic_api_key = resolve_provider_keys()
+        self.use_llm = use_llm and bool(anthropic_api_key)
         self.pageindex_dir = _PAGEINDEX_DIR
         self.pageindex_dir.mkdir(parents=True, exist_ok=True)
         self._llm_client = None
+        self._anthropic_api_key = anthropic_api_key
 
     def _get_llm(self):
         if self._llm_client is None and self.use_llm:
             try:
                 import anthropic
                 self._llm_client = anthropic.Anthropic(
-                    api_key=os.getenv("ANTHROPIC_API_KEY")
+                    api_key=self._anthropic_api_key
                 )
             except Exception:
                 self.use_llm = False

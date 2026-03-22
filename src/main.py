@@ -16,6 +16,8 @@ from rich.panel import Panel
 from rich.table import Table
 from rich.tree import Tree
 
+from src.provider_keys import apply_provider_key_aliases
+
 app = typer.Typer(
     name="refinery",
     help="Document Intelligence Refinery — 5-stage agentic pipeline",
@@ -31,12 +33,7 @@ try:
 except Exception:
     pass
 
-# Key aliasing: if ANTHROPIC_API_KEY is set but looks like an OpenRouter key
-# (sk-or-v1-...), use it as OPENROUTER_API_KEY transparently.
-import os as _os
-_anthropic_val = _os.getenv("ANTHROPIC_API_KEY", "")
-if _anthropic_val.startswith("sk-or-") and not _os.getenv("OPENROUTER_API_KEY"):
-    _os.environ["OPENROUTER_API_KEY"] = _anthropic_val
+apply_provider_key_aliases()
 
 
 def _get_data_path(filename: str) -> Path:
