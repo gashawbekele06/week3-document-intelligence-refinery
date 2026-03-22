@@ -142,16 +142,32 @@ class LayoutExtractor(BaseExtractor):
             return False
 
     def _extract_with_docling(self, file_path: Path) -> ExtractedDocument:
-        from docling.document_converter import DocumentConverter
+        import os
+        import sys
+        from docling.document_converter import DocumentConverter, InputFormat
         from docling.datamodel.pipeline_options import PdfPipelineOptions
+        from docling.document_converter import PdfFormatOption
 
         start = time.time()
         pipeline_options = PdfPipelineOptions()
-        pipeline_options.do_ocr = False
-        pipeline_options.do_table_structure = True
+        pipeline_options.do_ocr = False             # skip RapidOCR — avoids OOM on image pages
+        pipeline_options.do_table_structure = False  # skip ML table model — also OOM-prone
+        pipeline_options.images_scale = 1.0         # low resolution — reduces memory pressure
 
-        converter = DocumentConverter()
-        result = converter.convert(str(file_path))
+        converter = DocumentConverter(
+            format_options={
+                InputFormat.PDF: PdfFormatOption(pipeline_options=pipeline_options)
+            }
+        )
+
+        # Suppress C++ stderr noise (Stage preprocess bad_alloc warnings from MuPDF)
+        with open(os.devnull, "w") as devnull:
+            old_stderr = sys.stderr
+            sys.stderr = devnull
+            try:
+                result = converter.convert(str(file_path))
+            finally:
+                sys.stderr = old_stderr
         doc = result.document
 
         adapter = DoclingDocumentAdapter(doc)

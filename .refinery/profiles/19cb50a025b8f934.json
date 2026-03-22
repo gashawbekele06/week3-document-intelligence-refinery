@@ -1,0 +1,17 @@
+{
+  "doc_id": "19cb50a025b8f934",
+  "filename": "Company_Profile_2024_25.pdf",
+  "file_path": "C:\\Users\\Administrator\\Desktop\\TPR1\\Week 3\\week3-document-intelligence-refinery\\data\\Company_Profile_2024_25.pdf",
+  "page_count": 24,
+  "origin_type": "native_digital",
+  "layout_complexity": "figure_heavy",
+  "language": "en",
+  "language_confidence": 0.9,
+  "domain_hint": "legal",
+  "estimated_cost": "needs_layout_model",
+  "char_density_mean": 3.65,
+  "image_ratio_mean": 0.2992,
+  "has_font_metadata": true,
+  "is_form_fillable": false,
+  "created_at": "2026-03-22T15:40:25.043221Z"
+}
