@@ -17,9 +17,9 @@ from typing import Annotated, Any, Optional, TypedDict
 
 import pdfplumber
 
-from src.data.audit import AuditMode
-from src.data.fact_table import FactTable
-from src.data.vector_store import VectorStore
+from src.storage.audit import AuditMode
+from src.storage.fact_table import FactTable
+from src.storage.vector_store import VectorStore
 from src.models import PageIndex, ProvenanceChain, ProvenanceCitation
 
 _PAGEINDEX_DIR = Path(".refinery") / "pageindex"
@@ -170,7 +170,7 @@ class QueryAgent:
     """
 
     def __init__(self, use_llm: bool = True):
-        self.use_llm = use_llm and bool(os.getenv("GEMINI_API_KEY"))
+        self.use_llm = use_llm and bool(os.getenv("ANTHROPIC_API_KEY"))
         self.audit = AuditMode()
 
     @staticmethod
@@ -565,12 +565,11 @@ class QueryAgent:
         doc_id: Optional[str] = None,
         plan: Optional[QueryPlan] = None,
     ) -> dict:
-        """LLM-orchestrated query using Gemini Flash."""
+        """LLM-orchestrated query using Claude (Anthropic)."""
         try:
             effective_plan = plan or self._build_query_plan(question, doc_id)
-            import google.generativeai as genai
-            genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
-            model = genai.GenerativeModel("gemini-1.5-flash")
+            import anthropic
+            client = anthropic.Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
 
             context = self._run_context_tools(question, doc_id, effective_plan)
             nav_result = context["nav"]
@@ -585,7 +584,7 @@ class QueryAgent:
                 )
                 section_context = (
                     f"Most relevant section: {top_sec['section_title']} "
-                    f"(pages {page_start}–{page_end})\n"
+                    f"(pages {page_start}\u2013{page_end})\n"
                     f"Summary: {top_sec.get('summary', '')}"
                 )
 
@@ -615,11 +614,13 @@ Document passages:
 
 Answer concisely, cite specific page numbers, and note if information is not found in the documents."""
 
-            response = model.generate_content(
-                prompt,
-                generation_config={"temperature": 0.2, "max_output_tokens": 500},
+            response = client.messages.create(
+                model="claude-3-5-haiku-20241022",
+                max_tokens=500,
+                temperature=0.2,
+                messages=[{"role": "user", "content": prompt}],
             )
-            answer = response.text.strip()
+            answer = response.content[0].text.strip()
 
             # Build provenance
             provenance_data = search_result.get("provenance", {})

@@ -127,9 +127,11 @@ class VisionExtractor(BaseExtractor):
         self.rules = _load_rules()
         self.api_key = os.getenv("OPENROUTER_API_KEY", "")
         self.openai_api_key = os.getenv("OPENAI_API_KEY", "")
+        self.anthropic_api_key = os.getenv("ANTHROPIC_API_KEY", "")
         self.openai_project_id = os.getenv("OPENAI_PROJECT") or os.getenv("OPENAI_PROJECT_ID")
         self.openai_disabled_reason: Optional[str] = None
         self.openrouter_disabled_reason: Optional[str] = None
+        self.anthropic_disabled_reason: Optional[str] = None
         self.openai_model = os.getenv("OPENAI_VISION_MODEL", "gpt-4o-mini")
         raw_model = os.getenv("OPENROUTER_MODEL") or self.rules.get("budget", {}).get(
             "vision_model", "openai/gpt-4o-mini"
@@ -245,6 +247,39 @@ class VisionExtractor(BaseExtractor):
 
         raise RuntimeError(f"OpenAI call failed: {last_error}")
 
+    def _call_anthropic(self, image_b64: str) -> Tuple[dict, int, int]:
+        """Call Anthropic claude-3-5-sonnet for vision extraction."""
+        try:
+            import anthropic
+            client = anthropic.Anthropic(api_key=self.anthropic_api_key)
+            response = client.messages.create(
+                model="claude-3-5-sonnet-20241022",
+                max_tokens=1200,
+                temperature=0.1,
+                messages=[
+                    {
+                        "role": "user",
+                        "content": [
+                            {
+                                "type": "image",
+                                "source": {
+                                    "type": "base64",
+                                    "media_type": "image/png",
+                                    "data": image_b64,
+                                },
+                            },
+                            {"type": "text", "text": _EXTRACTION_PROMPT},
+                        ],
+                    }
+                ],
+            )
+            raw_text = response.content[0].text
+            parsed = _parse_json_payload(raw_text)
+            usage = response.usage
+            return parsed, usage.input_tokens, usage.output_tokens
+        except Exception as e:
+            raise RuntimeError(f"Anthropic call failed: {e}")
+
     def _call_openrouter(self, image_b64: str) -> Tuple[dict, int, int]:
         """Fallback to OpenRouter."""
         headers = {
@@ -302,6 +337,7 @@ class VisionExtractor(BaseExtractor):
         try:
             image_b64 = base64.b64encode(img_bytes).decode("utf-8")
 
+            # 1. Try OpenAI
             if self.openai_api_key and not self.openai_disabled_reason:
                 try:
                     page_data, input_tokens, output_tokens = self._call_openai(image_b64)
@@ -311,20 +347,28 @@ class VisionExtractor(BaseExtractor):
                 except Exception as e:
                     if "HTTP error 401" in str(e):
                         self.openai_disabled_reason = "OpenAI authentication failed"
-                    print(f"OpenAI failed (page {page_num}): {e} — trying OpenRouter")
-                    if self.api_key and not self.openrouter_disabled_reason:
-                        page_data, input_tokens, output_tokens = self._call_openrouter(image_b64)
-                        budget_guard.record_usage(input_tokens, output_tokens)
-                        page_data.setdefault("page_number", page_num)
-                        return page_data
-                    raise
-            else:
-                if self.openrouter_disabled_reason:
-                    raise RuntimeError(self.openrouter_disabled_reason)
+                    print(f"OpenAI failed (page {page_num}): {e} — trying Anthropic/OpenRouter")
+
+            # 2. Try Anthropic
+            if self.anthropic_api_key and not self.anthropic_disabled_reason:
+                try:
+                    page_data, input_tokens, output_tokens = self._call_anthropic(image_b64)
+                    budget_guard.record_usage(input_tokens, output_tokens)
+                    page_data.setdefault("page_number", page_num)
+                    return page_data
+                except Exception as e:
+                    if "401" in str(e) or "authentication" in str(e).lower():
+                        self.anthropic_disabled_reason = "Anthropic authentication failed"
+                    print(f"Anthropic failed (page {page_num}): {e} — trying OpenRouter")
+
+            # 3. Try OpenRouter
+            if self.api_key and not self.openrouter_disabled_reason:
                 page_data, input_tokens, output_tokens = self._call_openrouter(image_b64)
                 budget_guard.record_usage(input_tokens, output_tokens)
                 page_data.setdefault("page_number", page_num)
                 return page_data
+
+            raise RuntimeError("No available vision API provider")
 
         except Exception as e:
             if "OpenRouter HTTP error 401" in str(e):
@@ -345,7 +389,7 @@ class VisionExtractor(BaseExtractor):
         start = time.time()
         budget_guard = BudgetGuard(self.rules)
 
-        if not self.api_key and not self.openai_api_key:
+        if not self.api_key and not self.openai_api_key and not self.anthropic_api_key:
             return ExtractedDocument(
                 doc_id=file_path.stem + "_vision_fail",
                 filename=file_path.name,

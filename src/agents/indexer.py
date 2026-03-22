@@ -29,7 +29,7 @@ class PageIndexBuilder:
     """
 
     def __init__(self, use_llm: bool = True):
-        self.use_llm = use_llm and bool(os.getenv("GEMINI_API_KEY"))
+        self.use_llm = use_llm and bool(os.getenv("ANTHROPIC_API_KEY"))
         self.pageindex_dir = _PAGEINDEX_DIR
         self.pageindex_dir.mkdir(parents=True, exist_ok=True)
         self._llm_client = None
@@ -37,15 +37,16 @@ class PageIndexBuilder:
     def _get_llm(self):
         if self._llm_client is None and self.use_llm:
             try:
-                import google.generativeai as genai
-                genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
-                self._llm_client = genai.GenerativeModel("gemini-1.5-flash")
+                import anthropic
+                self._llm_client = anthropic.Anthropic(
+                    api_key=os.getenv("ANTHROPIC_API_KEY")
+                )
             except Exception:
                 self.use_llm = False
         return self._llm_client
 
     def _generate_summary(self, section_text: str, title: str) -> str:
-        """Generate a 2-3 sentence summary using Gemini Flash."""
+        """Generate a 2-3 sentence summary using Claude Haiku."""
         if not self.use_llm:
             return self._extract_key_sentences(section_text)
 
@@ -60,11 +61,13 @@ class PageIndexBuilder:
                 "Write a 2-3 sentence factual summary of this section. "
                 "Focus on key facts, numbers, and findings. Be concise."
             )
-            response = client.generate_content(
-                prompt,
-                generation_config={"temperature": 0.2, "max_output_tokens": 200},
+            response = client.messages.create(
+                model="claude-3-5-haiku-20241022",
+                max_tokens=200,
+                temperature=0.2,
+                messages=[{"role": "user", "content": prompt}],
             )
-            return response.text.strip()
+            return response.content[0].text.strip()
         except Exception:
             return self._extract_key_sentences(section_text)
 

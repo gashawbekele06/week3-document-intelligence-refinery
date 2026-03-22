@@ -223,8 +223,8 @@ def ingest(
     from src.agents.extractor import ExtractionRouter
     from src.agents.chunker import ChunkingEngine
     from src.agents.indexer import PageIndexBuilder
-    from src.data.vector_store import VectorStore
-    from src.data.fact_table import FactTable
+    from src.storage.vector_store import VectorStore
+    from src.storage.fact_table import FactTable
 
     doc_path = _get_data_path(document)
     console.print(f"\n[bold magenta]🏭 FULL PIPELINE:[/bold magenta] {doc_path.name}\n")
@@ -275,7 +275,7 @@ def query(
 ):
     """Stage 5: Ask a question and get an answer with provenance."""
     from src.agents.query_agent import QueryAgent
-    from src.data.fact_table import FactTable
+    from src.storage.fact_table import FactTable
 
     agent = QueryAgent()
 
@@ -351,8 +351,8 @@ def process_corpus(
     from src.agents.extractor import ExtractionRouter
     from src.agents.chunker import ChunkingEngine
     from src.agents.indexer import PageIndexBuilder
-    from src.data.vector_store import VectorStore
-    from src.data.fact_table import FactTable
+    from src.storage.vector_store import VectorStore
+    from src.storage.fact_table import FactTable
 
     triage_agent = TriageAgent()
     router = ExtractionRouter()
