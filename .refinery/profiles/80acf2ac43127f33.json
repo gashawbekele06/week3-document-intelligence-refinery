@@ -1,0 +1,17 @@
+{
+  "doc_id": "80acf2ac43127f33",
+  "filename": "CBE ANNUAL REPORT 2023-24.pdf",
+  "file_path": "C:\\Users\\gasha\\OneDrive\\Desktop\\TRP1\\Week 3\\week3-document-intelligence-refinery\\data\\CBE ANNUAL REPORT 2023-24.pdf",
+  "page_count": 161,
+  "origin_type": "scanned_image",
+  "layout_complexity": "multi_column",
+  "language": "en",
+  "language_confidence": 0.9,
+  "domain_hint": "financial",
+  "estimated_cost": "needs_vision_model",
+  "char_density_mean": 0.91,
+  "image_ratio_mean": 0.3892,
+  "has_font_metadata": true,
+  "is_form_fillable": false,
+  "created_at": "2026-04-02T17:59:38.056282Z"
+}
